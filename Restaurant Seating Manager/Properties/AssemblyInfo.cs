@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Restaurant Seating Manager")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("State of Nebraska")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Restaurant Seating Manager")]
-[assembly: AssemblyCopyright("Copyright © State of Nebraska 2017")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
