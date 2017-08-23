@@ -33,7 +33,7 @@ namespace SeatingManager
         private void TabItem_Loaded(object sender, RoutedEventArgs e)
         {
             
-            //// Define the Columns.
+            //// Define the Columns.test
             //ColumnDefinition myColDef1 = new ColumnDefinition();
             //myColDef1.Width = new GridLength(1, GridUnitType.Auto);
             //ColumnDefinition myColDef2 = new ColumnDefinition();
