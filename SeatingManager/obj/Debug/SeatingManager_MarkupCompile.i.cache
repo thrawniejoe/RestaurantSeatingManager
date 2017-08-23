@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\
+C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\
 SeatingManager
 none
 false
 DEBUG;TRACE
-C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\App.xaml
-3-623232441
+C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\App.xaml
+4777115007
 
-11884712705
+12370261272
 131569487696
-AddCustomer.xaml;Login.xaml;MainWindow.xaml;
+AddCustomer.xaml;Login.xaml;MainWindow.xaml;SplashLogin.xaml;
 
-False
+True
 
