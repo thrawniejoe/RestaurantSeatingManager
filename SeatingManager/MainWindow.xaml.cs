@@ -196,5 +196,12 @@ namespace SeatingManager
             btnCounter++;
             myWrapPan.Children.Add(newBtn); //adds button to the WrapPannel
         }
+
+        private void btnAddCustomer_Click(object sender, RoutedEventArgs e)
+        {
+            AddCustomer addCust = new AddCustomer();
+            addCust.Show();
+            this.Close();
+        }
     }
 }

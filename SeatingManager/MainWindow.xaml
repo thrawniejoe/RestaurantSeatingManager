@@ -14,7 +14,7 @@
                     <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="908">
                         <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4"/>
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAddCustomer_Click"/>
                         <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
                         <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
                         <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>

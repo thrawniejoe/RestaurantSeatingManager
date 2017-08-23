@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("SeatingManager")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("State of Nebraska")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("SeatingManager")]
-[assembly: AssemblyCopyright("Copyright © State of Nebraska 2017")]
+[assembly: AssemblyCopyright("")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
