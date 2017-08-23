@@ -121,5 +121,14 @@
     <Resource Include="Images\login.jpg" />
     <Resource Include="Images\min.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\slideshow-overlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\main_background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\main_background2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

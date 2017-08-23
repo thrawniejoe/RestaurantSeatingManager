@@ -5,12 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="841" Width="1100">
+        Title="MainWindow" Height="841" Width="1100" Icon="Images/iconRectangle.ico" WindowStartupLocation="CenterOwner" WindowState="Maximized">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/main_background2.jpg" Stretch="UniformToFill"/>
+    </Window.Background>
     <Grid>
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="934" Margin="148,69,0,0">
+            <TabControl.Background>
+                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+            </TabControl.Background>
             <TabItem x:Name="tab_Tables" Header="Tables" Margin="-1.999,0,1.998,-2" Width="83.356" HorizontalContentAlignment="Stretch">
+                <TabItem.Background>
+                    <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+                </TabItem.Background>
                 <Grid Height="650.333" Width="928">
-                    <WrapPanel x:Name="myWrapPan" HorizontalAlignment="Left" Height="589" VerticalAlignment="Top" Width="918" Margin="10,61,0,0" Background="#FFEAEAEA"/>
+                    <WrapPanel x:Name="myWrapPan" HorizontalAlignment="Left" Height="589" VerticalAlignment="Top" Width="918" Margin="10,61,0,0">
+                        <WrapPanel.Background>
+                            <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+                        </WrapPanel.Background>
+                    </WrapPanel>
                     <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="908">
                         <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4"/>
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
@@ -21,12 +34,22 @@
                     </WrapPanel>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tab2" Header="Server List" HorizontalAlignment="Right" Loaded="tab2_Loaded" Margin="0,0,-0.667,0" VerticalAlignment="Top" Height="72.667" Width="83.356" HorizontalContentAlignment="Stretch"/>
+            <TabItem x:Name="tab2" Header="Server List" Loaded="tab2_Loaded" Margin="1,0,-1,0" VerticalAlignment="Top" Height="73" HorizontalContentAlignment="Stretch">
+                <TabItem.Background>
+                    <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+                </TabItem.Background>
+            </TabItem>
             <TabItem Header="      View &#xD;&#xA;Reservations" HorizontalAlignment="Left" Height="72.667" VerticalAlignment="Top" Width="83.356" Margin="3.666,0,-3.666,0" HorizontalContentAlignment="Stretch">
+                <TabItem.Background>
+                    <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+                </TabItem.Background>
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
         <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,148,0,0" VerticalAlignment="Top" Width="133">
+            <ListView.Background>
+                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+            </ListView.Background>
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>
@@ -34,6 +57,9 @@
             </ListView.View>
         </ListView>
         <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="303" Margin="10,497,0,0" VerticalAlignment="Top" Width="133">
+            <ListView.Background>
+                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+            </ListView.Background>
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

@@ -8,10 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cls.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/iconcirle.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/iconrectangle.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/login.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/min.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/main_background2.jpg")]
 
 

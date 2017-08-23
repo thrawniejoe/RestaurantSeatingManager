@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
         Title="SplashLogin" Height="512" Width="768" BorderBrush="Transparent" Icon="Images/iconRectangle.ico" WindowStyle="none" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Color x:Key="Color1">#FFE27F1C</Color>
+    </Window.Resources>
     <Window.Background>
         <ImageBrush ImageSource="Images/login.jpg"/>
     </Window.Background>
@@ -23,20 +26,24 @@
                 <ImageBrush ImageSource="Images/min.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtUsername" Background="Transparent"  HorizontalAlignment="Left" Height="30" Margin="159,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="0,0,0,3" BorderBrush="#FF3399FF" SnapsToDevicePixels="True" Foreground="#FF3399FF" FontFamily="Segoe Print" FontSize="14" TabIndex="1"/>
+        <TextBox x:Name="txtUsername" Background="Transparent"  HorizontalAlignment="Left" Height="30" Margin="159,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="0,0,0,3" BorderBrush="#FFE27F1C" SnapsToDevicePixels="True" Foreground="#FFE27F1C" FontFamily="Segoe Print" FontSize="14" TabIndex="1"/>
         <Button x:Name="btnLogin" IsDefault="true" Content="LOGIN" HorizontalAlignment="Left" Margin="229,361,0,0" VerticalAlignment="Top" Width="75" TabIndex="3" FontFamily="Segoe Print" FontWeight="Bold" FontSize="14" Foreground="#FF3399FF" Click="btnLogin_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
                     <GradientStop Color="#FFF3F3F3"/>
                     <GradientStop Color="#FFEBEBEB" Offset="0.248"/>
                     <GradientStop Color="#FFDDDDDD" Offset="1"/>
-                    <GradientStop Color="#7F3399FF" Offset="0.992"/>
+                    <GradientStop Color="{DynamicResource Color1}" Offset="0.992"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="184,317,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderThickness="0,0,0,3" BorderBrush="#FF3399FF" Height="18" TabIndex="2" />
-        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="46,257,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FF3399FF"/>
-        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="71,302,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FF3399FF"/>
+        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="184,317,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderThickness="0,0,0,3" BorderBrush="#FFE27F1C" Height="18" TabIndex="2" >
+            <PasswordBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource Color2}"/>
+            </PasswordBox.Foreground>
+        </PasswordBox>
+        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="46,257,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
+        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="71,302,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
 
     </Grid>
 </Window>

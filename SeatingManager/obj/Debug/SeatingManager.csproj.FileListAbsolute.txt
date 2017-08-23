@@ -52,3 +52,4 @@ C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\
 C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.g.resources
 C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.Properties.Resources.resources
 C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csproj.GenerateResource.Cache
+C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\App.baml
