@@ -200,8 +200,8 @@ namespace SeatingManager
         private void btnAddCustomer_Click(object sender, RoutedEventArgs e)
         {
             AddCustomer addCust = new AddCustomer();
-            addCust.Show();
-            this.Close();
+            addCust.ShowDialog();
+            //addCust.Show();
         }
     }
 }

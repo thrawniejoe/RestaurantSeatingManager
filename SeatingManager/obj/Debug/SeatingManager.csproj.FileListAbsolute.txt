@@ -30,3 +30,5 @@ C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.g.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.baml
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.g.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.baml
