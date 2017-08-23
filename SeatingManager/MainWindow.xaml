@@ -1,0 +1,47 @@
+﻿<Window x:Class="SeatingManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeatingManager"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="841" Width="1100">
+    <Grid>
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="934" Margin="148,69,0,0">
+            <TabItem x:Name="tab_Tables" Header="Tables" Margin="-1.999,0,1.998,-2" Width="83.356" HorizontalContentAlignment="Stretch">
+                <Grid Height="650.333" Width="928">
+                    <WrapPanel x:Name="myWrapPan" HorizontalAlignment="Left" Height="589" VerticalAlignment="Top" Width="918" Margin="10,61,0,0" Background="#FFEAEAEA"/>
+                    <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="908">
+                        <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                    </WrapPanel>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="tab2" Header="Server List" HorizontalAlignment="Right" Loaded="tab2_Loaded" Margin="0,0,-0.667,0" VerticalAlignment="Top" Height="72.667" Width="83.356" HorizontalContentAlignment="Stretch"/>
+            <TabItem Header="      View &#xD;&#xA;Reservations" HorizontalAlignment="Left" Height="72.667" VerticalAlignment="Top" Width="83.356" Margin="3.666,0,-3.666,0" HorizontalContentAlignment="Stretch">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,148,0,0" VerticalAlignment="Top" Width="133">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="303" Margin="10,497,0,0" VerticalAlignment="Top" Width="133">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,469,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,122.04,0,0" VerticalAlignment="Top" Width="133"/>
+
+    </Grid>
+</Window>
