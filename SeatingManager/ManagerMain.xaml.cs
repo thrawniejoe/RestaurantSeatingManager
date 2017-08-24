@@ -23,5 +23,13 @@ namespace SeatingManager
         {
             InitializeComponent();
         }
+
+        private void btnAddUser_Click(object sender, RoutedEventArgs e)
+        {
+            AddUser aU = new AddUser();
+            aU.Owner = Application.Current.MainWindow;
+            aU.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            aU.ShowDialog();
+        }
     }
 }

@@ -199,9 +199,11 @@ namespace SeatingManager
 
         private void btnAddCustomer_Click(object sender, RoutedEventArgs e)
         {
+            //opens add customer screen and centers it in the middle of the main screen
             AddCustomer addCust = new AddCustomer();
+            addCust.Owner = Application.Current.MainWindow;
+            addCust.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             addCust.ShowDialog();
-            //addCust.Show();
         }
     }
 }

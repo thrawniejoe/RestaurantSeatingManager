@@ -57,3 +57,5 @@ C:\Users\Joe.Velasquez\source\repos\RestaurantSeatingManager\SeatingManager\obj\
 C:\Users\Joe.Velasquez\source\repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ManagerMain.baml
 C:\Users\Joe.Velasquez\source\repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SplashLogin.baml
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\App.baml
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.g.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.baml
