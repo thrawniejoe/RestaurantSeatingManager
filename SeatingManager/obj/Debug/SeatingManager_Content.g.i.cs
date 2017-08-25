@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/main_background2.jpg")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("teambluedatabase.sql")]
 
 

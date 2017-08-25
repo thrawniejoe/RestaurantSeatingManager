@@ -144,5 +144,8 @@
   <ItemGroup>
     <Resource Include="Images\main_background2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="TeamBlueDatabase.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
