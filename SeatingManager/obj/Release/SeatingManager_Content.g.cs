@@ -8,6 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modelsm.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modelsm.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("seatingmanagerdb.sdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("teambluedatabase.sql")]
 
 

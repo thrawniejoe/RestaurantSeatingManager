@@ -42,6 +42,16 @@ namespace SeatingManager
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            SeatingManager.SeatingManagerDBDataSet seatingManagerDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDataSet")));
+
+            var context = new SeatingManager.SeatingManagerDBEntities();
+
+            string userName = txtUsername.Text;
+
+            var userCheck = from users in context.users
+                            where users.firstName == userName
+                            select users.role;
+
             if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
             {
                 main.Show();
