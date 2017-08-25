@@ -25,6 +25,13 @@ namespace SeatingManager
             InitializeComponent();
         }
 
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            //----------------MUST HAVE THIS TO CREATE YOUR CONTEXT AS IS DONE ON THE btnLogin-------------------------//
+            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            // Load data into the table users. You can modify this code as needed.
+        }
+
         private void Move(object sender, MouseButtonEventArgs e)
         {
             DragMove();
@@ -42,25 +49,31 @@ namespace SeatingManager
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            SeatingManager.SeatingManagerDBDataSet seatingManagerDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDataSet")));
-
             var context = new SeatingManager.SeatingManagerDBEntities();
-
             string userName = txtUsername.Text;
 
-            var userCheck = from users in context.users
-                            where users.firstName == userName
-                            select users.role;
+            var uCheck = (from u in context.users
+                          where u.firstName.Equals(userName)
+                          select u.password).SingleOrDefault();
 
-            if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
+            //MessageBox.Show(Convert.ToString(uCheck));
+           if (Convert.ToString(uCheck) == txtPassword.Text)
             {
                 main.Show();
                 this.Close();
             }
+
+            //if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
+            //{
+            //    main.Show();
+            //    this.Close();
+            //}
             else
             {
                 MessageBox.Show("Invalid Username and/or Password. Please try again.");
             }
         }
+
+
     }
 }

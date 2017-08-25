@@ -5,9 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="SplashLogin" Height="512" Width="768" BorderBrush="Transparent" Icon="Images/iconRectangle.ico" WindowStyle="none" AllowsTransparency="True" WindowStartupLocation="CenterScreen">
+        Title="SplashLogin" Height="512" Width="768" BorderBrush="Transparent" Icon="Images/iconRectangle.ico" WindowStyle="none" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
     <Window.Resources>
         <Color x:Key="Color1">#FFE27F1C</Color>
+        <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
     <Window.Background>
         <ImageBrush ImageSource="Images/login.jpg"/>
@@ -21,7 +23,7 @@
                 <ImageBrush ImageSource="Images/cls.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnMinimize" BorderBrush="Transparent" Margin="738,30,0,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="-1.965,1.02" Width="30" Click="btnMinimize_Click">
+        <Button x:Name="btnMinimize" BorderBrush="Transparent" Margin="708,0,30,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="-1.965,1.02" Width="30" Click="btnMinimize_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Images/min.png"/>
             </Button.Background>
@@ -37,13 +39,18 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <PasswordBox x:Name="txtPassword" HorizontalAlignment="Left" Margin="184,317,0,0" VerticalAlignment="Top" Width="120" Background="{x:Null}" BorderThickness="0,0,0,3" BorderBrush="#FFE27F1C" Height="18" TabIndex="2" >
-            <PasswordBox.Foreground>
-                <SolidColorBrush Color="{DynamicResource Color2}"/>
-            </PasswordBox.Foreground>
-        </PasswordBox>
         <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="46,257,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
         <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="71,302,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
+        <Grid x:Name="grid1" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="459,280,0,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        </Grid>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="171,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

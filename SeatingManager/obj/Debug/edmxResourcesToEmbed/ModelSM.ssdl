@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SeatingManagerDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SeatingManagerDBModelStoreContainer">
+    <EntitySet Name="assigncustomer" EntityType="SeatingManagerDBModel.Store.assigncustomer" store:Type="Tables" />
+    <EntitySet Name="customer" EntityType="SeatingManagerDBModel.Store.customer" store:Type="Tables" />
+    <EntitySet Name="tablemap" EntityType="SeatingManagerDBModel.Store.tablemap" store:Type="Tables" />
+    <EntitySet Name="tablemerge" EntityType="SeatingManagerDBModel.Store.tablemerge" store:Type="Tables" />
+    <EntitySet Name="tablesection" EntityType="SeatingManagerDBModel.Store.tablesection" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="SeatingManagerDBModel.Store.users" store:Type="Tables" />
+  </EntityContainer>
+  <EntityType Name="assigncustomer">
+    <Key>
+      <PropertyRef Name="tableAssignID" />
+    </Key>
+    <Property Name="tableAssignID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tableID" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
+    <Property Name="assignTime" Type="datetime" Nullable="false" />
+    <Property Name="isAssigned" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="customer">
+    <Key>
+      <PropertyRef Name="customerID" />
+    </Key>
+    <Property Name="customerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="customerName" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="wait" Type="tinyint" Nullable="false" />
+    <Property Name="reservation" Type="tinyint" Nullable="false" />
+    <Property Name="timeIn" Type="datetime" Nullable="false" />
+    <Property Name="timeMade" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tablemap">
+    <Key>
+      <PropertyRef Name="tableID" />
+    </Key>
+    <Property Name="tableID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tableX" Type="int" />
+    <Property Name="tableY" Type="int" />
+    <Property Name="numberOfSeats" Type="int" Nullable="false" />
+    <Property Name="visible" Type="tinyint" Nullable="false" />
+    <Property Name="sectionID" Type="int" Nullable="false" />
+    <Property Name="tableType" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tablemerge">
+    <Key>
+      <PropertyRef Name="tableMergeID" />
+    </Key>
+    <Property Name="tableMergeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="tableID1" Type="int" Nullable="false" />
+    <Property Name="tableID2" Type="int" Nullable="false" />
+    <Property Name="tableID3" Type="int" />
+    <Property Name="tableID4" Type="int" />
+    <Property Name="visible" Type="tinyint" Nullable="false" />
+    <Property Name="isMerged" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tablesection">
+    <Key>
+      <PropertyRef Name="tableSectionID" />
+    </Key>
+    <Property Name="tableSectionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="sectionColor" Type="nvarchar" Nullable="false" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="lastName" Type="nvarchar" Nullable="false" MaxLength="25" />
+    <Property Name="phone" Type="nvarchar" MaxLength="15" />
+    <Property Name="role" Type="int" Nullable="false" />
+    <Property Name="isActive" Type="tinyint" Nullable="false" />
+    <Property Name="isOnDuty" Type="tinyint" Nullable="false" />
+    <Property Name="sectionID" Type="int" Nullable="false" />
+    <Property Name="password" Type="nvarchar" Nullable="false" MaxLength="45" />
+    <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="15" />
+    <Property Name="dateHired" Type="datetime" Nullable="false" />
+  </EntityType>
+</Schema>
