@@ -24,9 +24,34 @@ namespace SeatingManager
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
+            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            // Load data into the table customer. You can modify this code as needed.
+            //SeatingManager.SeatingManagerDBDataSetTableAdapters.customerTableAdapter seatingManagerDBDataSetcustomerTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.customerTableAdapter();
+            //seatingManagerDBDataSetcustomerTableAdapter.Fill(seatingManagerDBDataSet.customer);
+            //System.Windows.Data.CollectionViewSource customerViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customerViewSource")));
+            //customerViewSource.View.MoveCurrentToFirst();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            //gets connection info for database
+            var context = new SeatingManager.SeatingManagerDBEntities();
+
+            //creates new customer object
+            customer cust = new customer();
+
+            cust.customerName = customerNameTextBox.Text;
+            cust.timeIn = timeInDatePicker.DisplayDate;
+            cust.wait = Convert.ToByte(waitTextBox.Text);
+            cust.reservation = Convert.ToByte(reservationComboBox.Text);
+
+            //adds customer object to db
+            context.customers.Add(cust);
+            MessageBox.Show("Customer Added To System");
         }
     }
 }
