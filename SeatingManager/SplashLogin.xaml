@@ -18,17 +18,8 @@
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="738,0,0,0" VerticalAlignment="Top" Height="30" Width="30" Click="btnClose_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Images/cls.png"/>
-            </Button.Background>
-        </Button>
-        <Button x:Name="btnMinimize" BorderBrush="Transparent" Margin="708,0,30,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="-1.965,1.02" Width="30" Click="btnMinimize_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Images/min.png"/>
-            </Button.Background>
-        </Button>
         <TextBox x:Name="txtUsername" Background="Transparent"  HorizontalAlignment="Left" Height="30" Margin="159,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderThickness="0,0,0,3" BorderBrush="#FFE27F1C" SnapsToDevicePixels="True" Foreground="#FFE27F1C" FontFamily="Segoe Print" FontSize="14" TabIndex="1"/>
+        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="171,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" BorderBrush="#FFE27F1C" BorderThickness="0,0,0,3" Background="Transparent"/>
         <Button x:Name="btnLogin" IsDefault="true" Content="LOGIN" HorizontalAlignment="Left" Margin="229,361,0,0" VerticalAlignment="Top" Width="75" TabIndex="3" FontFamily="Segoe Print" FontWeight="Bold" FontSize="14" Foreground="#FF3399FF" Click="btnLogin_Click">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
@@ -39,8 +30,18 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="46,257,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
-        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="71,302,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
+        <Label x:Name="label" Content="Username" HorizontalAlignment="Left" Margin="58,268,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
+        <Label x:Name="label_Copy" Content="Password" HorizontalAlignment="Left" Margin="75,312,0,0" VerticalAlignment="Top" Width="108" FontFamily="Segoe Print" FontSize="18" FontWeight="ExtraBold" Foreground="#FFE27F1C"/>
+        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="738,0,0,0" VerticalAlignment="Top" Height="30" Width="30" Click="btnClose_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/cls.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnMinimize" BorderBrush="Transparent" Margin="708,0,30,0" VerticalAlignment="Top" Height="30" RenderTransformOrigin="-1.965,1.02" Width="30" Click="btnMinimize_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/min.png"/>
+            </Button.Background>
+        </Button>
         <Grid x:Name="grid1" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="459,280,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
@@ -50,7 +51,6 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
         </Grid>
-        <TextBox x:Name="txtPassword" HorizontalAlignment="Left" Height="23" Margin="171,316,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

@@ -41,7 +41,7 @@ namespace SeatingManager
             User.isActive = 0;
             User.isOnDuty = 0;
             User.sectionID = 0;
-            User.dateHired = Convert.ToDateTime(dateHiredDatePicker);
+            User.dateHired = Convert.ToDateTime(dateHiredDatePicker.SelectedDate);
             //adds User object to db
             context.users.Add(User);
             context.SaveChanges();
