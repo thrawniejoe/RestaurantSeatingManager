@@ -201,7 +201,8 @@ namespace SeatingManager
         {
             //opens add customer screen and centers it in the middle of the main screen
             AddCustomer addCust = new AddCustomer();
-            addCust.Owner = Application.Current.MainWindow;
+            addCust.Owner = this;
+            //addCust.Owner = Application.Current.MainWindow;
             addCust.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             addCust.ShowDialog();
         }

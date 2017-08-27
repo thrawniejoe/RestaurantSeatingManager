@@ -19,7 +19,7 @@ namespace SeatingManager
     /// </summary>
     public partial class SplashLogin : Window
     {
-        MainWindow main = new MainWindow();
+        
         public SplashLogin()
         {
             InitializeComponent();
@@ -56,12 +56,33 @@ namespace SeatingManager
                           where u.firstName.Equals(userName)
                           select u.password).SingleOrDefault();
 
+
+            var getRole = (from u in context.users
+                           where u.firstName.Equals(userName)
+                           select u.role).SingleOrDefault();
+
             //MessageBox.Show(Convert.ToString(uCheck));
            if (Convert.ToString(uCheck) == txtPassword.Text)
             {
-                main.Show();
+            switch (getRole)
+                {
+                    case 0:
+                        ManagerMain manager = new ManagerMain();
+                        manager.Show();
+                        break;
+                    case 1:
+                        MainWindow main = new MainWindow();
+                        main.Show();
+                        break;
+                    case 2:
+                        MainWindow main2 = new MainWindow();
+                        main2.Show();
+                        break;
+                }
+                
                 this.Close();
             }
+
 
             //if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
             //{

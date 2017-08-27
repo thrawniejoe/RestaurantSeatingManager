@@ -21,7 +21,7 @@ namespace SeatingManager
         public int role { get; set; }
         public byte isActive { get; set; }
         public byte isOnDuty { get; set; }
-        public int sectionID { get; set; }
+        public Nullable<int> sectionID { get; set; }
         public string password { get; set; }
         public string title { get; set; }
         public System.DateTime dateHired { get; set; }

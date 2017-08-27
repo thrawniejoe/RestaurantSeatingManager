@@ -24,5 +24,36 @@ namespace SeatingManager
             InitializeComponent();
         }
 
+        private void btnAddUser_Click(object sender, RoutedEventArgs e)
+        {
+            //gets connection info for database
+            var context = new SeatingManager.SeatingManagerDBEntities();
+
+            //creates new user object
+            user User = new user();
+
+            User.firstName = firstNameTextBox.Text;
+            User.lastName = lastNameTextBox.Text;
+            User.password = passwordTextBox.Text;
+            User.title = titleTextBox.Text;
+            User.role = Convert.ToInt16(roleTextBox.Text);
+            User.phone = phoneTextBox.Text;
+
+            //adds User object to db
+            context.users.Add(User);
+            MessageBox.Show("User Added To System");
+            this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            // Load data into the table users. You can modify this code as needed.
+            //SeatingManager.SeatingManagerDBDataSetTableAdapters.usersTableAdapter seatingManagerDBDataSetusersTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.usersTableAdapter();
+            //seatingManagerDBDataSetusersTableAdapter.Fill(seatingManagerDBDataSet.users);
+            //System.Windows.Data.CollectionViewSource usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
+            //usersViewSource.View.MoveCurrentToFirst();
+        }
     }
 }

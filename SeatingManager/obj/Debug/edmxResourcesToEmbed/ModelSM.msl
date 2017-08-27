@@ -61,17 +61,17 @@
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.user">
         <MappingFragment StoreEntitySet="users">
-          <ScalarProperty Name="userID" ColumnName="userID" />
-          <ScalarProperty Name="firstName" ColumnName="firstName" />
-          <ScalarProperty Name="lastName" ColumnName="lastName" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="role" ColumnName="role" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
-          <ScalarProperty Name="sectionID" ColumnName="sectionID" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+          <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

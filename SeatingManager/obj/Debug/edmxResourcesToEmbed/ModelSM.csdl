@@ -64,16 +64,16 @@
     <Key>
       <PropertyRef Name="userID" />
     </Key>
-    <Property Name="userID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="firstName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
-    <Property Name="lastName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
-    <Property Name="phone" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="role" Type="Int32" Nullable="false" />
     <Property Name="isActive" Type="Byte" Nullable="false" />
     <Property Name="isOnDuty" Type="Byte" Nullable="false" />
-    <Property Name="sectionID" Type="Int32" Nullable="false" />
-    <Property Name="password" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
-    <Property Name="title" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="sectionID" Type="Int32" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="dateHired" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
 </Schema>

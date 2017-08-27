@@ -10,7 +10,7 @@
         <EntityTypeShape EntityType="SeatingManagerDBModel.tablemap" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SeatingManagerDBModel.tablemerge" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SeatingManagerDBModel.tablesection" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.user" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.user" Width="1.5" PointX="4.625" PointY="3" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

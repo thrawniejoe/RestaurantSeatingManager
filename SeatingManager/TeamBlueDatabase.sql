@@ -88,7 +88,7 @@ CREATE TABLE users (
   role int NOT NULL,
   isActive tinyint NOT NULL DEFAULT 0,
   isOnDuty tinyint NOT NULL DEFAULT 0,
-  sectionID int NOT NULL,
+  sectionID int,
   password nvarchar(45) NOT NULL,
   title nvarchar(15) NOT NULL,
   dateHired date NOT NULL,

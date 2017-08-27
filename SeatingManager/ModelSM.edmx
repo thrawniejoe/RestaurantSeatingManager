@@ -4,20 +4,12 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SeatingManagerDBModel.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="SeatingManagerDBModelStoreContainer">
-          <EntitySet Name="assigncustomer" EntityType="SeatingManagerDBModel.Store.assigncustomer" store:Type="Tables" />
-          <EntitySet Name="customer" EntityType="SeatingManagerDBModel.Store.customer" store:Type="Tables" />
-          <EntitySet Name="tablemap" EntityType="SeatingManagerDBModel.Store.tablemap" store:Type="Tables" />
-          <EntitySet Name="tablemerge" EntityType="SeatingManagerDBModel.Store.tablemerge" store:Type="Tables" />
-          <EntitySet Name="tablesection" EntityType="SeatingManagerDBModel.Store.tablesection" store:Type="Tables" />
-          <EntitySet Name="users" EntityType="SeatingManagerDBModel.Store.users" store:Type="Tables" />
-        </EntityContainer>
+    <Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="assigncustomer">
           <Key>
             <PropertyRef Name="tableAssignID" />
           </Key>
-          <Property Name="tableAssignID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tableAssignID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tableID" Type="int" Nullable="false" />
           <Property Name="customerID" Type="int" Nullable="false" />
           <Property Name="assignTime" Type="datetime" Nullable="false" />
@@ -27,8 +19,8 @@
           <Key>
             <PropertyRef Name="customerID" />
           </Key>
-          <Property Name="customerID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="customerName" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="customerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="customerName" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="wait" Type="tinyint" Nullable="false" />
           <Property Name="reservation" Type="tinyint" Nullable="false" />
           <Property Name="timeIn" Type="datetime" Nullable="false" />
@@ -38,7 +30,7 @@
           <Key>
             <PropertyRef Name="tableID" />
           </Key>
-          <Property Name="tableID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tableID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tableX" Type="int" />
           <Property Name="tableY" Type="int" />
           <Property Name="numberOfSeats" Type="int" Nullable="false" />
@@ -50,7 +42,7 @@
           <Key>
             <PropertyRef Name="tableMergeID" />
           </Key>
-          <Property Name="tableMergeID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="tableMergeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="tableID1" Type="int" Nullable="false" />
           <Property Name="tableID2" Type="int" Nullable="false" />
           <Property Name="tableID3" Type="int" />
@@ -62,27 +54,34 @@
           <Key>
             <PropertyRef Name="tableSectionID" />
           </Key>
-          <Property Name="tableSectionID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="sectionColor" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="tableSectionID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sectionColor" Type="nvarchar" MaxLength="15" Nullable="false" />
         </EntityType>
         <EntityType Name="users">
           <Key>
             <PropertyRef Name="userID" />
           </Key>
-          <Property Name="userID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="firstName" Type="nvarchar" Nullable="false" MaxLength="25" />
-          <Property Name="lastName" Type="nvarchar" Nullable="false" MaxLength="25" />
+          <Property Name="userID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="phone" Type="nvarchar" MaxLength="15" />
           <Property Name="role" Type="int" Nullable="false" />
           <Property Name="isActive" Type="tinyint" Nullable="false" />
           <Property Name="isOnDuty" Type="tinyint" Nullable="false" />
-          <Property Name="sectionID" Type="int" Nullable="false" />
-          <Property Name="password" Type="nvarchar" Nullable="false" MaxLength="45" />
-          <Property Name="title" Type="nvarchar" Nullable="false" MaxLength="15" />
+          <Property Name="sectionID" Type="int" />
+          <Property Name="password" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="title" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="dateHired" Type="datetime" Nullable="false" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+        <EntityContainer Name="SeatingManagerDBModelStoreContainer">
+          <EntitySet Name="assigncustomer" EntityType="Self.assigncustomer" store:Type="Tables" />
+          <EntitySet Name="customer" EntityType="Self.customer" store:Type="Tables" />
+          <EntitySet Name="tablemap" EntityType="Self.tablemap" store:Type="Tables" />
+          <EntitySet Name="tablemerge" EntityType="Self.tablemerge" store:Type="Tables" />
+          <EntitySet Name="tablesection" EntityType="Self.tablesection" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SeatingManagerDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -150,16 +149,16 @@
           <Key>
             <PropertyRef Name="userID" />
           </Key>
-          <Property Name="userID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="firstName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
-          <Property Name="lastName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
-          <Property Name="phone" Type="String" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="firstName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="role" Type="Int32" Nullable="false" />
           <Property Name="isActive" Type="Byte" Nullable="false" />
           <Property Name="isOnDuty" Type="Byte" Nullable="false" />
-          <Property Name="sectionID" Type="Int32" Nullable="false" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="45" Unicode="true" FixedLength="false" />
-          <Property Name="title" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="sectionID" Type="Int32" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
+          <Property Name="title" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="dateHired" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
       </Schema>
@@ -228,17 +227,17 @@
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.user">
               <MappingFragment StoreEntitySet="users">
-                <ScalarProperty Name="userID" ColumnName="userID" />
-                <ScalarProperty Name="firstName" ColumnName="firstName" />
-                <ScalarProperty Name="lastName" ColumnName="lastName" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="role" ColumnName="role" />
-                <ScalarProperty Name="isActive" ColumnName="isActive" />
-                <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
-                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+                <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -259,6 +258,7 @@
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

@@ -14,8 +14,11 @@
     <Grid>
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="164,69,0,0" Background="#FF232323">
             <TabItem Header="Tables" Margin="-2,-2,-2,0" Width="87" Background="#FF232323" Foreground="White" FontSize="14">
-                <Grid Background="#FFE5E5E5" Margin="10,36,0,0" DataContext="{StaticResource usersViewSource}">
-                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,10,10.4,10" SelectionMode="Single">
+                <Grid Background="#FFE5E5E5" Margin="10,36,0,0" DataContext="{StaticResource usersViewSource}"/>
+            </TabItem>
+            <TabItem Header="Users" Margin="5,0,-5,-2" Width="87" Background="#FF232323" Foreground="White" FontSize="14">
+                <Grid Background="#FFE5E5E5" Margin="0,7,0.4,0">
+                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,50,19,12" SelectionMode="Single">
                         <ListView.ItemContainerStyle>
                             <Style>
                                 <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
@@ -104,10 +107,8 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
+                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F"/>
                 </Grid>
-            </TabItem>
-            <TabItem Header="Users" Margin="5,0,-5,-2" Width="87" Background="#FF232323" Foreground="White" FontSize="14">
-                <Grid Background="#FFE5E5E5" Margin="0,34,0,0"/>
             </TabItem>
             <TabItem Header="Customers" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="87" Margin="10,0,-10,0" Background="#FF232323" Foreground="White" FontSize="14">
                 <Grid Background="#FFE5E5E5"/>
@@ -116,7 +117,6 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="974,44,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click"/>
         <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,123,0,0" VerticalAlignment="Top" Width="133">
             <ListView.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>

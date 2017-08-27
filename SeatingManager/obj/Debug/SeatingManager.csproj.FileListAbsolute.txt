@@ -90,3 +90,8 @@ C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\S
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.exe
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.xml
