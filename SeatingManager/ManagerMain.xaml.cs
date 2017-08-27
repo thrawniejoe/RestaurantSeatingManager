@@ -44,16 +44,20 @@ namespace SeatingManager
             usersViewSource.View.MoveCurrentToFirst();
         }
 
-        public void refreshList()
+        public void RefreshList()
         {
-            usersListView.InvalidateArrange();
-            usersListView.UpdateLayout();
-
+            //usersListView.Items.Clear();
+            usersListView.InvalidateProperty(ListView.ItemsSourceProperty);
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            var getList = (from u in context.users                          
+                           select u);
+            usersListView.ItemsSource = null;
+            usersListView.ItemsSource = getList.ToList();
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
         {
-            refreshList();
+            RefreshList();
         }
     }
 }

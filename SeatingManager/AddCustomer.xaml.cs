@@ -51,6 +51,7 @@ namespace SeatingManager
 
             //adds customer object to db
             context.customers.Add(cust);
+            context.SaveChanges();
             MessageBox.Show("Customer Added To System");
         }
     }
