@@ -12,7 +12,7 @@
     <Key>
       <PropertyRef Name="tableAssignID" />
     </Key>
-    <Property Name="tableAssignID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="tableAssignID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tableID" Type="Int32" Nullable="false" />
     <Property Name="customerID" Type="Int32" Nullable="false" />
     <Property Name="assignTime" Type="DateTime" Nullable="false" Precision="3" />
@@ -22,8 +22,8 @@
     <Key>
       <PropertyRef Name="customerID" />
     </Key>
-    <Property Name="customerID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="customerName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+    <Property Name="customerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customerName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="wait" Type="Byte" Nullable="false" />
     <Property Name="reservation" Type="Byte" Nullable="false" />
     <Property Name="timeIn" Type="DateTime" Nullable="false" Precision="3" />
@@ -33,7 +33,7 @@
     <Key>
       <PropertyRef Name="tableID" />
     </Key>
-    <Property Name="tableID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="tableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tableX" Type="Int32" />
     <Property Name="tableY" Type="Int32" />
     <Property Name="numberOfSeats" Type="Int32" Nullable="false" />
@@ -45,7 +45,7 @@
     <Key>
       <PropertyRef Name="tableMergeID" />
     </Key>
-    <Property Name="tableMergeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="tableMergeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="tableID1" Type="Int32" Nullable="false" />
     <Property Name="tableID2" Type="Int32" Nullable="false" />
     <Property Name="tableID3" Type="Int32" />
@@ -57,8 +57,8 @@
     <Key>
       <PropertyRef Name="tableSectionID" />
     </Key>
-    <Property Name="tableSectionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-    <Property Name="sectionColor" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+    <Property Name="tableSectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sectionColor" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="user">
     <Key>

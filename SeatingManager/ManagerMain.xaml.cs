@@ -43,5 +43,17 @@ namespace SeatingManager
             System.Windows.Data.CollectionViewSource usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
             usersViewSource.View.MoveCurrentToFirst();
         }
+
+        public void refreshList()
+        {
+            usersListView.InvalidateArrange();
+            usersListView.UpdateLayout();
+
+        }
+
+        private void btnRefresh_Click(object sender, RoutedEventArgs e)
+        {
+            refreshList();
+        }
     }
 }

@@ -38,9 +38,13 @@ namespace SeatingManager
             User.title = titleTextBox.Text;
             User.role = Convert.ToInt16(roleTextBox.Text);
             User.phone = phoneTextBox.Text;
-
+            User.isActive = 0;
+            User.isOnDuty = 0;
+            User.sectionID = 0;
+            User.dateHired = Convert.ToDateTime(dateHiredDatePicker);
             //adds User object to db
             context.users.Add(User);
+            context.SaveChanges();
             MessageBox.Show("User Added To System");
             this.Close();
         }

@@ -24,22 +24,22 @@ namespace SeatingManager {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class SeatingManagerDBDataSet : global::System.Data.DataSet {
         
-        private assigncustomerDataTable tableassigncustomer;
+        private assigncustomersDataTable tableassigncustomers;
         
-        private customerDataTable tablecustomer;
+        private customersDataTable tablecustomers;
         
-        private tablemapDataTable tabletablemap;
+        private tablemapsDataTable tabletablemaps;
         
-        private tablemergeDataTable tabletablemerge;
+        private tablemergesDataTable tabletablemerges;
         
-        private tablesectionDataTable tabletablesection;
+        private tablesectionsDataTable tabletablesections;
         
         private usersDataTable tableusers;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public SeatingManagerDBDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -50,7 +50,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected SeatingManagerDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
@@ -64,20 +64,20 @@ namespace SeatingManager {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["assigncustomer"] != null)) {
-                    base.Tables.Add(new assigncustomerDataTable(ds.Tables["assigncustomer"]));
+                if ((ds.Tables["assigncustomers"] != null)) {
+                    base.Tables.Add(new assigncustomersDataTable(ds.Tables["assigncustomers"]));
                 }
-                if ((ds.Tables["customer"] != null)) {
-                    base.Tables.Add(new customerDataTable(ds.Tables["customer"]));
+                if ((ds.Tables["customers"] != null)) {
+                    base.Tables.Add(new customersDataTable(ds.Tables["customers"]));
                 }
-                if ((ds.Tables["tablemap"] != null)) {
-                    base.Tables.Add(new tablemapDataTable(ds.Tables["tablemap"]));
+                if ((ds.Tables["tablemaps"] != null)) {
+                    base.Tables.Add(new tablemapsDataTable(ds.Tables["tablemaps"]));
                 }
-                if ((ds.Tables["tablemerge"] != null)) {
-                    base.Tables.Add(new tablemergeDataTable(ds.Tables["tablemerge"]));
+                if ((ds.Tables["tablemerges"] != null)) {
+                    base.Tables.Add(new tablemergesDataTable(ds.Tables["tablemerges"]));
                 }
-                if ((ds.Tables["tablesection"] != null)) {
-                    base.Tables.Add(new tablesectionDataTable(ds.Tables["tablesection"]));
+                if ((ds.Tables["tablesections"] != null)) {
+                    base.Tables.Add(new tablesectionsDataTable(ds.Tables["tablesections"]));
                 }
                 if ((ds.Tables["users"] != null)) {
                     base.Tables.Add(new usersDataTable(ds.Tables["users"]));
@@ -101,57 +101,57 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public assigncustomerDataTable assigncustomer {
+        public assigncustomersDataTable assigncustomers {
             get {
-                return this.tableassigncustomer;
+                return this.tableassigncustomers;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public customerDataTable customer {
+        public customersDataTable customers {
             get {
-                return this.tablecustomer;
+                return this.tablecustomers;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tablemapDataTable tablemap {
+        public tablemapsDataTable tablemaps {
             get {
-                return this.tabletablemap;
+                return this.tabletablemaps;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tablemergeDataTable tablemerge {
+        public tablemergesDataTable tablemerges {
             get {
-                return this.tabletablemerge;
+                return this.tabletablemerges;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tablesectionDataTable tablesection {
+        public tablesectionsDataTable tablesections {
             get {
-                return this.tabletablesection;
+                return this.tabletablesections;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public usersDataTable users {
@@ -161,7 +161,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -174,7 +174,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataTableCollection Tables {
             get {
@@ -183,7 +183,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataRelationCollection Relations {
             get {
@@ -192,7 +192,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override void InitializeDerivedDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -200,7 +200,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
             SeatingManagerDBDataSet cln = ((SeatingManagerDBDataSet)(base.Clone()));
             cln.InitVars();
@@ -209,38 +209,38 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override bool ShouldSerializeTables() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override bool ShouldSerializeRelations() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
             if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["assigncustomer"] != null)) {
-                    base.Tables.Add(new assigncustomerDataTable(ds.Tables["assigncustomer"]));
+                if ((ds.Tables["assigncustomers"] != null)) {
+                    base.Tables.Add(new assigncustomersDataTable(ds.Tables["assigncustomers"]));
                 }
-                if ((ds.Tables["customer"] != null)) {
-                    base.Tables.Add(new customerDataTable(ds.Tables["customer"]));
+                if ((ds.Tables["customers"] != null)) {
+                    base.Tables.Add(new customersDataTable(ds.Tables["customers"]));
                 }
-                if ((ds.Tables["tablemap"] != null)) {
-                    base.Tables.Add(new tablemapDataTable(ds.Tables["tablemap"]));
+                if ((ds.Tables["tablemaps"] != null)) {
+                    base.Tables.Add(new tablemapsDataTable(ds.Tables["tablemaps"]));
                 }
-                if ((ds.Tables["tablemerge"] != null)) {
-                    base.Tables.Add(new tablemergeDataTable(ds.Tables["tablemerge"]));
+                if ((ds.Tables["tablemerges"] != null)) {
+                    base.Tables.Add(new tablemergesDataTable(ds.Tables["tablemerges"]));
                 }
-                if ((ds.Tables["tablesection"] != null)) {
-                    base.Tables.Add(new tablesectionDataTable(ds.Tables["tablesection"]));
+                if ((ds.Tables["tablesections"] != null)) {
+                    base.Tables.Add(new tablesectionsDataTable(ds.Tables["tablesections"]));
                 }
                 if ((ds.Tables["users"] != null)) {
                     base.Tables.Add(new usersDataTable(ds.Tables["users"]));
@@ -261,7 +261,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
@@ -270,42 +270,42 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars() {
             this.InitVars(true);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableassigncustomer = ((assigncustomerDataTable)(base.Tables["assigncustomer"]));
+            this.tableassigncustomers = ((assigncustomersDataTable)(base.Tables["assigncustomers"]));
             if ((initTable == true)) {
-                if ((this.tableassigncustomer != null)) {
-                    this.tableassigncustomer.InitVars();
+                if ((this.tableassigncustomers != null)) {
+                    this.tableassigncustomers.InitVars();
                 }
             }
-            this.tablecustomer = ((customerDataTable)(base.Tables["customer"]));
+            this.tablecustomers = ((customersDataTable)(base.Tables["customers"]));
             if ((initTable == true)) {
-                if ((this.tablecustomer != null)) {
-                    this.tablecustomer.InitVars();
+                if ((this.tablecustomers != null)) {
+                    this.tablecustomers.InitVars();
                 }
             }
-            this.tabletablemap = ((tablemapDataTable)(base.Tables["tablemap"]));
+            this.tabletablemaps = ((tablemapsDataTable)(base.Tables["tablemaps"]));
             if ((initTable == true)) {
-                if ((this.tabletablemap != null)) {
-                    this.tabletablemap.InitVars();
+                if ((this.tabletablemaps != null)) {
+                    this.tabletablemaps.InitVars();
                 }
             }
-            this.tabletablemerge = ((tablemergeDataTable)(base.Tables["tablemerge"]));
+            this.tabletablemerges = ((tablemergesDataTable)(base.Tables["tablemerges"]));
             if ((initTable == true)) {
-                if ((this.tabletablemerge != null)) {
-                    this.tabletablemerge.InitVars();
+                if ((this.tabletablemerges != null)) {
+                    this.tabletablemerges.InitVars();
                 }
             }
-            this.tabletablesection = ((tablesectionDataTable)(base.Tables["tablesection"]));
+            this.tabletablesections = ((tablesectionsDataTable)(base.Tables["tablesections"]));
             if ((initTable == true)) {
-                if ((this.tabletablesection != null)) {
-                    this.tabletablesection.InitVars();
+                if ((this.tabletablesections != null)) {
+                    this.tabletablesections.InitVars();
                 }
             }
             this.tableusers = ((usersDataTable)(base.Tables["users"]));
@@ -317,65 +317,65 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
             this.DataSetName = "SeatingManagerDBDataSet";
             this.Prefix = "";
             this.Namespace = "http://tempuri.org/SeatingManagerDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableassigncustomer = new assigncustomerDataTable();
-            base.Tables.Add(this.tableassigncustomer);
-            this.tablecustomer = new customerDataTable();
-            base.Tables.Add(this.tablecustomer);
-            this.tabletablemap = new tablemapDataTable();
-            base.Tables.Add(this.tabletablemap);
-            this.tabletablemerge = new tablemergeDataTable();
-            base.Tables.Add(this.tabletablemerge);
-            this.tabletablesection = new tablesectionDataTable();
-            base.Tables.Add(this.tabletablesection);
+            this.tableassigncustomers = new assigncustomersDataTable();
+            base.Tables.Add(this.tableassigncustomers);
+            this.tablecustomers = new customersDataTable();
+            base.Tables.Add(this.tablecustomers);
+            this.tabletablemaps = new tablemapsDataTable();
+            base.Tables.Add(this.tabletablemaps);
+            this.tabletablemerges = new tablemergesDataTable();
+            base.Tables.Add(this.tabletablemerges);
+            this.tabletablesections = new tablesectionsDataTable();
+            base.Tables.Add(this.tabletablesections);
             this.tableusers = new usersDataTable();
             base.Tables.Add(this.tableusers);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeassigncustomer() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializeassigncustomers() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializecustomer() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializecustomers() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetablemap() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializetablemaps() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetablemerge() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializetablemerges() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializetablesection() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private bool ShouldSerializetablesections() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private bool ShouldSerializeusers() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -383,7 +383,7 @@ namespace SeatingManager {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
             SeatingManagerDBDataSet ds = new SeatingManagerDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
@@ -429,22 +429,22 @@ namespace SeatingManager {
             return type;
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void assigncustomerRowChangeEventHandler(object sender, assigncustomerRowChangeEvent e);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void assigncustomersRowChangeEventHandler(object sender, assigncustomersRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void customerRowChangeEventHandler(object sender, customerRowChangeEvent e);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void customersRowChangeEventHandler(object sender, customersRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tablemapRowChangeEventHandler(object sender, tablemapRowChangeEvent e);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void tablemapsRowChangeEventHandler(object sender, tablemapsRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tablemergeRowChangeEventHandler(object sender, tablemergeRowChangeEvent e);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void tablemergesRowChangeEventHandler(object sender, tablemergesRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void tablesectionRowChangeEventHandler(object sender, tablesectionRowChangeEvent e);
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public delegate void tablesectionsRowChangeEventHandler(object sender, tablesectionsRowChangeEvent e);
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void usersRowChangeEventHandler(object sender, usersRowChangeEvent e);
         
         /// <summary>
@@ -452,7 +452,7 @@ namespace SeatingManager {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class assigncustomerDataTable : global::System.Data.TypedTableBase<assigncustomerRow> {
+        public partial class assigncustomersDataTable : global::System.Data.TypedTableBase<assigncustomersRow> {
             
             private global::System.Data.DataColumn columntableAssignID;
             
@@ -465,17 +465,17 @@ namespace SeatingManager {
             private global::System.Data.DataColumn columnisAssigned;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerDataTable() {
-                this.TableName = "assigncustomer";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersDataTable() {
+                this.TableName = "assigncustomers";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal assigncustomerDataTable(global::System.Data.DataTable table) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal assigncustomersDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -491,14 +491,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected assigncustomerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected assigncustomersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableAssignIDColumn {
                 get {
                     return this.columntableAssignID;
@@ -506,7 +506,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableIDColumn {
                 get {
                     return this.columntableID;
@@ -514,7 +514,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn customerIDColumn {
                 get {
                     return this.columncustomerID;
@@ -522,7 +522,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn assignTimeColumn {
                 get {
                     return this.columnassignTime;
@@ -530,7 +530,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn isAssignedColumn {
                 get {
                     return this.columnisAssigned;
@@ -538,7 +538,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -547,69 +547,69 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerRow this[int index] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersRow this[int index] {
                 get {
-                    return ((assigncustomerRow)(this.Rows[index]));
+                    return ((assigncustomersRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event assigncustomerRowChangeEventHandler assigncustomerRowChanging;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event assigncustomersRowChangeEventHandler assigncustomersRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event assigncustomerRowChangeEventHandler assigncustomerRowChanged;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event assigncustomersRowChangeEventHandler assigncustomersRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event assigncustomerRowChangeEventHandler assigncustomerRowDeleting;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event assigncustomersRowChangeEventHandler assigncustomersRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event assigncustomerRowChangeEventHandler assigncustomerRowDeleted;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event assigncustomersRowChangeEventHandler assigncustomersRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddassigncustomerRow(assigncustomerRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddassigncustomersRow(assigncustomersRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerRow AddassigncustomerRow(int tableID, int customerID, System.DateTime assignTime, byte isAssigned) {
-                assigncustomerRow rowassigncustomerRow = ((assigncustomerRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersRow AddassigncustomersRow(int tableID, int customerID, System.DateTime assignTime, byte isAssigned) {
+                assigncustomersRow rowassigncustomersRow = ((assigncustomersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         tableID,
                         customerID,
                         assignTime,
                         isAssigned};
-                rowassigncustomerRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowassigncustomerRow);
-                return rowassigncustomerRow;
+                rowassigncustomersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowassigncustomersRow);
+                return rowassigncustomersRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerRow FindBytableAssignID(int tableAssignID) {
-                return ((assigncustomerRow)(this.Rows.Find(new object[] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersRow FindBytableAssignID(int tableAssignID) {
+                return ((assigncustomersRow)(this.Rows.Find(new object[] {
                             tableAssignID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                assigncustomerDataTable cln = ((assigncustomerDataTable)(base.Clone()));
+                assigncustomersDataTable cln = ((assigncustomersDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new assigncustomerDataTable();
+                return new assigncustomersDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columntableAssignID = base.Columns["tableAssignID"];
                 this.columntableID = base.Columns["tableID"];
@@ -619,7 +619,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columntableAssignID = new global::System.Data.DataColumn("tableAssignID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntableAssignID);
@@ -646,67 +646,67 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerRow NewassigncustomerRow() {
-                return ((assigncustomerRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersRow NewassigncustomersRow() {
+                return ((assigncustomersRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new assigncustomerRow(builder);
+                return new assigncustomersRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(assigncustomerRow);
+                return typeof(assigncustomersRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.assigncustomerRowChanged != null)) {
-                    this.assigncustomerRowChanged(this, new assigncustomerRowChangeEvent(((assigncustomerRow)(e.Row)), e.Action));
+                if ((this.assigncustomersRowChanged != null)) {
+                    this.assigncustomersRowChanged(this, new assigncustomersRowChangeEvent(((assigncustomersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.assigncustomerRowChanging != null)) {
-                    this.assigncustomerRowChanging(this, new assigncustomerRowChangeEvent(((assigncustomerRow)(e.Row)), e.Action));
+                if ((this.assigncustomersRowChanging != null)) {
+                    this.assigncustomersRowChanging(this, new assigncustomersRowChangeEvent(((assigncustomersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.assigncustomerRowDeleted != null)) {
-                    this.assigncustomerRowDeleted(this, new assigncustomerRowChangeEvent(((assigncustomerRow)(e.Row)), e.Action));
+                if ((this.assigncustomersRowDeleted != null)) {
+                    this.assigncustomersRowDeleted(this, new assigncustomersRowChangeEvent(((assigncustomersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.assigncustomerRowDeleting != null)) {
-                    this.assigncustomerRowDeleting(this, new assigncustomerRowChangeEvent(((assigncustomerRow)(e.Row)), e.Action));
+                if ((this.assigncustomersRowDeleting != null)) {
+                    this.assigncustomersRowDeleting(this, new assigncustomersRowChangeEvent(((assigncustomersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemoveassigncustomerRow(assigncustomerRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveassigncustomersRow(assigncustomersRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -728,7 +728,7 @@ namespace SeatingManager {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "assigncustomerDataTable";
+                attribute2.FixedValue = "assigncustomersDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -774,7 +774,7 @@ namespace SeatingManager {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class customerDataTable : global::System.Data.TypedTableBase<customerRow> {
+        public partial class customersDataTable : global::System.Data.TypedTableBase<customersRow> {
             
             private global::System.Data.DataColumn columncustomerID;
             
@@ -789,17 +789,17 @@ namespace SeatingManager {
             private global::System.Data.DataColumn columntimeMade;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerDataTable() {
-                this.TableName = "customer";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersDataTable() {
+                this.TableName = "customers";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal customerDataTable(global::System.Data.DataTable table) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal customersDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -815,14 +815,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected customerDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected customersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn customerIDColumn {
                 get {
                     return this.columncustomerID;
@@ -830,7 +830,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn customerNameColumn {
                 get {
                     return this.columncustomerName;
@@ -838,7 +838,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn waitColumn {
                 get {
                     return this.columnwait;
@@ -846,7 +846,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn reservationColumn {
                 get {
                     return this.columnreservation;
@@ -854,7 +854,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn timeInColumn {
                 get {
                     return this.columntimeIn;
@@ -862,7 +862,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn timeMadeColumn {
                 get {
                     return this.columntimeMade;
@@ -870,7 +870,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -879,35 +879,35 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRow this[int index] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersRow this[int index] {
                 get {
-                    return ((customerRow)(this.Rows[index]));
+                    return ((customersRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event customerRowChangeEventHandler customerRowChanging;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event customersRowChangeEventHandler customersRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event customerRowChangeEventHandler customerRowChanged;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event customersRowChangeEventHandler customersRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event customerRowChangeEventHandler customerRowDeleting;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event customersRowChangeEventHandler customersRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event customerRowChangeEventHandler customerRowDeleted;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event customersRowChangeEventHandler customersRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddcustomerRow(customerRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddcustomersRow(customersRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRow AddcustomerRow(string customerName, byte wait, byte reservation, System.DateTime timeIn, System.DateTime timeMade) {
-                customerRow rowcustomerRow = ((customerRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersRow AddcustomersRow(string customerName, byte wait, byte reservation, System.DateTime timeIn, System.DateTime timeMade) {
+                customersRow rowcustomersRow = ((customersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         customerName,
@@ -915,34 +915,34 @@ namespace SeatingManager {
                         reservation,
                         timeIn,
                         timeMade};
-                rowcustomerRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowcustomerRow);
-                return rowcustomerRow;
+                rowcustomersRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowcustomersRow);
+                return rowcustomersRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRow FindBycustomerID(int customerID) {
-                return ((customerRow)(this.Rows.Find(new object[] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersRow FindBycustomerID(int customerID) {
+                return ((customersRow)(this.Rows.Find(new object[] {
                             customerID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                customerDataTable cln = ((customerDataTable)(base.Clone()));
+                customersDataTable cln = ((customersDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new customerDataTable();
+                return new customersDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columncustomerID = base.Columns["customerID"];
                 this.columncustomerName = base.Columns["customerName"];
@@ -953,7 +953,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columncustomerID = new global::System.Data.DataColumn("customerID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncustomerID);
@@ -984,67 +984,67 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRow NewcustomerRow() {
-                return ((customerRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersRow NewcustomersRow() {
+                return ((customersRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new customerRow(builder);
+                return new customersRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(customerRow);
+                return typeof(customersRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.customerRowChanged != null)) {
-                    this.customerRowChanged(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
+                if ((this.customersRowChanged != null)) {
+                    this.customersRowChanged(this, new customersRowChangeEvent(((customersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.customerRowChanging != null)) {
-                    this.customerRowChanging(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
+                if ((this.customersRowChanging != null)) {
+                    this.customersRowChanging(this, new customersRowChangeEvent(((customersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.customerRowDeleted != null)) {
-                    this.customerRowDeleted(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
+                if ((this.customersRowDeleted != null)) {
+                    this.customersRowDeleted(this, new customersRowChangeEvent(((customersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.customerRowDeleting != null)) {
-                    this.customerRowDeleting(this, new customerRowChangeEvent(((customerRow)(e.Row)), e.Action));
+                if ((this.customersRowDeleting != null)) {
+                    this.customersRowDeleting(this, new customersRowChangeEvent(((customersRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovecustomerRow(customerRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovecustomersRow(customersRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1066,7 +1066,7 @@ namespace SeatingManager {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "customerDataTable";
+                attribute2.FixedValue = "customersDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1112,7 +1112,7 @@ namespace SeatingManager {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tablemapDataTable : global::System.Data.TypedTableBase<tablemapRow> {
+        public partial class tablemapsDataTable : global::System.Data.TypedTableBase<tablemapsRow> {
             
             private global::System.Data.DataColumn columntableID;
             
@@ -1129,17 +1129,17 @@ namespace SeatingManager {
             private global::System.Data.DataColumn columntableType;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapDataTable() {
-                this.TableName = "tablemap";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsDataTable() {
+                this.TableName = "tablemaps";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tablemapDataTable(global::System.Data.DataTable table) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tablemapsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1155,14 +1155,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected tablemapDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected tablemapsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableIDColumn {
                 get {
                     return this.columntableID;
@@ -1170,7 +1170,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableXColumn {
                 get {
                     return this.columntableX;
@@ -1178,7 +1178,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableYColumn {
                 get {
                     return this.columntableY;
@@ -1186,7 +1186,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn numberOfSeatsColumn {
                 get {
                     return this.columnnumberOfSeats;
@@ -1194,7 +1194,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn visibleColumn {
                 get {
                     return this.columnvisible;
@@ -1202,7 +1202,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn sectionIDColumn {
                 get {
                     return this.columnsectionID;
@@ -1210,7 +1210,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableTypeColumn {
                 get {
                     return this.columntableType;
@@ -1218,7 +1218,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1227,35 +1227,35 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapRow this[int index] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsRow this[int index] {
                 get {
-                    return ((tablemapRow)(this.Rows[index]));
+                    return ((tablemapsRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemapRowChangeEventHandler tablemapRowChanging;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemapsRowChangeEventHandler tablemapsRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemapRowChangeEventHandler tablemapRowChanged;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemapsRowChangeEventHandler tablemapsRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemapRowChangeEventHandler tablemapRowDeleting;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemapsRowChangeEventHandler tablemapsRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemapRowChangeEventHandler tablemapRowDeleted;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemapsRowChangeEventHandler tablemapsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddtablemapRow(tablemapRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddtablemapsRow(tablemapsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapRow AddtablemapRow(int tableX, int tableY, int numberOfSeats, byte visible, int sectionID, int tableType) {
-                tablemapRow rowtablemapRow = ((tablemapRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsRow AddtablemapsRow(int tableX, int tableY, int numberOfSeats, byte visible, int sectionID, int tableType) {
+                tablemapsRow rowtablemapsRow = ((tablemapsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         tableX,
@@ -1264,34 +1264,34 @@ namespace SeatingManager {
                         visible,
                         sectionID,
                         tableType};
-                rowtablemapRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtablemapRow);
-                return rowtablemapRow;
+                rowtablemapsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtablemapsRow);
+                return rowtablemapsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapRow FindBytableID(int tableID) {
-                return ((tablemapRow)(this.Rows.Find(new object[] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsRow FindBytableID(int tableID) {
+                return ((tablemapsRow)(this.Rows.Find(new object[] {
                             tableID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tablemapDataTable cln = ((tablemapDataTable)(base.Clone()));
+                tablemapsDataTable cln = ((tablemapsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tablemapDataTable();
+                return new tablemapsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columntableID = base.Columns["tableID"];
                 this.columntableX = base.Columns["tableX"];
@@ -1303,7 +1303,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columntableID = new global::System.Data.DataColumn("tableID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntableID);
@@ -1334,67 +1334,67 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapRow NewtablemapRow() {
-                return ((tablemapRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsRow NewtablemapsRow() {
+                return ((tablemapsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tablemapRow(builder);
+                return new tablemapsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tablemapRow);
+                return typeof(tablemapsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tablemapRowChanged != null)) {
-                    this.tablemapRowChanged(this, new tablemapRowChangeEvent(((tablemapRow)(e.Row)), e.Action));
+                if ((this.tablemapsRowChanged != null)) {
+                    this.tablemapsRowChanged(this, new tablemapsRowChangeEvent(((tablemapsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tablemapRowChanging != null)) {
-                    this.tablemapRowChanging(this, new tablemapRowChangeEvent(((tablemapRow)(e.Row)), e.Action));
+                if ((this.tablemapsRowChanging != null)) {
+                    this.tablemapsRowChanging(this, new tablemapsRowChangeEvent(((tablemapsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tablemapRowDeleted != null)) {
-                    this.tablemapRowDeleted(this, new tablemapRowChangeEvent(((tablemapRow)(e.Row)), e.Action));
+                if ((this.tablemapsRowDeleted != null)) {
+                    this.tablemapsRowDeleted(this, new tablemapsRowChangeEvent(((tablemapsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tablemapRowDeleting != null)) {
-                    this.tablemapRowDeleting(this, new tablemapRowChangeEvent(((tablemapRow)(e.Row)), e.Action));
+                if ((this.tablemapsRowDeleting != null)) {
+                    this.tablemapsRowDeleting(this, new tablemapsRowChangeEvent(((tablemapsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovetablemapRow(tablemapRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovetablemapsRow(tablemapsRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1416,7 +1416,7 @@ namespace SeatingManager {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tablemapDataTable";
+                attribute2.FixedValue = "tablemapsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1462,7 +1462,7 @@ namespace SeatingManager {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tablemergeDataTable : global::System.Data.TypedTableBase<tablemergeRow> {
+        public partial class tablemergesDataTable : global::System.Data.TypedTableBase<tablemergesRow> {
             
             private global::System.Data.DataColumn columntableMergeID;
             
@@ -1479,17 +1479,17 @@ namespace SeatingManager {
             private global::System.Data.DataColumn columnisMerged;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeDataTable() {
-                this.TableName = "tablemerge";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesDataTable() {
+                this.TableName = "tablemerges";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tablemergeDataTable(global::System.Data.DataTable table) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tablemergesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1505,14 +1505,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected tablemergeDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected tablemergesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableMergeIDColumn {
                 get {
                     return this.columntableMergeID;
@@ -1520,7 +1520,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableID1Column {
                 get {
                     return this.columntableID1;
@@ -1528,7 +1528,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableID2Column {
                 get {
                     return this.columntableID2;
@@ -1536,7 +1536,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableID3Column {
                 get {
                     return this.columntableID3;
@@ -1544,7 +1544,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableID4Column {
                 get {
                     return this.columntableID4;
@@ -1552,7 +1552,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn visibleColumn {
                 get {
                     return this.columnvisible;
@@ -1560,7 +1560,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn isMergedColumn {
                 get {
                     return this.columnisMerged;
@@ -1568,7 +1568,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1577,35 +1577,35 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeRow this[int index] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesRow this[int index] {
                 get {
-                    return ((tablemergeRow)(this.Rows[index]));
+                    return ((tablemergesRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemergeRowChangeEventHandler tablemergeRowChanging;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemergesRowChangeEventHandler tablemergesRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemergeRowChangeEventHandler tablemergeRowChanged;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemergesRowChangeEventHandler tablemergesRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemergeRowChangeEventHandler tablemergeRowDeleting;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemergesRowChangeEventHandler tablemergesRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablemergeRowChangeEventHandler tablemergeRowDeleted;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablemergesRowChangeEventHandler tablemergesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddtablemergeRow(tablemergeRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddtablemergesRow(tablemergesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeRow AddtablemergeRow(int tableID1, int tableID2, int tableID3, int tableID4, byte visible, byte isMerged) {
-                tablemergeRow rowtablemergeRow = ((tablemergeRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesRow AddtablemergesRow(int tableID1, int tableID2, int tableID3, int tableID4, byte visible, byte isMerged) {
+                tablemergesRow rowtablemergesRow = ((tablemergesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         tableID1,
@@ -1614,34 +1614,34 @@ namespace SeatingManager {
                         tableID4,
                         visible,
                         isMerged};
-                rowtablemergeRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtablemergeRow);
-                return rowtablemergeRow;
+                rowtablemergesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtablemergesRow);
+                return rowtablemergesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeRow FindBytableMergeID(int tableMergeID) {
-                return ((tablemergeRow)(this.Rows.Find(new object[] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesRow FindBytableMergeID(int tableMergeID) {
+                return ((tablemergesRow)(this.Rows.Find(new object[] {
                             tableMergeID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tablemergeDataTable cln = ((tablemergeDataTable)(base.Clone()));
+                tablemergesDataTable cln = ((tablemergesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tablemergeDataTable();
+                return new tablemergesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columntableMergeID = base.Columns["tableMergeID"];
                 this.columntableID1 = base.Columns["tableID1"];
@@ -1653,7 +1653,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columntableMergeID = new global::System.Data.DataColumn("tableMergeID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntableMergeID);
@@ -1684,67 +1684,67 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeRow NewtablemergeRow() {
-                return ((tablemergeRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesRow NewtablemergesRow() {
+                return ((tablemergesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tablemergeRow(builder);
+                return new tablemergesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tablemergeRow);
+                return typeof(tablemergesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tablemergeRowChanged != null)) {
-                    this.tablemergeRowChanged(this, new tablemergeRowChangeEvent(((tablemergeRow)(e.Row)), e.Action));
+                if ((this.tablemergesRowChanged != null)) {
+                    this.tablemergesRowChanged(this, new tablemergesRowChangeEvent(((tablemergesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tablemergeRowChanging != null)) {
-                    this.tablemergeRowChanging(this, new tablemergeRowChangeEvent(((tablemergeRow)(e.Row)), e.Action));
+                if ((this.tablemergesRowChanging != null)) {
+                    this.tablemergesRowChanging(this, new tablemergesRowChangeEvent(((tablemergesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tablemergeRowDeleted != null)) {
-                    this.tablemergeRowDeleted(this, new tablemergeRowChangeEvent(((tablemergeRow)(e.Row)), e.Action));
+                if ((this.tablemergesRowDeleted != null)) {
+                    this.tablemergesRowDeleted(this, new tablemergesRowChangeEvent(((tablemergesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tablemergeRowDeleting != null)) {
-                    this.tablemergeRowDeleting(this, new tablemergeRowChangeEvent(((tablemergeRow)(e.Row)), e.Action));
+                if ((this.tablemergesRowDeleting != null)) {
+                    this.tablemergesRowDeleting(this, new tablemergesRowChangeEvent(((tablemergesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovetablemergeRow(tablemergeRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovetablemergesRow(tablemergesRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1766,7 +1766,7 @@ namespace SeatingManager {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tablemergeDataTable";
+                attribute2.FixedValue = "tablemergesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1812,24 +1812,24 @@ namespace SeatingManager {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tablesectionDataTable : global::System.Data.TypedTableBase<tablesectionRow> {
+        public partial class tablesectionsDataTable : global::System.Data.TypedTableBase<tablesectionsRow> {
             
             private global::System.Data.DataColumn columntableSectionID;
             
             private global::System.Data.DataColumn columnsectionColor;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionDataTable() {
-                this.TableName = "tablesection";
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsDataTable() {
+                this.TableName = "tablesections";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tablesectionDataTable(global::System.Data.DataTable table) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tablesectionsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1845,14 +1845,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected tablesectionDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected tablesectionsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn tableSectionIDColumn {
                 get {
                     return this.columntableSectionID;
@@ -1860,7 +1860,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn sectionColorColumn {
                 get {
                     return this.columnsectionColor;
@@ -1868,7 +1868,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1877,73 +1877,73 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionRow this[int index] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsRow this[int index] {
                 get {
-                    return ((tablesectionRow)(this.Rows[index]));
+                    return ((tablesectionsRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablesectionRowChangeEventHandler tablesectionRowChanging;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablesectionsRowChangeEventHandler tablesectionsRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablesectionRowChangeEventHandler tablesectionRowChanged;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablesectionsRowChangeEventHandler tablesectionsRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablesectionRowChangeEventHandler tablesectionRowDeleting;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablesectionsRowChangeEventHandler tablesectionsRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event tablesectionRowChangeEventHandler tablesectionRowDeleted;
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event tablesectionsRowChangeEventHandler tablesectionsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddtablesectionRow(tablesectionRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddtablesectionsRow(tablesectionsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionRow AddtablesectionRow(string sectionColor) {
-                tablesectionRow rowtablesectionRow = ((tablesectionRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsRow AddtablesectionsRow(string sectionColor) {
+                tablesectionsRow rowtablesectionsRow = ((tablesectionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         sectionColor};
-                rowtablesectionRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtablesectionRow);
-                return rowtablesectionRow;
+                rowtablesectionsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowtablesectionsRow);
+                return rowtablesectionsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionRow FindBytableSectionID(int tableSectionID) {
-                return ((tablesectionRow)(this.Rows.Find(new object[] {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsRow FindBytableSectionID(int tableSectionID) {
+                return ((tablesectionsRow)(this.Rows.Find(new object[] {
                             tableSectionID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tablesectionDataTable cln = ((tablesectionDataTable)(base.Clone()));
+                tablesectionsDataTable cln = ((tablesectionsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tablesectionDataTable();
+                return new tablesectionsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columntableSectionID = base.Columns["tableSectionID"];
                 this.columnsectionColor = base.Columns["sectionColor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columntableSectionID = new global::System.Data.DataColumn("tableSectionID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntableSectionID);
@@ -1962,67 +1962,67 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionRow NewtablesectionRow() {
-                return ((tablesectionRow)(this.NewRow()));
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsRow NewtablesectionsRow() {
+                return ((tablesectionsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tablesectionRow(builder);
+                return new tablesectionsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tablesectionRow);
+                return typeof(tablesectionsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tablesectionRowChanged != null)) {
-                    this.tablesectionRowChanged(this, new tablesectionRowChangeEvent(((tablesectionRow)(e.Row)), e.Action));
+                if ((this.tablesectionsRowChanged != null)) {
+                    this.tablesectionsRowChanged(this, new tablesectionsRowChangeEvent(((tablesectionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tablesectionRowChanging != null)) {
-                    this.tablesectionRowChanging(this, new tablesectionRowChangeEvent(((tablesectionRow)(e.Row)), e.Action));
+                if ((this.tablesectionsRowChanging != null)) {
+                    this.tablesectionsRowChanging(this, new tablesectionsRowChangeEvent(((tablesectionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tablesectionRowDeleted != null)) {
-                    this.tablesectionRowDeleted(this, new tablesectionRowChangeEvent(((tablesectionRow)(e.Row)), e.Action));
+                if ((this.tablesectionsRowDeleted != null)) {
+                    this.tablesectionsRowDeleted(this, new tablesectionsRowChangeEvent(((tablesectionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tablesectionRowDeleting != null)) {
-                    this.tablesectionRowDeleting(this, new tablesectionRowChangeEvent(((tablesectionRow)(e.Row)), e.Action));
+                if ((this.tablesectionsRowDeleting != null)) {
+                    this.tablesectionsRowDeleting(this, new tablesectionsRowChangeEvent(((tablesectionsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovetablesectionRow(tablesectionRow row) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovetablesectionsRow(tablesectionsRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -2044,7 +2044,7 @@ namespace SeatingManager {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tablesectionDataTable";
+                attribute2.FixedValue = "tablesectionsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2115,7 +2115,7 @@ namespace SeatingManager {
             private global::System.Data.DataColumn columndateHired;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersDataTable() {
                 this.TableName = "users";
                 this.BeginInit();
@@ -2124,7 +2124,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal usersDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -2141,14 +2141,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected usersDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn userIDColumn {
                 get {
                     return this.columnuserID;
@@ -2156,7 +2156,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn firstNameColumn {
                 get {
                     return this.columnfirstName;
@@ -2164,7 +2164,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn lastNameColumn {
                 get {
                     return this.columnlastName;
@@ -2172,7 +2172,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn phoneColumn {
                 get {
                     return this.columnphone;
@@ -2180,7 +2180,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn roleColumn {
                 get {
                     return this.columnrole;
@@ -2188,7 +2188,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn isActiveColumn {
                 get {
                     return this.columnisActive;
@@ -2196,7 +2196,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn isOnDutyColumn {
                 get {
                     return this.columnisOnDuty;
@@ -2204,7 +2204,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn sectionIDColumn {
                 get {
                     return this.columnsectionID;
@@ -2212,7 +2212,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn passwordColumn {
                 get {
                     return this.columnpassword;
@@ -2220,7 +2220,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn titleColumn {
                 get {
                     return this.columntitle;
@@ -2228,7 +2228,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn dateHiredColumn {
                 get {
                     return this.columndateHired;
@@ -2236,7 +2236,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2245,33 +2245,33 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersRow this[int index] {
                 get {
                     return ((usersRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event usersRowChangeEventHandler usersRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event usersRowChangeEventHandler usersRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event usersRowChangeEventHandler usersRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public event usersRowChangeEventHandler usersRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void AddusersRow(usersRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersRow AddusersRow(string firstName, string lastName, string phone, int role, byte isActive, byte isOnDuty, int sectionID, string password, string title, System.DateTime dateHired) {
                 usersRow rowusersRow = ((usersRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
@@ -2292,14 +2292,14 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersRow FindByuserID(int userID) {
                 return ((usersRow)(this.Rows.Find(new object[] {
                             userID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 usersDataTable cln = ((usersDataTable)(base.Clone()));
                 cln.InitVars();
@@ -2307,13 +2307,13 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new usersDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
                 this.columnuserID = base.Columns["userID"];
                 this.columnfirstName = base.Columns["firstName"];
@@ -2329,7 +2329,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
                 this.columnuserID = new global::System.Data.DataColumn("userID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnuserID);
@@ -2369,7 +2369,6 @@ namespace SeatingManager {
                 this.columnrole.AllowDBNull = false;
                 this.columnisActive.AllowDBNull = false;
                 this.columnisOnDuty.AllowDBNull = false;
-                this.columnsectionID.AllowDBNull = false;
                 this.columnpassword.AllowDBNull = false;
                 this.columnpassword.MaxLength = 45;
                 this.columntitle.AllowDBNull = false;
@@ -2378,25 +2377,25 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersRow NewusersRow() {
                 return ((usersRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new usersRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(usersRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.usersRowChanged != null)) {
@@ -2405,7 +2404,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.usersRowChanging != null)) {
@@ -2414,7 +2413,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.usersRowDeleted != null)) {
@@ -2423,7 +2422,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.usersRowDeleting != null)) {
@@ -2432,13 +2431,13 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void RemoveusersRow(usersRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -2504,69 +2503,69 @@ namespace SeatingManager {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class assigncustomerRow : global::System.Data.DataRow {
+        public partial class assigncustomersRow : global::System.Data.DataRow {
             
-            private assigncustomerDataTable tableassigncustomer;
+            private assigncustomersDataTable tableassigncustomers;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal assigncustomerRow(global::System.Data.DataRowBuilder rb) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal assigncustomersRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableassigncustomer = ((assigncustomerDataTable)(this.Table));
+                this.tableassigncustomers = ((assigncustomersDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableAssignID {
                 get {
-                    return ((int)(this[this.tableassigncustomer.tableAssignIDColumn]));
+                    return ((int)(this[this.tableassigncustomers.tableAssignIDColumn]));
                 }
                 set {
-                    this[this.tableassigncustomer.tableAssignIDColumn] = value;
+                    this[this.tableassigncustomers.tableAssignIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableID {
                 get {
-                    return ((int)(this[this.tableassigncustomer.tableIDColumn]));
+                    return ((int)(this[this.tableassigncustomers.tableIDColumn]));
                 }
                 set {
-                    this[this.tableassigncustomer.tableIDColumn] = value;
+                    this[this.tableassigncustomers.tableIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int customerID {
                 get {
-                    return ((int)(this[this.tableassigncustomer.customerIDColumn]));
+                    return ((int)(this[this.tableassigncustomers.customerIDColumn]));
                 }
                 set {
-                    this[this.tableassigncustomer.customerIDColumn] = value;
+                    this[this.tableassigncustomers.customerIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime assignTime {
                 get {
-                    return ((global::System.DateTime)(this[this.tableassigncustomer.assignTimeColumn]));
+                    return ((global::System.DateTime)(this[this.tableassigncustomers.assignTimeColumn]));
                 }
                 set {
-                    this[this.tableassigncustomer.assignTimeColumn] = value;
+                    this[this.tableassigncustomers.assignTimeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte isAssigned {
                 get {
-                    return ((byte)(this[this.tableassigncustomer.isAssignedColumn]));
+                    return ((byte)(this[this.tableassigncustomers.isAssignedColumn]));
                 }
                 set {
-                    this[this.tableassigncustomer.isAssignedColumn] = value;
+                    this[this.tableassigncustomers.isAssignedColumn] = value;
                 }
             }
         }
@@ -2574,80 +2573,80 @@ namespace SeatingManager {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class customerRow : global::System.Data.DataRow {
+        public partial class customersRow : global::System.Data.DataRow {
             
-            private customerDataTable tablecustomer;
+            private customersDataTable tablecustomers;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal customerRow(global::System.Data.DataRowBuilder rb) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal customersRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablecustomer = ((customerDataTable)(this.Table));
+                this.tablecustomers = ((customersDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int customerID {
                 get {
-                    return ((int)(this[this.tablecustomer.customerIDColumn]));
+                    return ((int)(this[this.tablecustomers.customerIDColumn]));
                 }
                 set {
-                    this[this.tablecustomer.customerIDColumn] = value;
+                    this[this.tablecustomers.customerIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string customerName {
                 get {
-                    return ((string)(this[this.tablecustomer.customerNameColumn]));
+                    return ((string)(this[this.tablecustomers.customerNameColumn]));
                 }
                 set {
-                    this[this.tablecustomer.customerNameColumn] = value;
+                    this[this.tablecustomers.customerNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte wait {
                 get {
-                    return ((byte)(this[this.tablecustomer.waitColumn]));
+                    return ((byte)(this[this.tablecustomers.waitColumn]));
                 }
                 set {
-                    this[this.tablecustomer.waitColumn] = value;
+                    this[this.tablecustomers.waitColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte reservation {
                 get {
-                    return ((byte)(this[this.tablecustomer.reservationColumn]));
+                    return ((byte)(this[this.tablecustomers.reservationColumn]));
                 }
                 set {
-                    this[this.tablecustomer.reservationColumn] = value;
+                    this[this.tablecustomers.reservationColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime timeIn {
                 get {
-                    return ((global::System.DateTime)(this[this.tablecustomer.timeInColumn]));
+                    return ((global::System.DateTime)(this[this.tablecustomers.timeInColumn]));
                 }
                 set {
-                    this[this.tablecustomer.timeInColumn] = value;
+                    this[this.tablecustomers.timeInColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime timeMade {
                 get {
-                    return ((global::System.DateTime)(this[this.tablecustomer.timeMadeColumn]));
+                    return ((global::System.DateTime)(this[this.tablecustomers.timeMadeColumn]));
                 }
                 set {
-                    this[this.tablecustomer.timeMadeColumn] = value;
+                    this[this.tablecustomers.timeMadeColumn] = value;
                 }
             }
         }
@@ -2655,288 +2654,288 @@ namespace SeatingManager {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tablemapRow : global::System.Data.DataRow {
+        public partial class tablemapsRow : global::System.Data.DataRow {
             
-            private tablemapDataTable tabletablemap;
+            private tablemapsDataTable tabletablemaps;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tablemapRow(global::System.Data.DataRowBuilder rb) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tablemapsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletablemap = ((tablemapDataTable)(this.Table));
+                this.tabletablemaps = ((tablemapsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableID {
                 get {
-                    return ((int)(this[this.tabletablemap.tableIDColumn]));
+                    return ((int)(this[this.tabletablemaps.tableIDColumn]));
                 }
                 set {
-                    this[this.tabletablemap.tableIDColumn] = value;
+                    this[this.tabletablemaps.tableIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableX {
                 get {
                     try {
-                        return ((int)(this[this.tabletablemap.tableXColumn]));
+                        return ((int)(this[this.tabletablemaps.tableXColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tableX\' in table \'tablemap\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tableX\' in table \'tablemaps\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletablemap.tableXColumn] = value;
+                    this[this.tabletablemaps.tableXColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableY {
                 get {
                     try {
-                        return ((int)(this[this.tabletablemap.tableYColumn]));
+                        return ((int)(this[this.tabletablemaps.tableYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tableY\' in table \'tablemap\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tableY\' in table \'tablemaps\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletablemap.tableYColumn] = value;
+                    this[this.tabletablemaps.tableYColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int numberOfSeats {
                 get {
-                    return ((int)(this[this.tabletablemap.numberOfSeatsColumn]));
+                    return ((int)(this[this.tabletablemaps.numberOfSeatsColumn]));
                 }
                 set {
-                    this[this.tabletablemap.numberOfSeatsColumn] = value;
+                    this[this.tabletablemaps.numberOfSeatsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte visible {
                 get {
-                    return ((byte)(this[this.tabletablemap.visibleColumn]));
+                    return ((byte)(this[this.tabletablemaps.visibleColumn]));
                 }
                 set {
-                    this[this.tabletablemap.visibleColumn] = value;
+                    this[this.tabletablemaps.visibleColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int sectionID {
                 get {
-                    return ((int)(this[this.tabletablemap.sectionIDColumn]));
+                    return ((int)(this[this.tabletablemaps.sectionIDColumn]));
                 }
                 set {
-                    this[this.tabletablemap.sectionIDColumn] = value;
+                    this[this.tabletablemaps.sectionIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableType {
                 get {
-                    return ((int)(this[this.tabletablemap.tableTypeColumn]));
+                    return ((int)(this[this.tabletablemaps.tableTypeColumn]));
                 }
                 set {
-                    this[this.tabletablemap.tableTypeColumn] = value;
+                    this[this.tabletablemaps.tableTypeColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IstableXNull() {
-                return this.IsNull(this.tabletablemap.tableXColumn);
+                return this.IsNull(this.tabletablemaps.tableXColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettableXNull() {
-                this[this.tabletablemap.tableXColumn] = global::System.Convert.DBNull;
+                this[this.tabletablemaps.tableXColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IstableYNull() {
-                return this.IsNull(this.tabletablemap.tableYColumn);
+                return this.IsNull(this.tabletablemaps.tableYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettableYNull() {
-                this[this.tabletablemap.tableYColumn] = global::System.Convert.DBNull;
+                this[this.tabletablemaps.tableYColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tablemergeRow : global::System.Data.DataRow {
+        public partial class tablemergesRow : global::System.Data.DataRow {
             
-            private tablemergeDataTable tabletablemerge;
+            private tablemergesDataTable tabletablemerges;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tablemergeRow(global::System.Data.DataRowBuilder rb) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tablemergesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletablemerge = ((tablemergeDataTable)(this.Table));
+                this.tabletablemerges = ((tablemergesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableMergeID {
                 get {
-                    return ((int)(this[this.tabletablemerge.tableMergeIDColumn]));
+                    return ((int)(this[this.tabletablemerges.tableMergeIDColumn]));
                 }
                 set {
-                    this[this.tabletablemerge.tableMergeIDColumn] = value;
+                    this[this.tabletablemerges.tableMergeIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableID1 {
                 get {
-                    return ((int)(this[this.tabletablemerge.tableID1Column]));
+                    return ((int)(this[this.tabletablemerges.tableID1Column]));
                 }
                 set {
-                    this[this.tabletablemerge.tableID1Column] = value;
+                    this[this.tabletablemerges.tableID1Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableID2 {
                 get {
-                    return ((int)(this[this.tabletablemerge.tableID2Column]));
+                    return ((int)(this[this.tabletablemerges.tableID2Column]));
                 }
                 set {
-                    this[this.tabletablemerge.tableID2Column] = value;
+                    this[this.tabletablemerges.tableID2Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableID3 {
                 get {
                     try {
-                        return ((int)(this[this.tabletablemerge.tableID3Column]));
+                        return ((int)(this[this.tabletablemerges.tableID3Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tableID3\' in table \'tablemerge\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tableID3\' in table \'tablemerges\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletablemerge.tableID3Column] = value;
+                    this[this.tabletablemerges.tableID3Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableID4 {
                 get {
                     try {
-                        return ((int)(this[this.tabletablemerge.tableID4Column]));
+                        return ((int)(this[this.tabletablemerges.tableID4Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'tableID4\' in table \'tablemerge\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'tableID4\' in table \'tablemerges\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletablemerge.tableID4Column] = value;
+                    this[this.tabletablemerges.tableID4Column] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte visible {
                 get {
-                    return ((byte)(this[this.tabletablemerge.visibleColumn]));
+                    return ((byte)(this[this.tabletablemerges.visibleColumn]));
                 }
                 set {
-                    this[this.tabletablemerge.visibleColumn] = value;
+                    this[this.tabletablemerges.visibleColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte isMerged {
                 get {
-                    return ((byte)(this[this.tabletablemerge.isMergedColumn]));
+                    return ((byte)(this[this.tabletablemerges.isMergedColumn]));
                 }
                 set {
-                    this[this.tabletablemerge.isMergedColumn] = value;
+                    this[this.tabletablemerges.isMergedColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IstableID3Null() {
-                return this.IsNull(this.tabletablemerge.tableID3Column);
+                return this.IsNull(this.tabletablemerges.tableID3Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettableID3Null() {
-                this[this.tabletablemerge.tableID3Column] = global::System.Convert.DBNull;
+                this[this.tabletablemerges.tableID3Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IstableID4Null() {
-                return this.IsNull(this.tabletablemerge.tableID4Column);
+                return this.IsNull(this.tabletablemerges.tableID4Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SettableID4Null() {
-                this[this.tabletablemerge.tableID4Column] = global::System.Convert.DBNull;
+                this[this.tabletablemerges.tableID4Column] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tablesectionRow : global::System.Data.DataRow {
+        public partial class tablesectionsRow : global::System.Data.DataRow {
             
-            private tablesectionDataTable tabletablesection;
+            private tablesectionsDataTable tabletablesections;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal tablesectionRow(global::System.Data.DataRowBuilder rb) : 
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal tablesectionsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletablesection = ((tablesectionDataTable)(this.Table));
+                this.tabletablesections = ((tablesectionsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int tableSectionID {
                 get {
-                    return ((int)(this[this.tabletablesection.tableSectionIDColumn]));
+                    return ((int)(this[this.tabletablesections.tableSectionIDColumn]));
                 }
                 set {
-                    this[this.tabletablesection.tableSectionIDColumn] = value;
+                    this[this.tabletablesections.tableSectionIDColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string sectionColor {
                 get {
-                    return ((string)(this[this.tabletablesection.sectionColorColumn]));
+                    return ((string)(this[this.tabletablesections.sectionColorColumn]));
                 }
                 set {
-                    this[this.tabletablesection.sectionColorColumn] = value;
+                    this[this.tabletablesections.sectionColorColumn] = value;
                 }
             }
         }
@@ -2949,14 +2948,14 @@ namespace SeatingManager {
             private usersDataTable tableusers;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal usersRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tableusers = ((usersDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int userID {
                 get {
                     return ((int)(this[this.tableusers.userIDColumn]));
@@ -2967,7 +2966,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string firstName {
                 get {
                     return ((string)(this[this.tableusers.firstNameColumn]));
@@ -2978,7 +2977,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string lastName {
                 get {
                     return ((string)(this[this.tableusers.lastNameColumn]));
@@ -2989,7 +2988,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string phone {
                 get {
                     try {
@@ -3005,7 +3004,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int role {
                 get {
                     return ((int)(this[this.tableusers.roleColumn]));
@@ -3016,7 +3015,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte isActive {
                 get {
                     return ((byte)(this[this.tableusers.isActiveColumn]));
@@ -3027,7 +3026,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public byte isOnDuty {
                 get {
                     return ((byte)(this[this.tableusers.isOnDutyColumn]));
@@ -3038,10 +3037,15 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int sectionID {
                 get {
-                    return ((int)(this[this.tableusers.sectionIDColumn]));
+                    try {
+                        return ((int)(this[this.tableusers.sectionIDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'sectionID\' in table \'users\' is DBNull.", e);
+                    }
                 }
                 set {
                     this[this.tableusers.sectionIDColumn] = value;
@@ -3049,7 +3053,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string password {
                 get {
                     return ((string)(this[this.tableusers.passwordColumn]));
@@ -3060,7 +3064,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string title {
                 get {
                     return ((string)(this[this.tableusers.titleColumn]));
@@ -3071,7 +3075,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime dateHired {
                 get {
                     return ((global::System.DateTime)(this[this.tableusers.dateHiredColumn]));
@@ -3082,45 +3086,57 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsphoneNull() {
                 return this.IsNull(this.tableusers.phoneColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetphoneNull() {
                 this[this.tableusers.phoneColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IssectionIDNull() {
+                return this.IsNull(this.tableusers.sectionIDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetsectionIDNull() {
+                this[this.tableusers.sectionIDColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class assigncustomerRowChangeEvent : global::System.EventArgs {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class assigncustomersRowChangeEvent : global::System.EventArgs {
             
-            private assigncustomerRow eventRow;
+            private assigncustomersRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerRowChangeEvent(assigncustomerRow row, global::System.Data.DataRowAction action) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersRowChangeEvent(assigncustomersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public assigncustomerRow Row {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public assigncustomersRow Row {
                 get {
                     return this.eventRow;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -3131,30 +3147,30 @@ namespace SeatingManager {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class customerRowChangeEvent : global::System.EventArgs {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class customersRowChangeEvent : global::System.EventArgs {
             
-            private customerRow eventRow;
+            private customersRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRowChangeEvent(customerRow row, global::System.Data.DataRowAction action) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersRowChangeEvent(customersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public customerRow Row {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public customersRow Row {
                 get {
                     return this.eventRow;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -3165,30 +3181,30 @@ namespace SeatingManager {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tablemapRowChangeEvent : global::System.EventArgs {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class tablemapsRowChangeEvent : global::System.EventArgs {
             
-            private tablemapRow eventRow;
+            private tablemapsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapRowChangeEvent(tablemapRow row, global::System.Data.DataRowAction action) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsRowChangeEvent(tablemapsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemapRow Row {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemapsRow Row {
                 get {
                     return this.eventRow;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -3199,30 +3215,30 @@ namespace SeatingManager {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tablemergeRowChangeEvent : global::System.EventArgs {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class tablemergesRowChangeEvent : global::System.EventArgs {
             
-            private tablemergeRow eventRow;
+            private tablemergesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeRowChangeEvent(tablemergeRow row, global::System.Data.DataRowAction action) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesRowChangeEvent(tablemergesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablemergeRow Row {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablemergesRow Row {
                 get {
                     return this.eventRow;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -3233,30 +3249,30 @@ namespace SeatingManager {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class tablesectionRowChangeEvent : global::System.EventArgs {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public class tablesectionsRowChangeEvent : global::System.EventArgs {
             
-            private tablesectionRow eventRow;
+            private tablesectionsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionRowChangeEvent(tablesectionRow row, global::System.Data.DataRowAction action) {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsRowChangeEvent(tablesectionsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tablesectionRow Row {
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tablesectionsRow Row {
                 get {
                     return this.eventRow;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -3267,7 +3283,7 @@ namespace SeatingManager {
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public class usersRowChangeEvent : global::System.EventArgs {
             
             private usersRow eventRow;
@@ -3275,14 +3291,14 @@ namespace SeatingManager {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersRowChangeEvent(usersRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usersRow Row {
                 get {
                     return this.eventRow;
@@ -3290,7 +3306,7 @@ namespace SeatingManager {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -3311,27 +3327,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class assigncustomerTableAdapter : global::System.ComponentModel.Component {
+    public partial class assigncustomersTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public assigncustomerTableAdapter() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public assigncustomersTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -3341,8 +3357,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -3362,15 +3378,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -3395,8 +3411,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -3406,7 +3422,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -3417,68 +3433,79 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "assigncustomer";
+            tableMapping.DataSetTable = "assigncustomers";
             tableMapping.ColumnMappings.Add("tableAssignID", "tableAssignID");
             tableMapping.ColumnMappings.Add("tableID", "tableID");
             tableMapping.ColumnMappings.Add("customerID", "customerID");
             tableMapping.ColumnMappings.Add("assignTime", "assignTime");
             tableMapping.ColumnMappings.Add("isAssigned", "isAssigned");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [assigncustomer] WHERE (([tableAssignID] = @Original_tableAssignID))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[assigncustomers] WHERE (([tableAssignID] = @Original_tableAssi" +
+                "gnID) AND ([tableID] = @Original_tableID) AND ([customerID] = @Original_customer" +
+                "ID) AND ([assignTime] = @Original_assignTime) AND ([isAssigned] = @Original_isAs" +
+                "signed))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableAssignID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableAssignID", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableAssignID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableAssignID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assignTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isAssigned", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isAssigned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [assigncustomer] ([tableID], [customerID], [assignTime], [isAssigned]" +
-                ") VALUES (@tableID, @customerID, @assignTime, @isAssigned)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[assigncustomers] ([tableID], [customerID], [assignTime], [isAssigned]) VALUES (@tableID, @customerID, @assignTime, @isAssigned);
+SELECT tableAssignID, tableID, customerID, assignTime, isAssigned FROM assigncustomers WHERE (tableAssignID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@assignTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "assignTime", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isAssigned", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isAssigned", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assignTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isAssigned", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [assigncustomer] SET [tableID] = @tableID, [customerID] = @customerID, [as" +
-                "signTime] = @assignTime, [isAssigned] = @isAssigned WHERE (([tableAssignID] = @O" +
-                "riginal_tableAssignID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[assigncustomers] SET [tableID] = @tableID, [customerID] = @customerID, [assignTime] = @assignTime, [isAssigned] = @isAssigned WHERE (([tableAssignID] = @Original_tableAssignID) AND ([tableID] = @Original_tableID) AND ([customerID] = @Original_customerID) AND ([assignTime] = @Original_assignTime) AND ([isAssigned] = @Original_isAssigned));
+SELECT tableAssignID, tableID, customerID, assignTime, isAssigned FROM assigncustomers WHERE (tableAssignID = @tableAssignID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@assignTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "assignTime", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isAssigned", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isAssigned", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableAssignID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableAssignID", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@assignTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignTime", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isAssigned", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isAssigned", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableAssignID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableAssignID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_assignTime", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "assignTime", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isAssigned", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isAssigned", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableAssignID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tableAssignID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionStringMain;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [tableAssignID], [tableID], [customerID], [assignTime], [isAssigned] FROM " +
-                "[assigncustomer]";
+            this._commandCollection[0].CommandText = "SELECT tableAssignID, tableID, customerID, assignTime, isAssigned FROM dbo.assign" +
+                "customers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SeatingManagerDBDataSet.assigncustomerDataTable dataTable) {
+        public virtual int Fill(SeatingManagerDBDataSet.assigncustomersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3488,32 +3515,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SeatingManagerDBDataSet.assigncustomerDataTable GetData() {
+        public virtual SeatingManagerDBDataSet.assigncustomersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SeatingManagerDBDataSet.assigncustomerDataTable dataTable = new SeatingManagerDBDataSet.assigncustomerDataTable();
+            SeatingManagerDBDataSet.assigncustomersDataTable dataTable = new SeatingManagerDBDataSet.assigncustomersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeatingManagerDBDataSet.assigncustomerDataTable dataTable) {
+        public virtual int Update(SeatingManagerDBDataSet.assigncustomersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "assigncustomer");
+            return this.Adapter.Update(dataSet, "assigncustomers");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -3521,18 +3548,22 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tableAssignID) {
+        public virtual int Delete(int Original_tableAssignID, int Original_tableID, int Original_customerID, System.DateTime Original_assignTime, byte Original_isAssigned) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tableAssignID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_tableID));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_customerID));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_assignTime));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((byte)(Original_isAssigned));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3550,7 +3581,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(int tableID, int customerID, System.DateTime assignTime, byte isAssigned) {
@@ -3575,15 +3606,20 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int tableID, int customerID, System.DateTime assignTime, byte isAssigned, int Original_tableAssignID) {
+        public virtual int Update(int tableID, int customerID, System.DateTime assignTime, byte isAssigned, int Original_tableAssignID, int Original_tableID, int Original_customerID, System.DateTime Original_assignTime, byte Original_isAssigned, int tableAssignID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(tableID));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(customerID));
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(assignTime));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((byte)(isAssigned));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_tableAssignID));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_tableID));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_customerID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_assignTime));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(Original_isAssigned));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(tableAssignID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3599,6 +3635,14 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int tableID, int customerID, System.DateTime assignTime, byte isAssigned, int Original_tableAssignID, int Original_tableID, int Original_customerID, System.DateTime Original_assignTime, byte Original_isAssigned) {
+            return this.Update(tableID, customerID, assignTime, isAssigned, Original_tableAssignID, Original_tableID, Original_customerID, Original_assignTime, Original_isAssigned, Original_tableAssignID);
+        }
     }
     
     /// <summary>
@@ -3610,27 +3654,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class customerTableAdapter : global::System.ComponentModel.Component {
+    public partial class customersTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public customerTableAdapter() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public customersTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -3640,8 +3684,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -3661,15 +3705,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -3694,8 +3738,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -3705,7 +3749,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -3716,12 +3760,12 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "customer";
+            tableMapping.DataSetTable = "customers";
             tableMapping.ColumnMappings.Add("customerID", "customerID");
             tableMapping.ColumnMappings.Add("customerName", "customerName");
             tableMapping.ColumnMappings.Add("wait", "wait");
@@ -3729,58 +3773,68 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("timeIn", "timeIn");
             tableMapping.ColumnMappings.Add("timeMade", "timeMade");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [customer] WHERE (([customerID] = @Original_customerID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[customers] WHERE (([customerID] = @Original_customerID) AND ([customerName] = @Original_customerName) AND ([wait] = @Original_wait) AND ([reservation] = @Original_reservation) AND ([timeIn] = @Original_timeIn) AND ([timeMade] = @Original_timeMade))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_wait", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wait", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reservation", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reservation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_timeIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_timeMade", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeMade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [customer] ([customerName], [wait], [reservation], [timeIn], [timeMad" +
-                "e]) VALUES (@customerName, @wait, @reservation, @timeIn, @timeMade)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[customers] ([customerName], [wait], [reservation], [timeIn], [timeMade]) VALUES (@customerName, @wait, @reservation, @timeIn, @timeMade);
+SELECT customerID, customerName, wait, reservation, timeIn, timeMade FROM customers WHERE (customerID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "customerName", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@wait", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "wait", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@reservation", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "reservation", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@timeIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "timeIn", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@timeMade", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "timeMade", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@wait", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wait", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reservation", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reservation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@timeIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@timeMade", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [customer] SET [customerName] = @customerName, [wait] = @wait, [reservatio" +
-                "n] = @reservation, [timeIn] = @timeIn, [timeMade] = @timeMade WHERE (([customerI" +
-                "D] = @Original_customerID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[customers] SET [customerName] = @customerName, [wait] = @wait, [reservation] = @reservation, [timeIn] = @timeIn, [timeMade] = @timeMade WHERE (([customerID] = @Original_customerID) AND ([customerName] = @Original_customerName) AND ([wait] = @Original_wait) AND ([reservation] = @Original_reservation) AND ([timeIn] = @Original_timeIn) AND ([timeMade] = @Original_timeMade));
+SELECT customerID, customerName, wait, reservation, timeIn, timeMade FROM customers WHERE (customerID = @customerID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "customerName", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@wait", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "wait", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@reservation", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "reservation", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@timeIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "timeIn", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@timeMade", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "timeMade", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@wait", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wait", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@reservation", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reservation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@timeIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeIn", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@timeMade", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeMade", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_customerName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "customerName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_wait", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "wait", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_reservation", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "reservation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_timeIn", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeIn", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_timeMade", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "timeMade", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@customerID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "customerID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionStringMain;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [customerID], [customerName], [wait], [reservation], [timeIn], [timeMade] " +
-                "FROM [customer]";
+            this._commandCollection[0].CommandText = "SELECT customerID, customerName, wait, reservation, timeIn, timeMade FROM dbo.cus" +
+                "tomers";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SeatingManagerDBDataSet.customerDataTable dataTable) {
+        public virtual int Fill(SeatingManagerDBDataSet.customersDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3790,32 +3844,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SeatingManagerDBDataSet.customerDataTable GetData() {
+        public virtual SeatingManagerDBDataSet.customersDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SeatingManagerDBDataSet.customerDataTable dataTable = new SeatingManagerDBDataSet.customerDataTable();
+            SeatingManagerDBDataSet.customersDataTable dataTable = new SeatingManagerDBDataSet.customersDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeatingManagerDBDataSet.customerDataTable dataTable) {
+        public virtual int Update(SeatingManagerDBDataSet.customersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "customer");
+            return this.Adapter.Update(dataSet, "customers");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -3823,18 +3877,28 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_customerID) {
+        public virtual int Delete(int Original_customerID, string Original_customerName, byte Original_wait, byte Original_reservation, System.DateTime Original_timeIn, System.DateTime Original_timeMade) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_customerID));
+            if ((Original_customerName == null)) {
+                throw new global::System.ArgumentNullException("Original_customerName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_customerName));
+            }
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(Original_wait));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((byte)(Original_reservation));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_timeIn));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((System.DateTime)(Original_timeMade));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3852,7 +3916,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string customerName, byte wait, byte reservation, System.DateTime timeIn, System.DateTime timeMade) {
@@ -3883,10 +3947,10 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string customerName, byte wait, byte reservation, System.DateTime timeIn, System.DateTime timeMade, int Original_customerID) {
+        public virtual int Update(string customerName, byte wait, byte reservation, System.DateTime timeIn, System.DateTime timeMade, int Original_customerID, string Original_customerName, byte Original_wait, byte Original_reservation, System.DateTime Original_timeIn, System.DateTime Original_timeMade, int customerID) {
             if ((customerName == null)) {
                 throw new global::System.ArgumentNullException("customerName");
             }
@@ -3898,6 +3962,17 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(timeIn));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(timeMade));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_customerID));
+            if ((Original_customerName == null)) {
+                throw new global::System.ArgumentNullException("Original_customerName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_customerName));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((byte)(Original_wait));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(Original_reservation));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(Original_timeIn));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(Original_timeMade));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(customerID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3913,6 +3988,14 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string customerName, byte wait, byte reservation, System.DateTime timeIn, System.DateTime timeMade, int Original_customerID, string Original_customerName, byte Original_wait, byte Original_reservation, System.DateTime Original_timeIn, System.DateTime Original_timeMade) {
+            return this.Update(customerName, wait, reservation, timeIn, timeMade, Original_customerID, Original_customerName, Original_wait, Original_reservation, Original_timeIn, Original_timeMade, Original_customerID);
+        }
     }
     
     /// <summary>
@@ -3924,27 +4007,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tablemapTableAdapter : global::System.ComponentModel.Component {
+    public partial class tablemapsTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public tablemapTableAdapter() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public tablemapsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -3954,8 +4037,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -3975,15 +4058,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -4008,8 +4091,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -4019,7 +4102,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -4030,12 +4113,12 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tablemap";
+            tableMapping.DataSetTable = "tablemaps";
             tableMapping.ColumnMappings.Add("tableID", "tableID");
             tableMapping.ColumnMappings.Add("tableX", "tableX");
             tableMapping.ColumnMappings.Add("tableY", "tableY");
@@ -4044,61 +4127,76 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("sectionID", "sectionID");
             tableMapping.ColumnMappings.Add("tableType", "tableType");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [tablemap] WHERE (([tableID] = @Original_tableID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tablemaps] WHERE (([tableID] = @Original_tableID) AND ((@IsNull_tableX = 1 AND [tableX] IS NULL) OR ([tableX] = @Original_tableX)) AND ((@IsNull_tableY = 1 AND [tableY] IS NULL) OR ([tableY] = @Original_tableY)) AND ([numberOfSeats] = @Original_numberOfSeats) AND ([visible] = @Original_visible) AND ([sectionID] = @Original_sectionID) AND ([tableType] = @Original_tableType))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableX", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableX", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numberOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfSeats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [tablemap] ([tableX], [tableY], [numberOfSeats], [visible], [sectionI" +
-                "D], [tableType]) VALUES (@tableX, @tableY, @numberOfSeats, @visible, @sectionID," +
-                " @tableType)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tablemaps] ([tableX], [tableY], [numberOfSeats], [visible], [sectionID], [tableType]) VALUES (@tableX, @tableY, @numberOfSeats, @visible, @sectionID, @tableType);
+SELECT tableID, tableX, tableY, numberOfSeats, visible, sectionID, tableType FROM tablemaps WHERE (tableID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableX", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableY", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@numberOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "numberOfSeats", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "visible", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableType", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numberOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfSeats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [tablemap] SET [tableX] = @tableX, [tableY] = @tableY, [numberOfSeats] = @" +
-                "numberOfSeats, [visible] = @visible, [sectionID] = @sectionID, [tableType] = @ta" +
-                "bleType WHERE (([tableID] = @Original_tableID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tablemaps] SET [tableX] = @tableX, [tableY] = @tableY, [numberOfSeats] = @numberOfSeats, [visible] = @visible, [sectionID] = @sectionID, [tableType] = @tableType WHERE (([tableID] = @Original_tableID) AND ((@IsNull_tableX = 1 AND [tableX] IS NULL) OR ([tableX] = @Original_tableX)) AND ((@IsNull_tableY = 1 AND [tableY] IS NULL) OR ([tableY] = @Original_tableY)) AND ([numberOfSeats] = @Original_numberOfSeats) AND ([visible] = @Original_visible) AND ([sectionID] = @Original_sectionID) AND ([tableType] = @Original_tableType));
+SELECT tableID, tableX, tableY, numberOfSeats, visible, sectionID, tableType FROM tablemaps WHERE (tableID = @tableID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableX", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableY", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@numberOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "numberOfSeats", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "visible", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableType", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableX", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableY", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numberOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfSeats", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableX", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableX", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableX", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableY", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableY", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableY", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numberOfSeats", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numberOfSeats", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tableID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionStringMain;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [tableID], [tableX], [tableY], [numberOfSeats], [visible], [sectionID], [t" +
-                "ableType] FROM [tablemap]";
+            this._commandCollection[0].CommandText = "SELECT tableID, tableX, tableY, numberOfSeats, visible, sectionID, tableType FROM" +
+                " dbo.tablemaps";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SeatingManagerDBDataSet.tablemapDataTable dataTable) {
+        public virtual int Fill(SeatingManagerDBDataSet.tablemapsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4108,32 +4206,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SeatingManagerDBDataSet.tablemapDataTable GetData() {
+        public virtual SeatingManagerDBDataSet.tablemapsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SeatingManagerDBDataSet.tablemapDataTable dataTable = new SeatingManagerDBDataSet.tablemapDataTable();
+            SeatingManagerDBDataSet.tablemapsDataTable dataTable = new SeatingManagerDBDataSet.tablemapsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeatingManagerDBDataSet.tablemapDataTable dataTable) {
+        public virtual int Update(SeatingManagerDBDataSet.tablemapsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tablemap");
+            return this.Adapter.Update(dataSet, "tablemaps");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -4141,18 +4239,38 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tableID) {
+        public virtual int Delete(int Original_tableID, global::System.Nullable<int> Original_tableX, global::System.Nullable<int> Original_tableY, int Original_numberOfSeats, byte Original_visible, int Original_sectionID, int Original_tableType) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tableID));
+            if ((Original_tableX.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_tableX.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            if ((Original_tableY.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_tableY.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_numberOfSeats));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((byte)(Original_visible));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_sectionID));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((int)(Original_tableType));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4170,7 +4288,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(global::System.Nullable<int> tableX, global::System.Nullable<int> tableY, int numberOfSeats, byte visible, int sectionID, int tableType) {
@@ -4207,10 +4325,10 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(global::System.Nullable<int> tableX, global::System.Nullable<int> tableY, int numberOfSeats, byte visible, int sectionID, int tableType, int Original_tableID) {
+        public virtual int Update(global::System.Nullable<int> tableX, global::System.Nullable<int> tableY, int numberOfSeats, byte visible, int sectionID, int tableType, int Original_tableID, global::System.Nullable<int> Original_tableX, global::System.Nullable<int> Original_tableY, int Original_numberOfSeats, byte Original_visible, int Original_sectionID, int Original_tableType, int tableID) {
             if ((tableX.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(tableX.Value));
             }
@@ -4228,6 +4346,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(sectionID));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(tableType));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_tableID));
+            if ((Original_tableX.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_tableX.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            if ((Original_tableY.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_tableY.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_numberOfSeats));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((byte)(Original_visible));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_sectionID));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(Original_tableType));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(tableID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4243,6 +4382,14 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(global::System.Nullable<int> tableX, global::System.Nullable<int> tableY, int numberOfSeats, byte visible, int sectionID, int tableType, int Original_tableID, global::System.Nullable<int> Original_tableX, global::System.Nullable<int> Original_tableY, int Original_numberOfSeats, byte Original_visible, int Original_sectionID, int Original_tableType) {
+            return this.Update(tableX, tableY, numberOfSeats, visible, sectionID, tableType, Original_tableID, Original_tableX, Original_tableY, Original_numberOfSeats, Original_visible, Original_sectionID, Original_tableType, Original_tableID);
+        }
     }
     
     /// <summary>
@@ -4254,27 +4401,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tablemergeTableAdapter : global::System.ComponentModel.Component {
+    public partial class tablemergesTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public tablemergeTableAdapter() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public tablemergesTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -4284,8 +4431,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -4305,15 +4452,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -4338,8 +4485,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -4349,7 +4496,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -4360,12 +4507,12 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tablemerge";
+            tableMapping.DataSetTable = "tablemerges";
             tableMapping.ColumnMappings.Add("tableMergeID", "tableMergeID");
             tableMapping.ColumnMappings.Add("tableID1", "tableID1");
             tableMapping.ColumnMappings.Add("tableID2", "tableID2");
@@ -4374,61 +4521,76 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("visible", "visible");
             tableMapping.ColumnMappings.Add("isMerged", "isMerged");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [tablemerge] WHERE (([tableMergeID] = @Original_tableMergeID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tablemerges] WHERE (([tableMergeID] = @Original_tableMergeID) AND ([tableID1] = @Original_tableID1) AND ([tableID2] = @Original_tableID2) AND ((@IsNull_tableID3 = 1 AND [tableID3] IS NULL) OR ([tableID3] = @Original_tableID3)) AND ((@IsNull_tableID4 = 1 AND [tableID4] IS NULL) OR ([tableID4] = @Original_tableID4)) AND ([visible] = @Original_visible) AND ([isMerged] = @Original_isMerged))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableMergeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableMergeID", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableMergeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableMergeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID4", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isMerged", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isMerged", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [tablemerge] ([tableID1], [tableID2], [tableID3], [tableID4], [visibl" +
-                "e], [isMerged]) VALUES (@tableID1, @tableID2, @tableID3, @tableID4, @visible, @i" +
-                "sMerged)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tablemerges] ([tableID1], [tableID2], [tableID3], [tableID4], [visible], [isMerged]) VALUES (@tableID1, @tableID2, @tableID3, @tableID4, @visible, @isMerged);
+SELECT tableMergeID, tableID1, tableID2, tableID3, tableID4, visible, isMerged FROM tablemerges WHERE (tableMergeID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID1", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID2", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID3", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID4", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "visible", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isMerged", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isMerged", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isMerged", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isMerged", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [tablemerge] SET [tableID1] = @tableID1, [tableID2] = @tableID2, [tableID3" +
-                "] = @tableID3, [tableID4] = @tableID4, [visible] = @visible, [isMerged] = @isMer" +
-                "ged WHERE (([tableMergeID] = @Original_tableMergeID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tablemerges] SET [tableID1] = @tableID1, [tableID2] = @tableID2, [tableID3] = @tableID3, [tableID4] = @tableID4, [visible] = @visible, [isMerged] = @isMerged WHERE (([tableMergeID] = @Original_tableMergeID) AND ([tableID1] = @Original_tableID1) AND ([tableID2] = @Original_tableID2) AND ((@IsNull_tableID3 = 1 AND [tableID3] IS NULL) OR ([tableID3] = @Original_tableID3)) AND ((@IsNull_tableID4 = 1 AND [tableID4] IS NULL) OR ([tableID4] = @Original_tableID4)) AND ([visible] = @Original_visible) AND ([isMerged] = @Original_isMerged));
+SELECT tableMergeID, tableID1, tableID2, tableID3, tableID4, visible, isMerged FROM tablemerges WHERE (tableMergeID = @tableMergeID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID1", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID2", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID3", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableID4", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "visible", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isMerged", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isMerged", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableMergeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableMergeID", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID3", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID4", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isMerged", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isMerged", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableMergeID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableMergeID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID1", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID2", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID3", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID3", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID3", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID4", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableID4", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableID4", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_visible", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "visible", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isMerged", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isMerged", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableMergeID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tableMergeID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionStringMain;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [tableMergeID], [tableID1], [tableID2], [tableID3], [tableID4], [visible]," +
-                " [isMerged] FROM [tablemerge]";
+            this._commandCollection[0].CommandText = "SELECT tableMergeID, tableID1, tableID2, tableID3, tableID4, visible, isMerged FR" +
+                "OM dbo.tablemerges";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SeatingManagerDBDataSet.tablemergeDataTable dataTable) {
+        public virtual int Fill(SeatingManagerDBDataSet.tablemergesDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4438,32 +4600,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SeatingManagerDBDataSet.tablemergeDataTable GetData() {
+        public virtual SeatingManagerDBDataSet.tablemergesDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SeatingManagerDBDataSet.tablemergeDataTable dataTable = new SeatingManagerDBDataSet.tablemergeDataTable();
+            SeatingManagerDBDataSet.tablemergesDataTable dataTable = new SeatingManagerDBDataSet.tablemergesDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeatingManagerDBDataSet.tablemergeDataTable dataTable) {
+        public virtual int Update(SeatingManagerDBDataSet.tablemergesDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tablemerge");
+            return this.Adapter.Update(dataSet, "tablemerges");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -4471,18 +4633,38 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tableMergeID) {
+        public virtual int Delete(int Original_tableMergeID, int Original_tableID1, int Original_tableID2, global::System.Nullable<int> Original_tableID3, global::System.Nullable<int> Original_tableID4, byte Original_visible, byte Original_isMerged) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tableMergeID));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_tableID1));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_tableID2));
+            if ((Original_tableID3.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_tableID3.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_tableID4.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_tableID4.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((byte)(Original_visible));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((byte)(Original_isMerged));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4500,7 +4682,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(int tableID1, int tableID2, global::System.Nullable<int> tableID3, global::System.Nullable<int> tableID4, byte visible, byte isMerged) {
@@ -4537,10 +4719,10 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int tableID1, int tableID2, global::System.Nullable<int> tableID3, global::System.Nullable<int> tableID4, byte visible, byte isMerged, int Original_tableMergeID) {
+        public virtual int Update(int tableID1, int tableID2, global::System.Nullable<int> tableID3, global::System.Nullable<int> tableID4, byte visible, byte isMerged, int Original_tableMergeID, int Original_tableID1, int Original_tableID2, global::System.Nullable<int> Original_tableID3, global::System.Nullable<int> Original_tableID4, byte Original_visible, byte Original_isMerged, int tableMergeID) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(tableID1));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(tableID2));
             if ((tableID3.HasValue == true)) {
@@ -4558,6 +4740,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(visible));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(isMerged));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_tableMergeID));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_tableID1));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_tableID2));
+            if ((Original_tableID3.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_tableID3.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_tableID4.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_tableID4.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((byte)(Original_visible));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((byte)(Original_isMerged));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(tableMergeID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4573,6 +4776,14 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(int tableID1, int tableID2, global::System.Nullable<int> tableID3, global::System.Nullable<int> tableID4, byte visible, byte isMerged, int Original_tableMergeID, int Original_tableID1, int Original_tableID2, global::System.Nullable<int> Original_tableID3, global::System.Nullable<int> Original_tableID4, byte Original_visible, byte Original_isMerged) {
+            return this.Update(tableID1, tableID2, tableID3, tableID4, visible, isMerged, Original_tableMergeID, Original_tableID1, Original_tableID2, Original_tableID3, Original_tableID4, Original_visible, Original_isMerged, Original_tableMergeID);
+        }
     }
     
     /// <summary>
@@ -4584,27 +4795,27 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tablesectionTableAdapter : global::System.ComponentModel.Component {
+    public partial class tablesectionsTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public tablesectionTableAdapter() {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public tablesectionsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -4614,8 +4825,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -4635,15 +4846,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -4668,8 +4879,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -4679,7 +4890,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -4690,56 +4901,62 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tablesection";
+            tableMapping.DataSetTable = "tablesections";
             tableMapping.ColumnMappings.Add("tableSectionID", "tableSectionID");
             tableMapping.ColumnMappings.Add("sectionColor", "sectionColor");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [tablesection] WHERE (([tableSectionID] = @Original_tableSectionID))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[tablesections] WHERE (([tableSectionID] = @Original_tableSecti" +
+                "onID) AND ([sectionColor] = @Original_sectionColor))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableSectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableSectionID", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableSectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableSectionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sectionColor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionColor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [tablesection] ([sectionColor]) VALUES (@sectionColor)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[tablesections] ([sectionColor]) VALUES (@sectionColor);\r\nSELEC" +
+                "T tableSectionID, sectionColor FROM tablesections WHERE (tableSectionID = SCOPE_" +
+                "IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@sectionColor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "sectionColor", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sectionColor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionColor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [tablesection] SET [sectionColor] = @sectionColor WHERE (([tableSectionID]" +
-                " = @Original_tableSectionID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tablesections] SET [sectionColor] = @sectionColor WHERE (([tableSectionID] = @Original_tableSectionID) AND ([sectionColor] = @Original_sectionColor));
+SELECT tableSectionID, sectionColor FROM tablesections WHERE (tableSectionID = @tableSectionID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@sectionColor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "sectionColor", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_tableSectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "tableSectionID", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sectionColor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionColor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tableSectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tableSectionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sectionColor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionColor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tableSectionID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "tableSectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionStringMain;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [tableSectionID], [sectionColor] FROM [tablesection]";
+            this._commandCollection[0].CommandText = "SELECT tableSectionID, sectionColor FROM dbo.tablesections";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SeatingManagerDBDataSet.tablesectionDataTable dataTable) {
+        public virtual int Fill(SeatingManagerDBDataSet.tablesectionsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4749,32 +4966,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SeatingManagerDBDataSet.tablesectionDataTable GetData() {
+        public virtual SeatingManagerDBDataSet.tablesectionsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SeatingManagerDBDataSet.tablesectionDataTable dataTable = new SeatingManagerDBDataSet.tablesectionDataTable();
+            SeatingManagerDBDataSet.tablesectionsDataTable dataTable = new SeatingManagerDBDataSet.tablesectionsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SeatingManagerDBDataSet.tablesectionDataTable dataTable) {
+        public virtual int Update(SeatingManagerDBDataSet.tablesectionsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tablesection");
+            return this.Adapter.Update(dataSet, "tablesections");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -4782,18 +4999,24 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_tableSectionID) {
+        public virtual int Delete(int Original_tableSectionID, string Original_sectionColor) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_tableSectionID));
+            if ((Original_sectionColor == null)) {
+                throw new global::System.ArgumentNullException("Original_sectionColor");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_sectionColor));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4811,7 +5034,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string sectionColor) {
@@ -4838,10 +5061,10 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string sectionColor, int Original_tableSectionID) {
+        public virtual int Update(string sectionColor, int Original_tableSectionID, string Original_sectionColor, int tableSectionID) {
             if ((sectionColor == null)) {
                 throw new global::System.ArgumentNullException("sectionColor");
             }
@@ -4849,6 +5072,13 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(sectionColor));
             }
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_tableSectionID));
+            if ((Original_sectionColor == null)) {
+                throw new global::System.ArgumentNullException("Original_sectionColor");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_sectionColor));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(tableSectionID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4864,6 +5094,14 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string sectionColor, int Original_tableSectionID, string Original_sectionColor) {
+            return this.Update(sectionColor, Original_tableSectionID, Original_sectionColor, Original_tableSectionID);
+        }
     }
     
     /// <summary>
@@ -4877,25 +5115,25 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class usersTableAdapter : global::System.ComponentModel.Component {
         
-        private global::System.Data.SqlServerCe.SqlCeDataAdapter _adapter;
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
-        private global::System.Data.SqlServerCe.SqlCeConnection _connection;
+        private global::System.Data.SqlClient.SqlConnection _connection;
         
-        private global::System.Data.SqlServerCe.SqlCeTransaction _transaction;
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
         
-        private global::System.Data.SqlServerCe.SqlCeCommand[] _commandCollection;
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
         
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public usersTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlServerCe.SqlCeDataAdapter Adapter {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
                     this.InitAdapter();
@@ -4905,8 +5143,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeConnection Connection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
                     this.InitConnection();
@@ -4926,15 +5164,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
                 for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
                     if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlServerCe.SqlCeCommand)(this.CommandCollection[i])).Connection = value;
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
                     }
                 }
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlServerCe.SqlCeTransaction Transaction {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
             }
@@ -4959,8 +5197,8 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlServerCe.SqlCeCommand[] CommandCollection {
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
                     this.InitCommandCollection();
@@ -4970,7 +5208,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -4981,9 +5219,9 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlServerCe.SqlCeDataAdapter();
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "users";
@@ -4999,65 +5237,89 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("title", "title");
             tableMapping.ColumnMappings.Add("dateHired", "dateHired");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [users] WHERE (([userID] = @Original_userID))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[users] WHERE (([userID] = @Original_userID) AND ([firstName] = @Original_firstName) AND ([lastName] = @Original_lastName) AND ((@IsNull_phone = 1 AND [phone] IS NULL) OR ([phone] = @Original_phone)) AND ([role] = @Original_role) AND ([isActive] = @Original_isActive) AND ([isOnDuty] = @Original_isOnDuty) AND ((@IsNull_sectionID = 1 AND [sectionID] IS NULL) OR ([sectionID] = @Original_sectionID)) AND ([password] = @Original_password) AND ([title] = @Original_title) AND ([dateHired] = @Original_dateHired))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_userID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "userID", global::System.Data.DataRowVersion.Original, null));
-            this._adapter.InsertCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_firstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "firstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_phone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isActive", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActive", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isOnDuty", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isOnDuty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateHired", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateHired", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [users] ([firstName], [lastName], [phone], [role], [isActive], [isOnD" +
-                "uty], [sectionID], [password], [title], [dateHired]) VALUES (@firstName, @lastNa" +
-                "me, @phone, @role, @isActive, @isOnDuty, @sectionID, @password, @title, @dateHir" +
-                "ed)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[users] ([firstName], [lastName], [phone], [role], [isActive], [isOnDuty], [sectionID], [password], [title], [dateHired]) VALUES (@firstName, @lastName, @phone, @role, @isActive, @isOnDuty, @sectionID, @password, @title, @dateHired);
+SELECT userID, firstName, lastName, phone, role, isActive, isOnDuty, sectionID, password, title, dateHired FROM users WHERE (userID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@firstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "firstName", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@lastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "lastName", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "phone", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "role", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isActive", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isActive", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isOnDuty", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isOnDuty", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "password", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "title", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@dateHired", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "dateHired", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "firstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isActive", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isOnDuty", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isOnDuty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateHired", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateHired", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [users] SET [firstName] = @firstName, [lastName] = @lastName, [phone] = @phone, [role] = @role, [isActive] = @isActive, [isOnDuty] = @isOnDuty, [sectionID] = @sectionID, [password] = @password, [title] = @title, [dateHired] = @dateHired WHERE (([userID] = @Original_userID))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[users] SET [firstName] = @firstName, [lastName] = @lastName, [phone] = @phone, [role] = @role, [isActive] = @isActive, [isOnDuty] = @isOnDuty, [sectionID] = @sectionID, [password] = @password, [title] = @title, [dateHired] = @dateHired WHERE (([userID] = @Original_userID) AND ([firstName] = @Original_firstName) AND ([lastName] = @Original_lastName) AND ((@IsNull_phone = 1 AND [phone] IS NULL) OR ([phone] = @Original_phone)) AND ([role] = @Original_role) AND ([isActive] = @Original_isActive) AND ([isOnDuty] = @Original_isOnDuty) AND ((@IsNull_sectionID = 1 AND [sectionID] IS NULL) OR ([sectionID] = @Original_sectionID)) AND ([password] = @Original_password) AND ([title] = @Original_title) AND ([dateHired] = @Original_dateHired));
+SELECT userID, firstName, lastName, phone, role, isActive, isOnDuty, sectionID, password, title, dateHired FROM users WHERE (userID = @userID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@firstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "firstName", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@lastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "lastName", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "phone", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "role", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isActive", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isActive", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@isOnDuty", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "isOnDuty", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "password", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "title", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@dateHired", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "dateHired", global::System.Data.DataRowVersion.Current, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlServerCe.SqlCeParameter("@Original_userID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, true, 0, 0, "userID", global::System.Data.DataRowVersion.Original, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@firstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "firstName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lastName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isActive", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActive", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@isOnDuty", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isOnDuty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dateHired", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateHired", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_userID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "userID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_firstName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "firstName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lastName", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lastName", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_phone", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phone", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phone", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_role", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "role", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isActive", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isActive", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_isOnDuty", global::System.Data.SqlDbType.TinyInt, 0, global::System.Data.ParameterDirection.Input, 0, 0, "isOnDuty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sectionID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sectionID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_title", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "title", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dateHired", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dateHired", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@userID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "userID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
-            this._connection = new global::System.Data.SqlServerCe.SqlCeConnection();
-            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionString;
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::SeatingManager.Properties.Settings.Default.SeatingManagerDBConnectionStringMain;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlServerCe.SqlCeCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlServerCe.SqlCeCommand();
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT [userID], [firstName], [lastName], [phone], [role], [isActive], [isOnDuty]" +
-                ", [sectionID], [password], [title], [dateHired] FROM [users]";
+            this._commandCollection[0].CommandText = "SELECT userID, firstName, lastName, phone, role, isActive, isOnDuty, sectionID, p" +
+                "assword, title, dateHired FROM dbo.users";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(SeatingManagerDBDataSet.usersDataTable dataTable) {
@@ -5070,7 +5332,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual SeatingManagerDBDataSet.usersDataTable GetData() {
@@ -5081,21 +5343,21 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet.usersDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(SeatingManagerDBDataSet dataSet) {
             return this.Adapter.Update(dataSet, "users");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -5103,18 +5365,62 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_userID) {
+        public virtual int Delete(int Original_userID, string Original_firstName, string Original_lastName, string Original_phone, int Original_role, byte Original_isActive, byte Original_isOnDuty, global::System.Nullable<int> Original_sectionID, string Original_password, string Original_title, System.DateTime Original_dateHired) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_userID));
+            if ((Original_firstName == null)) {
+                throw new global::System.ArgumentNullException("Original_firstName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_firstName));
+            }
+            if ((Original_lastName == null)) {
+                throw new global::System.ArgumentNullException("Original_lastName");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_lastName));
+            }
+            if ((Original_phone == null)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_phone));
+            }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_role));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((byte)(Original_isActive));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((byte)(Original_isOnDuty));
+            if ((Original_sectionID.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_sectionID.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            if ((Original_password == null)) {
+                throw new global::System.ArgumentNullException("Original_password");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_password));
+            }
+            if ((Original_title == null)) {
+                throw new global::System.ArgumentNullException("Original_title");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_title));
+            }
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((System.DateTime)(Original_dateHired));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5132,10 +5438,10 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string firstName, string lastName, string phone, int role, byte isActive, byte isOnDuty, int sectionID, string password, string title, System.DateTime dateHired) {
+        public virtual int Insert(string firstName, string lastName, string phone, int role, byte isActive, byte isOnDuty, global::System.Nullable<int> sectionID, string password, string title, System.DateTime dateHired) {
             if ((firstName == null)) {
                 throw new global::System.ArgumentNullException("firstName");
             }
@@ -5157,7 +5463,12 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             this.Adapter.InsertCommand.Parameters[3].Value = ((int)(role));
             this.Adapter.InsertCommand.Parameters[4].Value = ((byte)(isActive));
             this.Adapter.InsertCommand.Parameters[5].Value = ((byte)(isOnDuty));
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(sectionID));
+            if ((sectionID.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(sectionID.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             if ((password == null)) {
                 throw new global::System.ArgumentNullException("password");
             }
@@ -5188,10 +5499,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string firstName, string lastName, string phone, int role, byte isActive, byte isOnDuty, int sectionID, string password, string title, System.DateTime dateHired, int Original_userID) {
+        public virtual int Update(
+                    string firstName, 
+                    string lastName, 
+                    string phone, 
+                    int role, 
+                    byte isActive, 
+                    byte isOnDuty, 
+                    global::System.Nullable<int> sectionID, 
+                    string password, 
+                    string title, 
+                    System.DateTime dateHired, 
+                    int Original_userID, 
+                    string Original_firstName, 
+                    string Original_lastName, 
+                    string Original_phone, 
+                    int Original_role, 
+                    byte Original_isActive, 
+                    byte Original_isOnDuty, 
+                    global::System.Nullable<int> Original_sectionID, 
+                    string Original_password, 
+                    string Original_title, 
+                    System.DateTime Original_dateHired, 
+                    int userID) {
             if ((firstName == null)) {
                 throw new global::System.ArgumentNullException("firstName");
             }
@@ -5213,7 +5546,12 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(role));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((byte)(isActive));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((byte)(isOnDuty));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(sectionID));
+            if ((sectionID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(sectionID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
             if ((password == null)) {
                 throw new global::System.ArgumentNullException("password");
             }
@@ -5228,6 +5566,51 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             }
             this.Adapter.UpdateCommand.Parameters[9].Value = ((System.DateTime)(dateHired));
             this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_userID));
+            if ((Original_firstName == null)) {
+                throw new global::System.ArgumentNullException("Original_firstName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_firstName));
+            }
+            if ((Original_lastName == null)) {
+                throw new global::System.ArgumentNullException("Original_lastName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_lastName));
+            }
+            if ((Original_phone == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_phone));
+            }
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_role));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((byte)(Original_isActive));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((byte)(Original_isOnDuty));
+            if ((Original_sectionID.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_sectionID.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
+            }
+            if ((Original_password == null)) {
+                throw new global::System.ArgumentNullException("Original_password");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_password));
+            }
+            if ((Original_title == null)) {
+                throw new global::System.ArgumentNullException("Original_title");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_title));
+            }
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.DateTime)(Original_dateHired));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(userID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -5243,6 +5626,35 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string firstName, 
+                    string lastName, 
+                    string phone, 
+                    int role, 
+                    byte isActive, 
+                    byte isOnDuty, 
+                    global::System.Nullable<int> sectionID, 
+                    string password, 
+                    string title, 
+                    System.DateTime dateHired, 
+                    int Original_userID, 
+                    string Original_firstName, 
+                    string Original_lastName, 
+                    string Original_phone, 
+                    int Original_role, 
+                    byte Original_isActive, 
+                    byte Original_isOnDuty, 
+                    global::System.Nullable<int> Original_sectionID, 
+                    string Original_password, 
+                    string Original_title, 
+                    System.DateTime Original_dateHired) {
+            return this.Update(firstName, lastName, phone, role, isActive, isOnDuty, sectionID, password, title, dateHired, Original_userID, Original_firstName, Original_lastName, Original_phone, Original_role, Original_isActive, Original_isOnDuty, Original_sectionID, Original_password, Original_title, Original_dateHired, Original_userID);
+        }
     }
     
     /// <summary>
@@ -5257,15 +5669,15 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private assigncustomerTableAdapter _assigncustomerTableAdapter;
+        private assigncustomersTableAdapter _assigncustomersTableAdapter;
         
-        private customerTableAdapter _customerTableAdapter;
+        private customersTableAdapter _customersTableAdapter;
         
-        private tablemapTableAdapter _tablemapTableAdapter;
+        private tablemapsTableAdapter _tablemapsTableAdapter;
         
-        private tablemergeTableAdapter _tablemergeTableAdapter;
+        private tablemergesTableAdapter _tablemergesTableAdapter;
         
-        private tablesectionTableAdapter _tablesectionTableAdapter;
+        private tablesectionsTableAdapter _tablesectionsTableAdapter;
         
         private usersTableAdapter _usersTableAdapter;
         
@@ -5274,7 +5686,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         private global::System.Data.IDbConnection _connection;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public UpdateOrderOption UpdateOrder {
             get {
                 return this._updateOrder;
@@ -5285,77 +5697,77 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public assigncustomerTableAdapter assigncustomerTableAdapter {
+        public assigncustomersTableAdapter assigncustomersTableAdapter {
             get {
-                return this._assigncustomerTableAdapter;
+                return this._assigncustomersTableAdapter;
             }
             set {
-                this._assigncustomerTableAdapter = value;
+                this._assigncustomersTableAdapter = value;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public customerTableAdapter customerTableAdapter {
+        public customersTableAdapter customersTableAdapter {
             get {
-                return this._customerTableAdapter;
+                return this._customersTableAdapter;
             }
             set {
-                this._customerTableAdapter = value;
+                this._customersTableAdapter = value;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tablemapTableAdapter tablemapTableAdapter {
+        public tablemapsTableAdapter tablemapsTableAdapter {
             get {
-                return this._tablemapTableAdapter;
+                return this._tablemapsTableAdapter;
             }
             set {
-                this._tablemapTableAdapter = value;
+                this._tablemapsTableAdapter = value;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tablemergeTableAdapter tablemergeTableAdapter {
+        public tablemergesTableAdapter tablemergesTableAdapter {
             get {
-                return this._tablemergeTableAdapter;
+                return this._tablemergesTableAdapter;
             }
             set {
-                this._tablemergeTableAdapter = value;
+                this._tablemergesTableAdapter = value;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tablesectionTableAdapter tablesectionTableAdapter {
+        public tablesectionsTableAdapter tablesectionsTableAdapter {
             get {
-                return this._tablesectionTableAdapter;
+                return this._tablesectionsTableAdapter;
             }
             set {
-                this._tablesectionTableAdapter = value;
+                this._tablesectionsTableAdapter = value;
             }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
@@ -5369,7 +5781,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -5380,32 +5792,32 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         public global::System.Data.IDbConnection Connection {
             get {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._assigncustomerTableAdapter != null) 
-                            && (this._assigncustomerTableAdapter.Connection != null))) {
-                    return this._assigncustomerTableAdapter.Connection;
+                if (((this._assigncustomersTableAdapter != null) 
+                            && (this._assigncustomersTableAdapter.Connection != null))) {
+                    return this._assigncustomersTableAdapter.Connection;
                 }
-                if (((this._customerTableAdapter != null) 
-                            && (this._customerTableAdapter.Connection != null))) {
-                    return this._customerTableAdapter.Connection;
+                if (((this._customersTableAdapter != null) 
+                            && (this._customersTableAdapter.Connection != null))) {
+                    return this._customersTableAdapter.Connection;
                 }
-                if (((this._tablemapTableAdapter != null) 
-                            && (this._tablemapTableAdapter.Connection != null))) {
-                    return this._tablemapTableAdapter.Connection;
+                if (((this._tablemapsTableAdapter != null) 
+                            && (this._tablemapsTableAdapter.Connection != null))) {
+                    return this._tablemapsTableAdapter.Connection;
                 }
-                if (((this._tablemergeTableAdapter != null) 
-                            && (this._tablemergeTableAdapter.Connection != null))) {
-                    return this._tablemergeTableAdapter.Connection;
+                if (((this._tablemergesTableAdapter != null) 
+                            && (this._tablemergesTableAdapter.Connection != null))) {
+                    return this._tablemergesTableAdapter.Connection;
                 }
-                if (((this._tablesectionTableAdapter != null) 
-                            && (this._tablesectionTableAdapter.Connection != null))) {
-                    return this._tablesectionTableAdapter.Connection;
+                if (((this._tablesectionsTableAdapter != null) 
+                            && (this._tablesectionsTableAdapter.Connection != null))) {
+                    return this._tablesectionsTableAdapter.Connection;
                 }
                 if (((this._usersTableAdapter != null) 
                             && (this._usersTableAdapter.Connection != null))) {
@@ -5419,24 +5831,24 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._assigncustomerTableAdapter != null)) {
+                if ((this._assigncustomersTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._customerTableAdapter != null)) {
+                if ((this._customersTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tablemapTableAdapter != null)) {
+                if ((this._tablemapsTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tablemergeTableAdapter != null)) {
+                if ((this._tablemergesTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tablesectionTableAdapter != null)) {
+                if ((this._tablesectionsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._usersTableAdapter != null)) {
@@ -5450,51 +5862,51 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(SeatingManagerDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._assigncustomerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.assigncustomer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._assigncustomersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.assigncustomers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._assigncustomerTableAdapter.Update(updatedRows));
+                    result = (result + this._assigncustomersTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._customerTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.customer.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._customersTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.customers.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._customerTableAdapter.Update(updatedRows));
+                    result = (result + this._customersTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tablemapTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tablemap.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tablemapsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tablemaps.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tablemapTableAdapter.Update(updatedRows));
+                    result = (result + this._tablemapsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tablemergeTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tablemerge.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tablemergesTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tablemerges.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tablemergeTableAdapter.Update(updatedRows));
+                    result = (result + this._tablemergesTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._tablesectionTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tablesection.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tablesectionsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tablesections.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tablesectionTableAdapter.Update(updatedRows));
+                    result = (result + this._tablesectionsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -5514,46 +5926,46 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(SeatingManagerDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._assigncustomerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.assigncustomer.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._assigncustomersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.assigncustomers.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._assigncustomerTableAdapter.Update(addedRows));
+                    result = (result + this._assigncustomersTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._customerTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.customer.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._customersTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.customers.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._customerTableAdapter.Update(addedRows));
+                    result = (result + this._customersTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tablemapTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tablemap.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tablemapsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tablemaps.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tablemapTableAdapter.Update(addedRows));
+                    result = (result + this._tablemapsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tablemergeTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tablemerge.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tablemergesTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tablemerges.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tablemergeTableAdapter.Update(addedRows));
+                    result = (result + this._tablemergesTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._tablesectionTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tablesection.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tablesectionsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tablesections.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tablesectionTableAdapter.Update(addedRows));
+                    result = (result + this._tablesectionsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -5572,7 +5984,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateDeletedRows(SeatingManagerDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._usersTableAdapter != null)) {
@@ -5583,43 +5995,43 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tablesectionTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tablesection.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tablesectionsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tablesections.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tablesectionTableAdapter.Update(deletedRows));
+                    result = (result + this._tablesectionsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tablemergeTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tablemerge.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tablemergesTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tablemerges.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tablemergeTableAdapter.Update(deletedRows));
+                    result = (result + this._tablemergesTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tablemapTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tablemap.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tablemapsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tablemaps.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tablemapTableAdapter.Update(deletedRows));
+                    result = (result + this._tablemapsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._customerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.customer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._customersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.customers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._customerTableAdapter.Update(deletedRows));
+                    result = (result + this._customersTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._assigncustomerTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.assigncustomer.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._assigncustomersTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.assigncustomers.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._assigncustomerTableAdapter.Update(deletedRows));
+                    result = (result + this._assigncustomersTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -5630,7 +6042,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             if (((updatedRows == null) 
                         || (updatedRows.Length < 1))) {
@@ -5654,7 +6066,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public virtual int UpdateAll(SeatingManagerDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
@@ -5662,28 +6074,28 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._assigncustomerTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._assigncustomerTableAdapter.Connection) == false))) {
+            if (((this._assigncustomersTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._assigncustomersTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._customerTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._customerTableAdapter.Connection) == false))) {
+            if (((this._customersTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._customersTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tablemapTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tablemapTableAdapter.Connection) == false))) {
+            if (((this._tablemapsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tablemapsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tablemergeTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tablemergeTableAdapter.Connection) == false))) {
+            if (((this._tablemergesTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tablemergesTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tablesectionTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tablesectionTableAdapter.Connection) == false))) {
+            if (((this._tablesectionsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tablesectionsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -5724,55 +6136,55 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._assigncustomerTableAdapter != null)) {
-                    revertConnections.Add(this._assigncustomerTableAdapter, this._assigncustomerTableAdapter.Connection);
-                    this._assigncustomerTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._assigncustomerTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
-                    if (this._assigncustomerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._assigncustomerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._assigncustomerTableAdapter.Adapter);
+                if ((this._assigncustomersTableAdapter != null)) {
+                    revertConnections.Add(this._assigncustomersTableAdapter, this._assigncustomersTableAdapter.Connection);
+                    this._assigncustomersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._assigncustomersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._assigncustomersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._assigncustomersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._assigncustomersTableAdapter.Adapter);
                     }
                 }
-                if ((this._customerTableAdapter != null)) {
-                    revertConnections.Add(this._customerTableAdapter, this._customerTableAdapter.Connection);
-                    this._customerTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._customerTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
-                    if (this._customerTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._customerTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._customerTableAdapter.Adapter);
+                if ((this._customersTableAdapter != null)) {
+                    revertConnections.Add(this._customersTableAdapter, this._customersTableAdapter.Connection);
+                    this._customersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._customersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._customersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._customersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._customersTableAdapter.Adapter);
                     }
                 }
-                if ((this._tablemapTableAdapter != null)) {
-                    revertConnections.Add(this._tablemapTableAdapter, this._tablemapTableAdapter.Connection);
-                    this._tablemapTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._tablemapTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
-                    if (this._tablemapTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tablemapTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tablemapTableAdapter.Adapter);
+                if ((this._tablemapsTableAdapter != null)) {
+                    revertConnections.Add(this._tablemapsTableAdapter, this._tablemapsTableAdapter.Connection);
+                    this._tablemapsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tablemapsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tablemapsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tablemapsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tablemapsTableAdapter.Adapter);
                     }
                 }
-                if ((this._tablemergeTableAdapter != null)) {
-                    revertConnections.Add(this._tablemergeTableAdapter, this._tablemergeTableAdapter.Connection);
-                    this._tablemergeTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._tablemergeTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
-                    if (this._tablemergeTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tablemergeTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tablemergeTableAdapter.Adapter);
+                if ((this._tablemergesTableAdapter != null)) {
+                    revertConnections.Add(this._tablemergesTableAdapter, this._tablemergesTableAdapter.Connection);
+                    this._tablemergesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tablemergesTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tablemergesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tablemergesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tablemergesTableAdapter.Adapter);
                     }
                 }
-                if ((this._tablesectionTableAdapter != null)) {
-                    revertConnections.Add(this._tablesectionTableAdapter, this._tablesectionTableAdapter.Connection);
-                    this._tablesectionTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._tablesectionTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
-                    if (this._tablesectionTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tablesectionTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tablesectionTableAdapter.Adapter);
+                if ((this._tablesectionsTableAdapter != null)) {
+                    revertConnections.Add(this._tablesectionsTableAdapter, this._tablesectionsTableAdapter.Connection);
+                    this._tablesectionsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._tablesectionsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._tablesectionsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tablesectionsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tablesectionsTableAdapter.Adapter);
                     }
                 }
                 if ((this._usersTableAdapter != null)) {
                     revertConnections.Add(this._usersTableAdapter, this._usersTableAdapter.Connection);
-                    this._usersTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(workConnection));
-                    this._usersTableAdapter.Transaction = ((global::System.Data.SqlServerCe.SqlCeTransaction)(workTransaction));
+                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._usersTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
                     if (this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._usersTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._usersTableAdapter.Adapter);
@@ -5836,28 +6248,28 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._assigncustomerTableAdapter != null)) {
-                    this._assigncustomerTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._assigncustomerTableAdapter]));
-                    this._assigncustomerTableAdapter.Transaction = null;
+                if ((this._assigncustomersTableAdapter != null)) {
+                    this._assigncustomersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._assigncustomersTableAdapter]));
+                    this._assigncustomersTableAdapter.Transaction = null;
                 }
-                if ((this._customerTableAdapter != null)) {
-                    this._customerTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._customerTableAdapter]));
-                    this._customerTableAdapter.Transaction = null;
+                if ((this._customersTableAdapter != null)) {
+                    this._customersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._customersTableAdapter]));
+                    this._customersTableAdapter.Transaction = null;
                 }
-                if ((this._tablemapTableAdapter != null)) {
-                    this._tablemapTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._tablemapTableAdapter]));
-                    this._tablemapTableAdapter.Transaction = null;
+                if ((this._tablemapsTableAdapter != null)) {
+                    this._tablemapsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tablemapsTableAdapter]));
+                    this._tablemapsTableAdapter.Transaction = null;
                 }
-                if ((this._tablemergeTableAdapter != null)) {
-                    this._tablemergeTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._tablemergeTableAdapter]));
-                    this._tablemergeTableAdapter.Transaction = null;
+                if ((this._tablemergesTableAdapter != null)) {
+                    this._tablemergesTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tablemergesTableAdapter]));
+                    this._tablemergesTableAdapter.Transaction = null;
                 }
-                if ((this._tablesectionTableAdapter != null)) {
-                    this._tablesectionTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._tablesectionTableAdapter]));
-                    this._tablesectionTableAdapter.Transaction = null;
+                if ((this._tablesectionsTableAdapter != null)) {
+                    this._tablesectionsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._tablesectionsTableAdapter]));
+                    this._tablesectionsTableAdapter.Transaction = null;
                 }
                 if ((this._usersTableAdapter != null)) {
-                    this._usersTableAdapter.Connection = ((global::System.Data.SqlServerCe.SqlCeConnection)(revertConnections[this._usersTableAdapter]));
+                    this._usersTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._usersTableAdapter]));
                     this._usersTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
@@ -5873,13 +6285,13 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected virtual void SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst) {
             global::System.Array.Sort<global::System.Data.DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         protected virtual bool MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection) {
             if ((this._connection != null)) {
                 return true;
@@ -5897,7 +6309,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         /// <summary>
         ///Update Order Option
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public enum UpdateOrderOption {
             
             InsertUpdateDelete = 0,
@@ -5908,7 +6320,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
         /// <summary>
         ///Used to sort self-referenced table's rows
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
             
             private global::System.Data.DataRelation _relation;
@@ -5916,7 +6328,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             private int _childFirst;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal SelfReferenceComparer(global::System.Data.DataRelation relation, bool childFirst) {
                 this._relation = relation;
                 if (childFirst) {
@@ -5928,7 +6340,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private global::System.Data.DataRow GetRoot(global::System.Data.DataRow row, out int distance) {
                 global::System.Diagnostics.Debug.Assert((row != null));
                 global::System.Data.DataRow root = row;
@@ -5967,7 +6379,7 @@ namespace SeatingManager.SeatingManagerDBDataSetTableAdapters {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int Compare(global::System.Data.DataRow row1, global::System.Data.DataRow row2) {
                 if (object.ReferenceEquals(row1, row2)) {
                     return 0;

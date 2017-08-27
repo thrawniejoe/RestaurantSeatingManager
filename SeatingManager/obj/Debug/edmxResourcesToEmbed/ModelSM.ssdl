@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-  <EntityType Name="assigncustomer">
+<Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="assigncustomers">
     <Key>
       <PropertyRef Name="tableAssignID" />
     </Key>
@@ -10,7 +10,7 @@
     <Property Name="assignTime" Type="datetime" Nullable="false" />
     <Property Name="isAssigned" Type="tinyint" Nullable="false" />
   </EntityType>
-  <EntityType Name="customer">
+  <EntityType Name="customers">
     <Key>
       <PropertyRef Name="customerID" />
     </Key>
@@ -21,7 +21,7 @@
     <Property Name="timeIn" Type="datetime" Nullable="false" />
     <Property Name="timeMade" Type="datetime" Nullable="false" />
   </EntityType>
-  <EntityType Name="tablemap">
+  <EntityType Name="tablemaps">
     <Key>
       <PropertyRef Name="tableID" />
     </Key>
@@ -33,7 +33,7 @@
     <Property Name="sectionID" Type="int" Nullable="false" />
     <Property Name="tableType" Type="int" Nullable="false" />
   </EntityType>
-  <EntityType Name="tablemerge">
+  <EntityType Name="tablemerges">
     <Key>
       <PropertyRef Name="tableMergeID" />
     </Key>
@@ -45,7 +45,7 @@
     <Property Name="visible" Type="tinyint" Nullable="false" />
     <Property Name="isMerged" Type="tinyint" Nullable="false" />
   </EntityType>
-  <EntityType Name="tablesection">
+  <EntityType Name="tablesections">
     <Key>
       <PropertyRef Name="tableSectionID" />
     </Key>
@@ -69,11 +69,11 @@
     <Property Name="dateHired" Type="datetime" Nullable="false" />
   </EntityType>
   <EntityContainer Name="SeatingManagerDBModelStoreContainer">
-    <EntitySet Name="assigncustomer" EntityType="Self.assigncustomer" store:Type="Tables" />
-    <EntitySet Name="customer" EntityType="Self.customer" store:Type="Tables" />
-    <EntitySet Name="tablemap" EntityType="Self.tablemap" store:Type="Tables" />
-    <EntitySet Name="tablemerge" EntityType="Self.tablemerge" store:Type="Tables" />
-    <EntitySet Name="tablesection" EntityType="Self.tablesection" store:Type="Tables" />
-    <EntitySet Name="users" EntityType="Self.users" store:Type="Tables" />
+    <EntitySet Name="assigncustomers" EntityType="Self.assigncustomers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tablemaps" EntityType="Self.tablemaps" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tablemerges" EntityType="Self.tablemerges" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tablesections" EntityType="Self.tablesections" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -4,8 +4,8 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="assigncustomer">
+    <Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="assigncustomers">
           <Key>
             <PropertyRef Name="tableAssignID" />
           </Key>
@@ -15,7 +15,7 @@
           <Property Name="assignTime" Type="datetime" Nullable="false" />
           <Property Name="isAssigned" Type="tinyint" Nullable="false" />
         </EntityType>
-        <EntityType Name="customer">
+        <EntityType Name="customers">
           <Key>
             <PropertyRef Name="customerID" />
           </Key>
@@ -26,7 +26,7 @@
           <Property Name="timeIn" Type="datetime" Nullable="false" />
           <Property Name="timeMade" Type="datetime" Nullable="false" />
         </EntityType>
-        <EntityType Name="tablemap">
+        <EntityType Name="tablemaps">
           <Key>
             <PropertyRef Name="tableID" />
           </Key>
@@ -38,7 +38,7 @@
           <Property Name="sectionID" Type="int" Nullable="false" />
           <Property Name="tableType" Type="int" Nullable="false" />
         </EntityType>
-        <EntityType Name="tablemerge">
+        <EntityType Name="tablemerges">
           <Key>
             <PropertyRef Name="tableMergeID" />
           </Key>
@@ -50,7 +50,7 @@
           <Property Name="visible" Type="tinyint" Nullable="false" />
           <Property Name="isMerged" Type="tinyint" Nullable="false" />
         </EntityType>
-        <EntityType Name="tablesection">
+        <EntityType Name="tablesections">
           <Key>
             <PropertyRef Name="tableSectionID" />
           </Key>
@@ -74,12 +74,12 @@
           <Property Name="dateHired" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityContainer Name="SeatingManagerDBModelStoreContainer">
-          <EntitySet Name="assigncustomer" EntityType="Self.assigncustomer" store:Type="Tables" />
-          <EntitySet Name="customer" EntityType="Self.customer" store:Type="Tables" />
-          <EntitySet Name="tablemap" EntityType="Self.tablemap" store:Type="Tables" />
-          <EntitySet Name="tablemerge" EntityType="Self.tablemerge" store:Type="Tables" />
-          <EntitySet Name="tablesection" EntityType="Self.tablesection" store:Type="Tables" />
-          <EntitySet Name="users" EntityType="Self.users" store:Type="Tables" />
+          <EntitySet Name="assigncustomers" EntityType="Self.assigncustomers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tablemaps" EntityType="Self.tablemaps" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tablemerges" EntityType="Self.tablemerges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tablesections" EntityType="Self.tablesections" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -97,7 +97,7 @@
           <Key>
             <PropertyRef Name="tableAssignID" />
           </Key>
-          <Property Name="tableAssignID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="tableAssignID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tableID" Type="Int32" Nullable="false" />
           <Property Name="customerID" Type="Int32" Nullable="false" />
           <Property Name="assignTime" Type="DateTime" Nullable="false" Precision="3" />
@@ -107,8 +107,8 @@
           <Key>
             <PropertyRef Name="customerID" />
           </Key>
-          <Property Name="customerID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="customerName" Type="String" Nullable="false" MaxLength="25" Unicode="true" FixedLength="false" />
+          <Property Name="customerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="customerName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
           <Property Name="wait" Type="Byte" Nullable="false" />
           <Property Name="reservation" Type="Byte" Nullable="false" />
           <Property Name="timeIn" Type="DateTime" Nullable="false" Precision="3" />
@@ -118,7 +118,7 @@
           <Key>
             <PropertyRef Name="tableID" />
           </Key>
-          <Property Name="tableID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="tableID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tableX" Type="Int32" />
           <Property Name="tableY" Type="Int32" />
           <Property Name="numberOfSeats" Type="Int32" Nullable="false" />
@@ -130,7 +130,7 @@
           <Key>
             <PropertyRef Name="tableMergeID" />
           </Key>
-          <Property Name="tableMergeID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="tableMergeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tableID1" Type="Int32" Nullable="false" />
           <Property Name="tableID2" Type="Int32" Nullable="false" />
           <Property Name="tableID3" Type="Int32" />
@@ -142,8 +142,8 @@
           <Key>
             <PropertyRef Name="tableSectionID" />
           </Key>
-          <Property Name="tableSectionID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
-          <Property Name="sectionColor" Type="String" Nullable="false" MaxLength="15" Unicode="true" FixedLength="false" />
+          <Property Name="tableSectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sectionColor" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="user">
           <Key>
@@ -169,58 +169,58 @@
         <EntityContainerMapping StorageEntityContainer="SeatingManagerDBModelStoreContainer" CdmEntityContainer="SeatingManagerDBEntities">
           <EntitySetMapping Name="assigncustomers">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.assigncustomer">
-              <MappingFragment StoreEntitySet="assigncustomer">
-                <ScalarProperty Name="tableAssignID" ColumnName="tableAssignID" />
-                <ScalarProperty Name="tableID" ColumnName="tableID" />
-                <ScalarProperty Name="customerID" ColumnName="customerID" />
-                <ScalarProperty Name="assignTime" ColumnName="assignTime" />
+              <MappingFragment StoreEntitySet="assigncustomers">
                 <ScalarProperty Name="isAssigned" ColumnName="isAssigned" />
+                <ScalarProperty Name="assignTime" ColumnName="assignTime" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
+                <ScalarProperty Name="tableID" ColumnName="tableID" />
+                <ScalarProperty Name="tableAssignID" ColumnName="tableAssignID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="customers">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.customer">
-              <MappingFragment StoreEntitySet="customer">
-                <ScalarProperty Name="customerID" ColumnName="customerID" />
-                <ScalarProperty Name="customerName" ColumnName="customerName" />
-                <ScalarProperty Name="wait" ColumnName="wait" />
-                <ScalarProperty Name="reservation" ColumnName="reservation" />
-                <ScalarProperty Name="timeIn" ColumnName="timeIn" />
+              <MappingFragment StoreEntitySet="customers">
                 <ScalarProperty Name="timeMade" ColumnName="timeMade" />
+                <ScalarProperty Name="timeIn" ColumnName="timeIn" />
+                <ScalarProperty Name="reservation" ColumnName="reservation" />
+                <ScalarProperty Name="wait" ColumnName="wait" />
+                <ScalarProperty Name="customerName" ColumnName="customerName" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tablemaps">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.tablemap">
-              <MappingFragment StoreEntitySet="tablemap">
-                <ScalarProperty Name="tableID" ColumnName="tableID" />
-                <ScalarProperty Name="tableX" ColumnName="tableX" />
-                <ScalarProperty Name="tableY" ColumnName="tableY" />
-                <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
-                <ScalarProperty Name="visible" ColumnName="visible" />
-                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+              <MappingFragment StoreEntitySet="tablemaps">
                 <ScalarProperty Name="tableType" ColumnName="tableType" />
+                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+                <ScalarProperty Name="visible" ColumnName="visible" />
+                <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+                <ScalarProperty Name="tableY" ColumnName="tableY" />
+                <ScalarProperty Name="tableX" ColumnName="tableX" />
+                <ScalarProperty Name="tableID" ColumnName="tableID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tablemerges">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.tablemerge">
-              <MappingFragment StoreEntitySet="tablemerge">
-                <ScalarProperty Name="tableMergeID" ColumnName="tableMergeID" />
-                <ScalarProperty Name="tableID1" ColumnName="tableID1" />
-                <ScalarProperty Name="tableID2" ColumnName="tableID2" />
-                <ScalarProperty Name="tableID3" ColumnName="tableID3" />
-                <ScalarProperty Name="tableID4" ColumnName="tableID4" />
-                <ScalarProperty Name="visible" ColumnName="visible" />
+              <MappingFragment StoreEntitySet="tablemerges">
                 <ScalarProperty Name="isMerged" ColumnName="isMerged" />
+                <ScalarProperty Name="visible" ColumnName="visible" />
+                <ScalarProperty Name="tableID4" ColumnName="tableID4" />
+                <ScalarProperty Name="tableID3" ColumnName="tableID3" />
+                <ScalarProperty Name="tableID2" ColumnName="tableID2" />
+                <ScalarProperty Name="tableID1" ColumnName="tableID1" />
+                <ScalarProperty Name="tableMergeID" ColumnName="tableMergeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tablesections">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.tablesection">
-              <MappingFragment StoreEntitySet="tablesection">
-                <ScalarProperty Name="tableSectionID" ColumnName="tableSectionID" />
+              <MappingFragment StoreEntitySet="tablesections">
                 <ScalarProperty Name="sectionColor" ColumnName="sectionColor" />
+                <ScalarProperty Name="tableSectionID" ColumnName="tableSectionID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

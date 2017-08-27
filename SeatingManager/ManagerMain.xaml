@@ -13,12 +13,11 @@
     </Window.Resources>
     <Grid>
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="164,69,0,0" Background="#FF232323">
-            <TabItem Header="Tables" Margin="-2,-2,-2,0" Width="87" Background="#FF232323" Foreground="White" FontSize="14">
-                <Grid Background="#FFE5E5E5" Margin="10,36,0,0" DataContext="{StaticResource usersViewSource}"/>
-            </TabItem>
+            <TabItem Header="Tables" Margin="-2,-2,-2,0" Width="87" Background="#FF232323" Foreground="White" FontSize="14"/>
             <TabItem Header="Users" Margin="5,0,-5,-2" Width="87" Background="#FF232323" Foreground="White" FontSize="14">
-                <Grid Background="#FFE5E5E5" Margin="0,7,0.4,0">
-                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,50,19,12" SelectionMode="Single">
+                <Grid Background="#FFE5E5E5" Margin="0,7,0.4,0" DataContext="{StaticResource usersViewSource}">
+                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F"/>
+                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,37,10,10" SelectionMode="Single">
                         <ListView.ItemContainerStyle>
                             <Style>
                                 <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
@@ -62,13 +61,6 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn x:Name="isActiveColumn" Header="is Active" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding isActive, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
                                 <GridViewColumn x:Name="isOnDutyColumn" Header="is On Duty" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -104,10 +96,17 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
+                                <GridViewColumn x:Name="removeUser" Header="date Hired" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Name="btnRemoveUser" Content="Remove" ></Button>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F"/>
+                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="140,10,0,0" VerticalAlignment="Top" Width="75" Click="btnRefresh_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Customers" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="87" Margin="10,0,-10,0" Background="#FF232323" Foreground="White" FontSize="14">

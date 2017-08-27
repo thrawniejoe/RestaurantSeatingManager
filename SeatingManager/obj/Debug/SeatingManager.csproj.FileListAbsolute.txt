@@ -59,7 +59,6 @@ C:\Users\Joe.Velasquez\source\repos\RestaurantSeatingManager\SeatingManager\obj\
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\App.baml
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.g.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.baml
-C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB.sdf
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManager.exe.config
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManager.exe
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManager.pdb
@@ -95,3 +94,5 @@ C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\E
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\System.Data.SqlServerCe.dll
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB.mdf
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB_log.ldf
