@@ -59,5 +59,19 @@ namespace SeatingManager
         {
             RefreshList();
         }
+
+        //Removes a user from the list
+        private void btnRemoveUser_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
+
+            user nu = new user { userID = myid };
+            context.users.Attach(nu); //attacts the user object by the id given to the object above
+            context.users.Remove(nu);
+            context.SaveChanges();
+            RefreshList();
+        }
     }
 }
