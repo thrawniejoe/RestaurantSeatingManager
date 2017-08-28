@@ -42,6 +42,16 @@ namespace SeatingManager
             seatingManagerDBDataSetusersTableAdapter.Fill(seatingManagerDBDataSet.users);
             System.Windows.Data.CollectionViewSource usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
             usersViewSource.View.MoveCurrentToFirst();
+            // Load data into the table tablemaps. You can modify this code as needed.
+            SeatingManager.SeatingManagerDBDataSetTableAdapters.tablemapsTableAdapter seatingManagerDBDataSettablemapsTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.tablemapsTableAdapter();
+            seatingManagerDBDataSettablemapsTableAdapter.Fill(seatingManagerDBDataSet.tablemaps);
+            System.Windows.Data.CollectionViewSource tablemapsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("tablemapsViewSource")));
+            tablemapsViewSource.View.MoveCurrentToFirst();
+            // Load data into the table customers. You can modify this code as needed.
+            SeatingManager.SeatingManagerDBDataSetTableAdapters.customersTableAdapter seatingManagerDBDataSetcustomersTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.customersTableAdapter();
+            seatingManagerDBDataSetcustomersTableAdapter.Fill(seatingManagerDBDataSet.customers);
+            System.Windows.Data.CollectionViewSource customersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customersViewSource")));
+            customersViewSource.View.MoveCurrentToFirst();
         }
 
         public void RefreshList()

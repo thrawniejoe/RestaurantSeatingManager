@@ -96,3 +96,14 @@ C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\E
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.xml
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB.mdf
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB_log.ldf
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB.mdf
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB_log.ldf
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.dll
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.dll
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\System.Data.SqlServerCe.dll
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.xml
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.xml
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager_Content.g.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\GeneratedInternalTypeHelper.g.cs

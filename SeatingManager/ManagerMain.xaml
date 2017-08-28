@@ -10,13 +10,62 @@
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Border x:Name="Border" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0"
+                        Padding="25,5,25,5" Margin="0,0,0,0" BorderBrush="Gainsboro">
+                            <ContentPresenter x:Name="ContentSite" ContentSource="Header" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
+                                <Setter TargetName="Border" Property="Background" Value="#FF232323"/>
+                                <Setter Property="BorderBrush" TargetName="Border" Value="#00DCDCDC"/>
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="Black"/>
+                                <Setter TargetName="Border" Property="Background" Value="White" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <CollectionViewSource x:Key="tablemapsViewSource" Source="{Binding tablemaps, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
+
     </Window.Resources>
-    <Grid>
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="164,69,0,0" Background="#FF232323">
-            <TabItem Header="Tables" Margin="-2,-2,-2,0" Width="87" Background="#FF232323" Foreground="White" FontSize="14"/>
-            <TabItem Header="Users" Margin="5,0,-5,-2" Width="87" Background="#FF232323" Foreground="White" FontSize="14">
-                <Grid Background="#FFE5E5E5" Margin="0,7,0.4,0" DataContext="{StaticResource usersViewSource}">
-                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F"/>
+    <Grid DataContext="{StaticResource customersViewSource}">
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="174,10,0,0" Background="#FF232323" BorderBrush="#00000000">
+            <TabItem Header="Tables" Width="87" Background="#FF232323" Foreground="#FF9B3F3F" FontSize="14" Style="{DynamicResource TabItemStyle1}" Height="76">
+                <Grid Margin="0,0,-1,0" Background="White" DataContext="{StaticResource tablemapsViewSource}">
+                    <DataGrid x:Name="tablemapsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="422,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="table ID" IsReadOnly="True" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="tableXColumn" Binding="{Binding tableX}" Header="table X" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="tableYColumn" Binding="{Binding tableY}" Header="table Y" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="number Of Seats" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="visibleColumn" Binding="{Binding visible}" Header="visible" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="sectionIDColumn1" Binding="{Binding sectionID}" Header="section ID" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="table Type" Width="SizeToHeader"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="201,239,0,0" VerticalAlignment="Top" Width="75"/>
+                    <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="214,124,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Visible:" HorizontalAlignment="Left" Margin="159,182,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Section:" HorizontalAlignment="Left" Margin="153,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552"/>
+                    <Label Content="Table Type:" HorizontalAlignment="Left" Margin="136,124,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cboSection" HorizontalAlignment="Left" Margin="214,154,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="cboVisible" HorizontalAlignment="Left" Margin="214,184,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Add a Table" HorizontalAlignment="Left" Margin="196,71,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Users" Margin="5,0,-5,0" Width="87" Background="#FF151515" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Height="76" BorderBrush="#00ACACAC">
+                <Grid Background="#FF232323" Margin="0,7,0.4,0" DataContext="{StaticResource usersViewSource}">
+                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
                     <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,37,10,10" SelectionMode="Single">
                         <ListView.ItemContainerStyle>
                             <Style>
@@ -96,29 +145,32 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn x:Name="removeUser" Header="date Hired" Width="80">
+                                <GridViewColumn x:Name="removeUser" Header="" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Button Name="btnRemoveUser" Content="Remove" ></Button>
+                                            <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}"></Button>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="140,10,0,0" VerticalAlignment="Top" Width="75" Click="btnRefresh_Click"/>
+                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,0,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Customers" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="87" Margin="10,0,-10,0" Background="#FF232323" Foreground="White" FontSize="14">
+            <TabItem Header="Customers" HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="87" Margin="10,0,-10,0" Background="#FF232323" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Reservations" HorizontalAlignment="Left" Height="74" VerticalAlignment="Top" Width="87" Margin="15,0,-15,0" Background="#FF232323" Foreground="White" FontSize="14">
+            <TabItem Header="Reservations" HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="87" Margin="15,0,-15,0" Background="#FF232323" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,123,0,0" VerticalAlignment="Top" Width="133">
+        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,92,0,0" VerticalAlignment="Top" Width="149">
             <ListView.Background>
-                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF878787" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
             </ListView.Background>
             <ListView.View>
                 <GridView>
@@ -126,18 +178,40 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="303" Margin="10,472,0,0" VerticalAlignment="Top" Width="133">
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
+        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="133"/>
+        <ListView x:Name="customersListView" ItemsSource="{Binding}" Margin="10,424,933,69" SelectionMode="Single">
             <ListView.Background>
-                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFBBBBBB" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
             </ListView.Background>
+            <ListView.ItemContainerStyle>
+                <Style>
+                    <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Control.VerticalContentAlignment" Value="Stretch"/>
+                </Style>
+            </ListView.ItemContainerStyle>
             <ListView.View>
                 <GridView>
-                    <GridViewColumn/>
+                    <GridViewColumn x:Name="customerNameColumn" Header="customer Name" Width="110">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBox Margin="-6,-1" Text="{Binding customerName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    <GridViewColumn x:Name="timeMadeColumn" Header="" Width="35">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" Width="20"></Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,444,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="133"/>
 
     </Grid>
 </Window>
