@@ -143,3 +143,6 @@ C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\Seating
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csproj.GenerateResource.Cache
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.exe
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
+C:\Users\Taylor\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManager.exe.config
+C:\Users\Taylor\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.exe
+C:\Users\Taylor\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
