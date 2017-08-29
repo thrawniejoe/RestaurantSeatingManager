@@ -62,29 +62,26 @@ namespace SeatingManager
                            select u.role).SingleOrDefault();
 
             //MessageBox.Show(Convert.ToString(uCheck));
-           if (Convert.ToString(uCheck) == txtPassword.Text)
+            
+            if (Convert.ToString(uCheck) == txtPassword.Text)
             {
-            switch (getRole)
+                Window mainWindow = null;
+                switch (getRole)
                 {
                     case 0:
-                        ManagerMain manager = new ManagerMain();
-                        manager.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                        manager.Show();
+                        mainWindow = new ManagerMain();
                         break;
                     case 1:
-                        MainWindow main = new MainWindow();
-                        main.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                        main.Show();
+                        mainWindow = new MainWindow();
                         break;
                     case 2:
-                        MainWindow main2 = new MainWindow();
-                        main2.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                        main2.Show();
+                        mainWindow = new MainWindow();
                         break;
                 }
-                
+                mainWindow.Show();
                 this.Close();
             }
+
 
             //if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
             //{
