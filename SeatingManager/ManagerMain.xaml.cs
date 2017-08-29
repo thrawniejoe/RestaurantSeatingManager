@@ -27,6 +27,7 @@ namespace SeatingManager
         private void btnAddUser_Click(object sender, RoutedEventArgs e)
         {
             AddUser aU = new AddUser();
+            aU.refreshPage += RefreshList;
             aU.Owner = this;
             //aU.Owner = Application.Current.MainWindow;
             aU.WindowStartupLocation = WindowStartupLocation.CenterOwner;

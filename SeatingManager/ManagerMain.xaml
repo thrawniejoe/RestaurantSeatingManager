@@ -6,31 +6,27 @@
         xmlns:local="clr-namespace:SeatingManager"
         xmlns:SeatingManagerDBDataSetTableAdapters="clr-namespace:SeatingManager.SeatingManagerDBDataSetTableAdapters" x:Class="SeatingManager.ManagerMain"
         mc:Ignorable="d"
-        Title="ManagerMain" Height="841" Width="1100" Background="#FF2A2B30" Loaded="Window_Loaded">
+        Title="ManagerMain" Height="841" Width="1100" Background="#FF363636" Loaded="Window_Loaded">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}"/>
-        <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}" >
+        <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type TabItem}">
-
-                        <Border x:Name="Border" BorderThickness="0,0,0,0" CornerRadius="0,0,0,0"
-                        Padding="5,5,5,5" Margin="0,0,0,0" BorderBrush="#00E0E0E0">
-                            <ContentPresenter x:Name="ContentSite" ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        <Border x:Name="Border" BorderThickness="1,1,1,0" CornerRadius="5,5,0,0"
+                        Padding="25,5,25,5" Margin="0,0,0,0" BorderBrush="Gainsboro">
+                            <ContentPresenter x:Name="ContentSite" ContentSource="Header" />
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsSelected" Value="True">
-                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
                                 <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
-                                <Setter TargetName="Border" Property="Background" Value="#FFAC1C1C"/>
+                                <Setter TargetName="Border" Property="Background" Value="#FF232323"/>
                                 <Setter Property="BorderBrush" TargetName="Border" Value="#00DCDCDC"/>
-                                <Setter Property="FontWeight" Value="Normal"/>
                             </Trigger>
                             <Trigger Property="IsSelected" Value="False">
-                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="#FFE8E8E8"/>
-                                <Setter TargetName="Border" Property="Background" Value="#FFF72F2F" />
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="Black"/>
+                                <Setter TargetName="Border" Property="Background" Value="White" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -43,10 +39,9 @@
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="174,10,0,0" Background="#FF232323" BorderBrush="#00000000">
-
-            <TabItem Header="Tables" Width="108" Background="#FFF72F2F" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" Height="33" VerticalAlignment="Top" >
-                <Grid Background="#FFEDEDED" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0">
-                    <DataGrid x:Name="tablemapsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="422,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" Background="White" BorderBrush="{x:Null}">
+            <TabItem Header="Tables" Width="87" Background="#FF232323" Foreground="#FF9B3F3F" FontSize="14" Style="{DynamicResource TabItemStyle1}" Height="76">
+                <Grid Margin="0,0,-1,0" Background="White" DataContext="{StaticResource tablemapsViewSource}">
+                    <DataGrid x:Name="tablemapsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="422,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected">
                         <DataGrid.Columns>
                             <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="table ID" IsReadOnly="True" Width="SizeToHeader"/>
                             <DataGridTextColumn x:Name="tableXColumn" Binding="{Binding tableX}" Header="table X" Width="SizeToHeader"/>
@@ -57,17 +52,7 @@
                             <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="table Type" Width="SizeToHeader"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="203,244,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFDFBFC" FontFamily="Segoe UI Semibold" BorderBrush="{x:Null}" Height="31">
-
-                        <Button.Background>
-
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FFA2CB4B" Offset="0"/>
-                                <GradientStop Color="#FF6B901C" Offset="1"/>
-                                <GradientStop Color="#FF87AD34" Offset="0.514"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="201,239,0,0" VerticalAlignment="Top" Width="75"/>
                     <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="214,124,0,0" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Visible:" HorizontalAlignment="Left" Margin="159,182,0,0" VerticalAlignment="Top"/>
                     <Label Content="Section:" HorizontalAlignment="Left" Margin="153,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552"/>
@@ -78,7 +63,7 @@
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Users" Margin="5,0,-5,0" Width="108" Background="#FFF72F2F" Foreground="White" FontSize="14" BorderBrush="#00000000" Padding="2" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top">
+            <TabItem Header="Users" Margin="5,0,-5,0" Width="87" Background="#FF151515" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Height="76" BorderBrush="#00ACACAC">
                 <Grid Background="#FF232323" Margin="0,7,0.4,0" DataContext="{StaticResource usersViewSource}">
                     <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
                     <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,37,10,10" SelectionMode="Single">
@@ -90,66 +75,80 @@
                         </ListView.ItemContainerStyle>
                         <ListView.View>
                             <GridView>
-                                <!--<GridViewColumn x:Name="userIDColumn" Header="user ID" Width="80">
+                                <GridViewColumn x:Name="userIDColumn" Header="user ID" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="6,-1,-6,-1" Text="{Binding userID, Mode=OneWay}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>-->
-                                <GridViewColumn x:Name="firstNameColumn" Header="first Name" Width="100">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="6,-1,-6,-1" Text="{Binding userID, Mode=OneWay}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn x:Name="lastNameColumn" Header="last Name" Width="120">
+                                <GridViewColumn x:Name="firstNameColumn" Header="first Name" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding lastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="-6,-1" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn x:Name="phoneColumn" Header="phone" Width="100">
+                                <GridViewColumn x:Name="lastNameColumn" Header="last Name" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="-6,-1" Text="{Binding lastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn x:Name="phoneColumn" Header="phone" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Margin="-6,-1" Text="{Binding phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn x:Name="roleColumn" Header="role" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Margin="-6,-1" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn x:Name="isOnDutyColumn" Header="is On Duty" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding isOnDuty, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="-6,-1" Text="{Binding isOnDuty, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn x:Name="sectionIDColumn" Header="section ID" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding sectionID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="-6,-1" Text="{Binding sectionID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn x:Name="passwordColumn" Header="password" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBox Margin="-6,-1" Text="{Binding password, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn x:Name="titleColumn" Header="title" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="-6,-1" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn x:Name="dateHiredColumn" Header="date Hired" Width="120">
+                                <GridViewColumn x:Name="dateHiredColumn" Header="date Hired" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <DatePicker Margin="-6,-1" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <DatePicker Margin="-6,-1" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
                                 <GridViewColumn x:Name="removeUser" Header="" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0"></Button>
+                                            <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}"></Button>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
@@ -159,17 +158,17 @@
                     <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,0,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="Customers" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="108" Margin="10,0,-10,0" Background="#FFF72F2F" Foreground="White" Style="{DynamicResource TabItemStyle1}" Padding="2" FontSize="14" BorderBrush="#00ACACAC">
+            <TabItem Header="Customers" HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="87" Margin="10,0,-10,0" Background="#FF232323" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
-            <TabItem Header="Reservations" Width="108" Margin="15,0,-15,0" Background="#FFF72F2F" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" RenderTransformOrigin="0.483,0.5" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" BorderThickness="0" Height="33">
+            <TabItem Header="Reservations" HorizontalAlignment="Left" Height="76" VerticalAlignment="Top" Width="87" Margin="15,0,-15,0" Background="#FF232323" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}">
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
         <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,92,0,0" VerticalAlignment="Top" Width="149">
             <ListView.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEDEDED" Offset="0"/>
+                    <GradientStop Color="#FF878787" Offset="0"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </ListView.Background>
@@ -179,12 +178,12 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
-        <Label Content="Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,66,933,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
+        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="133" Background="#FF232323" Foreground="White"/>
         <ListView x:Name="customersListView" ItemsSource="{Binding}" Margin="10,424,933,69" SelectionMode="Single">
             <ListView.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEDEDED" Offset="0"/>
+                    <GradientStop Color="#FFBBBBBB" Offset="0"/>
                     <GradientStop Color="White" Offset="1"/>
                 </LinearGradientBrush>
             </ListView.Background>
