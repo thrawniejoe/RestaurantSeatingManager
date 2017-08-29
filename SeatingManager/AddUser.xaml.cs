@@ -17,8 +17,14 @@ namespace SeatingManager
     /// <summary>
     /// Interaction logic for AddUser.xaml
     /// </summary>
+    /// 
+    
+
     public partial class AddUser : Window
     {
+        public delegate void Refresh();
+ +      public event Refresh refreshPage;
+
         public AddUser()
         {
             InitializeComponent();
@@ -58,7 +64,8 @@ namespace SeatingManager
             //adds User object to db
             context.users.Add(User);
             context.SaveChanges();
-            MessageBox.Show("User Added To System");
+            refreshPage();
+            //MessageBox.Show("User Added To System");
             this.Close();
         }
 
