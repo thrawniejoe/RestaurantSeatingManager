@@ -54,8 +54,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="role:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="roleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            
         </Grid>
         <Grid x:Name="grid5" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="401,122,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -110,7 +109,12 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,0,0,4" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Bottom" Width="120">
+                <ComboBoxItem>Admin</ComboBoxItem>
+                <ComboBoxItem>Manager </ComboBoxItem>
+                <ComboBoxItem>Host</ComboBoxItem>
+                <ComboBoxItem>Server</ComboBoxItem>
+            </ComboBox>
         </Grid>
         <Grid x:Name="grid10" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="392,243,0,0" VerticalAlignment="Top" Width="247">
             <Grid.ColumnDefinitions>
