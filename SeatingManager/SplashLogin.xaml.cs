@@ -68,21 +68,23 @@ namespace SeatingManager
                 {
                     case 0:
                         ManagerMain manager = new ManagerMain();
+                        manager.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                         manager.Show();
                         break;
                     case 1:
                         MainWindow main = new MainWindow();
+                        main.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                         main.Show();
                         break;
                     case 2:
                         MainWindow main2 = new MainWindow();
+                        main2.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                         main2.Show();
                         break;
                 }
                 
                 this.Close();
             }
-
 
             //if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
             //{
