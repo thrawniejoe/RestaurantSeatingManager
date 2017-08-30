@@ -23,7 +23,7 @@ namespace SeatingManager
     public partial class AddUser : Window
     {
         public delegate void Refresh();
- +      public event Refresh refreshPage;
+        public event Refresh refreshPage;
 
         public AddUser()
         {

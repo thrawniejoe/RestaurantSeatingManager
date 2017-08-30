@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="SeatingManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="assigncustomers">
           <Key>
             <PropertyRef Name="tableAssignID" />
@@ -69,9 +69,10 @@
           <Property Name="isActive" Type="tinyint" Nullable="false" />
           <Property Name="isOnDuty" Type="tinyint" Nullable="false" />
           <Property Name="sectionID" Type="int" />
-          <Property Name="password" Type="nvarchar" MaxLength="45" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="256" Nullable="false" />
           <Property Name="title" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="dateHired" Type="datetime" Nullable="false" />
+          <Property Name="passwordSalt" Type="nvarchar" MaxLength="256" />
         </EntityType>
         <EntityContainer Name="SeatingManagerDBModelStoreContainer">
           <EntitySet Name="assigncustomers" EntityType="Self.assigncustomers" Schema="dbo" store:Type="Tables" />
@@ -81,18 +82,11 @@
           <EntitySet Name="tablesections" EntityType="Self.tablesections" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="SeatingManagerDBModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="SeatingManagerDBEntities" p1:LazyLoadingEnabled="true">
-          <EntitySet Name="assigncustomers" EntityType="SeatingManagerDBModel.assigncustomer" />
-          <EntitySet Name="customers" EntityType="SeatingManagerDBModel.customer" />
-          <EntitySet Name="tablemaps" EntityType="SeatingManagerDBModel.tablemap" />
-          <EntitySet Name="tablemerges" EntityType="SeatingManagerDBModel.tablemerge" />
-          <EntitySet Name="tablesections" EntityType="SeatingManagerDBModel.tablesection" />
-          <EntitySet Name="users" EntityType="SeatingManagerDBModel.user" />
-        </EntityContainer>
+      <Schema Namespace="SeatingManagerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="assigncustomer">
           <Key>
             <PropertyRef Name="tableAssignID" />
@@ -108,7 +102,7 @@
             <PropertyRef Name="customerID" />
           </Key>
           <Property Name="customerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="customerName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="customerName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="wait" Type="Byte" Nullable="false" />
           <Property Name="reservation" Type="Byte" Nullable="false" />
           <Property Name="timeIn" Type="DateTime" Nullable="false" Precision="3" />
@@ -143,24 +137,33 @@
             <PropertyRef Name="tableSectionID" />
           </Key>
           <Property Name="tableSectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="sectionColor" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="sectionColor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="user">
           <Key>
             <PropertyRef Name="userID" />
           </Key>
           <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="firstName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
-          <Property Name="lastName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="firstName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lastName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
           <Property Name="role" Type="Int32" Nullable="false" />
           <Property Name="isActive" Type="Byte" Nullable="false" />
           <Property Name="isOnDuty" Type="Byte" Nullable="false" />
           <Property Name="sectionID" Type="Int32" />
-          <Property Name="password" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="true" />
-          <Property Name="title" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="title" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="dateHired" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="passwordSalt" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityContainer Name="SeatingManagerDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="assigncustomers" EntityType="Self.assigncustomer" />
+          <EntitySet Name="customers" EntityType="Self.customer" />
+          <EntitySet Name="tablemaps" EntityType="Self.tablemap" />
+          <EntitySet Name="tablemerges" EntityType="Self.tablemerge" />
+          <EntitySet Name="tablesections" EntityType="Self.tablesection" />
+          <EntitySet Name="users" EntityType="Self.user" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -170,74 +173,75 @@
           <EntitySetMapping Name="assigncustomers">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.assigncustomer">
               <MappingFragment StoreEntitySet="assigncustomers">
-                <ScalarProperty Name="isAssigned" ColumnName="isAssigned" />
-                <ScalarProperty Name="assignTime" ColumnName="assignTime" />
-                <ScalarProperty Name="customerID" ColumnName="customerID" />
-                <ScalarProperty Name="tableID" ColumnName="tableID" />
                 <ScalarProperty Name="tableAssignID" ColumnName="tableAssignID" />
+                <ScalarProperty Name="tableID" ColumnName="tableID" />
+                <ScalarProperty Name="customerID" ColumnName="customerID" />
+                <ScalarProperty Name="assignTime" ColumnName="assignTime" />
+                <ScalarProperty Name="isAssigned" ColumnName="isAssigned" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="customers">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.customer">
               <MappingFragment StoreEntitySet="customers">
-                <ScalarProperty Name="timeMade" ColumnName="timeMade" />
-                <ScalarProperty Name="timeIn" ColumnName="timeIn" />
-                <ScalarProperty Name="reservation" ColumnName="reservation" />
-                <ScalarProperty Name="wait" ColumnName="wait" />
-                <ScalarProperty Name="customerName" ColumnName="customerName" />
                 <ScalarProperty Name="customerID" ColumnName="customerID" />
+                <ScalarProperty Name="customerName" ColumnName="customerName" />
+                <ScalarProperty Name="wait" ColumnName="wait" />
+                <ScalarProperty Name="reservation" ColumnName="reservation" />
+                <ScalarProperty Name="timeIn" ColumnName="timeIn" />
+                <ScalarProperty Name="timeMade" ColumnName="timeMade" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tablemaps">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.tablemap">
               <MappingFragment StoreEntitySet="tablemaps">
-                <ScalarProperty Name="tableType" ColumnName="tableType" />
-                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
-                <ScalarProperty Name="visible" ColumnName="visible" />
-                <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
-                <ScalarProperty Name="tableY" ColumnName="tableY" />
-                <ScalarProperty Name="tableX" ColumnName="tableX" />
                 <ScalarProperty Name="tableID" ColumnName="tableID" />
+                <ScalarProperty Name="tableX" ColumnName="tableX" />
+                <ScalarProperty Name="tableY" ColumnName="tableY" />
+                <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+                <ScalarProperty Name="visible" ColumnName="visible" />
+                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+                <ScalarProperty Name="tableType" ColumnName="tableType" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tablemerges">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.tablemerge">
               <MappingFragment StoreEntitySet="tablemerges">
-                <ScalarProperty Name="isMerged" ColumnName="isMerged" />
-                <ScalarProperty Name="visible" ColumnName="visible" />
-                <ScalarProperty Name="tableID4" ColumnName="tableID4" />
-                <ScalarProperty Name="tableID3" ColumnName="tableID3" />
-                <ScalarProperty Name="tableID2" ColumnName="tableID2" />
-                <ScalarProperty Name="tableID1" ColumnName="tableID1" />
                 <ScalarProperty Name="tableMergeID" ColumnName="tableMergeID" />
+                <ScalarProperty Name="tableID1" ColumnName="tableID1" />
+                <ScalarProperty Name="tableID2" ColumnName="tableID2" />
+                <ScalarProperty Name="tableID3" ColumnName="tableID3" />
+                <ScalarProperty Name="tableID4" ColumnName="tableID4" />
+                <ScalarProperty Name="visible" ColumnName="visible" />
+                <ScalarProperty Name="isMerged" ColumnName="isMerged" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="tablesections">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.tablesection">
               <MappingFragment StoreEntitySet="tablesections">
-                <ScalarProperty Name="sectionColor" ColumnName="sectionColor" />
                 <ScalarProperty Name="tableSectionID" ColumnName="tableSectionID" />
+                <ScalarProperty Name="sectionColor" ColumnName="sectionColor" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="SeatingManagerDBModel.user">
               <MappingFragment StoreEntitySet="users">
-                <ScalarProperty Name="dateHired" ColumnName="dateHired" />
-                <ScalarProperty Name="title" ColumnName="title" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
-                <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
-                <ScalarProperty Name="isActive" ColumnName="isActive" />
-                <ScalarProperty Name="role" ColumnName="role" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="lastName" ColumnName="lastName" />
-                <ScalarProperty Name="firstName" ColumnName="firstName" />
                 <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="role" ColumnName="role" />
+                <ScalarProperty Name="isActive" ColumnName="isActive" />
+                <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
+                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+                <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -255,10 +259,10 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
-        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

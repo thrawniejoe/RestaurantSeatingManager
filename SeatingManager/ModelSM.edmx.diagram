@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f79ef78aa2ae4f0d8ea8a60603264c15" Name="Diagram1">
-        <EntityTypeShape EntityType="SeatingManagerDBModel.assigncustomer" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.customer" Width="1.5" PointX="2.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemap" Width="1.5" PointX="0.75" PointY="3.75" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemerge" Width="1.5" PointX="2.75" PointY="3.75" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.tablesection" Width="1.5" PointX="4.75" PointY="0.75" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.user" Width="1.5" PointX="4.75" PointY="3.75" />
+      <Diagram DiagramId="9c5505605e8b4e74b46bde02a24a2c3d" Name="Diagram1">
+        <EntityTypeShape EntityType="SeatingManagerDBModel.assigncustomer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.customer" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemap" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemerge" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.tablesection" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.user" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

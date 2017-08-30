@@ -33,7 +33,7 @@ namespace SeatingManager.csClasses
             return Convert.ToBase64String(buff);
         }
 
-        public bool ConfirmPassword(string username, string password)
+        public static bool ConfirmPassword(string username, string password)
         {
             var context = new SeatingManager.SeatingManagerDBEntities();
             string recordedPassword = (from u in context.users
