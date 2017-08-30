@@ -78,9 +78,9 @@
             </TabItem>
 
             <TabItem Header="Users" Margin="5,0,-5,0" Width="108" Background="#FFF72F2F" Foreground="White" FontSize="14" BorderBrush="#00000000" Padding="2" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top">
-                <Grid Background="#FF232323" Margin="0,7,0.4,0" DataContext="{StaticResource usersViewSource}">
-                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
-                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,37,10,10" SelectionMode="Single">
+                <Grid Background="#FF232323" Margin="0,10,0,0" DataContext="{StaticResource usersViewSource}">
+                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
+                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,50,10,10" SelectionMode="Single">
                         <ListView.ItemContainerStyle>
                             <Style>
                                 <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
@@ -155,9 +155,9 @@
                             </GridView>
                         </ListView.View>
                     </ListView>
-                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,0,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
-                    <ComboBox x:Name="cboFilterList" HorizontalAlignment="Left" Margin="517,0,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="cboFilterList_SelectionChanged" Height="32"/>
-                    <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,0,0,0" VerticalAlignment="Top" Width="112" Height="33" Background="#FFF72F2F" BorderBrush="#FFF72F2F" Foreground="White" Click="btnClearFilter_Click"/>
+                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,7,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
+                    <ComboBox x:Name="cboFilterList" HorizontalAlignment="Left" Margin="517,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="cboFilterList_SelectionChanged" Height="32"/>
+                    <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,7,0,0" VerticalAlignment="Top" Width="112" Height="33" Background="#FFF72F2F" BorderBrush="#FFF72F2F" Foreground="White" Click="btnClearFilter_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Customers" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="108" Margin="10,0,-10,0" Background="#FFF72F2F" Foreground="White" Style="{DynamicResource TabItemStyle1}" Padding="2" FontSize="14" BorderBrush="#00ACACAC">
