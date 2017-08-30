@@ -2,14 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
         xmlns:local="clr-namespace:SeatingManager"
+    
         xmlns:SeatingManagerDBDataSetTableAdapters="clr-namespace:SeatingManager.SeatingManagerDBDataSetTableAdapters" x:Class="SeatingManager.ManagerMain"
         mc:Ignorable="d"
         Title="ManagerMain" Height="841" Width="1100" Background="#FF2A2B30" Loaded="Window_Loaded">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
-        <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}" />
         <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}" >
             <Setter Property="Template">
                 <Setter.Value>
@@ -155,6 +156,8 @@
                         </ListView.View>
                     </ListView>
                     <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,0,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
+                    <ComboBox x:Name="cboFilterList" HorizontalAlignment="Left" Margin="517,0,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="cboFilterList_SelectionChanged" Height="32"/>
+                    <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,0,0,0" VerticalAlignment="Top" Width="112" Height="33" Background="#FFF72F2F" BorderBrush="#FFF72F2F" Foreground="White" Click="btnClearFilter_Click"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Customers" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="108" Margin="10,0,-10,0" Background="#FFF72F2F" Foreground="White" Style="{DynamicResource TabItemStyle1}" Padding="2" FontSize="14" BorderBrush="#00ACACAC">
@@ -178,7 +181,7 @@
             </ListView.View>
         </ListView>
         <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
-        <Label Content="Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,66,933,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
+        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,66,933,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
         <ListView x:Name="customersListView" ItemsSource="{Binding}" Margin="10,424,933,69" SelectionMode="Single">
             <ListView.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
