@@ -13,7 +13,7 @@
     <Grid>
         <Button x:Name="btnAddUser" Content="Add" HorizontalAlignment="Left" Margin="283,334,0,0" VerticalAlignment="Top" Width="87" Click="btnAddUser_Click"/>
         <Label Content="Add a User" HorizontalAlignment="Left" Margin="265,10,0,0" VerticalAlignment="Top" FontSize="24"/>
-        <Grid x:Name="grid1" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="61,74,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid1" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="60,75,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -21,10 +21,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="first Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="First Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="firstNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid2" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="60,112,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid2" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="61,110,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -32,10 +32,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="last Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Last Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="lastNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding lastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid3" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="66,149,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid3" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="84,145,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -43,7 +43,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="phone:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Phone:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="phoneTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Grid x:Name="grid4" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="423,91,0,0" VerticalAlignment="Top">
@@ -54,9 +54,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            
+
         </Grid>
-        <Grid x:Name="grid5" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="401,122,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid5" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="401,110,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -64,10 +64,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="is Active:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Is Active:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="isActiveTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding isActive, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid6" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="388,158,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid6" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="389,145,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -75,10 +75,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="is On Duty:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Is On Duty:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="isOnDutyTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding isOnDuty, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid7" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="388,196,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid7" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="391,180,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -86,10 +86,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="section ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Section ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="sectionIDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding sectionID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid8" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="50,191,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid8" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="68,180,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -97,10 +97,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="password:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Password:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="passwordTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding password, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid9" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="79,228,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid9" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="95,215,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -108,15 +108,15 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,0,0,4" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Bottom" Width="120">
                 <ComboBoxItem>Admin</ComboBoxItem>
-                <ComboBoxItem>Manager </ComboBoxItem>
+                <ComboBoxItem>Manager</ComboBoxItem>
                 <ComboBoxItem>Host</ComboBoxItem>
                 <ComboBoxItem>Server</ComboBoxItem>
             </ComboBox>
         </Grid>
-        <Grid x:Name="grid10" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="392,243,0,0" VerticalAlignment="Top" Width="247">
+        <Grid x:Name="grid10" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="386,215,0,0" VerticalAlignment="Top" Width="247">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -124,7 +124,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="date Hired:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Date Hired:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <DatePicker x:Name="dateHiredDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-51.4,4" Grid.Row="0" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="158"/>
         </Grid>
 

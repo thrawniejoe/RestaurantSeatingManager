@@ -18,7 +18,7 @@
         <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="153,215,0,0" VerticalAlignment="Top" Width="75"/>
         <Label HorizontalAlignment="Left" Margin="234,64,0,0" VerticalAlignment="Top"/>
         <Label Content="" HorizontalAlignment="Left" Margin="200,123,0,0" VerticalAlignment="Top" Height="29"/>
-        <Grid x:Name="grid1" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="172,66,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid1" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="170,65,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -26,10 +26,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="customer Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Customer Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="customerNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding customerName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid2" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="235,102,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid2" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="233,100,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -37,10 +37,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="wait:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Wait:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <TextBox x:Name="waitTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding wait, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid3" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="221,135,0,0" VerticalAlignment="Top" Width="246">
+        <Grid x:Name="grid3" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="216,135,0,0" VerticalAlignment="Top" Width="246">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -48,10 +48,10 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="time In:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Time In:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <DatePicker x:Name="timeInDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3.2,4,-69.6,4" Grid.Row="0" SelectedDate="{Binding timeIn, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="176"/>
         </Grid>
-        <Grid x:Name="grid4" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="197,172,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid4" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="195,170,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -59,7 +59,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="reservation:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="Reservation:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <ComboBox x:Name="reservationComboBox" Grid.Column="1" DisplayMemberPath="reservation" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120">
                 <ComboBox.ItemsPanel>
                     <ItemsPanelTemplate>
@@ -68,6 +68,7 @@
                 </ComboBox.ItemsPanel>
             </ComboBox>
         </Grid>
+        <Label x:Name="label" Content="Add a Customer" HorizontalAlignment="Left" Margin="198,10,0,0" VerticalAlignment="Top" FontSize="24"/>
 
     </Grid>
 </Window>
