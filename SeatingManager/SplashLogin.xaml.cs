@@ -69,6 +69,7 @@ namespace SeatingManager
                 switch (getRole)
                 {
                     case 0:
+                        //Properties.Resources.CurrentUserRole ="TEST";
                         mainWindow = new ManagerMain();
                         break;
                     case 1:
