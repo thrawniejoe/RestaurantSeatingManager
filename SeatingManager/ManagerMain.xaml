@@ -110,13 +110,6 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-                                <GridViewColumn x:Name="phoneColumn" Header="phone" Width="100">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
                                 <GridViewColumn x:Name="isOnDutyColumn" Header="is On Duty" Width="80">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -142,6 +135,13 @@
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <DatePicker Margin="-6,-1" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn x:Name="modifyUser" Header="" Width="80">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button Name="btnRemoveUser"  Click="btnModifyUser_Click" Content="Modify" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0"></Button>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>

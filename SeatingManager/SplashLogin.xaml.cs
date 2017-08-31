@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace SeatingManager
 {
     /// <summary>
@@ -60,35 +61,27 @@ namespace SeatingManager
             var getRole = (from u in context.users
                            where u.firstName.Equals(userName)
                            select u.role).SingleOrDefault();
-
-            //MessageBox.Show(Convert.ToString(uCheck));
-            
+        
             if (Convert.ToString(uCheck) == txtPassword.Text)
             {
                 Window mainWindow = null;
                 switch (getRole)
                 {
                     case 0:
-                        //Properties.Resources.CurrentUserRole ="TEST";
                         mainWindow = new ManagerMain();
                         break;
                     case 1:
-                        mainWindow = new MainWindow();
+                        mainWindow = new ManagerMain();
                         break;
                     case 2:
                         mainWindow = new MainWindow();
                         break;
                 }
+                Properties.Settings.Default.CurrentUserRole = getRole; //saves the user role to the applcation settings file
+                Properties.Settings.Default.Save();
                 mainWindow.Show();
                 this.Close();
             }
-
-
-            //if (txtUsername.Text.Equals("john") && txtPassword.Password.Equals("password"))
-            //{
-            //    main.Show();
-            //    this.Close();
-            //}
             else
             {
                 MessageBox.Show("Invalid Username and/or Password. Please try again.");

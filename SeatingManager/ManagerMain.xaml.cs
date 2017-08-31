@@ -19,6 +19,8 @@ namespace SeatingManager
     /// </summary>
     public partial class ManagerMain : Window
     {
+        public delegate void getUserID(int uid);
+
         public ManagerMain()
         {
             InitializeComponent();
@@ -56,11 +58,24 @@ namespace SeatingManager
 
             //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(usersListView.ItemsSource);
             //view.Filter = UserFilter;
-            var getList = (from u in context.users
+            var getServerList = (from u in context.users
                            where u.title == "Server"
                            select u);
-            serverListView.ItemsSource = getList.ToList();
+            serverListView.ItemsSource = getServerList.ToList();
             cboFilterList.ItemsSource = FilterList();
+            int userRole = Properties.Settings.Default.CurrentUserRole;
+            switch (userRole)
+            {
+                case 0: //admin
+                    
+                    break;
+                case 1:  //manager
+                    var getManagerUserList = (from mul in context.users
+                                              where mul.role != 0
+                                              select mul);
+                    usersListView.ItemsSource = getManagerUserList.ToList();
+                    break;        
+            }
         }
 
         public void RefreshList()
@@ -171,6 +186,21 @@ namespace SeatingManager
             usersListView.ItemsSource = null;
             usersListView.ItemsSource = getList.ToList();
             cboFilterList.SelectedItem = null;
+        }
+
+        private void btnModifyUser_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            int i = Convert.ToInt16(btn.Tag);
+
+            ModifyUser Mu = new ModifyUser();
+            getUserID del = new getUserID(Mu.getID);
+            del(i);
+            Mu.refreshPage += RefreshList;
+            Mu.Owner = this;
+            //aU.Owner = Application.Current.MainWindow;
+            Mu.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            Mu.ShowDialog();
         }
     }
 }

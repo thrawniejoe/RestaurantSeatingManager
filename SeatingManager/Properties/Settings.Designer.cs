@@ -43,5 +43,17 @@ namespace SeatingManager.Properties {
                 return ((string)(this["SeatingManagerDBConnectionStringMain"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int CurrentUserRole {
+            get {
+                return ((int)(this["CurrentUserRole"]));
+            }
+            set {
+                this["CurrentUserRole"] = value;
+            }
+        }
     }
 }
