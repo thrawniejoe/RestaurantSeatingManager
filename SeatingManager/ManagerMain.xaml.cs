@@ -67,7 +67,7 @@ namespace SeatingManager
             switch (userRole)
             {
                 case 0: //admin
-                    
+                    //currently don't need to do anything
                     break;
                 case 1:  //manager
                     var getManagerUserList = (from mul in context.users
@@ -190,16 +190,15 @@ namespace SeatingManager
 
         private void btnModifyUser_Click(object sender, RoutedEventArgs e)
         {
-            Button btn = (Button)sender;
+            Button btn = (Button)sender; //creates new button and gets the button that was pressed data
             int i = Convert.ToInt16(btn.Tag);
 
             ModifyUser Mu = new ModifyUser();
             getUserID del = new getUserID(Mu.getID);
-            del(i);
-            Mu.refreshPage += RefreshList;
-            Mu.Owner = this;
-            //aU.Owner = Application.Current.MainWindow;
-            Mu.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            del(i); //sets delagate value
+            Mu.refreshPage += RefreshList;  //forwards refresh button to the modifty user form
+            Mu.Owner = this; //sets the owner of this new form the managerMain form
+            Mu.WindowStartupLocation = WindowStartupLocation.CenterOwner; //center the new dialog on the mainwindow
             Mu.ShowDialog();
         }
     }

@@ -55,7 +55,30 @@ namespace SeatingManager
 
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            //INSERT VALIDATION CHECK HERE
+
+
+
+
+            //Updates user in database
+            using (var db = new SeatingManager.SeatingManagerDBEntities())
+            {
+                var result = db.users.SingleOrDefault(b => b.userID == userID);
+                if (result != null)
+                {
+                    result.firstName = firstNameTextBox.Text;
+                    result.lastName = lastNameTextBox.Text;
+                    result.phone = phoneTextBox.Text;
+                    result.isActive = Convert.ToByte(isActiveTextBox.Text);
+                    result.sectionID = Convert.ToInt16(sectionIDTextBox.Text);
+                    result.password = passwordTextBox.Text;
+                    result.title = titleTextBox.Text;
+                    result.dateHired = dateHiredDatePicker.SelectedDate.Value;
+                    db.SaveChanges();
+                }
+            }
             refreshPage();
+            this.Close();
         }
 
         public void getID(int myid)

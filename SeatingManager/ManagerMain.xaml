@@ -44,19 +44,19 @@
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="174,10,0,0" Background="#FF2A2B30" BorderBrush="#00000000">
 
             <TabItem Header="Tables" Width="108" Background="#FFF72F2F" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" Height="33" VerticalAlignment="Top" >
-                <Grid Background="#FFEDEDED" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0">
-                    <DataGrid x:Name="tablemapsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="422,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" Background="White" BorderBrush="{x:Null}">
+                <Grid Background="#FF232323" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0" Width="834" IsHitTestVisible="True">
+                    <DataGrid x:Name="tablemapsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="345,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" BorderBrush="{x:Null}" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="0" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="None" UseLayoutRounding="False" Background="{x:Null}" AreRowDetailsFrozen="True" Focusable="False" AlternationCount="1" RowBackground="#FF54FFFF">
                         <DataGrid.Columns>
-                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="table ID" IsReadOnly="True" Width="SizeToHeader"/>
-                            <DataGridTextColumn x:Name="tableXColumn" Binding="{Binding tableX}" Header="table X" Width="SizeToHeader"/>
-                            <DataGridTextColumn x:Name="tableYColumn" Binding="{Binding tableY}" Header="table Y" Width="SizeToHeader"/>
-                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="number Of Seats" Width="SizeToHeader"/>
-                            <DataGridTextColumn x:Name="visibleColumn" Binding="{Binding visible}" Header="visible" Width="SizeToHeader"/>
-                            <DataGridTextColumn x:Name="sectionIDColumn1" Binding="{Binding sectionID}" Header="section ID" Width="SizeToHeader"/>
-                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="table Type" Width="SizeToHeader"/>
+                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="table ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="tableXColumn" Binding="{Binding tableX}" Header="table X" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="tableYColumn" Binding="{Binding tableY}" Header="table Y" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="number Of Seats" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="visibleColumn" Binding="{Binding visible}" Header="visible" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="sectionIDColumn1" Binding="{Binding sectionID}" Header="section ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="table Type" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="203,244,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFDFBFC" FontFamily="Segoe UI Semibold" BorderBrush="{x:Null}" Height="31">
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFDFBFC" FontFamily="Segoe UI Semibold" BorderBrush="{x:Null}" Height="31">
 
                         <Button.Background>
 
@@ -67,13 +67,13 @@
                             </LinearGradientBrush>
                         </Button.Background>
                     </Button>
-                    <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="214,124,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Visible:" HorizontalAlignment="Left" Margin="159,182,0,0" VerticalAlignment="Top"/>
-                    <Label Content="Section:" HorizontalAlignment="Left" Margin="153,153,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552"/>
-                    <Label Content="Table Type:" HorizontalAlignment="Left" Margin="136,124,0,0" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="cboSection" HorizontalAlignment="Left" Margin="214,154,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="cboVisible" HorizontalAlignment="Left" Margin="214,184,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Add a Table" HorizontalAlignment="Left" Margin="196,71,0,0" VerticalAlignment="Top"/>
+                    <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="119,153,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Visible:" HorizontalAlignment="Left" Margin="64,211,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label Content="Section:" HorizontalAlignment="Left" Margin="58,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552" Foreground="White"/>
+                    <Label Content="Table Type:" HorizontalAlignment="Left" Margin="41,153,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <ComboBox x:Name="cboSection" HorizontalAlignment="Left" Margin="119,183,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="cboVisible" HorizontalAlignment="Left" Margin="119,213,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Add a Table" HorizontalAlignment="Left" Margin="101,100,0,0" VerticalAlignment="Top" Foreground="White"/>
                 </Grid>
             </TabItem>
 
@@ -82,9 +82,20 @@
                     <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
                     <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,50,10,10" SelectionMode="Single">
                         <ListView.ItemContainerStyle>
-                            <Style>
+                            <Style TargetType="ListViewItem">
                                 <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
                                 <Setter Property="Control.VerticalContentAlignment" Value="Stretch"/>
+
+                                <!--<Setter Property="BorderBrush" Value="Black"/>
+                                <Setter Property="BorderThickness" Value="0"/>
+                                <Setter Property="Margin" Value="0"/>
+                                -->
+                                <!-- here we go -->
+                                <!--
+                                <Style.Resources>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Black"/>
+                                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Gray"/>
+                                </Style.Resources>-->
                             </Style>
                         </ListView.ItemContainerStyle>
                         <ListView.View>
@@ -99,7 +110,7 @@
                                 <GridViewColumn x:Name="firstNameColumn" Header="first Name" Width="100">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
+                                            <TextBox Margin="-6,-1" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0" IsReadOnlyCaretVisible="False" IsReadOnly="True"/>
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
