@@ -4,10 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
         xmlns:local="clr-namespace:SeatingManager"
+    WindowStyle="None"
+    AllowsTransparency="True"
+    ResizeMode="CanResizeWithGrip"
+    ShowInTaskbar="True"
     
         xmlns:SeatingManagerDBDataSetTableAdapters="clr-namespace:SeatingManager.SeatingManagerDBDataSetTableAdapters" x:Class="SeatingManager.ManagerMain"
         mc:Ignorable="d"
-        Title="ManagerMain" Height="841" Width="1100" Background="#FF2F2C38" Loaded="Window_Loaded">
+        Title="ManagerMain" Height="841" Width="1100" Background="#FF2F2C38" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}" />
@@ -80,7 +85,7 @@
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="832" Margin="260,10,0,0" Background="#FF2F2C38" BorderBrush="#00000000" SelectedIndex="{Binding Mode=OneWay}">
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="832" Margin="258,41,0,0" Background="#FF2F2C38" BorderBrush="#00000000" SelectedIndex="{Binding Mode=OneWay}">
 
             <TabItem Header="Tables" Width="108" Background="#FFE95B63" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" Height="33" VerticalAlignment="Top" >
                 <Grid Background="#FF2F2C38" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0" Width="834" IsHitTestVisible="True">
@@ -174,9 +179,9 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="191" Background="#FF232323" Foreground="White"/>
-        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,66,891,0" VerticalAlignment="Top" Width="191" Background="#FF232323" Foreground="White"/>
-        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,92,891,429" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
+        <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="199" Background="#FF232323" Foreground="White"/>
+        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,37,891,0" VerticalAlignment="Top" Width="199" Background="#FF232323" Foreground="White"/>
+        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,63,891,458" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
                 <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="75"/>
@@ -201,6 +206,11 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="1070,0,0,0" VerticalAlignment="Top" Height="30" Width="30" Click="btnClose_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Images/cls.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
