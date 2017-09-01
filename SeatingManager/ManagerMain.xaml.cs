@@ -56,12 +56,12 @@ namespace SeatingManager
             System.Windows.Data.CollectionViewSource customersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customersViewSource")));
             customersViewSource.View.MoveCurrentToFirst();
 
-            //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(usersListView.ItemsSource);
+            //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(usersDataGrid.ItemsSource);
             //view.Filter = UserFilter;
             var getServerList = (from u in context.users
                            where u.title == "Server"
                            select u);
-            serverListView.ItemsSource = getServerList.ToList();
+            serversDataGrid.ItemsSource = getServerList.ToList();
             cboFilterList.ItemsSource = FilterList();
             int userRole = Properties.Settings.Default.CurrentUserRole;
             switch (userRole)
@@ -73,47 +73,47 @@ namespace SeatingManager
                     var getManagerUserList = (from mul in context.users
                                               where mul.role != 0
                                               select mul);
-                    usersListView.ItemsSource = getManagerUserList.ToList();
+                    usersDataGrid.ItemsSource = getManagerUserList.ToList();
                     break;        
             }
         }
 
         public void RefreshList()
         {
-            usersListView.InvalidateProperty(ListView.ItemsSourceProperty);
+            usersDataGrid.InvalidateProperty(ListView.ItemsSourceProperty);
             var context = new SeatingManager.SeatingManagerDBEntities();
 
             //Refresh UserListView
-            usersListView.ItemsSource = null;
+            usersDataGrid.ItemsSource = null;
 
             if (cboFilterList.SelectedItem == null)
             {
                 var getList = (from u in context.users
                            select u);
-                usersListView.ItemsSource = getList.ToList();
+                usersDataGrid.ItemsSource = getList.ToList();
             }
             else
             {
                 var getList = (from nu in context.users
                                 where nu.title == cboFilterList.SelectedValue.ToString()
                 select nu);
-                usersListView.ItemsSource = getList.ToList();
+                usersDataGrid.ItemsSource = getList.ToList();
             }
 
             //Refresh ServerListView
-            serverListView.ItemsSource = null;
+            serversDataGrid.ItemsSource = null;
             var getServ = (from su in context.users
                            where su.title == "Server"
                            select su);
-            serverListView.ItemsSource = getServ.ToList();
+            serversDataGrid.ItemsSource = getServ.ToList();
 
 
             //Refresh CustomerListView
-            customersListView.ItemsSource = null;
+            customersDataGrid.ItemsSource = null;
             var getCust = (from su in context.users
                            where su.title == "Server"
                            select su);
-            serverListView.ItemsSource = getCust.ToList();
+            serversDataGrid.ItemsSource = getCust.ToList();
 
         }
 
@@ -147,14 +147,14 @@ namespace SeatingManager
             {
                 var context = new SeatingManager.SeatingManagerDBEntities();
                 string filterValuue = cboFilterList.SelectedValue.ToString();
-                usersListView.InvalidateProperty(ListView.ItemsSourceProperty);
+                usersDataGrid.InvalidateProperty(ListView.ItemsSourceProperty);
 
                 var getListA = (from u in context.users
                                 where u.title == filterValuue
                                 select u);
 
-                usersListView.ItemsSource = null;
-                usersListView.ItemsSource = getListA.ToList();
+                usersDataGrid.ItemsSource = null;
+                usersDataGrid.ItemsSource = getListA.ToList();
             }
         }
 
@@ -179,12 +179,12 @@ namespace SeatingManager
 
         private void btnClearFilter_Click(object sender, RoutedEventArgs e)
         {
-            usersListView.InvalidateProperty(ListView.ItemsSourceProperty);
+            usersDataGrid.InvalidateProperty(ListView.ItemsSourceProperty);
             var context = new SeatingManager.SeatingManagerDBEntities();
             var getList = (from u in context.users
                            select u);
-            usersListView.ItemsSource = null;
-            usersListView.ItemsSource = getList.ToList();
+            usersDataGrid.ItemsSource = null;
+            usersDataGrid.ItemsSource = getList.ToList();
             cboFilterList.SelectedItem = null;
         }
 
@@ -200,6 +200,16 @@ namespace SeatingManager
             Mu.Owner = this; //sets the owner of this new form the managerMain form
             Mu.WindowStartupLocation = WindowStartupLocation.CenterOwner; //center the new dialog on the mainwindow
             Mu.ShowDialog();
+        }
+
+        private void btnDeleteTable_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteServer_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

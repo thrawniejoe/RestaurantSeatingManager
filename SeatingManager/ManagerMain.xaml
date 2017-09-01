@@ -7,7 +7,7 @@
     
         xmlns:SeatingManagerDBDataSetTableAdapters="clr-namespace:SeatingManager.SeatingManagerDBDataSetTableAdapters" x:Class="SeatingManager.ManagerMain"
         mc:Ignorable="d"
-        Title="ManagerMain" Height="841" Width="1100" Background="#FF2A2B30" Loaded="Window_Loaded">
+        Title="ManagerMain" Height="841" Width="1100" Background="#FF2F2C38" Loaded="Window_Loaded">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}" />
@@ -26,6 +26,7 @@
                                 <Setter TargetName="Border" Property="Background" Value="#FFAC1C1C"/>
                                 <Setter Property="BorderBrush" TargetName="Border" Value="#00DCDCDC"/>
                                 <Setter Property="FontWeight" Value="Normal"/>
+
                             </Trigger>
                             <Trigger Property="IsSelected" Value="False">
                                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -37,36 +38,71 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="BorderBrush" Value="#FF373542"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FF373542"/>
+            <Setter Property="VerticalGridLinesBrush" Value="{x:Null}"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="#FF373542" />
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridRow}">
+            <Setter Property="BorderBrush" Value="#FF373542"/>
+            <Setter Property="Background" Value="#FF2F2C38" />
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#FFE95B63" />
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="FontWeight" Value="ExtraBold" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+        <Style TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                    <Setter Property="Background" Value="#FFE95B63" />
+                    <Setter Property="BorderBrush" Value="#FFE95B63"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
         <CollectionViewSource x:Key="tablemapsViewSource" Source="{Binding tablemaps, Source={StaticResource seatingManagerDBDataSet}}"/>
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="918" Margin="174,10,0,0" Background="#FF2A2B30" BorderBrush="#00000000">
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="832" Margin="260,10,0,0" Background="#FF2F2C38" BorderBrush="#00000000">
 
             <TabItem Header="Tables" Width="108" Background="#FFF72F2F" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" Height="33" VerticalAlignment="Top" >
-                <Grid Background="#FF232323" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0" Width="834" IsHitTestVisible="True">
-                    <DataGrid x:Name="tablemapsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="345,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" BorderBrush="{x:Null}" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="0" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="{x:Null}" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="None" UseLayoutRounding="False" Background="{x:Null}" AreRowDetailsFrozen="True" Focusable="False" AlternationCount="1" RowBackground="#FF54FFFF">
+                <Grid Background="#FF2F2C38" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0" Width="834" IsHitTestVisible="True">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="299*"/>
+                        <ColumnDefinition Width="535*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="tablemapsDataGrid" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="24,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1">
                         <DataGrid.Columns>
-                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="table ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
-                            <DataGridTextColumn x:Name="tableXColumn" Binding="{Binding tableX}" Header="table X" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
-                            <DataGridTextColumn x:Name="tableYColumn" Binding="{Binding tableY}" Header="table Y" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
-                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="number Of Seats" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
-                            <DataGridTextColumn x:Name="visibleColumn" Binding="{Binding visible}" Header="visible" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
-                            <DataGridTextColumn x:Name="sectionIDColumn1" Binding="{Binding sectionID}" Header="section ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
-                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="table Type" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True"/>
+                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="TABLE ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="80"/>
+                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="# OF SEATS" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
+                            <DataGridTextColumn x:Name="visibleColumn" Binding="{Binding visible}" Header="VISIBLE" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="75"/>
+                            <DataGridTextColumn x:Name="sectionIDColumn1" Binding="{Binding sectionID}" Header="SECTION ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
+                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="TABLE TYPE" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
+                            <DataGridTemplateColumn MaxWidth="90" MinWidth="75">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btndeleteTable"  Click="btnDeleteTable_Click" Content="Delete" Tag="{Binding tableID, Mode=OneWay}" BorderThickness="0" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFDFBFC" FontFamily="Segoe UI Semibold" BorderBrush="{x:Null}" Height="31">
-
-                        <Button.Background>
-
-                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                <GradientStop Color="#FFA2CB4B" Offset="0"/>
-                                <GradientStop Color="#FF6B901C" Offset="1"/>
-                                <GradientStop Color="#FF87AD34" Offset="0.514"/>
-                            </LinearGradientBrush>
-                        </Button.Background>
-                    </Button>
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFDFBFC" FontFamily="Segoe UI Semibold" BorderBrush="#FFE0E0E0" Height="31" Background="#FF2F2C38"/>
                     <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="119,153,0,0" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Visible:" HorizontalAlignment="Left" Margin="64,211,0,0" VerticalAlignment="Top" Foreground="White"/>
                     <Label Content="Section:" HorizontalAlignment="Left" Margin="58,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552" Foreground="White"/>
@@ -80,95 +116,33 @@
             <TabItem Header="Users" Margin="5,0,-5,0" Width="108" Background="#FFF72F2F" Foreground="White" FontSize="14" BorderBrush="#00000000" Padding="2" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top">
                 <Grid Background="#FF232323" Margin="0,10,0,0" DataContext="{StaticResource usersViewSource}">
                     <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
-                    <ListView x:Name="usersListView" ItemsSource="{Binding}" Margin="10,50,10,10" SelectionMode="Single">
-                        <ListView.ItemContainerStyle>
-                            <Style TargetType="ListViewItem">
-                                <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
-                                <Setter Property="Control.VerticalContentAlignment" Value="Stretch"/>
-
-                                <!--<Setter Property="BorderBrush" Value="Black"/>
-                                <Setter Property="BorderThickness" Value="0"/>
-                                <Setter Property="Margin" Value="0"/>
-                                -->
-                                <!-- here we go -->
-                                <!--
-                                <Style.Resources>
-                                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Black"/>
-                                    <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="Gray"/>
-                                </Style.Resources>-->
-                            </Style>
-                        </ListView.ItemContainerStyle>
-                        <ListView.View>
-                            <GridView>
-                                <!--<GridViewColumn x:Name="userIDColumn" Header="user ID" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="6,-1,-6,-1" Text="{Binding userID, Mode=OneWay}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>-->
-                                <GridViewColumn x:Name="firstNameColumn" Header="first Name" Width="100">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0" IsReadOnlyCaretVisible="False" IsReadOnly="True"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="lastNameColumn" Header="last Name" Width="120">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding lastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="isOnDutyColumn" Header="is On Duty" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding isOnDuty, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="sectionIDColumn" Header="section ID" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding sectionID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="titleColumn" Header="title" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <TextBox Margin="-6,-1" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="dateHiredColumn" Header="date Hired" Width="120">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <DatePicker Margin="-6,-1" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" BorderThickness="0"/>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="modifyUser" Header="" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Button Name="btnRemoveUser"  Click="btnModifyUser_Click" Content="Modify" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0"></Button>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                                <GridViewColumn x:Name="removeUser" Header="" Width="80">
-                                    <GridViewColumn.CellTemplate>
-                                        <DataTemplate>
-                                            <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0"></Button>
-                                        </DataTemplate>
-                                    </GridViewColumn.CellTemplate>
-                                </GridViewColumn>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
                     <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,7,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Height="33"/>
                     <ComboBox x:Name="cboFilterList" HorizontalAlignment="Left" Margin="517,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="cboFilterList_SelectionChanged" Height="32"/>
                     <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,7,0,0" VerticalAlignment="Top" Width="112" Height="33" Background="#FFF72F2F" BorderBrush="#FFF72F2F" Foreground="White" Click="btnClearFilter_Click"/>
+                    <DataGrid x:Name="usersDataGrid" MinRowHeight="30" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,45,10,17" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="firstNameColumn2" Binding="{Binding firstName}" Header="FIRST NAME" Width="120"/>
+                            <DataGridTextColumn x:Name="lastNameColumn2" Binding="{Binding lastName}" Header="LAST NAME" Width="120"/>
+                            <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding phone}" Header="PHONE" Width="95"/>
+                            <DataGridTextColumn x:Name="isOnDutyColumn1" Binding="{Binding isOnDuty}" Header="ON DUTY" Width="85"/>
+                            <DataGridTextColumn x:Name="sectionIDColumn2" Binding="{Binding sectionID}" Header="SECTION" Width="85"/>
+                            <DataGridTextColumn x:Name="titleColumn1" Binding="{Binding title}" Header="TITLE" Width="120"/>
+                            <DataGridTemplateColumn x:Name="modifyUser" Header="" Width="80">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnRemoveUser"  Click="btnModifyUser_Click" Content="Modify" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn x:Name="removeUser" Header="" Width="80">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
                 </Grid>
             </TabItem>
             <TabItem Header="Customers" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="108" Margin="10,0,-10,0" Background="#FFF72F2F" Foreground="White" Style="{DynamicResource TabItemStyle1}" Padding="2" FontSize="14" BorderBrush="#00ACACAC">
@@ -178,73 +152,33 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
-        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,66,933,0" VerticalAlignment="Top" Width="149" Background="#FF232323" Foreground="White"/>
-        <ListView x:Name="customersListView" ItemsSource="{Binding}" Margin="10,424,933,69" SelectionMode="Single">
-            <ListView.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFEDEDED" Offset="0"/>
-                    <GradientStop Color="White" Offset="1"/>
-                </LinearGradientBrush>
-            </ListView.Background>
-            <ListView.ItemContainerStyle>
-                <Style>
-                    <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
-                    <Setter Property="Control.VerticalContentAlignment" Value="Stretch"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn x:Name="customerNameColumn" Header="customer Name" Width="110">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Margin="-6,-1" Text="{Binding customerName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <GridViewColumn x:Name="timeMadeColumn" Header="" Width="35">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" Width="20"></Button>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <ListView x:Name="serverListView" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,97,933,455" SelectionMode="Single">
-            <ListView.ItemContainerStyle>
-                <Style>
-                    <Setter Property="Control.HorizontalContentAlignment" Value="Stretch"/>
-                    <Setter Property="Control.VerticalContentAlignment" Value="Stretch"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn x:Name="firstNameColumn1" Header="first Name" Width="110">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Margin="-6,-1" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                    <!--<GridViewColumn x:Name="lastNameColumn1" Header="last Name" Width="80">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <TextBox Margin="-6,-1" Text="{Binding lastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>-->
-                    <GridViewColumn x:Name="dateHiredColumn1" Header="" Width="30">
-                        <GridViewColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Name="btnDeleteServer" Content="X" Tag="{Binding userID, Mode=OneWay}"></Button>
-                            </DataTemplate>
-                        </GridViewColumn.CellTemplate>
-                    </GridViewColumn>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="191" Background="#FF232323" Foreground="White"/>
+        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,66,891,0" VerticalAlignment="Top" Width="191" Background="#FF232323" Foreground="White"/>
+        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,92,891,429" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
+                <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="75"/>
+                <DataGridTemplateColumn MaxWidth="35" MinWidth="30">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btndeleteServer"  Click="btnDeleteServer_Click" Content="X" Tag="{Binding userID}" BorderThickness="0" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,424,891,69" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="customerNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
+                <DataGridTemplateColumn x:Name="deleteCustColumn" Header="" Width="35">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" BorderThickness="0" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </Window>
