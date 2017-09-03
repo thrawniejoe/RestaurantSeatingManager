@@ -97,6 +97,7 @@
     <Compile Include="ManagerMain.xaml.cs">
       <DependentUpon>ManagerMain.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelClass\Password.cs" />
     <Compile Include="ModelSM.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,6 +120,7 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SeatingManagerDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="SplashLogin.xaml.cs">
       <DependentUpon>SplashLogin.xaml</DependentUpon>
@@ -210,18 +212,23 @@
     </None>
     <None Include="SeatingManagerDBDataSet.xsc">
       <DependentUpon>SeatingManagerDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="SeatingManagerDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>SeatingManagerDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="SeatingManagerDBDataSet.xss">
       <DependentUpon>SeatingManagerDBDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\cls.png" />

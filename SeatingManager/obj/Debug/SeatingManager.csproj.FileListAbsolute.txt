@@ -158,7 +158,6 @@ C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.xml
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityFramework.SqlServerCompact.xml
-C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csprojResolveAssemblyReference.cache
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.g.cs
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.g.cs
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.g.cs
@@ -185,3 +184,10 @@ C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.g.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.baml
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.Designer.cs
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsc
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsd
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.g.cs
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.baml
+C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csprojResolveAssemblyReference.cache

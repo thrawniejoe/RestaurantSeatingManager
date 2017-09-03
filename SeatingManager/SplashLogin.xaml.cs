@@ -29,7 +29,7 @@ namespace SeatingManager
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //----------------MUST HAVE THIS TO CREATE YOUR CONTEXT AS IS DONE ON THE btnLogin-------------------------//
-            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
             // Load data into the table users. You can modify this code as needed.
         }
 
@@ -61,8 +61,9 @@ namespace SeatingManager
             var getRole = (from u in context.users
                            where u.firstName.Equals(userName)
                            select u.role).SingleOrDefault();
-        
+
             if (Convert.ToString(uCheck) == txtPassword.Text)
+            //if (ModelClass.Password.ConfirmPassword(userName, uCheck.ToString()))
             {
                 Window mainWindow = null;
                 switch (getRole)

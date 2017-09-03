@@ -32,21 +32,21 @@ namespace SeatingManager
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
             // Load data into the table users. You can modify this code as needed.
-            SeatingManager.SeatingManagerDBDataSetTableAdapters.usersTableAdapter seatingManagerDBDataSetusersTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.usersTableAdapter();
+            SeatingManagerDBDataSetTableAdapters.usersTableAdapter seatingManagerDBDataSetusersTableAdapter = new SeatingManagerDBDataSetTableAdapters.usersTableAdapter();
             seatingManagerDBDataSetusersTableAdapter.Fill(seatingManagerDBDataSet.users);
-            System.Windows.Data.CollectionViewSource usersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("usersViewSource")));
+            CollectionViewSource usersViewSource = ((CollectionViewSource)(this.FindResource("usersViewSource")));
             usersViewSource.View.MoveCurrentToFirst();
 
-            var context = new SeatingManager.SeatingManagerDBEntities();
+            var context = new SeatingManagerDBEntities();
             user p = context.users.First(u => u.userID == userID);
             firstNameTextBox.Text = p.firstName;
             lastNameTextBox.Text = p.lastName;
             phoneTextBox.Text = p.phone;
             isActiveTextBox.Text = Convert.ToString(p.isActive);
             sectionIDTextBox.Text = Convert.ToString(p.sectionID);
-            passwordTextBox.Text = p.password;
+            //passwordTextBox.Text = p.password;
             titleTextBox.Text = p.title;
             dateHiredDatePicker.SelectedDate = p.dateHired;
             
@@ -61,7 +61,7 @@ namespace SeatingManager
 
 
             //Updates user in database
-            using (var db = new SeatingManager.SeatingManagerDBEntities())
+            using (var db = new SeatingManagerDBEntities())
             {
                 var result = db.users.SingleOrDefault(b => b.userID == userID);
                 if (result != null)
@@ -71,6 +71,13 @@ namespace SeatingManager
                     result.phone = phoneTextBox.Text;
                     result.isActive = Convert.ToByte(isActiveTextBox.Text);
                     result.sectionID = Convert.ToInt16(sectionIDTextBox.Text);
+
+                    // set salt and hashed password, store it to the database
+                    //string salt = ModelClass.Password.CreateSalt(12);
+                    //string password = ModelClass.Password.Hash(passwordTextBox.Text, salt);
+                    //result.password = password;
+                    //result.passwordSalt = salt;
+
                     result.password = passwordTextBox.Text;
                     result.title = titleTextBox.Text;
                     result.dateHired = dateHiredDatePicker.SelectedDate.Value;
