@@ -28,8 +28,6 @@ C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csproj.CoreCompileInputs.cache
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.exe
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
-C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.g.cs
-C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.baml
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.g.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.baml
 C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManager.exe.config
@@ -191,3 +189,7 @@ C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.g.cs
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.baml
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csprojResolveAssemblyReference.cache
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.Designer.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsc
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsd
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
