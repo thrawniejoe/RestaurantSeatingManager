@@ -222,5 +222,12 @@ namespace SeatingManager
             if (e.ChangedButton == MouseButton.Left)
                 this.DragMove();
         }
+
+        private void btnLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.CurrentUserRole = -1; //saves the user role to the applcation settings file
+            Properties.Settings.Default.Save();
+            this.Close();
+        }
     }
 }

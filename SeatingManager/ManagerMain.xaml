@@ -11,7 +11,7 @@
     
         xmlns:SeatingManagerDBDataSetTableAdapters="clr-namespace:SeatingManager.SeatingManagerDBDataSetTableAdapters" x:Class="SeatingManager.ManagerMain"
         mc:Ignorable="d"
-        Title="ManagerMain" Height="841" Width="1100" Background="#FF2F2C38" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+        Title="ManagerMain" Height="841" Width="1100" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
 
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
@@ -28,15 +28,36 @@
                             <Trigger Property="IsSelected" Value="True">
                                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                                 <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
-                                <Setter TargetName="Border" Property="Background" Value="#FFAC1C1C"/>
                                 <Setter Property="BorderBrush" TargetName="Border" Value="#00DCDCDC"/>
                                 <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderThickness" TargetName="Border" Value="1"/>
+                                <Setter Property="Background" TargetName="Border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF3AC6AB" Offset="0.201"/>
+                                            <GradientStop Color="#FF2D74A0" Offset="1"/>
+                                            <GradientStop Color="#FF00F9D7" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="CornerRadius" TargetName="Border" Value="2"/>
 
                             </Trigger>
                             <Trigger Property="IsSelected" Value="False">
                                 <Setter Property="HorizontalContentAlignment" Value="Center"/>
                                 <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="#FFE8E8E8"/>
-                                <Setter TargetName="Border" Property="Background" Value="#FFE95B63" />
+                                <Setter Property="Background" TargetName="Border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF5A5B6E" Offset="0.096"/>
+                                            <GradientStop Color="#FF434551" Offset="0.77"/>
+                                            <GradientStop Color="#FFAFAFB2" Offset="0.013"/>
+                                            <GradientStop Color="#FF2B2B2E" Offset="1"/>
+                                            <GradientStop Color="#FF434551" Offset="0.933"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="CornerRadius" TargetName="Border" Value="2"/>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -56,19 +77,35 @@
             <Setter Property="ColumnHeaderHeight" Value="40"/>
         </Style>
         <Style TargetType="{x:Type DataGridColumnHeader}">
-            <Setter Property="Background" Value="#FF373542" />
+            <Setter Property="Background" >
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF40424E" Offset="0"/>
+                        <GradientStop Color="#FF32353E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
             <Setter Property="Foreground" Value="WhiteSmoke"/>
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
         </Style>
         <Style TargetType="{x:Type DataGridRow}">
             <Setter Property="BorderBrush" Value="#FF373542"/>
-            <Setter Property="Background" Value="#FF2F2C38" />
+            <Setter Property="Background" Value="#FF272731" />
             <Setter Property="Foreground" Value="WhiteSmoke"/>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#FFE95B63" />
-                    <Setter Property="Foreground" Value="Black"/>
-                    <Setter Property="FontWeight" Value="ExtraBold" />
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF23232B" Offset="1"/>
+                                <GradientStop Color="#FF373740" Offset="0"/>
+                                <GradientStop Color="#FF26262E" Offset="0.498"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FF00DDFD"/>
+                    <Setter Property="FontWeight" Value="SemiBold" />
                 </Trigger>
             </Style.Triggers>
 
@@ -76,24 +113,75 @@
         <Style TargetType="{x:Type DataGridCell}">
             <Style.Triggers>
                 <Trigger Property="DataGridCell.IsSelected" Value="True">
-                    <Setter Property="Background" Value="#FFE95B63" />
-                    <Setter Property="BorderBrush" Value="#FFE95B63"/>
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF23232B" Offset="1"/>
+                                <GradientStop Color="#FF373740" Offset="0"/>
+                                <GradientStop Color="#FF26262E" Offset="0.498"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FF00DDFD"/>
+                    <Setter Property="FontWeight" Value="SemiBold" />
                 </Trigger>
             </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF858593" Offset="0"/>
+                        <GradientStop Color="#FF434551" Offset="0.983"/>
+                        <GradientStop Color="#FF4B4D5C" Offset="0.527"/>
+                        <GradientStop Color="#FF57586A" Offset="0.021"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#FF3C3C3C"/>
+            <Setter Property="Foreground" Value="#FFFDFDFD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            CornerRadius="2" 
+                            BorderBrush="#FF646464"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FF191A1F"/>
+            <Setter Property="BorderBrush" Value="#FF292929"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style>
         <CollectionViewSource x:Key="tablemapsViewSource" Source="{Binding tablemaps, Source={StaticResource seatingManagerDBDataSet}}"/>
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="832" Margin="258,41,0,0" Background="#FF2F2C38" BorderBrush="#00000000" SelectedIndex="{Binding Mode=OneWay}">
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="832" Margin="258,41,0,0" Background="{x:Null}" BorderBrush="#00000000" SelectedIndex="{Binding Mode=OneWay}">
 
             <TabItem Header="Tables" Width="108" Background="#FFE95B63" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" Height="33" VerticalAlignment="Top" >
-                <Grid Background="#FF2F2C38" DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0" Width="834" IsHitTestVisible="True">
+                <Grid DataContext="{StaticResource tablemapsViewSource}" Margin="0,29,0,0" Width="834" IsHitTestVisible="True" Background="#FF545665">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="299*"/>
                         <ColumnDefinition Width="535*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="tablemapsDataGrid" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="24,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1">
+                    <DataGrid x:Name="tablemapsDataGrid" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="24,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1" Background="#FF1A1B20">
                         <DataGrid.Columns>
                             <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="TABLE ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="80"/>
                             <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="# OF SEATS" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
@@ -103,30 +191,34 @@
                             <DataGridTemplateColumn MaxWidth="90" MinWidth="75">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Name="btndeleteTable"  Click="btnDeleteTable_Click" Content="Delete" Tag="{Binding tableID, Mode=OneWay}" BorderThickness="0" Background="#FFF72F2F" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                        <Button Name="btndeleteTable"  Click="btnDeleteTable_Click" Content="Delete" Tag="{Binding tableID, Mode=OneWay}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top" Width="131" Foreground="#FFFDFBFC" FontFamily="Segoe UI Semibold" BorderBrush="#FFE0E0E0" Height="31" Background="#FF2F2C38"/>
-                    <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="119,153,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Visible:" HorizontalAlignment="Left" Margin="64,211,0,0" VerticalAlignment="Top" Foreground="White"/>
-                    <Label Content="Section:" HorizontalAlignment="Left" Margin="58,182,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552" Foreground="White"/>
-                    <Label Content="Table Type:" HorizontalAlignment="Left" Margin="41,153,0,0" VerticalAlignment="Top" Foreground="White"/>
-                    <ComboBox x:Name="cboSection" HorizontalAlignment="Left" Margin="119,183,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="cboVisible" HorizontalAlignment="Left" Margin="119,213,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Add a Table"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="28,100,0,0" VerticalAlignment="Top" Foreground="White" Width="227" Background="#FF373542"/>
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="84,170.69,0,0" VerticalAlignment="Top" Width="131" FontFamily="Segoe UI Semibold" Height="31"/>
+                    <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="119,69.69,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Visible:" HorizontalAlignment="Left" Margin="64,127.69,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label Content="Section:" HorizontalAlignment="Left" Margin="58,98.69,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552" Foreground="White"/>
+                    <Label Content="Table Type:" HorizontalAlignment="Left" Margin="41,69.69,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <ComboBox x:Name="cboSection" HorizontalAlignment="Left" Margin="119,99.69,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="cboVisible" HorizontalAlignment="Left" Margin="119,129.69,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Add a Table"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,16.69,0,0" VerticalAlignment="Top" Foreground="White" Width="246" Background="#FF3F414D"/>
+                    <Button Content="Add Section" HorizontalAlignment="Left" Margin="84,348,0,0" VerticalAlignment="Top" Width="131" Height="31"/>
+                    <TextBox x:Name="txtSection" HorizontalAlignment="Left" Height="23" Margin="136,301.62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846"/>
+                    <Label Content="Sections" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,259,0,0" VerticalAlignment="Top" Width="246" Foreground="White" Background="#FF3F414D"/>
+                    <Label Content="Section Name:" HorizontalAlignment="Left" Margin="38,296.62,0,0" VerticalAlignment="Top" Width="98" Foreground="White"/>
                 </Grid>
             </TabItem>
 
-            <TabItem Header="Users" Margin="5,0,-5,0" Width="108" Background="#FFE95B63" Foreground="White" FontSize="14" BorderBrush="#00000000" Padding="2" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top">
-                <Grid Background="#FF2F2C38" Margin="0,10,0,0" DataContext="{StaticResource usersViewSource}">
-                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Background="#FFE95B63" Foreground="White" BorderBrush="#FFE95B63" Height="33"/>
-                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,7,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Background="#FFE95B63" Foreground="White" BorderBrush="#FFE95B63" Height="33"/>
+            <TabItem Header="Users" Width="108" Background="{x:Null}" Foreground="White" FontSize="14" BorderBrush="#00000000" Padding="2" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top" Margin="1,0,-1,0">
+                <Grid Margin="0,10,0,0" DataContext="{StaticResource usersViewSource}">
+                    <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Height="33"/>
+                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,7,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Height="33"/>
                     <ComboBox x:Name="cboFilterList" HorizontalAlignment="Left" Margin="517,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="cboFilterList_SelectionChanged" Height="32"/>
-                    <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,7,0,0" VerticalAlignment="Top" Width="112" Height="33" Background="#FFE95B63" BorderBrush="#FFE95B63" Foreground="White" Click="btnClearFilter_Click"/>
-                    <DataGrid x:Name="usersDataGrid" MinRowHeight="30" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,45,10,0" RowDetailsVisibilityMode="VisibleWhenSelected" ColumnHeaderHeight="40">
+                    <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,7,0,0" VerticalAlignment="Top" Width="112" Height="33" Click="btnClearFilter_Click"/>
+                    <DataGrid x:Name="usersDataGrid" MinRowHeight="30" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,45,10,0" RowDetailsVisibilityMode="VisibleWhenSelected" ColumnHeaderHeight="40" BorderBrush="#FF2D2D30">
                         <DataGrid.Columns>
                             <DataGridTextColumn x:Name="firstNameColumn2" Binding="{Binding firstName}" Header="FIRST NAME" Width="120"/>
                             <DataGridTextColumn x:Name="lastNameColumn2" Binding="{Binding lastName}" Header="LAST NAME" Width="120"/>
@@ -137,14 +229,14 @@
                             <DataGridTemplateColumn x:Name="modifyUser" Header="" Width="80">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Name="btnRemoveUser"  Click="btnModifyUser_Click" Content="Modify" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0" Background="#FFE95B63" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                        <Button Name="btnRemoveUser"  Click="btnModifyUser_Click" Content="Modify" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                             <DataGridTemplateColumn x:Name="removeUser" Header="" Width="80">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0" Background="#FFE95B63" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                        <Button Name="btnRemoveUser"  Click="btnRemoveUser_Click" Content="Remove" Tag="{Binding userID, Mode=OneWay}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
@@ -152,7 +244,7 @@
                     </DataGrid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Reservations" Width="108" Margin="10,0,-10,0" Background="#FFE95B63" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" RenderTransformOrigin="0.483,0.5" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" BorderThickness="0" Height="33">
+            <TabItem Header="Reservations" Width="108" Background="#FFE95B63" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" RenderTransformOrigin="0.483,0.5" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" BorderThickness="0" Height="33" Margin="2,0,-2,0">
                 <Grid Width="769" Margin="0,42,0,-2">
                     <DataGrid x:Name="customersDataGrid1" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10" RowDetailsVisibilityMode="VisibleWhenSelected">
                         <DataGrid.Columns>
@@ -179,8 +271,8 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Label Content="Customer List:" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="199" Background="#FF232323" Foreground="White"/>
-        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,37,891,0" VerticalAlignment="Top" Width="199" Background="#FF232323" Foreground="White"/>
+        <Label Content="Customer List" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="199" Background="#FF3F414D" Foreground="White" FontSize="14"/>
+        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,34.38,891,0" VerticalAlignment="Top" Width="199" Foreground="White" Background="#FF3F414D" FontSize="14"/>
         <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,63,891,458" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
@@ -188,7 +280,7 @@
                 <DataGridTemplateColumn MaxWidth="35" MinWidth="30">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="btndeleteServer"  Click="btnDeleteServer_Click" Content="X" Tag="{Binding userID}" BorderThickness="0" Background="#FFE95B63" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                            <Button Name="btndeleteServer"  Click="btnDeleteServer_Click" Content="X" Tag="{Binding userID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -200,17 +292,14 @@
                 <DataGridTemplateColumn x:Name="deleteCustColumn" Header="" Width="35">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" BorderThickness="0" Background="#FFE95B63" Foreground="White" BorderBrush="#FFF72F2F" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                            <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="1070,0,0,0" VerticalAlignment="Top" Height="30" Width="30" Click="btnClose_Click">
-            <Button.Background>
-                <ImageBrush ImageSource="Images/cls.png"/>
-            </Button.Background>
-        </Button>
+        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="1074,0,0,0" VerticalAlignment="Top" Height="24" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="0" Width="24"/>
+        <Button x:Name="btnLogOut" Content="Log Off" HorizontalAlignment="Left" Margin="990,41,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
 
     </Grid>
 </Window>
