@@ -47,7 +47,7 @@ namespace SeatingManager
 
                 switch (titleTextBox.Text)
                 {
-                    case "Admin": User.role = 0; break;
+                    case "Administrator": User.role = 0; break;
                     case "Manager": User.role = 2; break;
                     case "Host": User.role = 1; break;
                     case "Server": User.role = 3; break;
@@ -134,7 +134,7 @@ namespace SeatingManager
 
             if (!Validations.CheckIfExact(phoneTextBox.Text, exact))
             {
-                lblPhoneError.Content = "field must be" + exact + " in length";
+                lblPhoneError.Content = "field must be " + exact + " in length";
                 check = false;
             }
 

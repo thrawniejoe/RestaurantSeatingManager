@@ -121,8 +121,8 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,0,0,4" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Bottom" Width="120" Tag="5">
-                <ComboBoxItem>Admin</ComboBoxItem>
+            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="2,0,0,4" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Bottom" Width="120" Tag="5">
+                <ComboBoxItem>Administrator</ComboBoxItem>
                 <ComboBoxItem>Manager</ComboBoxItem>
                 <ComboBoxItem>Host</ComboBoxItem>
                 <ComboBoxItem>Server</ComboBoxItem>

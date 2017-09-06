@@ -5,10 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="ModifyUser" Height="293.363" Width="471.903" Loaded="Window_Loaded">
+        Title="ModifyUser" Height="293.363" Width="471.903" Loaded="Window_Loaded" Background="#FF202028">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF858593" Offset="0"/>
+                        <GradientStop Color="#FF434551" Offset="0.983"/>
+                        <GradientStop Color="#FF4B4D5C" Offset="0.527"/>
+                        <GradientStop Color="#FF57586A" Offset="0.021"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#FF3C3C3C"/>
+            <Setter Property="Foreground" Value="#FFFDFDFD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            CornerRadius="2" 
+                            BorderBrush="#FF646464"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FF191A1F"/>
+            <Setter Property="BorderBrush" Value="#FF292929"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <Grid x:Name="grid1" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="18,40,0,0" VerticalAlignment="Top">
@@ -19,7 +60,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="first Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="first Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="firstNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding firstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Grid x:Name="grid2" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="20,72,0,0" VerticalAlignment="Top">
@@ -30,7 +71,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="last Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="last Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="lastNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding lastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Grid x:Name="grid3" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="39,109,0,0" VerticalAlignment="Top">
@@ -41,7 +82,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="phone:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="phone:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="phoneTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Grid x:Name="grid4" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="30,141,0,0" VerticalAlignment="Top">
@@ -52,7 +93,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="is Active:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="is Active:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="isActiveTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding isActive, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Grid x:Name="grid5" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="20,178,0,0" VerticalAlignment="Top">
@@ -63,7 +104,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="section ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="section ID:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="sectionIDTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding sectionID, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Grid x:Name="grid6" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="267,40,0,0" VerticalAlignment="Top">
@@ -74,8 +115,13 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <Label Content="title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
+            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120">
+                <ComboBoxItem>Administrator</ComboBoxItem>
+                <ComboBoxItem>Manager</ComboBoxItem>
+                <ComboBoxItem>Host</ComboBoxItem>
+                <ComboBoxItem>Server</ComboBoxItem>
+            </ComboBox>
         </Grid>
         <Grid x:Name="grid7" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="250,72,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -85,8 +131,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="date Hired:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <DatePicker x:Name="dateHiredDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3" Grid.Row="0" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center"/>
+            <Label Content="date Hired:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
+            <DatePicker x:Name="dateHiredDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-29,4" Grid.Row="0" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" BorderBrush="{x:Null}" Width="134"/>
         </Grid>
         <Grid x:Name="grid8" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="237,109,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -96,10 +142,11 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="password:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
+            <Label Content="password:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
             <TextBox x:Name="passwordTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding password, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="336,186,0,0" VerticalAlignment="Top" Width="96" Click="btnUpdate_Click" Height="24"/>
+        <Label x:Name="lblErrorMessage" Content="" HorizontalAlignment="Left" Margin="20,215,0,0" VerticalAlignment="Top" Foreground="#FF955757" FontSize="10"/>
 
     </Grid>
 </Window>
