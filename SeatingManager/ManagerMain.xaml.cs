@@ -129,6 +129,13 @@ namespace SeatingManager
                            select su);
             tablesectionsDataGrid.ItemsSource = getSec.ToList();
             sectionColorComboBox.ItemsSource = getSec.ToList();
+
+            //Refresh Table Gridview
+            tablemapsDataGrid.ItemsSource = null;
+            var getTm = (from tm in context.tablemaps
+                          select tm);
+            tablemapsDataGrid.ItemsSource = getTm.ToList();
+
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
@@ -218,12 +225,36 @@ namespace SeatingManager
 
         private void btnDeleteTable_Click(object sender, RoutedEventArgs e)
         {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
 
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this table?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                tablemap nu = new tablemap { tableID = myid };
+                context.tablemaps.Attach(nu); //attaches the user object by the id given to the object above
+                context.tablemaps.Remove(nu); //Adds the change to Deletes the user from the database
+                context.SaveChanges();  //Saves changes to the database
+            }
+            RefreshList();
         }
 
         private void btnDeleteServer_Click(object sender, RoutedEventArgs e)
         {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
 
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this user?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                user nu = new user { userID = myid };
+                context.users.Attach(nu); //attaches the user object by the id given to the object above
+                context.users.Remove(nu); //Adds the change to Deletes the user from the database
+                context.SaveChanges();  //Saves changes to the database
+            }
+            RefreshList();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -296,19 +327,37 @@ namespace SeatingManager
 
         private void btnAddTable_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(sectionColorComboBox.Text);
             var context = new SeatingManager.SeatingManagerDBEntities();
             var getSectionID = (from u in context.tablesections
-                                where u.sectionColor == sectionColorComboBox.SelectedItem.ToString()
-                            select u).FirstOrDefault();
+                                where u.sectionColor.Equals(sectionColorComboBox.Text)
+                                select u).SingleOrDefault();
 
             tablemap tm = new tablemap();
             tm.tableType = Convert.ToInt16(cboTableType.SelectedItem);
-            tm.sectionID = Convert.ToInt16(getSectionID);
+            tm.sectionID = getSectionID.tableSectionID;
             tm.visible = 1;
             tm.numberOfSeats = Convert.ToInt16(cboTableType.SelectedItem);
             context.tablemaps.Add(tm);
             context.SaveChanges();
+            RefreshList();
+        }
 
+        private void btnDeleteCust_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
+
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                customer nu = new customer { customerID = myid };
+                context.customers.Attach(nu); //attaches the user object by the id given to the object above
+                context.customers.Remove(nu); //Adds the change to Deletes the user from the database
+                context.SaveChanges();  //Saves changes to the database
+            }
+            RefreshList();
         }
     }
 }
