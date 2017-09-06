@@ -59,8 +59,8 @@ namespace SeatingManager
             //CollectionView view = (CollectionView)CollectionViewSource.GetDefaultView(usersDataGrid.ItemsSource);
             //view.Filter = UserFilter;
             var getServerList = (from u in context.users
-                           where u.title == "Server"
-                           select u);
+                                 where u.title == "Server"
+                                 select u);
             serversDataGrid.ItemsSource = getServerList.ToList();
             cboFilterList.ItemsSource = FilterList();
             int userRole = Properties.Settings.Default.CurrentUserRole;
@@ -74,8 +74,15 @@ namespace SeatingManager
                                               where mul.role != 0
                                               select mul);
                     usersDataGrid.ItemsSource = getManagerUserList.ToList();
-                    break;        
+                    break;
             }
+            // Load data into the table tablesections. You can modify this code as needed.
+            SeatingManager.SeatingManagerDBDataSetTableAdapters.tablesectionsTableAdapter seatingManagerDBDataSettablesectionsTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.tablesectionsTableAdapter();
+            seatingManagerDBDataSettablesectionsTableAdapter.Fill(seatingManagerDBDataSet.tablesections);
+            System.Windows.Data.CollectionViewSource tablesectionsViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("tablesectionsViewSource")));
+            tablesectionsViewSource.View.MoveCurrentToFirst();
+            RefreshList();
+            cboTableType.ItemsSource = fillTableType();
         }
 
         public void RefreshList()
@@ -100,7 +107,7 @@ namespace SeatingManager
                 usersDataGrid.ItemsSource = getList.ToList();
             }
 
-            //Refresh ServerListView
+            //Refresh Server GridView
             serversDataGrid.ItemsSource = null;
             var getServ = (from su in context.users
                            where su.title == "Server"
@@ -108,13 +115,20 @@ namespace SeatingManager
             serversDataGrid.ItemsSource = getServ.ToList();
 
 
-            //Refresh CustomerListView
+            //Refresh Customer GridView
             customersDataGrid.ItemsSource = null;
             var getCust = (from su in context.users
                            where su.title == "Server"
                            select su);
             serversDataGrid.ItemsSource = getCust.ToList();
 
+            //Refresh Table Section GridView
+            tablesectionsDataGrid.ItemsSource = null;
+            sectionColorComboBox.ItemsSource = null;
+            var getSec = (from su in context.tablesections
+                           select su);
+            tablesectionsDataGrid.ItemsSource = getSec.ToList();
+            sectionColorComboBox.ItemsSource = getSec.ToList();
         }
 
         private void btnRefresh_Click(object sender, RoutedEventArgs e)
@@ -228,6 +242,73 @@ namespace SeatingManager
             Properties.Settings.Default.CurrentUserRole = -1; //saves the user role to the applcation settings file
             Properties.Settings.Default.Save();
             this.Close();
+        }
+
+        private void btnAddSection_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+
+            tablesection Section = new tablesection();
+            if (txtSection.Text != null || txtSection.Text == "")
+            {
+                Section.sectionColor = txtSection.Text;
+                context.tablesections.Add(Section);
+
+                context.SaveChanges();
+                MessageBox.Show("Section " + txtSection.Text + "Added");
+                txtSection.Text = "";
+                RefreshList();
+            }
+            else
+            {
+                MessageBox.Show("Please Enter a name for your section");
+            }
+            
+        }
+
+        private void btnDeleteSection_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
+
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this Section?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                tablesection nu = new tablesection { tableSectionID = myid };
+                context.tablesections.Attach(nu); //attaches the user object by the id given to the object above
+                context.tablesections.Remove(nu); //Adds the change to Deletes the user from the database
+                context.SaveChanges();  //Saves changes to the database
+            }
+            RefreshList();
+        }
+
+        private List<int> fillTableType()
+        {
+            List<int> tabletypes = new List<int>();
+
+            tabletypes.Add(4);
+            tabletypes.Add(6);
+
+
+            return tabletypes;
+        }
+
+        private void btnAddTable_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            var getSectionID = (from u in context.tablesections
+                                where u.sectionColor == sectionColorComboBox.SelectedItem.ToString()
+                            select u).FirstOrDefault();
+
+            tablemap tm = new tablemap();
+            tm.tableType = Convert.ToInt16(cboTableType.SelectedItem);
+            tm.sectionID = Convert.ToInt16(getSectionID);
+            tm.visible = 1;
+            tm.numberOfSeats = Convert.ToInt16(cboTableType.SelectedItem);
+            context.tablemaps.Add(tm);
+            context.SaveChanges();
+
         }
     }
 }

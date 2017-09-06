@@ -75,6 +75,7 @@
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
         </Style>
         <Style TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="Background" >
@@ -92,6 +93,7 @@
             <Setter Property="BorderBrush" Value="#FF373542"/>
             <Setter Property="Background" Value="#FF272731" />
             <Setter Property="Foreground" Value="WhiteSmoke"/>
+
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
                     <Setter Property="Background" >
@@ -171,6 +173,7 @@
         </Style>
         <CollectionViewSource x:Key="tablemapsViewSource" Source="{Binding tablemaps, Source={StaticResource seatingManagerDBDataSet}}"/>
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <CollectionViewSource x:Key="tablesectionsViewSource" Source="{Binding tablesections, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="832" Margin="258,41,0,0" Background="{x:Null}" BorderBrush="#00000000" SelectedIndex="{Binding Mode=OneWay}">
@@ -197,18 +200,43 @@
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="84,170.69,0,0" VerticalAlignment="Top" Width="131" FontFamily="Segoe UI Semibold" Height="31"/>
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="119,135,0,0" VerticalAlignment="Top" Width="131" Height="31" Click="btnAddTable_Click"/>
                     <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="119,69.69,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Visible:" HorizontalAlignment="Left" Margin="64,127.69,0,0" VerticalAlignment="Top" Foreground="White"/>
-                    <Label Content="Section:" HorizontalAlignment="Left" Margin="58,98.69,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.508,0.552" Foreground="White"/>
                     <Label Content="Table Type:" HorizontalAlignment="Left" Margin="41,69.69,0,0" VerticalAlignment="Top" Foreground="White"/>
-                    <ComboBox x:Name="cboSection" HorizontalAlignment="Left" Margin="119,99.69,0,0" VerticalAlignment="Top" Width="120"/>
-                    <ComboBox x:Name="cboVisible" HorizontalAlignment="Left" Margin="119,129.69,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label Content="Add a Table"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,16.69,0,0" VerticalAlignment="Top" Foreground="White" Width="246" Background="#FF3F414D"/>
-                    <Button Content="Add Section" HorizontalAlignment="Left" Margin="84,348,0,0" VerticalAlignment="Top" Width="131" Height="31"/>
+                    <Label Content="Add a Table"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,16.69,0,0" VerticalAlignment="Top" Foreground="White" Width="246" Background="#FF3F414D" BorderBrush="#FF202028" BorderThickness="1"/>
+                    <Button x:Name="btnAddSection" Content="Add Section" HorizontalAlignment="Left" Margin="125,347,0,0" VerticalAlignment="Top" Width="131" Height="31" Click="btnAddSection_Click"/>
                     <TextBox x:Name="txtSection" HorizontalAlignment="Left" Height="23" Margin="136,301.62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846"/>
-                    <Label Content="Sections" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,259,0,0" VerticalAlignment="Top" Width="246" Foreground="White" Background="#FF3F414D"/>
+                    <Label Content="Sections" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,259,0,0" VerticalAlignment="Top" Width="246" Foreground="White" Background="#FF3F414D" Height="33" BorderBrush="#FF272731" BorderThickness="1"/>
                     <Label Content="Section Name:" HorizontalAlignment="Left" Margin="38,296.62,0,0" VerticalAlignment="Top" Width="98" Foreground="White"/>
+                    <DataGrid x:Name="tablesectionsDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource tablesectionsViewSource}}" Margin="21,396,43,10" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn x:Name="sectionColorColumn" Binding="{Binding sectionColor}" Header="Section Name" Width="180"/>
+                            <DataGridTemplateColumn x:Name="DelSec" Header="" Width="30">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnDelSection"  Click="btnDeleteSection_Click" Content="X" Tag="{Binding tableSectionID, Mode=OneWay}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <Grid x:Name="grid1" DataContext="{StaticResource tablesectionsViewSource}" HorizontalAlignment="Left" Margin="52,95,0,0" VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Section:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
+                        <ComboBox x:Name="sectionColorComboBox" Grid.Column="1" DisplayMemberPath="sectionColor" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120">
+                            <ComboBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <VirtualizingStackPanel/>
+                                </ItemsPanelTemplate>
+                            </ComboBox.ItemsPanel>
+                        </ComboBox>
+                    </Grid>
                 </Grid>
             </TabItem>
 
@@ -300,6 +328,6 @@
         </DataGrid>
         <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="1074,0,0,0" VerticalAlignment="Top" Height="24" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="0" Width="24"/>
         <Button x:Name="btnLogOut" Content="Log Off" HorizontalAlignment="Left" Margin="990,41,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
-
+        <Rectangle Fill="#FF1A1B20" HorizontalAlignment="Left" Height="26" Margin="0,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1075"/>
     </Grid>
 </Window>

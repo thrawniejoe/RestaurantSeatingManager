@@ -34,7 +34,47 @@ namespace SeatingManager
         {
             //gets connection info for database
             var context = new SeatingManager.SeatingManagerDBEntities();
+            if(Validate() == true)
+            {
+                //creates new user object
+                user User = new user();
 
+                User.firstName = firstNameTextBox.Text;
+                User.lastName = lastNameTextBox.Text;
+                User.password = passwordTextBox.Text;
+                User.title = titleTextBox.Text;
+
+                switch (titleTextBox.Text)
+                {
+                    case "Admin": User.role = 0; break;
+                    case "Manager": User.role = 2; break;
+                    case "Host": User.role = 1; break;
+                    case "Server": User.role = 3; break;
+                    default: User.role = 3; break;
+                }
+                //LIST OF ROLES
+                // 0 => ADMIN
+                // 1 => HOST
+                // 2 => MANAGER
+                // 3 => SERVER   
+                User.phone = phoneTextBox.Text;
+                User.isActive = 0;
+                User.isOnDuty = 0;
+                User.sectionID = 0;
+                User.dateHired = Convert.ToDateTime(dateHiredDatePicker.SelectedDate);
+                //adds User object to db
+                context.users.Add(User);
+                context.SaveChanges();
+                refreshPage();
+                //MessageBox.Show("User Added To System");
+                this.Close();
+            }           
+        }
+
+
+        private Boolean Validate()
+        {
+            Boolean check = true;
             //VALIDATION GOES HERE
 
 
@@ -47,43 +87,13 @@ namespace SeatingManager
 
 
 
-            //creates new user object
-            user User = new user();
-
-            User.firstName = firstNameTextBox.Text;
-            User.lastName = lastNameTextBox.Text;
-            User.password = passwordTextBox.Text;
-            User.title = titleTextBox.Text;
-
-            switch (titleTextBox.Text)
-            {
-                case "Admin":       User.role = 0;      break;
-                case "Manager":     User.role = 2;      break;
-                case "Host":        User.role = 1;      break;
-                case "Server":      User.role = 3;      break;
-                default:            User.role = 3;      break;
-            }
-            //LIST OF ROLES
-            // 0 => ADMIN
-            // 1 => HOST
-            // 2 => MANAGER
-            // 3 => SERVER   
-            User.phone = phoneTextBox.Text;
-            User.isActive = 0;
-            User.isOnDuty = 0;
-            User.sectionID = 0;
-            User.dateHired = Convert.ToDateTime(dateHiredDatePicker.SelectedDate);
-            //adds User object to db
-            context.users.Add(User);
-            context.SaveChanges();
-            refreshPage();
-            //MessageBox.Show("User Added To System");
-            this.Close();
+            return check;
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            dateHiredDatePicker.SelectedDate = DateTime.Today;
         }
     }
 }
