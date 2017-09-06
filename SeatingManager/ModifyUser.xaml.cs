@@ -77,12 +77,12 @@ namespace SeatingManager
                         result.sectionID = Convert.ToInt16(sectionIDTextBox.Text);
 
                         // set salt and hashed password, store it to the database
-                        //string salt = ModelClass.Password.CreateSalt(12);
-                        //string password = ModelClass.Password.Hash(passwordTextBox.Text, salt);
-                        //result.password = password;
-                        //result.passwordSalt = salt;
+                        string salt = ModelClass.Password.CreateSalt(12);
+                        string password = ModelClass.Password.Hash(passwordTextBox.Text, salt);
+                        result.password = password;
+                        result.passwordSalt = salt;
 
-                        result.password = passwordTextBox.Text;
+                        //result.password = passwordTextBox.Text;
                         switch (titleTextBox.Text)
                         {
                             case "Administrator": result.role = 0; break;
