@@ -120,7 +120,6 @@ C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\bin\Debug\EntityF
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csprojResolveAssemblyReference.cache
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.g.cs
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.g.cs
-C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.g.cs
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\MainWindow.g.cs
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\ManagerMain.g.cs
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SplashLogin.g.cs
@@ -132,7 +131,6 @@ C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\Seating
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\App.baml
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\AddCustomer.baml
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\AddUser.baml
-C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\Login.baml
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\MainWindow.baml
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\ManagerMain.baml
 C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SplashLogin.baml
@@ -193,3 +191,10 @@ C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsc
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsd
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.Designer.cs
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsc
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsd
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.g.cs
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.baml
+C:\Users\mathe\Desktop\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csproj.CoreCompileInputs.cache

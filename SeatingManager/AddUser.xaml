@@ -139,6 +139,12 @@
             <Label Content="Date Hired:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
             <DatePicker x:Name="dateHiredDatePicker" Grid.Column="1" HorizontalAlignment="Left" Margin="3,4,-51.4,4" Grid.Row="0" SelectedDate="{Binding dateHired, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="158" BorderBrush="{x:Null}" TabIndex="6"/>
         </Grid>
+        <Label x:Name="lblLastNameError" Content="*" HorizontalAlignment="Left" Margin="411,120,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblFirstNameError" Content="*" HorizontalAlignment="Left" Margin="411,82,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblPhoneError" Content="*" HorizontalAlignment="Left" Margin="411,152,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblPasswordError" Content="*" HorizontalAlignment="Left" Margin="411,187,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblTitleError" Content="*" HorizontalAlignment="Left" Margin="411,222,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblDateHiredError" Content="*" HorizontalAlignment="Left" Margin="443,259,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
 
     </Grid>
 </Window>

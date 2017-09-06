@@ -137,6 +137,7 @@
     <Compile Include="user.cs">
       <DependentUpon>ModelSM.tt</DependentUpon>
     </Compile>
+    <Compile Include="Validations.cs" />
     <Page Include="AddCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

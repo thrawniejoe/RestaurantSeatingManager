@@ -24,6 +24,7 @@ namespace SeatingManager
     {
         public delegate void Refresh();
         public event Refresh refreshPage;
+        
 
         public AddUser()
         {
@@ -34,10 +35,10 @@ namespace SeatingManager
         {
             //gets connection info for database
             var context = new SeatingManager.SeatingManagerDBEntities();
-            if(Validate() == true)
+            if(Validate())
             {
                 //creates new user object
-                user User = new user();
+                var User = new user();
 
                 User.firstName = firstNameTextBox.Text;
                 User.lastName = lastNameTextBox.Text;
@@ -74,8 +75,95 @@ namespace SeatingManager
 
         private Boolean Validate()
         {
-            Boolean check = true;
-            //VALIDATION GOES HERE
+            var check = true;
+            const int min = 2;
+            const int passMin = 6;
+            const int max = 30;
+            const int exact = 10;
+            lblFirstNameError.Content = "";
+            lblLastNameError.Content = "";
+            lblPhoneError.Content = "";
+            lblPasswordError.Content = "";
+            lblTitleError.Content = "";
+
+            //First Name Validation
+            if (!Validations.CheckEmptyString(firstNameTextBox.Text))
+            {
+                lblFirstNameError.Content = "field cannot be blank.";
+                check = false;
+            }
+        
+            if(!Validations.CheckStringMinMax(firstNameTextBox.Text,min,max))
+            {
+                lblFirstNameError.Content = "Must be between " + min + " and " + max + " in length";
+                check = false;
+            }
+         
+            if (!Validations.CheckIfAlpha(firstNameTextBox.Text))
+            {
+               lblFirstNameError.Content = "Field must be letters only.";
+                check = false;
+            }
+
+            //Last Name Validation
+            if (!Validations.CheckEmptyString(lastNameTextBox.Text))
+            {
+                lblLastNameError.Content = "field cannot be blank.";
+                check = false;
+            }
+
+            if (!Validations.CheckStringMinMax(lastNameTextBox.Text, min, max))
+            {
+                lblLastNameError.Content = "Must be between " + min + " and " + max + " in length";
+                check = false;
+            }
+
+            if (!Validations.CheckIfAlpha(lastNameTextBox.Text))
+            {
+                lblLastNameError.Content = "Field must be letters only.";
+                check = false;
+            }
+
+            //Phone Number Validation
+            if (!Validations.CheckIfNumeric(phoneTextBox.Text))
+            {
+                lblPhoneError.Content = "Field must be numbers only.";
+                check = false;
+            }
+
+            if (!Validations.CheckIfExact(phoneTextBox.Text, exact))
+            {
+                lblPhoneError.Content = "field must be" + exact + " in length";
+                check = false;
+            }
+
+            //Password Validation
+            if (!Validations.CheckEmptyString(passwordTextBox.Text))
+            {
+                lblPasswordError.Content = "field cannot be blank.";
+                check = false;
+            }
+
+            if (!Validations.CheckStringMinMax(passwordTextBox.Text, passMin, max))
+            {
+                lblPasswordError.Content = "Must be between " + passMin + " and " + max + " in length";
+                check = false;
+            }
+
+            if (!Validations.CheckIfAlpha(passwordTextBox.Text))
+            {
+                lblPasswordError.Content = "Field must be letters only.";
+                check = false;
+            }
+
+            if (titleTextBox.SelectedIndex == -1)
+            {
+                lblTitleError.Content = "Must select a title";
+                check = false;
+            }
+           
+
+
 
 
 
@@ -92,8 +180,14 @@ namespace SeatingManager
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            var seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
             dateHiredDatePicker.SelectedDate = DateTime.Today;
+        }
+
+        private void lastNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+
         }
     }
 }
