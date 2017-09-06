@@ -46,7 +46,7 @@ namespace SeatingManager
             phoneTextBox.Text = p.phone;
             isActiveTextBox.Text = Convert.ToString(p.isActive);
             sectionIDTextBox.Text = Convert.ToString(p.sectionID);
-            //passwordTextBox.Text = p.password;
+            passwordTextBox.Text = p.password;
             dateHiredDatePicker.SelectedDate = p.dateHired;
 
             switch (p.title)
