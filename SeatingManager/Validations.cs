@@ -57,6 +57,19 @@ namespace SeatingManager
             return false;
         }
 
+        public static bool CheckIfDate(string text)
+        {
+            try
+            {
+                DateTime dt = DateTime.Parse(text);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+            
+        }
 
     }
 }

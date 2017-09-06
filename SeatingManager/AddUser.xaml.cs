@@ -85,6 +85,7 @@ namespace SeatingManager
             lblPhoneError.Content = "";
             lblPasswordError.Content = "";
             lblTitleError.Content = "";
+            lblDateHiredError.Content = "";
 
             //First Name Validation
             if (!Validations.CheckEmptyString(firstNameTextBox.Text))
@@ -156,16 +157,19 @@ namespace SeatingManager
                 check = false;
             }
 
+            //Title Selection Validation
             if (titleTextBox.SelectedIndex == -1)
             {
                 lblTitleError.Content = "Must select a title";
                 check = false;
             }
-           
 
-
-
-
+            //Hire Date Validation
+           if (!Validations.CheckEmptyString(dateHiredDatePicker.Text))
+            {
+                lblDateHiredError.Content = "field cannot be blank.";
+                check = false;
+            }
 
 
 
