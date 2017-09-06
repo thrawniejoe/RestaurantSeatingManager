@@ -5,36 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="841" Width="1100" Icon="Images/iconRectangle.ico" WindowStartupLocation="CenterOwner" WindowState="Maximized">
+        Title="MainWindow" Height="1000" Width="1800" Icon="Images/iconRectangle.ico" WindowStartupLocation="CenterOwner" WindowState="Maximized">
     <Window.Background>
         <ImageBrush ImageSource="Images/main_background2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
     <Grid>
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="731" VerticalAlignment="Top" Width="934" Margin="148,69,0,0">
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0">
             <TabControl.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
             </TabControl.Background>
-            <TabItem x:Name="tab_Tables" Header="Tables" Margin="-1.999,0,1.998,-2" Width="83.356" HorizontalContentAlignment="Stretch">
+            <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="180" HorizontalContentAlignment="Stretch">
                 <TabItem.Background>
                     <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
                 </TabItem.Background>
-                <Grid Height="650.333" Width="928">
-                    <WrapPanel x:Name="myWrapPan" HorizontalAlignment="Left" Height="589" VerticalAlignment="Top" Width="918" Margin="10,61,0,0">
-                        <WrapPanel.Background>
-                            <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
-                        </WrapPanel.Background>
-                    </WrapPanel>
-                    <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="46" Margin="10,10,0,0" VerticalAlignment="Top" Width="908">
+                <Canvas>
+                    <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="1090">
                         <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4"/>
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
                         <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAddCustomer_Click"/>
-                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAssignCustomer_Click"/>
                         <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
+                        <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnClearTable_Click"/>
                     </WrapPanel>
-                </Grid>
+
+                    <Grid x:Name="background" HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1090" Margin="0,59,0,0">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="Images/layout.png"/>
+                        </Grid.Background>
+
+                        <Canvas x:Name="tables2" HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="770" Margin="0,0,0,0">
+
+                        </Canvas>
+
+                        <Canvas x:Name="tables" HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="770" Margin="0,0,0,0">
+
+                        </Canvas>
+                    </Grid>
+                </Canvas>
             </TabItem>
-            <TabItem x:Name="tab2" Header="Server List" Loaded="tab2_Loaded" Margin="1,0,-1,0" VerticalAlignment="Top" Height="73" HorizontalContentAlignment="Stretch">
+            <TabItem x:Name="tab2" Header="Server List" Loaded="tab2_Loaded" Margin="5,0,0,0" VerticalAlignment="Top" Width="180" HorizontalContentAlignment="Stretch">
                 <TabItem.Background>
                     <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
                 </TabItem.Background>
@@ -46,7 +55,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="300" Margin="10,148,0,0" VerticalAlignment="Top" Width="133">
+        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="400" Margin="10,100,0,0" VerticalAlignment="Top" Width="280">
             <ListView.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
             </ListView.Background>
@@ -56,7 +65,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="303" Margin="10,497,0,0" VerticalAlignment="Top" Width="133">
+        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="400" Margin="10,525,0,0" VerticalAlignment="Top" Width="280">
             <ListView.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
             </ListView.Background>
@@ -68,6 +77,9 @@
         </ListView>
         <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,469,0,0" VerticalAlignment="Top" Width="134"/>
         <Label Content="Server List" HorizontalAlignment="Left" Margin="10,122.04,0,0" VerticalAlignment="Top" Width="133"/>
+        <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="825" Margin="1500,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
 
     </Grid>
 </Window>
+
+
