@@ -125,6 +125,8 @@
     <Compile Include="SplashLogin.xaml.cs">
       <DependentUpon>SplashLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TableBC.cs" />
+    <Compile Include="TableDA.cs" />
     <Compile Include="tablemap.cs">
       <DependentUpon>ModelSM.tt</DependentUpon>
     </Compile>
@@ -241,6 +243,13 @@
     <Resource Include="Images\main_background2.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\2t.png" />
+    <Resource Include="Images\4t.png" />
+    <Resource Include="Images\6t.png" />
+    <Resource Include="Images\8t.png" />
+    <Resource Include="Images\Layout.png" />
+    <Resource Include="Images\Merged.png" />
+    <Resource Include="Images\taken.png" />
     <Content Include="ModelSM.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelSM.edmx</DependentUpon>
