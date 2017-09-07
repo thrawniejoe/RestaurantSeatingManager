@@ -37,15 +37,15 @@ namespace SeatingManager
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             var btn = sender as Button;
-            //if (btn.Tag.ToString() == "1")
-            //{
+            if (btn.Tag.ToString() != "0")
+            {
             btn.BorderThickness = new Thickness(2);
             txtTest.Text = btn.Name.ToString();
             string buttonToMerge = btn.Name.ToString();
             tableMerge.Add(buttonToMerge);
             buttonMerge.Add(btn);
             isButtonClicked = 1;
-            //}
+            }
         }
 
         //list of tables from the database
@@ -101,6 +101,7 @@ namespace SeatingManager
                         tableIndex = Convert.ToInt32(btn.Tag) - 1;
                         tableList2[tableIndex].TableNameOrig = tmerge;
                         tableList2[tableIndex].IsMerged = 0;
+                        btn.Tag = 0;
                     }
                     count++;
                 }
