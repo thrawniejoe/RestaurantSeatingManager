@@ -116,7 +116,12 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
-            <TextBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding title, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120">
+                <ComboBoxItem>Administrator</ComboBoxItem>
+                <ComboBoxItem>Manager</ComboBoxItem>
+                <ComboBoxItem>Host</ComboBoxItem>
+                <ComboBoxItem>Server</ComboBoxItem>
+            </ComboBox>
         </Grid>
         <Grid x:Name="grid7" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="250,72,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -141,6 +146,7 @@
             <TextBox x:Name="passwordTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding password, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
         <Button x:Name="btnUpdate" Content="Update" HorizontalAlignment="Left" Margin="336,186,0,0" VerticalAlignment="Top" Width="96" Click="btnUpdate_Click" Height="24"/>
+        <Label x:Name="lblErrorMessage" Content="" HorizontalAlignment="Left" Margin="20,215,0,0" VerticalAlignment="Top" Foreground="#FF955757" FontSize="10"/>
 
     </Grid>
 </Window>

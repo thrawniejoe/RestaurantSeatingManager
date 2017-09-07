@@ -12,7 +12,7 @@ namespace SeatingManager.ModelClass
     {
         public static string Hash(string value, string salt)
         {
-            return Hash(Encoding.UTF8.GetBytes(value), Encoding.UTF8.GetBytes(salt)).ToString();
+            return Convert.ToBase64String(Hash(Encoding.UTF8.GetBytes(value), Encoding.UTF8.GetBytes(salt)));
         }
 
         public static byte[] Hash(byte[] value, byte[] salt)
