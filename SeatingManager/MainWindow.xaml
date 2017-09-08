@@ -165,8 +165,8 @@
             <Setter Property="BorderBrush" Value="#FF292929"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
-        
-        
+
+
         <Style x:Key="userActiveStyle" TargetType="Button">
             <Setter Property="Background" Value="Red" />
             <Setter Property="Content" Value="No"/>
@@ -178,7 +178,7 @@
             </Style.Triggers>
         </Style>
 
-        </Window.Resources>
+    </Window.Resources>
     <Window.Background>
         <ImageBrush ImageSource="Images/main_background2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -245,9 +245,19 @@
                 </TabItem.Background>
                 <Grid Background="#FFE5E5E5" Margin="0,52,0,0"/>
             </TabItem>
+            <TabItem Header="Backup Table Concept&#xD;&#xA;" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="144" Margin="517,0,-517,0">
+                <Grid Background="#FFE5E5E5">
+                    <WrapPanel x:Name="wpMain" HorizontalAlignment="Left" Height="746" Margin="62,78,0,0" VerticalAlignment="Top" Width="1090" Background="#FF2B2B2B"/>
+                    <Button x:Name="btnTESTaddtable" Content="Add Table" HorizontalAlignment="Left" Margin="84,36,0,0" VerticalAlignment="Top" Width="75" Click="btnTESTaddtable_Click" Height="23"/>
+                    <Button x:Name="btnTESTaddsection" Content="Add Section" HorizontalAlignment="Left" Margin="164,36,0,0" VerticalAlignment="Top" Width="75" Click="btnTESTaddsection_Click" Height="23"/>
+                    <Button x:Name="btnTESTpull" Content="Pull From DB" HorizontalAlignment="Left" Margin="420,36,0,0" VerticalAlignment="Top" Width="98" Click="btnTESTpull_Click" Height="23"/>
+                    <TextBox x:Name="txtTESTSection" HorizontalAlignment="Left" Height="23" Margin="244,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="test1"/>
+                    <Label Content="Use a full string for section Name, 0 or 1 wont work, test1 or section1 will. When assigning tables to a section make sure the name in the textbox matches section your adding to." HorizontalAlignment="Left" Height="31" Margin="31,0,0,0" VerticalAlignment="Top" Width="1121"/>
+                </Grid>
+            </TabItem>
         </TabControl>
-        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,512,0,0" VerticalAlignment="Top" Width="280"/>
-        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="279"/>
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,512,0,0" VerticalAlignment="Top" Width="280"  HorizontalContentAlignment="Center"/>
+        <Label Content="Server's Currently On Duty" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="279" HorizontalContentAlignment="Center"/>
         <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="825" Margin="1500,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
         <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,74,1503,553" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
             <DataGrid.Columns>
