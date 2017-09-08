@@ -490,6 +490,7 @@ namespace SeatingManager
 
 
         List<WrapPanel> wpList = new List<WrapPanel>();
+        List<String> wpListNames = new List<String>();
         int sectionNum = 0;
         static Random rnd = new Random();
         private void btnTESTaddsection_Click(object sender, RoutedEventArgs e)
@@ -507,6 +508,7 @@ namespace SeatingManager
 
             string test = txtTESTSection.Text;
             WrapPanel nw = new WrapPanel();
+            
             //sectionNum = Convert.ToInt16(txtTESTSection.Text);
             nw.SetValue(WrapPanel.NameProperty, test);//THIS WILL NOT ACCEPT NUMBERS even if converted, must use something like test1 or section1, 0, 1, 2 ect will give error
 
@@ -514,7 +516,13 @@ namespace SeatingManager
             nw.Margin.Left.Equals(10);
            // MessageBox.Show(nw.Name);
             wpList.Add(nw);
+            wpListNames.Add(test);
             wpMain.Children.Add(nw);
+
+            cboSections.ItemsSource = null;
+            cboSections.ItemsSource = wpListNames;
+            txtTESTSection.Text = "";
+            MessageBox.Show("Section " + test + " added to the board");
         }
 
         
@@ -526,11 +534,11 @@ namespace SeatingManager
             foreach (WrapPanel w in wpList)
             {
                 //MessageBox.Show(w.Name);
-                if (w.Name == Convert.ToString(txtTESTSection.Text))
+                if (w.Name == Convert.ToString(cboSections.SelectedItem))
                 {
                     //Click and adds a button
                     System.Windows.Controls.Button newBtn = new Button();
-                    newBtn.Content = btnCounter;
+                    newBtn.Content = btnCounter + " \r\n Section: " + cboSections.SelectedItem;
                     newBtn.Name = "Button" + btnCounter;
                     newBtn.Width = 95;
                     newBtn.Height = 80;
