@@ -5,27 +5,200 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1000" Width="1800" Icon="Images/iconRectangle.ico" WindowStartupLocation="CenterOwner" WindowState="Maximized">
+        Title="MainWindow" Height="1000" Width="1800" Icon="Images/iconRectangle.ico" WindowStartupLocation="CenterOwner" WindowState="Maximized" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
+        <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}" />
+        <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Border x:Name="Border" BorderThickness="0,0,0,0" CornerRadius="0,0,0,0"
+                        Padding="5,5,5,5" Margin="0,0,0,0" BorderBrush="#00E0E0E0">
+                            <ContentPresenter x:Name="ContentSite" ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
+                                <Setter Property="BorderBrush" TargetName="Border" Value="#00DCDCDC"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderThickness" TargetName="Border" Value="1"/>
+                                <Setter Property="Background" TargetName="Border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF3AC6AB" Offset="0.201"/>
+                                            <GradientStop Color="#FF2D74A0" Offset="1"/>
+                                            <GradientStop Color="#FF00F9D7" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="CornerRadius" TargetName="Border" Value="2"/>
+
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="#FFE8E8E8"/>
+                                <Setter Property="Background" TargetName="Border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF5A5B6E" Offset="0.096"/>
+                                            <GradientStop Color="#FF434551" Offset="0.77"/>
+                                            <GradientStop Color="#FFAFAFB2" Offset="0.013"/>
+                                            <GradientStop Color="#FF2B2B2E" Offset="1"/>
+                                            <GradientStop Color="#FF434551" Offset="0.933"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="CornerRadius" TargetName="Border" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="BorderBrush" Value="#FF373542"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FF373542"/>
+            <Setter Property="VerticalGridLinesBrush" Value="{x:Null}"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" >
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF40424E" Offset="0"/>
+                        <GradientStop Color="#FF32353E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridRow}">
+            <Setter Property="BorderBrush" Value="#FF373542"/>
+            <Setter Property="Background" Value="#FF272731" />
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF23232B" Offset="1"/>
+                                <GradientStop Color="#FF373740" Offset="0"/>
+                                <GradientStop Color="#FF26262E" Offset="0.498"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FF00DDFD"/>
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+        <Style TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF23232B" Offset="1"/>
+                                <GradientStop Color="#FF373740" Offset="0"/>
+                                <GradientStop Color="#FF26262E" Offset="0.498"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FF00DDFD"/>
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF858593" Offset="0"/>
+                        <GradientStop Color="#FF434551" Offset="0.983"/>
+                        <GradientStop Color="#FF4B4D5C" Offset="0.527"/>
+                        <GradientStop Color="#FF57586A" Offset="0.021"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#FF3C3C3C"/>
+            <Setter Property="Foreground" Value="#FFFDFDFD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            CornerRadius="2" 
+                            BorderBrush="#FF646464"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FF191A1F"/>
+            <Setter Property="BorderBrush" Value="#FF292929"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        
+        <Style x:Key="userActiveStyle" TargetType="Button">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Content" Value="No"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding isOnDuty}" Value="1">
+                    <Setter Property="Button.Background" Value="Green"/>
+                    <Setter Property="Content" Value="Yes"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        </Window.Resources>
     <Window.Background>
         <ImageBrush ImageSource="Images/main_background2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
-    <Grid>
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0">
+    <Grid DataContext="{StaticResource customersViewSource}">
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0" SelectedIndex="{Binding Mode=OneWay, Source={StaticResource usersViewSource}}">
             <TabControl.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
             </TabControl.Background>
-            <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="180" HorizontalContentAlignment="Stretch">
+            <TabItem x:Name="tab_Tables" Header="Tables" Width="108" HorizontalContentAlignment="Stretch" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top">
                 <TabItem.Background>
                     <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
                 </TabItem.Background>
                 <Canvas>
                     <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="1090">
-                        <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAddCustomer_Click"/>
-                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAssignCustomer_Click"/>
-                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnClearTable_Click"/>
+                        <Button x:Name="btnMergeTables" Width="131" Height="31" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top"  Click="btnAddBtn_Click" Margin="4"/>
+                        <Button x:Name="btnModifyTables" Width="131" Height="31" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="4"/>
+                        <Button x:Name="btnAddCustomer" Width="131" Height="31" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="4" Click="btnAddCustomer_Click"/>
+                        <Button x:Name="btnAssignCustomer" Width="131" Height="31" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4" Click="btnAssignCustomer_Click"/>
+                        <Button x:Name="btnCreateReservation" Width="131" Height="31" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4"/>
+                        <Button x:Name="btnClearTable" Width="131" Height="31" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4" Click="btnClearTable_Click"/>
                     </WrapPanel>
 
                     <Grid x:Name="background" HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1090" Margin="0,59,0,0">
@@ -43,42 +216,64 @@
                     </Grid>
                 </Canvas>
             </TabItem>
-            <TabItem x:Name="tab2" Header="Server List" Loaded="tab2_Loaded" Margin="5,0,0,0" VerticalAlignment="Top" Width="180" HorizontalContentAlignment="Stretch">
-                <TabItem.Background>
-                    <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
-                </TabItem.Background>
+            <TabItem x:Name="tab2" Loaded="tab2_Loaded" Margin="2,0,-2,0" Width="108" HorizontalContentAlignment="Stretch" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top" Header="Servers">
+                <Grid Margin="4,0,2,1" Height="795" VerticalAlignment="Bottom" Background="#FF505262">
+                    <DataGrid x:Name="usersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="214,10,94,403" RowDetailsVisibilityMode="VisibleWhenSelected">
+                        <DataGrid.Columns>
+                            <!--<DataGridTextColumn x:Name="userIDColumn" Binding="{Binding userID}" Header="user ID" IsReadOnly="True" Width="SizeToHeader"/>-->
+                            <DataGridTextColumn x:Name="firstNameColumn" Binding="{Binding firstName}" Header="First Name" Width="120"/>
+                            <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding lastName}" Header="Last Name" Width="120"/>
+                            <DataGridTextColumn x:Name="roleColumn" Binding="{Binding role}" Header="role" Width="76"/>
+                            <DataGridTextColumn x:Name="isActiveColumn" Binding="{Binding isActive}" Header="Is Active" Width="75"/>
+                            <DataGridTextColumn x:Name="isOnDutyColumn" Binding="{Binding isOnDuty}" Header="Is On Duty" Width="75"/>
+                            <DataGridTextColumn x:Name="sectionIDColumn" Binding="{Binding sectionID}" Header="Section" Width="75"/>
+                            <DataGridTextColumn x:Name="titleColumn" Binding="{Binding title}" Header="Title" Width="120"/>
+                            <DataGridTemplateColumn x:Name="onDuty" Header="On Duty" Width="45">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Name="btnSetOnDuty" Style="{StaticResource userActiveStyle}"  Click="btnbtnSetOnDuty_Click" Content="A" Tag="{Binding userID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
             </TabItem>
-            <TabItem Header="      View &#xD;&#xA;Reservations" HorizontalAlignment="Left" Height="72.667" VerticalAlignment="Top" Width="83.356" Margin="3.666,0,-3.666,0" HorizontalContentAlignment="Stretch">
+            <TabItem Header="View Reservations" Style="{DynamicResource TabItemStyle1}" HorizontalAlignment="Left" Width="108" Margin="3,0,-3,0" HorizontalContentAlignment="Stretch">
                 <TabItem.Background>
                     <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
                 </TabItem.Background>
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5" Margin="0,52,0,0"/>
             </TabItem>
         </TabControl>
-        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="400" Margin="10,100,0,0" VerticalAlignment="Top" Width="280">
-            <ListView.Background>
-                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
-            </ListView.Background>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="400" Margin="10,525,0,0" VerticalAlignment="Top" Width="280">
-            <ListView.Background>
-                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
-            </ListView.Background>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,469,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,122.04,0,0" VerticalAlignment="Top" Width="133"/>
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,512,0,0" VerticalAlignment="Top" Width="280"/>
+        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="279"/>
         <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="825" Margin="1500,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220"/>
-
+        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,74,1503,553" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
+                <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="75"/>
+                <DataGridTemplateColumn MaxWidth="35" MinWidth="30">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btndeleteServer"  Click="btnDeleteServer_Click" Content="X" Tag="{Binding userID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="9,537,1503,29" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="customerNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
+                <DataGridTemplateColumn x:Name="deleteCustColumn" Header="" Width="35">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto" Click="btnDeleteCust_Click"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
 
