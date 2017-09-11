@@ -25,6 +25,7 @@ namespace SeatingManager
         public string password { get; set; }
         public string title { get; set; }
         public System.DateTime dateHired { get; set; }
-        public string passwordSalt { get; set; }
+        public byte[] passwordSalt { get; set; }
+        public byte[] hashedPassword { get; set; }
     }
 }
