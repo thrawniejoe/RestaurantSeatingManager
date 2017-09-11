@@ -21,9 +21,11 @@ namespace SeatingManager
     public partial class MainWindow : Window
     {
         private static List<TableBC> tableList2 = new List<TableBC>();
-        private static List<string> tableMerge = new List<string>();
+        private static List<Button> mergedTables = new List<Button>();
         private static List<Button> buttonMerge = new List<Button>();
+        private static List<Button> buttons = new List<Button>();
         int isButtonClicked = 0;
+        int firstLoad = 0;
 
         public MainWindow()
         {
@@ -31,6 +33,8 @@ namespace SeatingManager
             tableList();
             loadSections();
             loadTables();
+            putButtonsOnCanvas();
+            firstLoad = 1;
         }
 
         //click a button
@@ -39,12 +43,14 @@ namespace SeatingManager
             var btn = sender as Button;
             if (btn.Tag.ToString() != "0")
             {
-            btn.BorderThickness = new Thickness(2);
-            txtTest.Text = btn.Name.ToString();
-            string buttonToMerge = btn.Name.ToString();
-            tableMerge.Add(buttonToMerge);
-            buttonMerge.Add(btn);
-            isButtonClicked = 1;
+                int bThickness = Convert.ToInt32(btn.BorderThickness.Top);
+                if (bThickness == 0)
+                {
+                    btn.BorderThickness = new Thickness(2);
+                    txtTest.Text = btn.Name.ToString();
+                    buttonMerge.Add(btn);
+                    isButtonClicked = 1;
+                }
             }
         }
 
@@ -57,10 +63,13 @@ namespace SeatingManager
         //merge buttons
         private void btnAddBtn_Click(object sender, RoutedEventArgs e)
         {
-            int count = 0;
+            int counter = 0;
+            int counter1 = 0;
+            int counter2 = 0;
             int tmerge = 0;
             string newList2 = "";
             int tableIndex = 0;
+            int mergeOk = 0;
 
             ImageBrush tableBrush = new ImageBrush();
             tableBrush.ImageSource =
@@ -69,7 +78,7 @@ namespace SeatingManager
                 );
 
             ImageBrush tableBrush2 = new ImageBrush();
-            tableBrush.ImageSource =
+            tableBrush2.ImageSource =
                 new BitmapImage(
                     new Uri(@"..\\..\\images\Merged.png", UriKind.Relative)
                 );
@@ -77,39 +86,68 @@ namespace SeatingManager
 
             foreach (Button b in buttonMerge)
             {
-                while (count < tableMerge.Count())
+                while (counter1 < buttonMerge.Count())
                 {
-                    Button btn = buttonMerge[count] as Button;
-                    if (count == 0)
+                    Button btn = buttonMerge[counter1] as Button;
+                    tableIndex = Convert.ToInt32(btn.Tag) - 1;
+                    if (tableList2[tableIndex].IsMerged == 2)
                     {
-                        btn.Background = tableBrush2;
-                        btn.BorderThickness = new Thickness(0);
-                        btn.FontSize = 18;
-                        btn.Content = "Table " + buttonMerge[0].Content;
-                        btn.Foreground = Brushes.Black;
+                        MessageBox.Show("This merge includes a table that has already been merged", "Merge Error");
+                        mergeOk = 1;
+                    }
+                    counter1++;
+                }
+            }
+
+            foreach (Button b in buttonMerge)
+            {
+                while (counter < buttonMerge.Count())
+                {
+                    if (counter == 0 && mergeOk == 0)
+                    {
+                        Button btn = buttonMerge[counter] as Button;
+                        buttons[Convert.ToInt32(btn.Tag)-1].Background = tableBrush;
+                        buttons[Convert.ToInt32(btn.Tag)-1].BorderThickness = new Thickness(0);
+                        buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 15;
+                        buttons[Convert.ToInt32(btn.Tag)-1].Foreground = Brushes.Black;
                         tableIndex = Convert.ToInt32(btn.Tag) - 1;
                         tmerge = tableList2[tableIndex].TableNameOrig;
                         tableList2[tableIndex].IsMerged = 2;
                     }
-                    else
+                    else if (counter > 0 && mergeOk == 0)
                     {
-                        btn.Content = "Merged with \n" + buttonMerge[0].Content;
-                        btn.Foreground = Brushes.White;
-                        btn.Background = tableBrush;
-                        btn.BorderThickness = new Thickness(0);
-                        btn.FontSize = 15;
+                        Button btn = buttonMerge[counter] as Button;
+                        buttons[Convert.ToInt32(btn.Tag)-1].Content = "Merged with \n" + buttonMerge[0].Content.ToString();
+                        buttons[Convert.ToInt32(btn.Tag)-1].Foreground = Brushes.White;
+                        buttons[Convert.ToInt32(btn.Tag)-1].Background = tableBrush2;
+                        buttons[Convert.ToInt32(btn.Tag)-1].BorderThickness = new Thickness(0);
+                        buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 15;
                         tableIndex = Convert.ToInt32(btn.Tag) - 1;
                         tableList2[tableIndex].TableNameOrig = tmerge;
                         tableList2[tableIndex].IsMerged = 0;
                         btn.Tag = 0;
                     }
-                    count++;
+                    counter++;
                 }
             }
-            //txtTest.Text = tmerge;
-            tableMerge.Clear();
+
+            if (mergeOk == 1) { 
+                foreach (Button bb in buttonMerge)
+                    {
+                     while (counter2 < buttonMerge.Count())
+                        {
+                            Button btn2 = buttonMerge[counter2] as Button;
+                            tableIndex = Convert.ToInt32(btn2.Tag) - 1;
+                            btn2.BorderThickness = new Thickness(0);
+                            counter2++;
+                        }
+                        counter2++;
+                    }
+            }
+
             buttonMerge.Clear();
             isButtonClicked = 0;
+
             foreach (TableBC t in tableList2)
             {
                 string newList = t.TableName.ToString() + ", " + t.TableX.ToString() + ", " + t.TableY.ToString() + ", " + t.TableSeats.ToString() + ", " + "\t" + t.IsMerged.ToString() + ", " + t.Section.ToString() + ", " + t.TableNameOrig.ToString() + ", " + t.TableSeatsOrig.ToString() + "\n";
@@ -123,7 +161,6 @@ namespace SeatingManager
         private void loadTables()
         {
             string name = "";
-            //string isVisible = "";
             string bn = "";
             string bc = "t";
             int btnName = 0;
@@ -131,7 +168,6 @@ namespace SeatingManager
             {
                 bn = t.TableSeats.ToString();
                 name = t.TableName.ToString();
-                //isVisible = t.IsMerged.ToString();
                 btnName = t.TableName;
 
                 ImageBrush tableBrush = new ImageBrush();
@@ -144,26 +180,46 @@ namespace SeatingManager
                 newBtn.Content = name;
                 newBtn.Name = "Button" + btnName;
                 newBtn.Tag = t.TableName;
-                newBtn.Width = 110;
-                newBtn.Height = 90;
+                newBtn.Width = t.TableX;
+                newBtn.Height = t.TableY;
                 newBtn.Margin = new Thickness(0);
                 newBtn.BorderThickness = new Thickness(0);
                 newBtn.Background = tableBrush;
                 newBtn.Foreground = Brushes.Black;
+                newBtn.FontSize = 15;
                 newBtn.Click += btn1_Click;
+                buttons.Add(newBtn);
+            }
+        }
 
-                /*if (isVisible == "1")
-                {
-                    newBtn.Visibility = Visibility.Visible;
-                }
-                else
-                {
-                    newBtn.Visibility = Visibility.Hidden;
-                }*/
-
-                tables.Children.Add(newBtn); //adds button to the Canvas
-                Canvas.SetTop(newBtn, t.TableY);
-                Canvas.SetLeft(newBtn, t.TableX);
+        private void putButtonsOnCanvas()
+        {
+            if (firstLoad == 1)
+            {
+                tables.Children.RemoveRange(0, tableList2.Count());
+            }
+            int count = 0;
+            foreach (Button newBtn in buttons)
+            {
+                TableBC tbc = tableList2[count] as TableBC;
+                Button addBtn = newBtn as Button;
+                int y = Convert.ToInt32(tbc.TableX);
+                int x = Convert.ToInt32(tbc.TableY);
+                addBtn.Content = "Table " + newBtn.Tag;
+                addBtn.Name = newBtn.Name;
+                addBtn.Tag = newBtn.Tag;
+                addBtn.Width = 110;
+                addBtn.Height = 90;
+                addBtn.FontSize = 15;
+                addBtn.Margin = new Thickness(0);
+                addBtn.BorderThickness = new Thickness(0);
+                addBtn.Background = newBtn.Background;
+                addBtn.Foreground = Brushes.Black;
+                addBtn.Click += btn1_Click;
+                tables.Children.Add(addBtn); //adds button to the Canvas
+                Canvas.SetTop(addBtn, x);
+                Canvas.SetLeft(addBtn, y);
+                count++;
             }
         }
 
@@ -203,9 +259,7 @@ namespace SeatingManager
                 tables2.Children.Add(newLbl); //adds label to the Canvas
                 Canvas.SetTop(newLbl, t.TableY);
                 Canvas.SetLeft(newLbl, t.TableX);
-
             }
-
         }
 
         //adds a customer 
@@ -222,14 +276,61 @@ namespace SeatingManager
         //clears the table
         private void btnClearTable_Click(object sender, RoutedEventArgs e)
         {
+            string newList2 = "";
+            int mergedTableNumber = 0;
+            int unMergeNumber = 0;
+
             if (isButtonClicked == 1)
             {
-                tables.Children.Clear();
-                tableMerge.Clear();
-                buttonMerge.Clear();
-                loadTables();
-                loadSections();
+                foreach (Button btn in buttonMerge)
+                {
+                    mergedTableNumber = Convert.ToInt32(btn.Tag) - 1;
+                    unMergeNumber = Convert.ToInt32(tableList2[mergedTableNumber].TableName);
+
+                    foreach (TableBC tbc in tableList2)
+                    {
+                        if (tbc.TableNameOrig == unMergeNumber)
+                        {
+                            Button newBtn = new Button();
+                            newBtn.Tag = tbc.TableName.ToString();
+                            mergedTables.Add(newBtn);
+                            tbc.IsMerged = 1;
+                            tbc.TableNameOrig = tbc.TableName;
+                        }
+                    }
+                    foreach (Button bb in mergedTables)
+                    {
+                        foreach (TableBC tb in tableList2)
+                        {
+                            if ((string)bb.Tag == tb.TableName.ToString())
+                            {
+                                ImageBrush tableBrush = new ImageBrush();
+                                tableBrush.ImageSource =
+                                new BitmapImage(
+                                    new Uri(@"..\\..\\images\" + tb.TableSeats + "t.png", UriKind.Relative));
+                                Button btn2 = bb as Button;
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].Content = "Table " + tb.TableName.ToString();
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].Foreground = Brushes.Black;
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].Background = tableBrush;
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].BorderThickness = new Thickness(0);
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].FontSize = 15;
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].Tag = tb.TableName;
+                            }
+                        }
+                    }
+                }  
             }
+            
+            foreach (TableBC t in tableList2)
+            {
+                string newList = t.TableName.ToString() + ", " + t.TableX.ToString() + ", " + t.TableY.ToString() + ", " + t.TableSeats.ToString() + ", " + "\t" + t.IsMerged.ToString() + ", " + t.Section.ToString() + ", " + t.TableNameOrig.ToString() + ", " + t.TableSeatsOrig.ToString() + "\n";
+                newList2 += newList;
+                txtTest.Text = newList2;
+
+            }
+
+            buttonMerge.Clear();
+            mergedTables.Clear();
         }
 
         //assigns the customer to a table
@@ -243,163 +344,23 @@ namespace SeatingManager
 
             foreach (Button b in buttonMerge)
             {
-                b.Content = "Customer";
+                b.Content = b.Content + "\nCustomer";
+                b.FontSize = 15;
                 b.BorderThickness = new Thickness(0);
                 b.Background = tableBrush;
             }
-            tableMerge.Clear();
             buttonMerge.Clear();
             isButtonClicked = 0;
         }
 
-
-
-
-
         private void TabItem_Loaded(object sender, RoutedEventArgs e)
         {
-
-            //// Define the Columns.test
-            //ColumnDefinition myColDef1 = new ColumnDefinition();
-            //myColDef1.Width = new GridLength(1, GridUnitType.Auto);
-            //ColumnDefinition myColDef2 = new ColumnDefinition();
-            //myColDef2.Width = new GridLength(1, GridUnitType.Auto);
-            //ColumnDefinition myColDef3 = new ColumnDefinition();
-            //myColDef3.Width = new GridLength(1, GridUnitType.Auto);
-
-            //// Add the ColumnDefinitions to the Grid.
-            //myGrid.ColumnDefinitions.Add(myColDef1);
-            //myGrid.ColumnDefinitions.Add(myColDef2);
-            //myGrid.ColumnDefinitions.Add(myColDef3);
-
-            //int totalButtons = 11;
-            //int btnCounter = 0;
-            //int curT = totalButtons;
-
-            //StackPanel myStackPanel = new StackPanel();
-            //myStackPanel.HorizontalAlignment = HorizontalAlignment.Left;
-            //myStackPanel.VerticalAlignment = VerticalAlignment.Top;
-            //Grid.SetColumn(myStackPanel, 0);
-            //Grid.SetRow(myStackPanel, 0);
-
-            //StackPanel myStackPanel1 = new StackPanel();
-            //myStackPanel1.HorizontalAlignment = HorizontalAlignment.Stretch;
-            //myStackPanel1.VerticalAlignment = VerticalAlignment.Top;
-            //myStackPanel1.Orientation = Orientation.Vertical;
-            //Grid.SetColumn(myStackPanel1, 1);
-            //Grid.SetRow(myStackPanel1, 0);
-
-            //StackPanel myStackPanel2 = new StackPanel();
-            //myStackPanel2.HorizontalAlignment = HorizontalAlignment.Left;
-            //myStackPanel2.VerticalAlignment = VerticalAlignment.Top;
-            //Grid.SetColumn(myStackPanel2, 2);
-            //Grid.SetRow(myStackPanel2, 0);
-
-            //int LoopCount = 0;
-            //int mainLoopCount = 0;
-            //do
-            //{
-
-
-            //    //checks if total number of buttons needed is greater than 4
-            //    if (curT > 4)
-            //    {
-            //        LoopCount = 4;
-            //    }
-            //    else
-            //    {
-            //        LoopCount = curT;
-            //    }
-
-            //    //MessageBox.Show(Convert.ToString(mainLoopCount) + " |  " + Convert.ToString(curT));
-            //    //Generates buttons
-            //    for (int i = 0; i < LoopCount; i++)
-            //    {
-
-
-            //        btnCounter++;
-            //        System.Windows.Controls.Button newBtn = new Button();
-            //        newBtn.Content = btnCounter;
-            //        newBtn.Name = "Button" + btnCounter;
-            //        newBtn.Width = 75;
-            //        newBtn.Height = 50;
-            //        newBtn.Margin = new Thickness(5);
-            //        newBtn.Click += btn1_Click;
-
-
-            //        switch (mainLoopCount)
-            //        {
-            //            case 0:
-            //                myStackPanel.Children.Add(newBtn); //adds button to the StackPanel
-            //                break;
-            //            case 1:
-            //                 myStackPanel1.Children.Add(newBtn); //adds button to the StackPanel
-            //                break;
-            //            case 2:
-            //                myStackPanel2.Children.Add(newBtn); //adds button to the StackPanel
-            //                break;
-            //        }
-            //    }
-
-            //    curT = curT - LoopCount; //subtracks from total buttons
-            //    mainLoopCount++;
-            //}
-            //while (curT > 0);
-
-
-            //myGrid.Children.Add(myStackPanel);
-            //myGrid.Children.Add(myStackPanel1);
-            //myGrid.Children.Add(myStackPanel2);
 
         }
 
         private void tab2_Loaded(object sender, RoutedEventArgs e)
         {
-            //
-            //THIS ISNT WORKING CORRECTLY, TOO LAZY TO FIX
-            //
-            //ColumnDefinition myColDef1 = new ColumnDefinition();
-            //myColDef1.Width = new GridLength(1, GridUnitType.Auto);
-
-            //WrapPanel myStackPanel = new WrapPanel();
-            //myStackPanel.HorizontalAlignment = HorizontalAlignment.Left;
-            //myStackPanel.VerticalAlignment = VerticalAlignment.Top;
-            //Grid.SetColumn(myStackPanel, 0);
-            //Grid.SetRow(myStackPanel, 0);
-
-
-            //int LoopCount = 0;
-            //int mainLoopCount = 0;
-            //int totalButtons = 11;
-            //int btnCounter = 0;
-            //int curT = totalButtons;
-
-            //do
-            //{
-            //    //MessageBox.Show(Convert.ToString(mainLoopCount) + " |  " + Convert.ToString(curT));
-            //    //Generates buttons
-            //    for (int i = 0; i < LoopCount; i++)
-            //    {
-
-
-            //        btnCounter++;
-            //        System.Windows.Controls.Button newBtn = new Button();
-            //        newBtn.Content = btnCounter;
-            //        newBtn.Name = "Button" + btnCounter;
-            //        newBtn.Width = 75;
-            //        newBtn.Height = 50;
-            //        newBtn.Margin = new Thickness(5);
-            //        //newBtn.Click += btn1_Click;
-
-            //        myStackPanel.Children.Add(newBtn); //adds button to the StackPanel
-            //    }
-
-            //    curT = curT - LoopCount; //subtracks from total buttons
-            //    //mainLoopCount++;
-            //}
-            //while (curT > 0);
-            //myGrid.Children.Add(myStackPanel);
-
+            
         }
     }
 }

@@ -20,8 +20,8 @@ namespace SeatingManager
             tableList.Add(table0);
             TableBC table2 = new TableBC(2, 0, 90, 6, 1, 1, 2, 6);
             tableList.Add(table2);
-            TableBC table4 = new TableBC(3, 330, 90, 2, 1, 2, 3, 2);
-            tableList.Add(table4);
+            TableBC table3 = new TableBC(3, 330, 90, 2, 1, 2, 3, 2);
+            tableList.Add(table3);
             TableBC table5 = new TableBC(4, 440, 90, 4, 1, 2, 4, 4);
             tableList.Add(table5);
             TableBC table6 = new TableBC(5, 550, 90, 4, 1, 2, 5, 4);
