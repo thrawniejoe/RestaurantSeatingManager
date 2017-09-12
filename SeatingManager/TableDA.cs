@@ -1,13 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace SeatingManager
 {
     class TableDA
     {
+
+        public static string connstring = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\SeatingManagerDB.mdf;Integrated Security=True;Connect Timeout=30";
+        static int x = 0;
+        static int y = 0;
+        static int numOfSeats = 0;
+        static int section = 0;
+        static int counter = 1;
 
         //makes the list of tables for the restaurant
         public static List<TableBC> GetTables()
@@ -15,8 +24,32 @@ namespace SeatingManager
             // create the array list for tables
             List<TableBC> tableList = new List<TableBC>();
 
+            SqlDataReader reader = null;
+            SqlConnection conn = new SqlConnection(connstring);
+            string selectSatement = "Select * from tablemaps Order by tableY, tableX";
+            SqlCommand selectCommand = new SqlCommand(selectSatement, conn);
+
+            conn.Open();
+
+            reader = selectCommand.ExecuteReader();
+
+            while (reader.Read())
+            {
+                x = Convert.ToInt32(reader["tableX"]);
+                y = Convert.ToInt32(reader["tableY"]);
+                numOfSeats = Convert.ToInt32(reader["numberOfSeats"]);
+                section = Convert.ToInt32(reader["sectionID"]);
+                int xCord = x * 110;
+                int yCord = y * 90;
+                TableBC table = new TableBC(counter, xCord, yCord, numOfSeats, 1, section, counter, numOfSeats);
+                tableList.Add(table);
+                counter++;
+            }
+
+            return tableList;
+
             //adds the tiles to the list
-            TableBC table0 = new TableBC(1, 0, 0, 6, 1, 1, 1, 6);
+            /*TableBC table0 = new TableBC(1, 0, 0, 6, 1, 1, 1, 6);
             tableList.Add(table0);
             TableBC table2 = new TableBC(2, 0, 90, 6, 1, 1, 2, 6);
             tableList.Add(table2);
@@ -89,9 +122,9 @@ namespace SeatingManager
             TableBC table42 = new TableBC(36, 330, 540, 2, 1, 5, 36, 2);
             tableList.Add(table42);
             TableBC table43 = new TableBC(37, 440, 540, 4, 1, 5, 37, 4);
-            tableList.Add(table43);
+            tableList.Add(table43);*/
 
-            return tableList;
+
         }
     }
 }
