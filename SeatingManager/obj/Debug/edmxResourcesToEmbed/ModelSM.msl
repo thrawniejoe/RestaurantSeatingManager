@@ -73,6 +73,7 @@
           <ScalarProperty Name="title" ColumnName="title" />
           <ScalarProperty Name="dateHired" ColumnName="dateHired" />
           <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
+          <ScalarProperty Name="hashedPassword" ColumnName="hashedPassword" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

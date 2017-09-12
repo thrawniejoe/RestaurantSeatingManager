@@ -62,9 +62,10 @@ namespace SeatingManager
                            where u.firstName.Equals(userName)
                            select u.role).SingleOrDefault();
 
-            if (Convert.ToString(uCheck) == txtPassword.Text)
-            //if (ModelClass.Password.ConfirmPassword(userName, uCheck.ToString()))
+            //if (Convert.ToString(uCheck) == txtPassword.Text)
+            if (ModelClass.Password.ConfirmPassword(userName, txtPassword.Text))
             {
+                //MessageBox.Show("confirmed");
                 Window mainWindow = null;
                 switch (getRole)
                 {
@@ -89,6 +90,20 @@ namespace SeatingManager
             }
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            byte[] salt = ModelClass.Password.CreateSalt(12);
+            byte[] hashedPassword1 = ModelClass.Password.Hash("password", salt);
+            byte[] hashedPassword2 = ModelClass.Password.Hash("password", salt);
 
+            if (hashedPassword1.SequenceEqual(hashedPassword2))
+            {
+                MessageBox.Show("consistent");
+            }
+            else
+            {
+                MessageBox.Show("not the same");
+            }
+        }
     }
 }

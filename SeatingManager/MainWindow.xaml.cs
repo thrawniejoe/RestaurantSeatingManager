@@ -394,5 +394,155 @@ namespace SeatingManager
         {
             
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
+            // Load data into the table customers. You can modify this code as needed.
+            SeatingManager.SeatingManagerDBDataSetTableAdapters.customersTableAdapter seatingManagerDBDataSetcustomersTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.customersTableAdapter();
+            seatingManagerDBDataSetcustomersTableAdapter.Fill(seatingManagerDBDataSet.customers);
+            System.Windows.Data.CollectionViewSource customersViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customersViewSource")));
+            customersViewSource.View.MoveCurrentToFirst();
+            RefreshList();
+        }
+
+
+        public void RefreshList()
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            //Refresh Server GridView
+            serversDataGrid.ItemsSource = null;
+            var getServ = (from su in context.users
+                           where su.title == "Server" && su.isOnDuty == 1
+                           select su);
+            serversDataGrid.ItemsSource = getServ.ToList();
+
+
+            //Refresh Customer GridView
+            customersDataGrid.ItemsSource = null;
+            var getCust = (from su in context.customers
+                           select su);
+            customersDataGrid.ItemsSource = getCust.ToList();
+
+            //Refresh Server List
+            usersDataGrid.ItemsSource = null;
+            var getServers = (from su in context.users
+                           where su.title == "Server"
+                           select su);
+            usersDataGrid.ItemsSource = getServers.ToList();
+        }
+
+
+        private void btnbtnSetOnDuty_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button cBut = sender as Button;
+            int id = Convert.ToInt16(cBut.Tag);
+            var result = context.users.SingleOrDefault(b => b.userID == id);
+            if(result != null)
+            {
+                if(result.isOnDuty == 1)
+                {
+                    result.isOnDuty = 0;
+                }
+                else
+                {
+                    result.isOnDuty = 1;
+                }
+            context.SaveChanges();
+                RefreshList();
+            }
+        }
+
+        private void btnDeleteServer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteCust_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+        //******************** TEST CODE *************************//
+
+
+        private void btnTESTpull_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+        List<WrapPanel> wpList = new List<WrapPanel>();
+        List<String> wpListNames = new List<String>();
+        int sectionNum = 0;
+        static Random rnd = new Random();
+        private void btnTESTaddsection_Click(object sender, RoutedEventArgs e)
+        {
+            
+            List<Brush> blist = new List<Brush>();
+            blist.Add(Brushes.Pink);
+            blist.Add(Brushes.Orange);
+            blist.Add(Brushes.Purple);
+            blist.Add(Brushes.Red);
+            blist.Add(Brushes.Teal);
+            blist.Add(Brushes.YellowGreen);
+
+            int r = rnd.Next(blist.Count);
+
+            string test = txtTESTSection.Text;
+            WrapPanel nw = new WrapPanel();
+            
+            //sectionNum = Convert.ToInt16(txtTESTSection.Text);
+            nw.SetValue(WrapPanel.NameProperty, test);//THIS WILL NOT ACCEPT NUMBERS even if converted, must use something like test1 or section1, 0, 1, 2 ect will give error
+
+            nw.Background = blist[r];
+            nw.Margin.Left.Equals(10);
+           // MessageBox.Show(nw.Name);
+            wpList.Add(nw);
+            wpListNames.Add(test);
+            wpMain.Children.Add(nw);
+
+            cboSections.ItemsSource = null;
+            cboSections.ItemsSource = wpListNames;
+            txtTESTSection.Text = "";
+            MessageBox.Show("Section " + test + " added to the board");
+        }
+
+        
+        int btnCounter = 0;
+        private void btnTESTaddtable_Click(object sender, RoutedEventArgs e)
+        {
+            //int selectedSection = Convert.ToInt16(txtTESTSection.Text);
+            
+            foreach (WrapPanel w in wpList)
+            {
+                //MessageBox.Show(w.Name);
+                if (w.Name == Convert.ToString(cboSections.SelectedItem))
+                {
+                    //Click and adds a button
+                    System.Windows.Controls.Button newBtn = new Button();
+                    newBtn.Content = btnCounter + " \r\n Section: " + cboSections.SelectedItem;
+                    newBtn.Name = "Button" + btnCounter;
+                    newBtn.Width = 95;
+                    newBtn.Height = 80;
+                    newBtn.Margin = new Thickness(5);
+                    newBtn.Click += btn1_Click;
+                    btnCounter++;
+                    w.Children.Add(newBtn); //adds button to the WrapPannel
+                }
+            }
+            
+        }
+        //************** END TEST CODE ***********************************
     }
 }

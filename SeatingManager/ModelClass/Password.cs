@@ -10,9 +10,9 @@ namespace SeatingManager.ModelClass
 {
     class Password
     {
-        public static string Hash(string value, string salt)
+        public static byte[] Hash(string value, byte[] salt)
         {
-            return Convert.ToBase64String(Hash(Encoding.UTF8.GetBytes(value), Encoding.UTF8.GetBytes(salt)));
+            return Hash(Encoding.UTF8.GetBytes(value), salt);
         }
 
         public static byte[] Hash(byte[] value, byte[] salt)
@@ -22,7 +22,7 @@ namespace SeatingManager.ModelClass
             return new SHA256Managed().ComputeHash(saltedValue);
         }
 
-        public static string CreateSalt(int size)
+        public static byte[] CreateSalt(int size)
         {
             //Generate a cryptographic random number.
             RNGCryptoServiceProvider rng = new RNGCryptoServiceProvider();
@@ -30,20 +30,16 @@ namespace SeatingManager.ModelClass
             rng.GetBytes(buff);
 
             // Return a Base64 string representation of the random number.
-            return Convert.ToBase64String(buff);
+            return buff;
         }
 
         public static bool ConfirmPassword(string username, string password)
         {
             var context = new SeatingManager.SeatingManagerDBEntities();
-            string recordedPassword = (from u in context.users
-                                       where u.firstName == username
-                                       select u.password).ToString();
-            string salt = (from u in context.users
-                           where u.firstName == username
-                           select u.passwordSalt).ToString();
-            byte[] passwordHash = Encoding.UTF8.GetBytes(Hash(password, salt));
-            byte[] recordedHash = Encoding.UTF8.GetBytes(recordedPassword);
+            byte[] recordedPassword = context.users.Where(u => u.firstName == username).Single().hashedPassword;
+            byte[] salt = context.users.Where(u => u.firstName == username).Single().passwordSalt;
+            byte[] passwordHash = Hash(password, salt);
+            byte[] recordedHash = recordedPassword;
             return recordedHash.SequenceEqual(passwordHash);
         }
     }
