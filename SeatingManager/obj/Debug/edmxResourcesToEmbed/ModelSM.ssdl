@@ -67,7 +67,8 @@
     <Property Name="password" Type="nvarchar" MaxLength="256" Nullable="false" />
     <Property Name="title" Type="nvarchar" MaxLength="15" Nullable="false" />
     <Property Name="dateHired" Type="datetime" Nullable="false" />
-    <Property Name="passwordSalt" Type="nvarchar" MaxLength="256" />
+    <Property Name="passwordSalt" Type="varbinary" MaxLength="256" />
+    <Property Name="hashedPassword" Type="varbinary" MaxLength="256" />
   </EntityType>
   <EntityContainer Name="SeatingManagerDBModelStoreContainer">
     <EntitySet Name="assigncustomers" EntityType="Self.assigncustomers" Schema="dbo" store:Type="Tables" />

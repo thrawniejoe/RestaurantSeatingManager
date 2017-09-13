@@ -294,7 +294,6 @@ namespace SeatingManager
             {
                 MessageBox.Show("Please Enter a name for your section");
             }
-            
         }
 
         private void btnDeleteSection_Click(object sender, RoutedEventArgs e)

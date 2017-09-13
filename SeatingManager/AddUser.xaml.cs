@@ -42,21 +42,21 @@ namespace SeatingManager
 
                 User.firstName = firstNameTextBox.Text;
                 User.lastName = lastNameTextBox.Text;
-                User.password = passwordTextBox.Text;
+                User.password = passwordTextBox.Password;
                 User.title = titleTextBox.Text;
 
                 switch (titleTextBox.Text)
                 {
                     case "Administrator": User.role = 0; break;
-                    case "Manager": User.role = 2; break;
-                    case "Host": User.role = 1; break;
+                    case "Manager": User.role = 1; break;
+                    case "Host": User.role = 2; break;
                     case "Server": User.role = 3; break;
                     default: User.role = 3; break;
                 }
                 //LIST OF ROLES
                 // 0 => ADMIN
-                // 1 => HOST
-                // 2 => MANAGER
+                // 1 => MANAGER
+                // 2 => HOST
                 // 3 => SERVER   
                 User.phone = phoneTextBox.Text;
                 User.isActive = 0;
@@ -139,19 +139,19 @@ namespace SeatingManager
             }
 
             //Password Validation
-            if (!Validations.CheckEmptyString(passwordTextBox.Text))
+            if (!Validations.CheckEmptyString(passwordTextBox.Password))
             {
                 lblPasswordError.Content = "field cannot be blank.";
                 check = false;
             }
 
-            if (!Validations.CheckStringMinMax(passwordTextBox.Text, passMin, max))
+            if (!Validations.CheckStringMinMax(passwordTextBox.Password, passMin, max))
             {
                 lblPasswordError.Content = "Must be between " + passMin + " and " + max + " in length";
                 check = false;
             }
 
-            if (!Validations.CheckIfAlpha(passwordTextBox.Text))
+            if (!Validations.CheckIfAlpha(passwordTextBox.Password))
             {
                 lblPasswordError.Content = "Field must be letters only.";
                 check = false;
