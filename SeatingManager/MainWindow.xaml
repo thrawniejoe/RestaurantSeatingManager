@@ -127,7 +127,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style TargetType="{x:Type Button}">
+        <Style  x:Key="mainBtnStyle" TargetType="{x:Type Button}">
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -188,21 +188,15 @@
     </Window.Background>
     <Grid>
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0">
-            <TabControl.Background>
-                <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
-            </TabControl.Background>
-            <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="180" HorizontalContentAlignment="Stretch">
-                <TabItem.Background>
-                    <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
-                </TabItem.Background>
+            <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="180" HorizontalContentAlignment="Stretch" Style="{DynamicResource TabItemStyle1}" >
                 <Canvas>
                     <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="1090">
-                        <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAddCustomer_Click"/>
-                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAssignCustomer_Click"/>
-                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4"/>
-                        <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnClearTable_Click"/>
+                        <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Click="btnAddBtn_Click" Height="25.96" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAddCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAssignCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnClearTable_Click" Style="{DynamicResource mainBtnStyle}"/>
                     </WrapPanel>
 
                     <Grid x:Name="background" HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1090" Margin="0,59,0,0">
@@ -268,7 +262,7 @@
                 <DataGridTemplateColumn MaxWidth="35" MinWidth="30">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="btndeleteServer"  Click="btnDeleteServer_Click" Content="X" Tag="{Binding userID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
+                            <Button Name="btndeleteServer"  Click="btnDeleteServer_Click" Style="{DynamicResource mainBtnStyle}" Content="X" Tag="{Binding userID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -280,7 +274,7 @@
                 <DataGridTemplateColumn x:Name="deleteCustColumn" Header="" Width="35">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto" Click="btnDeleteCust_Click"></Button>
+                            <Button Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" Style="{DynamicResource mainBtnStyle}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto" Click="btnDeleteCust_Click"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

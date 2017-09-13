@@ -260,10 +260,10 @@
       <LastGenOutput>ModelSM.cs</LastGenOutput>
     </Content>
     <Content Include="SeatingManagerDB.mdf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="SeatingManagerDB_log.ldf">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>SeatingManagerDB.mdf</DependentUpon>
     </Content>
     <Content Include="TeamBlueDatabase.sql" />
