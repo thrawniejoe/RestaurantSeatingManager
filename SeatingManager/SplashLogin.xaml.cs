@@ -63,7 +63,7 @@ namespace SeatingManager
                            select u.role).SingleOrDefault();
 
             //if (Convert.ToString(uCheck) == txtPassword.Text)
-            if (ModelClass.Password.ConfirmPassword(userName, txtPassword.Text))
+            if (ModelClass.Password.ConfirmPassword(userName, txtPassword.Password))
             {
                 //MessageBox.Show("confirmed");
                 Window mainWindow = null;
