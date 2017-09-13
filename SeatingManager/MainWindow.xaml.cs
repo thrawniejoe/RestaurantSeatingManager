@@ -431,6 +431,7 @@ namespace SeatingManager
             //Refresh Customer GridView
             customersDataGrid.ItemsSource = null;
             var getCust = (from su in context.customers
+                           orderby su.timeIn
                            select su);
             customersDataGrid.ItemsSource = getCust.ToList();
 

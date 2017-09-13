@@ -71,5 +71,17 @@ namespace SeatingManager
             
         }
 
+        public static bool CheckIfValidTime(string text)
+        {
+            var pattern = "\\d{1,2}:\\d{2}\\s*(AM|PM)";
+
+            if (Regex.IsMatch(text, pattern))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }
