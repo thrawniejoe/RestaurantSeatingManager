@@ -95,9 +95,7 @@ namespace SeatingManager
                         db.SaveChanges();
                     }
                 }
-                
                 this.Close();
-
             }
 
 

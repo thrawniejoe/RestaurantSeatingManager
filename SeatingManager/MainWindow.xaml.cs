@@ -405,6 +405,7 @@ namespace SeatingManager
             isButtonClicked = 0;
         }
 
+
         private void TabItem_Loaded(object sender, RoutedEventArgs e)
         {
 
@@ -413,6 +414,69 @@ namespace SeatingManager
         private void tab2_Loaded(object sender, RoutedEventArgs e)
         {
             
+        }
+
+
+        public void RefreshList()
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            //Refresh Server GridView
+            serversDataGrid.ItemsSource = null;
+            var getServ = (from su in context.users
+                           where su.title == "Server" && su.isOnDuty == 1
+                           select su);
+            serversDataGrid.ItemsSource = getServ.ToList();
+
+
+            //Refresh Customer GridView
+            customersDataGrid.ItemsSource = null;
+            var getCust = (from su in context.customers
+                           select su);
+            customersDataGrid.ItemsSource = getCust.ToList();
+
+            //Refresh Server List
+            usersDataGrid.ItemsSource = null;
+            var getServers = (from su in context.users
+                              where su.title == "Server"
+                              select su);
+            usersDataGrid.ItemsSource = getServers.ToList();
+        }
+
+
+        private void btnbtnSetOnDuty_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button cBut = sender as Button;
+            int id = Convert.ToInt16(cBut.Tag);
+            var result = context.users.SingleOrDefault(b => b.userID == id);
+            if (result != null)
+            {
+                if (result.isOnDuty == 1)
+                {
+                    result.isOnDuty = 0;
+                }
+                else
+                {
+                    result.isOnDuty = 1;
+                }
+                context.SaveChanges();
+                RefreshList();
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            RefreshList();
+        }
+
+        private void btnDeleteServer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDeleteCust_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
