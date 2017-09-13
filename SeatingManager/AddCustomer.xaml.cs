@@ -27,13 +27,7 @@ namespace SeatingManager
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
             SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
-            // Load data into the table customer. You can modify this code as needed.
-            //SeatingManager.SeatingManagerDBDataSetTableAdapters.customerTableAdapter seatingManagerDBDataSetcustomerTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.customerTableAdapter();
-            //seatingManagerDBDataSetcustomerTableAdapter.Fill(seatingManagerDBDataSet.customer);
-            //System.Windows.Data.CollectionViewSource customerViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("customerViewSource")));
-            //customerViewSource.View.MoveCurrentToFirst();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

@@ -76,6 +76,8 @@
             <Setter Property="BorderThickness" Value="1"/>
             <Setter Property="ColumnHeaderHeight" Value="40"/>
             <Setter Property="CanUserAddRows" Value="False"/>
+            
+            
         </Style>
         <Style TargetType="{x:Type DataGridColumnHeader}">
             <Setter Property="Background" >
