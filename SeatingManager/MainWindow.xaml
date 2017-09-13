@@ -6,6 +6,184 @@
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
         Title="MainWindow" Height="1000" Width="1800" Icon="Images/iconRectangle.ico" WindowStartupLocation="CenterOwner" WindowState="Maximized">
+
+    <Window.Resources>
+        <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
+        <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <CollectionViewSource x:Key="usersViewSource" Source="{Binding users, Source={StaticResource seatingManagerDBDataSet}}" />
+        <Style x:Key="TabItemStyle1" TargetType="{x:Type TabItem}" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TabItem}">
+                        <Border x:Name="Border" BorderThickness="0,0,0,0" CornerRadius="0,0,0,0"
+                        Padding="5,5,5,5" Margin="0,0,0,0" BorderBrush="#00E0E0E0">
+                            <ContentPresenter x:Name="ContentSite" ContentSource="Header" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
+                                <Setter Property="BorderBrush" TargetName="Border" Value="#00DCDCDC"/>
+                                <Setter Property="FontWeight" Value="Normal"/>
+                                <Setter Property="BorderThickness" TargetName="Border" Value="1"/>
+                                <Setter Property="Background" TargetName="Border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF3AC6AB" Offset="0.201"/>
+                                            <GradientStop Color="#FF2D74A0" Offset="1"/>
+                                            <GradientStop Color="#FF00F9D7" Offset="0"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="CornerRadius" TargetName="Border" Value="2"/>
+
+                            </Trigger>
+                            <Trigger Property="IsSelected" Value="False">
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="#FFE8E8E8"/>
+                                <Setter Property="Background" TargetName="Border">
+                                    <Setter.Value>
+                                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                            <GradientStop Color="#FF5A5B6E" Offset="0.096"/>
+                                            <GradientStop Color="#FF434551" Offset="0.77"/>
+                                            <GradientStop Color="#FFAFAFB2" Offset="0.013"/>
+                                            <GradientStop Color="#FF2B2B2E" Offset="1"/>
+                                            <GradientStop Color="#FF434551" Offset="0.933"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="CornerRadius" TargetName="Border" Value="2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="{x:Type DataGrid}">
+            <Setter Property="BorderBrush" Value="#FF373542"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#FF373542"/>
+            <Setter Property="VerticalGridLinesBrush" Value="{x:Null}"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" >
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF40424E" Offset="0"/>
+                        <GradientStop Color="#FF32353E" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="{x:Type DataGridRow}">
+            <Setter Property="BorderBrush" Value="#FF373542"/>
+            <Setter Property="Background" Value="#FF272731" />
+            <Setter Property="Foreground" Value="WhiteSmoke"/>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF23232B" Offset="1"/>
+                                <GradientStop Color="#FF373740" Offset="0"/>
+                                <GradientStop Color="#FF26262E" Offset="0.498"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FF00DDFD"/>
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+        <Style TargetType="{x:Type DataGridCell}">
+            <Style.Triggers>
+                <Trigger Property="DataGridCell.IsSelected" Value="True">
+                    <Setter Property="Background" >
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FF23232B" Offset="1"/>
+                                <GradientStop Color="#FF373740" Offset="0"/>
+                                <GradientStop Color="#FF26262E" Offset="0.498"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#FF00DDFD"/>
+                    <Setter Property="FontWeight" Value="SemiBold" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF858593" Offset="0"/>
+                        <GradientStop Color="#FF434551" Offset="0.983"/>
+                        <GradientStop Color="#FF4B4D5C" Offset="0.527"/>
+                        <GradientStop Color="#FF57586A" Offset="0.021"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="BorderBrush" Value="#FF3C3C3C"/>
+            <Setter Property="Foreground" Value="#FFFDFDFD"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            CornerRadius="2" 
+                            BorderBrush="#FF646464"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        
+
+        <Style TargetType="TextBox">
+            <Setter Property="Background" Value="#FF191A1F"/>
+            <Setter Property="BorderBrush" Value="#FF292929"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+
+        <Style x:Key="userActiveStyle" TargetType="Button">
+            <Setter Property="Background" Value="Red" />
+            <Setter Property="Content" Value="No"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding isOnDuty}" Value="1">
+                    <Setter Property="Button.Background" Value="Green"/>
+                    <Setter Property="Content" Value="Yes"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
     <Window.Background>
         <ImageBrush ImageSource="Images/main_background2.jpg" Stretch="UniformToFill"/>
     </Window.Background>
@@ -43,7 +221,7 @@
                     </Grid>
                 </Canvas>
             </TabItem>
-            <TabItem x:Name="tab2" Header="Server List" Loaded="tab2_Loaded" Margin="5,0,0,0" VerticalAlignment="Top" Width="180" HorizontalContentAlignment="Stretch">
+            <!--<TabItem x:Name="tab2" Header="Server List" Loaded="tab2_Loaded" Margin="5,0,0,0" VerticalAlignment="Top" Width="180" HorizontalContentAlignment="Stretch">
                 <TabItem.Background>
                     <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
                 </TabItem.Background>
@@ -53,9 +231,9 @@
                     <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
                 </TabItem.Background>
                 <Grid Background="#FFE5E5E5"/>
-            </TabItem>
+            </TabItem>-->
         </TabControl>
-        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="400" Margin="10,100,0,0" VerticalAlignment="Top" Width="280">
+        <ListView x:Name="lstServers" HorizontalAlignment="Left" Height="263" Margin="10,677,0,0" VerticalAlignment="Top" Width="280">
             <ListView.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
             </ListView.Background>
@@ -65,7 +243,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="400" Margin="10,525,0,0" VerticalAlignment="Top" Width="280">
+        <ListView x:Name="lstCustomers" HorizontalAlignment="Left" Height="547" Margin="10,116,0,0" VerticalAlignment="Top" Width="280">
             <ListView.Background>
                 <ImageBrush ImageSource="Images/slideshow-overlay.png"/>
             </ListView.Background>
@@ -75,8 +253,8 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="9,469,0,0" VerticalAlignment="Top" Width="134"/>
-        <Label Content="Server List" HorizontalAlignment="Left" Margin="10,122.04,0,0" VerticalAlignment="Top" Width="133"/>
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="25" Margin="20,116,0,0" VerticalAlignment="Top" Width="134"/>
+        <Label Content="Server List" HorizontalAlignment="Left" Margin="20,677,0,0" VerticalAlignment="Top" Width="133" Height="27"/>
         <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="825" Margin="1500,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Visibility="Hidden"/>
 
     </Grid>

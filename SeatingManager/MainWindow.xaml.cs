@@ -58,8 +58,28 @@ namespace SeatingManager
 
         //list of tables from the database
         public void tableList()
-        {
-            tableList2 = TableDA.GetTables();
+             {
+                    int x = 0;
+                    int y = 0;
+                    int numOfSeats = 0;
+                    int section = 0;
+                    int counter = 1;
+
+                    var context = new SeatingManager.SeatingManagerDBEntities();
+                    var getTableData = context.tablemaps.SqlQuery("Select * from tablemaps Order by tableY, tableX").ToList();
+                    tablemap tm = new tablemap();
+            foreach (tablemap tmp in getTableData)
+            {
+                x = Convert.ToInt32(tmp.tableX);
+                y = Convert.ToInt32(tmp.tableY);
+                numOfSeats = Convert.ToInt32(tmp.numberOfSeats);
+                section = Convert.ToInt32(tmp.sectionID);
+                int xCord = (x - 1) * 110;
+                int yCord = (y - 1) * 90;
+                TableBC table = new TableBC(counter, xCord, yCord, numOfSeats, 1, section, counter, numOfSeats);
+                tableList2.Add(table);
+                counter++;
+            }
         }
 
         //merge buttons
@@ -183,8 +203,8 @@ namespace SeatingManager
                 newBtn.Content = name;
                 newBtn.Name = "Button" + btnName;
                 newBtn.Tag = t.TableName;
-                newBtn.Width = t.TableX;
-                newBtn.Height = t.TableY;
+                newBtn.Width = 110;
+                newBtn.Height = 90;
                 newBtn.Margin = new Thickness(0);
                 newBtn.BorderThickness = new Thickness(0);
                 newBtn.Background = tableBrush;
