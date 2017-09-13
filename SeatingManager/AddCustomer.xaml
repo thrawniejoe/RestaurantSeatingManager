@@ -61,8 +61,8 @@
             </Grid.RowDefinitions>
             <Label Content="Reservation:" Grid.Column="0" HorizontalAlignment="Left" Margin="7,-4,0,10" Grid.Row="0" VerticalAlignment="Center"/>
             <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="10,3,-111,-3">
-                <RadioButton x:Name="radioReservationNo" Content="No" Tag="Green" Checked="BGRadioButton_Checked" IsChecked="True"  Width="48"/>
-                <RadioButton x:Name="radioReservationYes" Content="Yes" Tag="White" Checked="BGRadioButton_Checked" Width="43"/>
+                <RadioButton x:Name="radioReservationNo" Content="No" Tag="Green"  IsChecked="True"  Width="48"/>
+                <RadioButton x:Name="radioReservationYes" Content="Yes" Tag="White" Width="43"/>
             </StackPanel>
         </Grid>
         <Label x:Name="label" Content="Add a Customer" HorizontalAlignment="Left" Margin="198,10,0,0" VerticalAlignment="Top" FontSize="24"/>
