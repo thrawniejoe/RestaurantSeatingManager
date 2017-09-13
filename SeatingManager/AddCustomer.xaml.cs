@@ -40,14 +40,20 @@ namespace SeatingManager
         {
             //gets connection info for database
             var context = new SeatingManager.SeatingManagerDBEntities();
-
+            
             //creates new customer object
             customer cust = new customer();
 
             cust.customerName = customerNameTextBox.Text;
             cust.timeIn = timeInDatePicker.DisplayDate;
             cust.wait = Convert.ToByte(waitTextBox.Text);
-            cust.reservation = Convert.ToByte(reservationComboBox.Text);
+
+            if(radioReservationNo.IsChecked != null && (bool)radioReservationNo.IsChecked)
+                cust.reservation = Convert.ToByte(0);
+            else
+            {
+                cust.reservation = Convert.ToByte(1);
+            }
 
             //adds customer object to db
             context.customers.Add(cust);
