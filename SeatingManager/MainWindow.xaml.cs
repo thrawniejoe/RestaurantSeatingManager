@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,6 +27,7 @@ namespace SeatingManager
         private static List<Button> buttons = new List<Button>();
         int isButtonClicked = 0;
         int firstLoad = 0;
+        int nameToUse = 0;
 
         public MainWindow()
         {
@@ -56,8 +58,28 @@ namespace SeatingManager
 
         //list of tables from the database
         public void tableList()
-        {
-            tableList2 = TableDA.GetTables();
+             {
+                    int x = 0;
+                    int y = 0;
+                    int numOfSeats = 0;
+                    int section = 0;
+                    int counter = 1;
+
+                    var context = new SeatingManager.SeatingManagerDBEntities();
+                    var getTableData = context.tablemaps.SqlQuery("Select * from tablemaps Order by tableY, tableX").ToList();
+                    tablemap tm = new tablemap();
+            foreach (tablemap tmp in getTableData)
+            {
+                x = Convert.ToInt32(tmp.tableX);
+                y = Convert.ToInt32(tmp.tableY);
+                numOfSeats = Convert.ToInt32(tmp.numberOfSeats);
+                section = Convert.ToInt32(tmp.sectionID);
+                int xCord = (x - 1) * 110;
+                int yCord = (y - 1) * 90;
+                TableBC table = new TableBC(counter, xCord, yCord, numOfSeats, 1, section, counter, numOfSeats);
+                tableList2.Add(table);
+                counter++;
+            }
         }
 
         //merge buttons
@@ -108,7 +130,7 @@ namespace SeatingManager
                         Button btn = buttonMerge[counter] as Button;
                         buttons[Convert.ToInt32(btn.Tag)-1].Background = tableBrush;
                         buttons[Convert.ToInt32(btn.Tag)-1].BorderThickness = new Thickness(0);
-                        buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 15;
+                        buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 14;
                         buttons[Convert.ToInt32(btn.Tag)-1].Foreground = Brushes.Black;
                         tableIndex = Convert.ToInt32(btn.Tag) - 1;
                         tmerge = tableList2[tableIndex].TableNameOrig;
@@ -121,7 +143,8 @@ namespace SeatingManager
                         buttons[Convert.ToInt32(btn.Tag)-1].Foreground = Brushes.White;
                         buttons[Convert.ToInt32(btn.Tag)-1].Background = tableBrush2;
                         buttons[Convert.ToInt32(btn.Tag)-1].BorderThickness = new Thickness(0);
-                        buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 15;
+                        buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 14;
+                        buttons[Convert.ToInt32(btn.Tag) - 1].HorizontalContentAlignment = HorizontalAlignment.Center;
                         tableIndex = Convert.ToInt32(btn.Tag) - 1;
                         tableList2[tableIndex].TableNameOrig = tmerge;
                         tableList2[tableIndex].IsMerged = 0;
@@ -180,8 +203,8 @@ namespace SeatingManager
                 newBtn.Content = name;
                 newBtn.Name = "Button" + btnName;
                 newBtn.Tag = t.TableName;
-                newBtn.Width = t.TableX;
-                newBtn.Height = t.TableY;
+                newBtn.Width = 110;
+                newBtn.Height = 90;
                 newBtn.Margin = new Thickness(0);
                 newBtn.BorderThickness = new Thickness(0);
                 newBtn.Background = tableBrush;
@@ -336,6 +359,35 @@ namespace SeatingManager
         //assigns the customer to a table
         private void btnAssignCustomer_Click(object sender, RoutedEventArgs e)
         {
+            string customer = "";
+            if (nameToUse == 0)
+            {
+                customer = "Matt";
+                nameToUse++;
+            }
+            else if (nameToUse == 1)
+            {
+                customer = "Joe";
+                nameToUse++;
+            }
+            else if (nameToUse == 2)
+            {
+                customer = "John";
+                nameToUse++;
+            }
+            else if (nameToUse == 3)
+            {
+                customer = "Taylor";
+                nameToUse++;
+            }
+            else if (nameToUse == 4)
+            {
+                customer = "Mark";
+                nameToUse = 0;
+            }
+
+            DateTime dt = DateTime.Now;
+            string time = dt.ToString("h:mm");
             ImageBrush tableBrush = new ImageBrush();
             tableBrush.ImageSource =
                 new BitmapImage(
@@ -344,8 +396,8 @@ namespace SeatingManager
 
             foreach (Button b in buttonMerge)
             {
-                b.Content = b.Content + "\nCustomer";
-                b.FontSize = 15;
+                b.Content = b.Content + "\n" + customer + "\nSeated: " + time;
+                b.FontSize = 14;
                 b.BorderThickness = new Thickness(0);
                 b.Background = tableBrush;
             }

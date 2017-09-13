@@ -126,7 +126,6 @@
       <DependentUpon>SplashLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="TableBC.cs" />
-    <Compile Include="TableDA.cs" />
     <Compile Include="tablemap.cs">
       <DependentUpon>ModelSM.tt</DependentUpon>
     </Compile>

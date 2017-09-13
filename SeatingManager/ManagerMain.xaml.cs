@@ -318,6 +318,7 @@ namespace SeatingManager
         {
             List<int> tabletypes = new List<int>();
 
+            tabletypes.Add(2);
             tabletypes.Add(4);
             tabletypes.Add(6);
 
@@ -338,6 +339,8 @@ namespace SeatingManager
             tm.sectionID = getSectionID.tableSectionID;
             tm.visible = 1;
             tm.numberOfSeats = Convert.ToInt16(cboTableType.SelectedItem);
+            tm.tableX = Convert.ToInt32(txtRow.Text);
+            tm.tableY = Convert.ToInt32(txtColumn.Text);
             context.tablemaps.Add(tm);
             context.SaveChanges();
             RefreshList();

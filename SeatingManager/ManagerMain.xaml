@@ -184,13 +184,13 @@
                         <ColumnDefinition Width="299*"/>
                         <ColumnDefinition Width="535*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="tablemapsDataGrid" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="24,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1" Background="#FF1A1B20">
+                    <DataGrid x:Name="tablemapsDataGrid" HorizontalAlignment="Center" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="24,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1" Background="#FF1A1B20">
                         <DataGrid.Columns>
-                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableID}" Header="TABLE ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="80"/>
-                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding numberOfSeats}" Header="# OF SEATS" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
+                            <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableY}" Header="ROW" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="80"/>
+                            <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding tableX}" Header="COLUMN" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
                             <DataGridTextColumn x:Name="visibleColumn" Binding="{Binding visible}" Header="VISIBLE" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="75"/>
                             <DataGridTextColumn x:Name="sectionIDColumn1" Binding="{Binding sectionID}" Header="SECTION ID" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
-                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding tableType}" Header="TABLE TYPE" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
+                            <DataGridTextColumn x:Name="tableTypeColumn" Binding="{Binding numberOfSeats}" Header="SEATS" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
                             <DataGridTemplateColumn MaxWidth="90" MinWidth="75">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
@@ -200,7 +200,7 @@
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
-                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="119,135,0,0" VerticalAlignment="Top" Width="131" Height="31" Click="btnAddTable_Click"/>
+                    <Button x:Name="btnAddTable" Content="Add Table" HorizontalAlignment="Left" Margin="119,203,0,0" VerticalAlignment="Top" Width="124" Height="31" Click="btnAddTable_Click" RenderTransformOrigin="0.497,2.772"/>
                     <ComboBox x:Name="cboTableType" HorizontalAlignment="Left" Margin="119,69.69,0,0" VerticalAlignment="Top" Width="120"/>
                     <Label Content="Table Seats:" HorizontalAlignment="Left" Margin="38,70,0,0" VerticalAlignment="Top" Foreground="White" Width="84"/>
                     <Label Content="Add a Table"  HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="21,16.69,0,0" VerticalAlignment="Top" Foreground="White" Width="246" Background="#FF3F414D" BorderBrush="#FF202028" BorderThickness="1"/>
@@ -228,8 +228,8 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Label Content="Section:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
-                        <ComboBox x:Name="sectionColorComboBox" Grid.Column="1" DisplayMemberPath="sectionColor" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="3" Grid.Row="0" VerticalAlignment="Center" Width="120">
+                        <Label Content="Section:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,6,0,0" Grid.Row="0" VerticalAlignment="Center" Foreground="White"/>
+                        <ComboBox x:Name="sectionColorComboBox" Grid.Column="1" DisplayMemberPath="sectionColor" HorizontalAlignment="Left" Height="Auto" ItemsSource="{Binding}" Margin="5,6,-3,4" Grid.Row="0" VerticalAlignment="Center" Width="120">
                             <ComboBox.ItemsPanel>
                                 <ItemsPanelTemplate>
                                     <VirtualizingStackPanel/>
@@ -237,6 +237,10 @@
                             </ComboBox.ItemsPanel>
                         </ComboBox>
                     </Grid>
+                    <TextBox x:Name="txtRow" HorizontalAlignment="Left" Height="23" Margin="119,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846"/>
+                    <TextBox x:Name="txtColumn" HorizontalAlignment="Left" Height="23" Margin="119,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846"/>
+                    <Label x:Name="label" Content="Column:" HorizontalAlignment="Left" Margin="53,130,0,0" VerticalAlignment="Top" Foreground="White"/>
+                    <Label x:Name="lblColumn" Content="Row:" HorizontalAlignment="Left" Margin="74,164,0,0" VerticalAlignment="Top" Foreground="White"/>
                 </Grid>
             </TabItem>
 

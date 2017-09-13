@@ -242,3 +242,6 @@ C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\S
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.g.cs
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.baml
+C:\Users\Mark\Source\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManager.exe.config
+C:\Users\Mark\Source\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.exe
+C:\Users\Mark\Source\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.pdb
