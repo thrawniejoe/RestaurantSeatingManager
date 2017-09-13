@@ -46,7 +46,7 @@ namespace SeatingManager
             phoneTextBox.Text = p.phone;
             isActiveTextBox.Text = Convert.ToString(p.isActive);
             sectionIDTextBox.Text = Convert.ToString(p.sectionID);
-            passwordTextBox.Text = p.password;
+            passwordTextBox.Password = p.password;
             dateHiredDatePicker.SelectedDate = p.dateHired;
 
             switch (p.title)
@@ -54,7 +54,7 @@ namespace SeatingManager
                 case "Administrator": titleTextBox.SelectedIndex = 0; break;
                 case "Manager": titleTextBox.SelectedIndex = 1; break;
                 case "Host": titleTextBox.SelectedIndex = 2; break;
-                case "Server": titleTextBox.SelectedIndex = 6; break;
+                case "Server": titleTextBox.SelectedIndex = 3; break;
           
             }
 
@@ -78,7 +78,7 @@ namespace SeatingManager
 
                         // set salt and hashed password, store it to the database
                         byte[] salt = ModelClass.Password.CreateSalt(12);
-                        byte[] password = ModelClass.Password.Hash(passwordTextBox.Text, salt);
+                        byte[] password = ModelClass.Password.Hash(passwordTextBox.Password, salt);
                         result.hashedPassword = password;
                         result.passwordSalt = salt;
 
@@ -86,8 +86,8 @@ namespace SeatingManager
                         switch (titleTextBox.Text)
                         {
                             case "Administrator": result.role = 0; break;
-                            case "Manager": result.role = 2; break;
-                            case "Host": result.role = 1; break;
+                            case "Manager": result.role = 1; break;
+                            case "Host": result.role = 2; break;
                             case "Server": result.role = 3; break;
                             default: result.role = 3; break;
                         }
@@ -169,19 +169,19 @@ namespace SeatingManager
             }
 
             //Password Validation
-            if (!Validations.CheckEmptyString(passwordTextBox.Text))
+            if (!Validations.CheckEmptyString(passwordTextBox.Password))
             {
                 lblErrorMessage.Content = "Password cannot be blank.";
                 check = false;
             }
 
-            if (!Validations.CheckStringMinMax(passwordTextBox.Text, passMin, max))
+            if (!Validations.CheckStringMinMax(passwordTextBox.Password, passMin, max))
             {
                 lblErrorMessage.Content = "Password must be between " + passMin + " and " + max + " in length";
                 check = false;
             }
 
-            if (!Validations.CheckIfAlpha(passwordTextBox.Text))
+            if (!Validations.CheckIfAlpha(passwordTextBox.Password))
             {
                 lblErrorMessage.Content = "Password must be letters only.";
                 check = false;
