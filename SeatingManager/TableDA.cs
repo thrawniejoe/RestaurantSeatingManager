@@ -39,8 +39,8 @@ namespace SeatingManager
                 y = Convert.ToInt32(reader["tableY"]);
                 numOfSeats = Convert.ToInt32(reader["numberOfSeats"]);
                 section = Convert.ToInt32(reader["sectionID"]);
-                int xCord = x * 110;
-                int yCord = y * 90;
+                int xCord = (x - 1) * 110;
+                int yCord = (y-1) * 90;
                 TableBC table = new TableBC(counter, xCord, yCord, numOfSeats, 1, section, counter, numOfSeats);
                 tableList.Add(table);
                 counter++;
