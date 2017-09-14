@@ -209,7 +209,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 247 "..\..\MainWindow.xaml"
+        #line 258 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid serversDataGrid;
         
@@ -217,7 +217,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 249 "..\..\MainWindow.xaml"
+        #line 260 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn firstNameColumn1;
         
@@ -225,7 +225,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 250 "..\..\MainWindow.xaml"
+        #line 261 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn lastNameColumn1;
         
@@ -233,7 +233,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 260 "..\..\MainWindow.xaml"
+        #line 271 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGrid reservationDataGrid;
         
@@ -241,7 +241,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 262 "..\..\MainWindow.xaml"
+        #line 273 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTextColumn customerNameColumn;
         
@@ -249,7 +249,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 263 "..\..\MainWindow.xaml"
+        #line 274 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.DataGridTemplateColumn deleteCustColumn;
         
@@ -257,15 +257,7 @@ namespace SeatingManager {
         #line hidden
         
         
-        #line 271 "..\..\MainWindow.xaml"
-        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DataGridTemplateColumn checkInReservationColumn;
-        
-        #line default
-        #line hidden
-        
-        
-        #line 282 "..\..\MainWindow.xaml"
+        #line 285 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox txtTest;
         
@@ -389,6 +381,12 @@ namespace SeatingManager {
             return;
             case 9:
             this.btnCreateReservation = ((System.Windows.Controls.Button)(target));
+            
+            #line 198 "..\..\MainWindow.xaml"
+            this.btnCreateReservation.Click += new System.Windows.RoutedEventHandler(this.btnCreateReservation_Click);
+            
+            #line default
+            #line hidden
             return;
             case 10:
             this.btnClearTable = ((System.Windows.Controls.Button)(target));
@@ -457,12 +455,12 @@ namespace SeatingManager {
             this.customerNameColumn = ((System.Windows.Controls.DataGridTextColumn)(target));
             return;
             case 30:
+            this.customerNameColumn = ((System.Windows.Controls.DataGridTextColumn)(target));
+            return;
+            case 31:
             this.deleteCustColumn = ((System.Windows.Controls.DataGridTemplateColumn)(target));
             return;
-            case 32:
-            this.checkInReservationColumn = ((System.Windows.Controls.DataGridTemplateColumn)(target));
-            return;
-            case 34:
+            case 33:
             this.txtTest = ((System.Windows.Controls.TextBox)(target));
             return;
             case 35:
@@ -506,7 +504,7 @@ namespace SeatingManager {
             break;
             case 27:
             
-            #line 254 "..\..\MainWindow.xaml"
+            #line 265 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnDeleteServer_Click);
             
             #line default
@@ -530,8 +528,16 @@ namespace SeatingManager {
             break;
             case 39:
             
-            #line 292 "..\..\MainWindow.xaml"
+            #line 277 "..\..\MainWindow.xaml"
             ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnDeleteCust_Click);
+            
+            #line default
+            #line hidden
+            break;
+            case 38:
+            
+            #line 292 "..\..\MainWindow.xaml"
+            ((System.Windows.Controls.Button)(target)).Click += new System.Windows.RoutedEventHandler(this.btnCheckInReservation_Click);
             
             #line default
             #line hidden
