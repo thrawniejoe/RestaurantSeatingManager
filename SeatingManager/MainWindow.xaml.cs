@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -294,6 +295,7 @@ namespace SeatingManager
             //addCust.Owner = Application.Current.MainWindow;
             addCust.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             addCust.ShowDialog();
+            RefreshList();
         }
 
         //clears the table
@@ -431,9 +433,18 @@ namespace SeatingManager
             //Refresh Customer GridView
             customersDataGrid.ItemsSource = null;
             var getCust = (from su in context.customers
-                           orderby su.timeIn
-                           select su);
+                where su.reservation == 0
+                orderby su.timeIn  
+                select su);
             customersDataGrid.ItemsSource = getCust.ToList();
+
+            //Refresh Reservation GridView
+            reservationDataGrid.ItemsSource = null;
+            var getResrv = (from su in context.customers
+                where su.reservation == 1
+                orderby su.timeIn 
+                select su);
+            reservationDataGrid.ItemsSource = getResrv.ToList();
 
             //Refresh Server List
             usersDataGrid.ItemsSource = null;
@@ -477,7 +488,41 @@ namespace SeatingManager
 
         private void btnDeleteCust_Click(object sender, RoutedEventArgs e)
         {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
 
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to delete this customer?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                var nu = new customer { customerID = myid };
+                context.customers.Attach(nu); //attaches the user object by the id given to the object above
+                context.customers.Remove(nu); //Adds the change to Deletes the customer from the database
+                context.SaveChanges();  //Saves changes to the database
+            }
+            RefreshList();
         }
+
+        //Moves customer from reservation list to customer list.
+        private void btnCheckInReservation_Click(object sender, RoutedEventArgs e)
+        {
+            var context = new SeatingManager.SeatingManagerDBEntities();
+            Button b = sender as Button;
+            int myid = Convert.ToInt16(b.Tag);
+
+            MessageBox.Show("Customer checked in! Vibrating flashy coaster thing activated!");
+
+            var cust = context.customers.SingleOrDefault(c => c.customerID == myid);
+            if (cust != null)
+            {
+                cust.reservation = 0;
+                cust.timeIn = DateTime.Today;
+                context.SaveChanges();
+                RefreshList();
+            }
+        }
+
+
+
     }
 }
