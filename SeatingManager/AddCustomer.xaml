@@ -27,7 +27,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Customer Name:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="customerNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding customerName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
+            <TextBox x:Name="customerNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,4,0,4" Grid.Row="0" Text="{Binding customerName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="123"/>
         </Grid>
         <Grid x:Name="grid2" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="233,100,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -38,19 +38,20 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Wait:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="waitTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" Text="{Binding wait, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="120"/>
         </Grid>
-        <Grid x:Name="grid3" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="216,135,0,0" VerticalAlignment="Top" Width="246">
+        <Grid x:Name="grid3" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="215,135,0,0" VerticalAlignment="Top" Width="246">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="175*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Label Content="Time In:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtTimeIn" Grid.Column="1" HorizontalAlignment="Left" Height="23
-                     " Margin="4,3,-121,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"/>
+            <Label Content="Time In:" Grid.Column="0" HorizontalAlignment="Left" Margin="3,3,0,3" Grid.Row="0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtTimeIn" Grid.Column="3" HorizontalAlignment="Left" Height="23
+                     " Margin="0,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="121"/>
 
         </Grid>
         <Grid x:Name="grid4" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="192,172,0,0" VerticalAlignment="Top" Height="25" Width="270">
@@ -73,6 +74,16 @@
         <Label x:Name="lblCustNameError" Content="*" HorizontalAlignment="Left" Margin="406,68,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
         <Label x:Name="lblWaitTimeError" Content="*" HorizontalAlignment="Left" Margin="406,103,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
         <Label x:Name="lblTimeInError" Content="*" HorizontalAlignment="Left" Margin="406,135,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
-
+        <ComboBox x:Name="cboWaitTime" HorizontalAlignment="Left" Margin="280,107,0,0" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Content="5"></ComboBoxItem>
+            <ComboBoxItem Content="10"></ComboBoxItem>
+            <ComboBoxItem Content="15"></ComboBoxItem>
+            <ComboBoxItem Content="20"></ComboBoxItem>
+            <ComboBoxItem Content="25"></ComboBoxItem>
+            <ComboBoxItem Content="30"></ComboBoxItem>
+            <ComboBoxItem Content="35"></ComboBoxItem>
+            <ComboBoxItem Content="40"></ComboBoxItem>
+            <ComboBoxItem Content="45"></ComboBoxItem>
+        </ComboBox>
     </Grid>
 </Window>

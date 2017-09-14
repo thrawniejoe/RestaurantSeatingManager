@@ -30,7 +30,7 @@ namespace SeatingManager
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
-            
+            txtTimeIn.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -50,7 +50,18 @@ namespace SeatingManager
                 cust.customerName = customerNameTextBox.Text;
                 cust.timeIn = dateTimeIn;
                 cust.timeMade = DateTime.Now;
-                cust.wait = Convert.ToByte(waitTextBox.Text);
+                switch (cboWaitTime.Text)
+                {
+                    case "5": cust.wait = 5; break;
+                    case "10": cust.wait = 10; break;
+                    case "15": cust.wait = 15; break;
+                    case "20": cust.wait = 20; break;
+                    case "25": cust.wait = 25; break;
+                    case "30": cust.wait = 30; break;
+                    case "35": cust.wait = 35; break;
+                    case "40": cust.wait = 40; break;
+                    case "45": cust.wait = 45; break; 
+                }
 
                 if (radioReservationNo.IsChecked != null && (bool)radioReservationNo.IsChecked)
                     cust.reservation = Convert.ToByte(0);
@@ -94,20 +105,6 @@ namespace SeatingManager
                 lblCustNameError.Content = "Field must be letters only.";
                 check = false;
             }
-
-            //Check Wait time validation
-            if (!Validations.CheckEmptyString(waitTextBox.Text))
-            {
-                lblWaitTimeError.Content = "field cannot be blank.";
-                check = false;
-            }
-
-            if (!Validations.CheckIfNumeric(waitTextBox.Text))
-            {
-                lblWaitTimeError.Content = "field cannot be blank.";
-                check = false;
-            }
-
 
             //Check time in validation
            if (!Validations.CheckIfValidTime(txtTimeIn.Text))
