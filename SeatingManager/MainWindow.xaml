@@ -195,7 +195,7 @@
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAddCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnAssignCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
-                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Style="{DynamicResource mainBtnStyle}" Click="btnCreateReservation_Click"/>
                         <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="111" Height="25.96" Margin="4" Click="btnClearTable_Click" Style="{DynamicResource mainBtnStyle}"/>
                     </WrapPanel>
 
