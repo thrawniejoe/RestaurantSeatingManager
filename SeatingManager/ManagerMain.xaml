@@ -186,7 +186,7 @@
                         <ColumnDefinition Width="299*"/>
                         <ColumnDefinition Width="535*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="tablemapsDataGrid" HorizontalAlignment="Center" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="24,10,10,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1" Background="#FF1A1B20">
+                    <DataGrid x:Name="tablemapsDataGrid" HorizontalAlignment="Center" RowHeaderWidth="0" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,10,17,10" RowDetailsVisibilityMode="VisibleWhenSelected" CanUserDeleteRows="False" CanUserResizeRows="False" BorderThickness="1" CanUserAddRows="False" SelectionMode="Single" Foreground="Black" HorizontalGridLinesBrush="#FF373542" VerticalGridLinesBrush="{x:Null}" GridLinesVisibility="Horizontal" UseLayoutRounding="False" Focusable="False" AlternationCount="1" CanUserResizeColumns="False" CanUserReorderColumns="False" MinRowHeight="30" Grid.Column="1" Background="#FF1A1B20" Width="508">
                         <DataGrid.Columns>
                             <DataGridTextColumn x:Name="tableIDColumn" Binding="{Binding tableY}" Header="ROW" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="80"/>
                             <DataGridTextColumn x:Name="numberOfSeatsColumn" Binding="{Binding tableX}" Header="COLUMN" Width="SizeToHeader" CanUserResize="False" IsReadOnly="True" Foreground="#FFE0E0E0" MinWidth="85"/>
@@ -249,7 +249,7 @@
             <TabItem Header="Users" Width="108" Background="{x:Null}" Foreground="White" FontSize="14" BorderBrush="#00000000" Padding="2" Style="{DynamicResource TabItemStyle1}" Height="33" VerticalAlignment="Top" Margin="1,0,-1,0">
                 <Grid Margin="0,10,0,0" DataContext="{StaticResource usersViewSource}">
                     <Button x:Name="btnAddUser" Content="Add user" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Height="33"/>
-                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,7,0,0" VerticalAlignment="Top" Width="112" Click="btnRefresh_Click" Height="33"/>
+                    <Button x:Name="btnRefresh" Content="Refresh" HorizontalAlignment="Left" Margin="123,7,0,0" VerticalAlignment="Top" Width="108" Click="btnRefresh_Click" Height="33"/>
                     <ComboBox x:Name="cboFilterList" HorizontalAlignment="Left" Margin="517,7,0,0" VerticalAlignment="Top" Width="146" SelectionChanged="cboFilterList_SelectionChanged" Height="32"/>
                     <Button x:Name="btnClearFilter" Content="Clear Filter" HorizontalAlignment="Left" Margin="668,7,0,0" VerticalAlignment="Top" Width="112" Height="33" Click="btnClearFilter_Click"/>
                     <DataGrid x:Name="usersDataGrid" MinRowHeight="30" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,45,10,0" RowDetailsVisibilityMode="VisibleWhenSelected" ColumnHeaderHeight="40" BorderBrush="#FF2D2D30">
@@ -279,8 +279,8 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Reservations" Width="108" Background="#FFE95B63" Foreground="White" FontSize="14" Style="{DynamicResource TabItemStyle1}" Padding="2" BorderBrush="#00ACACAC" RenderTransformOrigin="0.483,0.5" VerticalContentAlignment="Stretch" HorizontalAlignment="Left" BorderThickness="0" Height="33" Margin="2,0,-2,0">
-                <Grid Width="769" Margin="0,42,0,-2">
-                    <DataGrid x:Name="customersDataGrid1" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10" RowDetailsVisibilityMode="VisibleWhenSelected">
+                <Grid Width="784" Margin="0,42,0,-2">
+                    <DataGrid x:Name="customersDataGrid1" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,10" RowDetailsVisibilityMode="VisibleWhenSelected">
                         <DataGrid.Columns>
                             <!--<DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding customerID}" Header="customer ID" IsReadOnly="True" Width="50"/>-->
                             <DataGridTextColumn x:Name="customerNameColumn1" Binding="{Binding customerName}" Header="customer Name" Width="200"/>
@@ -306,8 +306,8 @@
             </TabItem>
         </TabControl>
         <Label Content="Customer List" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="199" Background="#FF3F414D" Foreground="White" FontSize="14"/>
-        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,34.38,891,0" VerticalAlignment="Top" Width="199" Foreground="White" Background="#FF3F414D" FontSize="14"/>
-        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,63,891,458" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}">
+        <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,36,891,0" VerticalAlignment="Top" Width="199" Foreground="White" Background="#FF3F414D" FontSize="14"/>
+        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,63,891,458" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Width="199" Height="316">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
                 <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="75"/>
@@ -320,7 +320,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,424,891,69" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="10,424,891,69" RowDetailsVisibilityMode="VisibleWhenSelected" Height="348" Width="199">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="customerNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
                 <DataGridTemplateColumn x:Name="deleteCustColumn" Header="" Width="35">

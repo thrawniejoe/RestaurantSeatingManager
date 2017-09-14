@@ -30,6 +30,12 @@ namespace SeatingManager
         int firstLoad = 0;
         int nameToUse = 0;
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -522,7 +528,9 @@ namespace SeatingManager
             }
         }
 
-
-
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
