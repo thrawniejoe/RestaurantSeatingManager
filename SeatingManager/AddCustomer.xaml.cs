@@ -31,6 +31,7 @@ namespace SeatingManager
         {
             SeatingManager.SeatingManagerDBDataSet seatingManagerDBDataSet = ((SeatingManager.SeatingManagerDBDataSet)(this.FindResource("seatingManagerDBDataSet")));
             txtTimeIn.Text = DateTime.Now.ToShortTimeString();
+            customerNameTextBox.Focus();
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
@@ -52,6 +53,7 @@ namespace SeatingManager
                 cust.timeMade = DateTime.Now;
                 switch (cboWaitTime.Text)
                 {
+                    case "0": cust.wait = 0; break;
                     case "5": cust.wait = 5; break;
                     case "10": cust.wait = 10; break;
                     case "15": cust.wait = 15; break;
