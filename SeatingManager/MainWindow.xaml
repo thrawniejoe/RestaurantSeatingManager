@@ -180,12 +180,12 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-
+        <Style TargetType="Window">
+            <Setter Property="Background" Value="#FF1F1F27" />
+        </Style>
     </Window.Resources>
 
-    <Window.Background>
-        <ImageBrush ImageSource="Images/main_background2.jpg" Stretch="UniformToFill"/>
-    </Window.Background>
+    
     <Grid>
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0">
             <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="180" HorizontalContentAlignment="Stretch" Style="{DynamicResource TabItemStyle1}" >
