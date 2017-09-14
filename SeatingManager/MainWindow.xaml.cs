@@ -22,10 +22,11 @@ namespace SeatingManager
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static List<TableBC> tableList2 = new List<TableBC>();
-        private static List<Button> mergedTables = new List<Button>();
-        private static List<Button> buttonMerge = new List<Button>();
-        private static List<Button> buttons = new List<Button>();
+        private static List<TableBC> tableList2;
+        private static List<Button> mergedTables;
+        private static List<Button> buttonMerge;
+        private static List<Button> buttons;
+        private static List<customer> reservationList;
         int isButtonClicked = 0;
         int firstLoad = 0;
         int nameToUse = 0;
@@ -38,6 +39,11 @@ namespace SeatingManager
 
         public MainWindow()
         {
+            tableList2 = new List<TableBC>();
+            mergedTables = new List<Button>();
+            buttonMerge = new List<Button>();
+            buttons = new List<Button>();
+            reservationList = new List<customer>();
             InitializeComponent();
             tableList();
             loadSections();
@@ -528,9 +534,9 @@ namespace SeatingManager
             }
         }
 
-        private void btnClose_Click(object sender, RoutedEventArgs e)
+        private void btnCreateReservation_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+
         }
     }
 }
