@@ -106,8 +106,16 @@ namespace SeatingManager
                 check = false;
             }
 
+            //Check wait validation
+            if (cboWaitTime.SelectedIndex == -1)
+            {
+                lblWaitTimeError.Content = "field cannot be blank.";
+                check = false;
+            }
+
+
             //Check time in validation
-           if (!Validations.CheckIfValidTime(txtTimeIn.Text))
+            if (!Validations.CheckIfValidTime(txtTimeIn.Text))
             {
                 lblTimeInError.Content = "Field needs to be proper time entry 12:34 AM|PM.";
                 check = false;
