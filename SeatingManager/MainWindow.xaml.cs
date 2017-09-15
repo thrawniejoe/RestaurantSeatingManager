@@ -547,14 +547,9 @@ namespace SeatingManager
         private void btnCreateReservation_Click(object sender, RoutedEventArgs e)
         {
             AddReservation addRes = new AddReservation();
-            addRes.EngageRefreshList += RefreshReservation;
+            addRes.EngageRefreshList += RefreshList;
             addRes.ShowDialog();
         }
-
-        private void RefreshReservation()
-        {
-
-            // code refresh reservation list
-        }
+        
     }
 }

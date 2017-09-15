@@ -122,14 +122,37 @@ namespace SeatingManager
                 hour = Convert.ToInt32(cboHour.SelectedValue) + 12;
             }
             //r.Customer = db.customers.Where(c => c.customerID == custId).Single();
-            r.CustomerID = custId;
-            r.ReservationDateTime = new DateTime(dtpResDate.SelectedDate.Value.Year,
-                                                 dtpResDate.SelectedDate.Value.Month,
-                                                 dtpResDate.SelectedDate.Value.Day,
-                                                 hour,
-                                                 Convert.ToInt32(cboMinute.SelectedValue),
-                                                 0);
-            db.Reservations.Add(r);
+            int id;
+            if (db.Reservations.Count() == 0)
+            {
+                id = 1;
+            }
+            else
+            {
+                id = db.Reservations.Last().Id + 1;
+            }
+            //r.CustomerID = custId;
+            //r.ReservationDateTime = new DateTime(dtpResDate.SelectedDate.Value.Year,
+            //                                     dtpResDate.SelectedDate.Value.Month,
+            //                                     dtpResDate.SelectedDate.Value.Day,
+            //                                     hour,
+            //                                     Convert.ToInt32(cboMinute.SelectedValue),
+            //                                     0);
+            //db.Reservations.Add(r);
+            SeatingManagerDBDataSet ds = new SeatingManagerDBDataSet();
+            SeatingManagerDBDataSet.ReservationRow newReservationRow;
+            newReservationRow = ds.Reservation.NewReservationRow();
+            newReservationRow.Id = id;
+            newReservationRow.CustomerID = custId;
+            newReservationRow.ReservationDateTime = new DateTime(dtpResDate.SelectedDate.Value.Year,
+                                                     dtpResDate.SelectedDate.Value.Month,
+                                                     dtpResDate.SelectedDate.Value.Day,
+                                                     hour,
+                                                     Convert.ToInt32(cboMinute.SelectedValue),
+                                                     0);
+            ds.Reservation.Rows.Add(newReservationRow);
+            SeatingManagerDBDataSetTableAdapters.ReservationTableAdapter ta = new SeatingManagerDBDataSetTableAdapters.ReservationTableAdapter();
+            ta.Update(ds.Reservation);
             EngageRefreshList();
             this.Close();
         }

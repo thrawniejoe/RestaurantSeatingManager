@@ -10,7 +10,6 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modelsm.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modelsm.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("reservationtable.sql")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("seatingmanagerdb.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("seatingmanagerdb_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("teambluedatabase.sql")]
