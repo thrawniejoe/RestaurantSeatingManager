@@ -218,7 +218,6 @@ C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\
 C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\ModifyUser.baml
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB.mdf
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDB_log.ldf
-C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.Designer.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsc
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsd
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
@@ -263,3 +262,6 @@ C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.baml
 C:\Users\johns_a0t36nc\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\seatingManagerDBDataSet1.Designer.cs
 C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\seatingManagerDBDataSet1.Designer.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\seatingManagerDBDataSet1.Designer.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.g.cs
+C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.baml
