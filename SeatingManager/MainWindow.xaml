@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
         
+        ResizeMode="NoResize"
         WindowStyle="None"
         AllowsTransparency="True"
-        ResizeMode="CanResizeWithGrip"
         ShowInTaskbar="True"
         
-        Title="MainWindow" Height="968.5" Width="1554" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown" WindowStartupLocation="CenterOwner">
+        Title="MainWindow" Height="938.5" Width="1532" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown" WindowStartupLocation="CenterOwner">
 
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
@@ -75,7 +75,7 @@
             <Setter Property="RowHeaderWidth" Value="0"/>
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="ColumnHeaderHeight" Value="40"/>
+            <Setter Property="ColumnHeaderHeight" Value="25"/>
             <Setter Property="CanUserAddRows" Value="False"/>
             <Setter Property="IsReadOnly" Value="True"/>
 
@@ -193,11 +193,22 @@
     </Window.Resources>
 
 
-    <Grid Background="#FF1F1F27" Width="1554" Height="968" DataContext="{StaticResource reservationViewSource}">
-        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0" Background="{x:Null}">
+    <Grid Background="#FF1F1F27" DataContext="{StaticResource reservationViewSource}">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0" Background="{x:Null}" BorderBrush="{x:Null}">
             <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="108" HorizontalContentAlignment="Stretch" Style="{DynamicResource TabItemStyle1}" Height="33" >
                 <Canvas>
-                    <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="50" Margin="10,10,0,0" VerticalAlignment="Top" Width="1090">
+                    <WrapPanel x:Name="wpTableMenu" HorizontalAlignment="Left" Height="40" VerticalAlignment="Top" Width="1090" Canvas.Left="10" Canvas.Top="10">
+                        <WrapPanel.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                <GradientStop Color="#FF1F1F27"/>
+                                <GradientStop Color="#FF1F1F27" Offset="0.991"/>
+                                <GradientStop Color="#FF373542" Offset="0.034"/>
+                                <GradientStop Color="#FF373542" Offset="0.959"/>
+                            </LinearGradientBrush>
+                        </WrapPanel.Background>
                         <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Click="btnAddBtn_Click" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAddCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
@@ -245,7 +256,7 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="12,74,1263,629" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Width="279" Height="265">
+        <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="12,72,1242,601" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Height="265">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
                 <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="75"/>
@@ -278,13 +289,11 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>-->
-        <Label Content="Customer List:" HorizontalAlignment="Left" Height="30" Margin="12,369,0,0" VerticalAlignment="Top" Width="279"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF373542" FontSize="16" FontWeight="Bold"/>
-        <Label Content="Server's Currently On Duty" HorizontalAlignment="Left" Margin="12,43,0,0" VerticalAlignment="Top" Width="278" HorizontalContentAlignment="Center" Background="#FF373542" Foreground="White" FontSize="16" FontWeight="Bold" Height="31"/>
-        <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="825" Margin="1500,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Visibility="Hidden"/>
-        <Label Content="Reservation List:" HorizontalAlignment="Left" Height="32" Margin="12,682,0,0" VerticalAlignment="Top" Width="278"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF373542" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="1530,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Width="22" Padding="1"/>
-        <Rectangle Fill="#FF1A1B20" HorizontalAlignment="Left" Height="26" Margin="-4,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1534"/>
-        <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,400,1263,320" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Width="279" Height="248">
+        <Label Content="Server's Currently On Duty" HorizontalAlignment="Left" Margin="12,43,0,0" VerticalAlignment="Top" Width="279" HorizontalContentAlignment="Center" Background="#FF3D404B" Foreground="White" FontSize="16" FontWeight="Bold" Height="31" BorderBrush="#FF3D404B"/>
+        <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="826" Margin="1500,100,-166,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Visibility="Hidden"/>
+        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="1500,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
+        <Rectangle Fill="#FF1A1B20" HorizontalAlignment="Left" Height="26" Margin="-4,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1504"/>
+        <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,0,0,292" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" UseLayoutRounding="False" HorizontalAlignment="Left" Width="279" Height="248" VerticalAlignment="Bottom">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="reserverNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
                 <DataGridTemplateColumn x:Name="deleteReserverColumn" Header="" Width="35">
@@ -296,19 +305,20 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="reservationDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,719,1264,28" RowDetailsVisibilityMode="VisibleWhenSelected">
+        <DataGrid x:Name="reservationDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,714,1242,42" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
-                <DataGridTemplateColumn x:Name="reservationDateTimeColumn" Header="Reservation Date Time" Width="SizeToHeader">
+                <DataGridTemplateColumn x:Name="reservationDateTimeColumn" Header="Reservation Time" Width="120">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <DatePicker SelectedDate="{Binding ReservationDateTime, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding CustomerID}" Header="Customer ID" Width="SizeToHeader"/>
+                <DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding CustomerID}" Header="Customer ID" Width="120"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Label Content="Customer List:" HorizontalAlignment="Left" Height="30" Margin="12,370,0,0" VerticalAlignment="Top" Width="279"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF3D404B" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Reservation List:" HorizontalAlignment="Left" Height="32" Margin="12,684,0,0" VerticalAlignment="Top" Width="278"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF3D404B" FontSize="16" FontWeight="Bold"/>
     </Grid>
 </Window>
 
