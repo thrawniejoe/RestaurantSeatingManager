@@ -5,25 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="AddReservation" Height="244.409" Width="409.265" Loaded="Window_Loaded">
+        Title="AddReservation" Height="306.533" Width="409.265" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
-        <Label x:Name="label" Content="Label" HorizontalAlignment="Left" Margin="54,38,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="customersComboBox" DisplayMemberPath="customerName" ItemsSource="{Binding}" Margin="116,46,0,0" SelectedValuePath="customerID" HorizontalAlignment="Left" VerticalAlignment="Top" />
-            <!--<ComboBox.ItemsPanel>
+        <Label x:Name="label" Content="Customer:" HorizontalAlignment="Left" Margin="28,46,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboCustomer" DisplayMemberPath="customerName" ItemsSource="{Binding}" Margin="116,46,0,0" SelectedValuePath="customerID" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <!--<ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
                 </ItemsPanelTemplate>
             </ComboBox.ItemsPanel>
         </ComboBox>-->
-        <Label x:Name="label_Copy" Content="Label" HorizontalAlignment="Left" Margin="54,96,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="116,100,0,0" VerticalAlignment="Top" Width="65"/>
-        <ComboBox x:Name="comboBox_Copy" HorizontalAlignment="Left" Margin="194,100,0,0" VerticalAlignment="Top" Width="65"/>
-        <ComboBox x:Name="comboBox_Copy1" HorizontalAlignment="Left" Margin="292,100,0,0" VerticalAlignment="Top" Width="65"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="54,159,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.231,0.471"/>
+        <Label x:Name="label_Copy" Content="Time:" HorizontalAlignment="Left" Margin="54,140,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboHour" HorizontalAlignment="Left" Margin="116,140,0,0" VerticalAlignment="Top" Width="65"/>
+        <ComboBox x:Name="cboMinute" HorizontalAlignment="Left" Margin="196,140,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.543,-0.239"/>
+        <ComboBox x:Name="cboAmPm" HorizontalAlignment="Left" Margin="290,140,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btnAdd" Content="AddReservation" HorizontalAlignment="Left" Margin="116,213,0,0" VerticalAlignment="Top" Width="127" RenderTransformOrigin="0.231,0.471" Click="btnAdd_Click"/>
+        <Separator HorizontalAlignment="Left" Height="32" Margin="28,171,0,0" VerticalAlignment="Top" Width="327"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="280,213,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+        <DatePicker x:Name="dtpResDate" HorizontalAlignment="Left" Margin="116,93,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label1" Content="Date
+               " HorizontalAlignment="Left" Margin="54,93,0,0" VerticalAlignment="Top" Width="38"/>
 
     </Grid>
 </Window>

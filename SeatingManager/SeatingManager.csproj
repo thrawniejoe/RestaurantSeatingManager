@@ -119,10 +119,13 @@
     <Compile Include="ModifyUser.xaml.cs">
       <DependentUpon>ModifyUser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SeatingManagerDBDataSet.Designer.cs">
+    <Compile Include="Reservation.cs">
+      <DependentUpon>ModelSM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="seatingManagerDBDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SeatingManagerDBDataSet.xsd</DependentUpon>
+      <DependentUpon>seatingManagerDBDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="SplashLogin.xaml.cs">
@@ -212,18 +215,18 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="SeatingManagerDBDataSet.xsc">
-      <DependentUpon>SeatingManagerDBDataSet.xsd</DependentUpon>
+    <None Include="seatingManagerDBDataSet.xsc">
+      <DependentUpon>seatingManagerDBDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="SeatingManagerDBDataSet.xsd">
+    <None Include="seatingManagerDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>SeatingManagerDBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>seatingManagerDBDataSet1.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="SeatingManagerDBDataSet.xss">
-      <DependentUpon>SeatingManagerDBDataSet.xsd</DependentUpon>
+    <None Include="seatingManagerDBDataSet.xss">
+      <DependentUpon>seatingManagerDBDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -266,6 +269,7 @@
       <DependentUpon>ModelSM.edmx</DependentUpon>
       <LastGenOutput>ModelSM.cs</LastGenOutput>
     </Content>
+    <Content Include="reservationTable.sql" />
     <Content Include="SeatingManagerDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

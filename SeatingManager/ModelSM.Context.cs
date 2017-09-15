@@ -27,6 +27,7 @@ namespace SeatingManager
     
         public virtual DbSet<assigncustomer> assigncustomers { get; set; }
         public virtual DbSet<customer> customers { get; set; }
+        public virtual DbSet<Reservation> Reservations { get; set; }
         public virtual DbSet<tablemap> tablemaps { get; set; }
         public virtual DbSet<tablemerge> tablemerges { get; set; }
         public virtual DbSet<tablesection> tablesections { get; set; }

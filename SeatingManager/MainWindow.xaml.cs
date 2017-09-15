@@ -453,9 +453,9 @@ namespace SeatingManager
             //Refresh Reservation GridView
             reservationDataGrid.ItemsSource = null;
             var getResrv = (from su in context.customers
-                where su.reservation == 1
-                orderby su.timeIn 
-                select su);
+                            where su.reservation == 1
+                            orderby su.timeIn
+                            select su);
             reservationDataGrid.ItemsSource = getResrv.ToList();
 
             //Refresh Server List
@@ -491,6 +491,11 @@ namespace SeatingManager
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             RefreshList();
+            // Load data into the table Reservation. You can modify this code as needed.
+            //SeatingManager.SeatingManagerDBDataSetTableAdapters.ReservationTableAdapter seatingManagerDBDataSetReservationTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.ReservationTableAdapter();
+            //seatingManagerDBDataSetReservationTableAdapter.Fill(seatingManagerDBDataSet.Reservation);
+            //System.Windows.Data.CollectionViewSource reservationViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("reservationViewSource")));
+            //reservationViewSource.View.MoveCurrentToFirst();
         }
 
         private void btnDeleteServer_Click(object sender, RoutedEventArgs e)
@@ -537,6 +542,19 @@ namespace SeatingManager
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnCreateReservation_Click(object sender, RoutedEventArgs e)
+        {
+            AddReservation addRes = new AddReservation();
+            addRes.EngageRefreshList += RefreshReservation;
+            addRes.ShowDialog();
+        }
+
+        private void RefreshReservation()
+        {
+
+            // code refresh reservation list
         }
     }
 }

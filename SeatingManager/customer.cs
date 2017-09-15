@@ -14,11 +14,20 @@ namespace SeatingManager
     
     public partial class customer
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public customer()
+        {
+            this.Reservations = new HashSet<Reservation>();
+        }
+    
         public int customerID { get; set; }
         public string customerName { get; set; }
         public byte wait { get; set; }
         public byte reservation { get; set; }
         public System.DateTime timeIn { get; set; }
         public System.DateTime timeMade { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Reservation> Reservations { get; set; }
     }
 }

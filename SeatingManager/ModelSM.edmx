@@ -26,6 +26,14 @@
           <Property Name="timeIn" Type="datetime" Nullable="false" />
           <Property Name="timeMade" Type="datetime" Nullable="false" />
         </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="ReservationDateTime" Type="datetime" Nullable="false" />
+          <Property Name="CustomerID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="tablemaps">
           <Key>
             <PropertyRef Name="tableID" />
@@ -75,13 +83,30 @@
           <Property Name="passwordSalt" Type="varbinary" MaxLength="256" />
           <Property Name="hashedPassword" Type="varbinary" MaxLength="256" />
         </EntityType>
+        <Association Name="fk_reservation_customers">
+          <End Role="customers" Type="Self.customers" Multiplicity="1" />
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="customerID" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="SeatingManagerDBModelStoreContainer">
           <EntitySet Name="assigncustomers" EntityType="Self.assigncustomers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="customers" EntityType="Self.customers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tablemaps" EntityType="Self.tablemaps" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tablemerges" EntityType="Self.tablemerges" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tablesections" EntityType="Self.tablesections" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_reservation_customers" Association="Self.fk_reservation_customers">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="Reservation" EntitySet="Reservation" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
@@ -108,6 +133,16 @@
           <Property Name="reservation" Type="Byte" Nullable="false" />
           <Property Name="timeIn" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="timeMade" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Reservations" Relationship="Self.fk_reservation_customers" FromRole="customers" ToRole="Reservation" />
+        </EntityType>
+        <EntityType Name="Reservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="ReservationDateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CustomerID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="customer" Relationship="Self.fk_reservation_customers" FromRole="Reservation" ToRole="customers" />
         </EntityType>
         <EntityType Name="tablemap">
           <Key>
@@ -158,13 +193,30 @@
           <Property Name="passwordSalt" Type="Binary" MaxLength="256" FixedLength="false" />
           <Property Name="hashedPassword" Type="Binary" MaxLength="256" FixedLength="false" />
         </EntityType>
+        <Association Name="fk_reservation_customers">
+          <End Role="customers" Type="Self.customer" Multiplicity="1" />
+          <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="customers">
+              <PropertyRef Name="customerID" />
+            </Principal>
+            <Dependent Role="Reservation">
+              <PropertyRef Name="CustomerID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="SeatingManagerDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="assigncustomers" EntityType="Self.assigncustomer" />
           <EntitySet Name="customers" EntityType="Self.customer" />
+          <EntitySet Name="Reservations" EntityType="Self.Reservation" />
           <EntitySet Name="tablemaps" EntityType="Self.tablemap" />
           <EntitySet Name="tablemerges" EntityType="Self.tablemerge" />
           <EntitySet Name="tablesections" EntityType="Self.tablesection" />
           <EntitySet Name="users" EntityType="Self.user" />
+          <AssociationSet Name="fk_reservation_customers" Association="Self.fk_reservation_customers">
+            <End Role="customers" EntitySet="customers" />
+            <End Role="Reservation" EntitySet="Reservations" />
+          </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
@@ -192,6 +244,15 @@
                 <ScalarProperty Name="reservation" ColumnName="reservation" />
                 <ScalarProperty Name="timeIn" ColumnName="timeIn" />
                 <ScalarProperty Name="timeMade" ColumnName="timeMade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reservations">
+            <EntityTypeMapping TypeName="SeatingManagerDBModel.Reservation">
+              <MappingFragment StoreEntitySet="Reservation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ReservationDateTime" ColumnName="ReservationDateTime" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

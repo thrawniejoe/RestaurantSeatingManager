@@ -20,6 +20,16 @@
     <Property Name="reservation" Type="Byte" Nullable="false" />
     <Property Name="timeIn" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="timeMade" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Reservations" Relationship="Self.fk_reservation_customers" FromRole="customers" ToRole="Reservation" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="ReservationDateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="customer" Relationship="Self.fk_reservation_customers" FromRole="Reservation" ToRole="customers" />
   </EntityType>
   <EntityType Name="tablemap">
     <Key>
@@ -70,12 +80,29 @@
     <Property Name="passwordSalt" Type="Binary" MaxLength="256" FixedLength="false" />
     <Property Name="hashedPassword" Type="Binary" MaxLength="256" FixedLength="false" />
   </EntityType>
+  <Association Name="fk_reservation_customers">
+    <End Role="customers" Type="Self.customer" Multiplicity="1" />
+    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="customers">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="Reservation">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="SeatingManagerDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="assigncustomers" EntityType="Self.assigncustomer" />
     <EntitySet Name="customers" EntityType="Self.customer" />
+    <EntitySet Name="Reservations" EntityType="Self.Reservation" />
     <EntitySet Name="tablemaps" EntityType="Self.tablemap" />
     <EntitySet Name="tablemerges" EntityType="Self.tablemerge" />
     <EntitySet Name="tablesections" EntityType="Self.tablesection" />
     <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="fk_reservation_customers" Association="Self.fk_reservation_customers">
+      <End Role="customers" EntitySet="customers" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

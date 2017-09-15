@@ -189,10 +189,11 @@
         <Style TargetType="Window">
             <Setter Property="Background" Value="#FF1F1F27" />
         </Style>
+        <CollectionViewSource x:Key="reservationViewSource" Source="{Binding Reservation, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
 
 
-    <Grid Background="#FF1F1F27" Width="1554" Height="968">
+    <Grid Background="#FF1F1F27" Width="1554" Height="968" DataContext="{StaticResource reservationViewSource}">
         <TabControl x:Name="maingrid" HorizontalAlignment="Left" Height="900" VerticalAlignment="Top" Width="1200" Margin="300,40,0,0" Background="{x:Null}">
             <TabItem x:Name="tab_Tables" Header="Tables" Margin="0,0,0,0" Width="108" HorizontalContentAlignment="Stretch" Style="{DynamicResource TabItemStyle1}" Height="33" >
                 <Canvas>
@@ -201,7 +202,7 @@
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAddCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAssignCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
-                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
+                        <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}" Click="btnCreateReservation_Click"/>
                         <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnClearTable_Click" Style="{DynamicResource mainBtnStyle}"/>
                     </WrapPanel>
 
@@ -257,7 +258,7 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid x:Name="reservationDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="11,712,1264,28" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Width="279">
+        <!--<DataGrid x:Name="reservationDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="11,712,1264,28" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Width="279">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="customerNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
                 <DataGridTemplateColumn x:Name="deleteCustColumn" Header="" Width="35">
@@ -276,7 +277,7 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
-        </DataGrid>
+        </DataGrid>-->
         <Label Content="Customer List:" HorizontalAlignment="Left" Height="30" Margin="12,369,0,0" VerticalAlignment="Top" Width="279"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF373542" FontSize="16" FontWeight="Bold"/>
         <Label Content="Server's Currently On Duty" HorizontalAlignment="Left" Margin="12,43,0,0" VerticalAlignment="Top" Width="278" HorizontalContentAlignment="Center" Background="#FF373542" Foreground="White" FontSize="16" FontWeight="Bold" Height="31"/>
         <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="825" Margin="1500,100,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Visibility="Hidden"/>
@@ -293,6 +294,19 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="reservationDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,719,1264,28" RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="SizeToHeader"/>
+                <DataGridTemplateColumn x:Name="reservationDateTimeColumn" Header="Reservation Date Time" Width="SizeToHeader">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding ReservationDateTime, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding CustomerID}" Header="Customer ID" Width="SizeToHeader"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>
