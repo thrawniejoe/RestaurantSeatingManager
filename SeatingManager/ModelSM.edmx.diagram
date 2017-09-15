@@ -5,14 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="121607581f3e43d0a858c98ba260ab31" Name="Diagram1">
-        <EntityTypeShape EntityType="SeatingManagerDBModel.assigncustomer" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.customer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.Reservation" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemap" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemerge" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.tablesection" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SeatingManagerDBModel.user" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
-        <AssociationConnector Association="SeatingManagerDBModel.fk_reservation_customers" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.assigncustomer" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.customer" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.Reservation" Width="1.5" PointX="3" PointY="1.25" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemap" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.tablemerge" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.tablesection" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="SeatingManagerDBModel.user" Width="1.5" PointX="6.75" PointY="3.75" />
+        <AssociationConnector Association="SeatingManagerDBModel.fk_reservation_customers" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

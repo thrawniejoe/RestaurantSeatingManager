@@ -4,85 +4,85 @@
     <EntitySetMapping Name="assigncustomers">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.assigncustomer">
         <MappingFragment StoreEntitySet="assigncustomers">
-          <ScalarProperty Name="tableAssignID" ColumnName="tableAssignID" />
-          <ScalarProperty Name="tableID" ColumnName="tableID" />
-          <ScalarProperty Name="customerID" ColumnName="customerID" />
-          <ScalarProperty Name="assignTime" ColumnName="assignTime" />
           <ScalarProperty Name="isAssigned" ColumnName="isAssigned" />
+          <ScalarProperty Name="assignTime" ColumnName="assignTime" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="tableID" ColumnName="tableID" />
+          <ScalarProperty Name="tableAssignID" ColumnName="tableAssignID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="customers">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.customer">
         <MappingFragment StoreEntitySet="customers">
-          <ScalarProperty Name="customerID" ColumnName="customerID" />
-          <ScalarProperty Name="customerName" ColumnName="customerName" />
-          <ScalarProperty Name="wait" ColumnName="wait" />
-          <ScalarProperty Name="reservation" ColumnName="reservation" />
-          <ScalarProperty Name="timeIn" ColumnName="timeIn" />
           <ScalarProperty Name="timeMade" ColumnName="timeMade" />
+          <ScalarProperty Name="timeIn" ColumnName="timeIn" />
+          <ScalarProperty Name="reservation" ColumnName="reservation" />
+          <ScalarProperty Name="wait" ColumnName="wait" />
+          <ScalarProperty Name="customerName" ColumnName="customerName" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Reservations">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.Reservation">
         <MappingFragment StoreEntitySet="Reservation">
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="ReservationDateTime" ColumnName="ReservationDateTime" />
           <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="ReservationDateTime" ColumnName="ReservationDateTime" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tablemaps">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.tablemap">
         <MappingFragment StoreEntitySet="tablemaps">
-          <ScalarProperty Name="tableID" ColumnName="tableID" />
-          <ScalarProperty Name="tableX" ColumnName="tableX" />
-          <ScalarProperty Name="tableY" ColumnName="tableY" />
-          <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
-          <ScalarProperty Name="visible" ColumnName="visible" />
-          <ScalarProperty Name="sectionID" ColumnName="sectionID" />
           <ScalarProperty Name="tableType" ColumnName="tableType" />
+          <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+          <ScalarProperty Name="visible" ColumnName="visible" />
+          <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+          <ScalarProperty Name="tableY" ColumnName="tableY" />
+          <ScalarProperty Name="tableX" ColumnName="tableX" />
+          <ScalarProperty Name="tableID" ColumnName="tableID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tablemerges">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.tablemerge">
         <MappingFragment StoreEntitySet="tablemerges">
-          <ScalarProperty Name="tableMergeID" ColumnName="tableMergeID" />
-          <ScalarProperty Name="tableID1" ColumnName="tableID1" />
-          <ScalarProperty Name="tableID2" ColumnName="tableID2" />
-          <ScalarProperty Name="tableID3" ColumnName="tableID3" />
-          <ScalarProperty Name="tableID4" ColumnName="tableID4" />
-          <ScalarProperty Name="visible" ColumnName="visible" />
           <ScalarProperty Name="isMerged" ColumnName="isMerged" />
+          <ScalarProperty Name="visible" ColumnName="visible" />
+          <ScalarProperty Name="tableID4" ColumnName="tableID4" />
+          <ScalarProperty Name="tableID3" ColumnName="tableID3" />
+          <ScalarProperty Name="tableID2" ColumnName="tableID2" />
+          <ScalarProperty Name="tableID1" ColumnName="tableID1" />
+          <ScalarProperty Name="tableMergeID" ColumnName="tableMergeID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="tablesections">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.tablesection">
         <MappingFragment StoreEntitySet="tablesections">
-          <ScalarProperty Name="tableSectionID" ColumnName="tableSectionID" />
           <ScalarProperty Name="sectionColor" ColumnName="sectionColor" />
+          <ScalarProperty Name="tableSectionID" ColumnName="tableSectionID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="users">
       <EntityTypeMapping TypeName="SeatingManagerDBModel.user">
         <MappingFragment StoreEntitySet="users">
-          <ScalarProperty Name="userID" ColumnName="userID" />
-          <ScalarProperty Name="firstName" ColumnName="firstName" />
-          <ScalarProperty Name="lastName" ColumnName="lastName" />
-          <ScalarProperty Name="phone" ColumnName="phone" />
-          <ScalarProperty Name="role" ColumnName="role" />
-          <ScalarProperty Name="isActive" ColumnName="isActive" />
-          <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
-          <ScalarProperty Name="sectionID" ColumnName="sectionID" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="title" ColumnName="title" />
-          <ScalarProperty Name="dateHired" ColumnName="dateHired" />
-          <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
           <ScalarProperty Name="hashedPassword" ColumnName="hashedPassword" />
+          <ScalarProperty Name="passwordSalt" ColumnName="passwordSalt" />
+          <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+          <ScalarProperty Name="isOnDuty" ColumnName="isOnDuty" />
+          <ScalarProperty Name="isActive" ColumnName="isActive" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

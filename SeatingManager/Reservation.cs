@@ -18,6 +18,6 @@ namespace SeatingManager
         public System.DateTime ReservationDateTime { get; set; }
         public int CustomerID { get; set; }
     
-        public virtual customer Customer { get; set; }
+        public virtual customer customer { get; set; }
     }
 }

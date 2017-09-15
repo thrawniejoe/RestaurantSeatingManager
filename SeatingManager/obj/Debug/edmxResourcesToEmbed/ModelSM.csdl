@@ -1,5 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="SeatingManagerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SeatingManagerDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="assigncustomers" EntityType="SeatingManagerDBModel.assigncustomer" />
+    <EntitySet Name="customers" EntityType="SeatingManagerDBModel.customer" />
+    <EntitySet Name="Reservations" EntityType="SeatingManagerDBModel.Reservation" />
+    <EntitySet Name="tablemaps" EntityType="SeatingManagerDBModel.tablemap" />
+    <EntitySet Name="tablemerges" EntityType="SeatingManagerDBModel.tablemerge" />
+    <EntitySet Name="tablesections" EntityType="SeatingManagerDBModel.tablesection" />
+    <EntitySet Name="users" EntityType="SeatingManagerDBModel.user" />
+    <AssociationSet Name="fk_reservation_customers" Association="SeatingManagerDBModel.fk_reservation_customers">
+      <End Role="customer" EntitySet="customers" />
+      <End Role="Reservation" EntitySet="Reservations" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="assigncustomer">
     <Key>
       <PropertyRef Name="tableAssignID" />
@@ -15,12 +28,12 @@
       <PropertyRef Name="customerID" />
     </Key>
     <Property Name="customerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="customerName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="customerName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="wait" Type="Byte" Nullable="false" />
     <Property Name="reservation" Type="Byte" Nullable="false" />
     <Property Name="timeIn" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="timeMade" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="Reservations" Relationship="Self.fk_reservation_customers" FromRole="customers" ToRole="Reservation" />
+    <NavigationProperty Name="Reservations" Relationship="SeatingManagerDBModel.fk_reservation_customers" FromRole="customer" ToRole="Reservation" />
   </EntityType>
   <EntityType Name="Reservation">
     <Key>
@@ -29,7 +42,7 @@
     <Property Name="Id" Type="Int32" Nullable="false" />
     <Property Name="ReservationDateTime" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="CustomerID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="customer" Relationship="Self.fk_reservation_customers" FromRole="Reservation" ToRole="customers" />
+    <NavigationProperty Name="customer" Relationship="SeatingManagerDBModel.fk_reservation_customers" FromRole="Reservation" ToRole="customer" />
   </EntityType>
   <EntityType Name="tablemap">
     <Key>
@@ -60,31 +73,31 @@
       <PropertyRef Name="tableSectionID" />
     </Key>
     <Property Name="tableSectionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="sectionColor" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="sectionColor" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="user">
     <Key>
       <PropertyRef Name="userID" />
     </Key>
     <Property Name="userID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="firstName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="lastName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="role" Type="Int32" Nullable="false" />
     <Property Name="isActive" Type="Byte" Nullable="false" />
     <Property Name="isOnDuty" Type="Byte" Nullable="false" />
     <Property Name="sectionID" Type="Int32" />
-    <Property Name="password" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="title" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="title" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
     <Property Name="dateHired" Type="DateTime" Nullable="false" Precision="3" />
     <Property Name="passwordSalt" Type="Binary" MaxLength="256" FixedLength="false" />
     <Property Name="hashedPassword" Type="Binary" MaxLength="256" FixedLength="false" />
   </EntityType>
   <Association Name="fk_reservation_customers">
-    <End Role="customers" Type="Self.customer" Multiplicity="1" />
-    <End Role="Reservation" Type="Self.Reservation" Multiplicity="*" />
+    <End Type="SeatingManagerDBModel.customer" Role="customer" Multiplicity="1" />
+    <End Type="SeatingManagerDBModel.Reservation" Role="Reservation" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="customers">
+      <Principal Role="customer">
         <PropertyRef Name="customerID" />
       </Principal>
       <Dependent Role="Reservation">
@@ -92,17 +105,4 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="SeatingManagerDBEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="assigncustomers" EntityType="Self.assigncustomer" />
-    <EntitySet Name="customers" EntityType="Self.customer" />
-    <EntitySet Name="Reservations" EntityType="Self.Reservation" />
-    <EntitySet Name="tablemaps" EntityType="Self.tablemap" />
-    <EntitySet Name="tablemerges" EntityType="Self.tablemerge" />
-    <EntitySet Name="tablesections" EntityType="Self.tablesection" />
-    <EntitySet Name="users" EntityType="Self.user" />
-    <AssociationSet Name="fk_reservation_customers" Association="Self.fk_reservation_customers">
-      <End Role="customers" EntitySet="customers" />
-      <End Role="Reservation" EntitySet="Reservations" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>
