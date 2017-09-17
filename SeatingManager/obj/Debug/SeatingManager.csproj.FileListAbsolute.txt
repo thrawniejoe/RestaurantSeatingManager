@@ -189,7 +189,6 @@ C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\Spl
 C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.g.resources
 C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.Properties.Resources.resources
 C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\SeatingManager.csproj.GenerateResource.Cache
-C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.Designer.cs
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsc
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xsd
 C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\SeatingManagerDBDataSet.xss
@@ -265,3 +264,6 @@ C:\Users\john_soerjawitaka\Source\Repos\RestaurantSeatingManager\SeatingManager\
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\seatingManagerDBDataSet1.Designer.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.g.cs
 C:\Users\Joe.Velasquez\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.baml
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\seatingManagerDBDataSet1.Designer.cs
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.g.cs
+C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.baml

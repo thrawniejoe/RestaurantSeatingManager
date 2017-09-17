@@ -271,10 +271,10 @@
     </Content>
     <Content Include="reservationTable.sql" />
     <Content Include="SeatingManagerDB.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="SeatingManagerDB_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>SeatingManagerDB.mdf</DependentUpon>
     </Content>
     <Content Include="TeamBlueDatabase.sql" />

@@ -110,7 +110,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Password:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <PasswordBox x:Name="passwordTextBox"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" PasswordChar="*" VerticalAlignment="Center" Width="120"/>
+            <PasswordBox x:Name="passwordTextBox"  Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="3" Grid.Row="0" PasswordChar="*" VerticalAlignment="Center" Width="120" TabIndex="4"/>
         </Grid>
         <Grid x:Name="grid9" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="219,215,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -121,7 +121,7 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Label Content="Title:" Grid.Column="0" HorizontalAlignment="Left" Margin="3" Grid.Row="0" VerticalAlignment="Center"/>
-            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="2,0,0,4" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Bottom" Width="120" Tag="5">
+            <ComboBox x:Name="titleTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="2,0,0,4" Grid.Row="0" Text="{Binding role, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Bottom" Width="120" Tag="5" TabIndex="5">
                 <ComboBoxItem>Administrator</ComboBoxItem>
                 <ComboBoxItem>Manager</ComboBoxItem>
                 <ComboBoxItem>Host</ComboBoxItem>

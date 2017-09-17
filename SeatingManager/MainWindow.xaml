@@ -218,14 +218,15 @@
                     </WrapPanel>
 
                     <Grid x:Name="background" HorizontalAlignment="Left" Height="700" VerticalAlignment="Top" Width="1090" Margin="0,59,0,0">
+                        <Grid.Background>
+                            <ImageBrush ImageSource="Images/Layout.png"/>
+                        </Grid.Background>
 
                         <Canvas x:Name="tables2" HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="770" Margin="0,0,0,0">
 
                         </Canvas>
 
-                        <Canvas x:Name="tables" HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="770" Margin="0,0,0,0">
-
-                        </Canvas>
+                        <Canvas x:Name="tables" HorizontalAlignment="Left" Height="630" VerticalAlignment="Top" Width="770" Margin="0,0,0,0"/>
                     </Grid>
                 </Canvas>
             </TabItem>
@@ -289,7 +290,7 @@
         <Label Content="Server's Currently On Duty" HorizontalAlignment="Left" Margin="12,43,0,0" VerticalAlignment="Top" Width="278" HorizontalContentAlignment="Center" Background="#FF3D404B" Foreground="White" FontSize="16" FontWeight="Bold" Height="31" BorderBrush="#FF3D404B"/>
         <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="826" Margin="1500,100,-166,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Visibility="Hidden"/>
         <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="1500,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
-        <Rectangle Fill="#FF1A1B20" HorizontalAlignment="Left" Height="26" Margin="-4,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1504"/>
+        <Rectangle Fill="#FF353848" HorizontalAlignment="Left" Height="26" Margin="-4,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1504"/>
         <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,0,0,292" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" UseLayoutRounding="False" HorizontalAlignment="Left" Width="279" Height="248" VerticalAlignment="Bottom">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="reserverNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
