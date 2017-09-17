@@ -170,15 +170,6 @@ namespace SeatingManager
                 lblDateHiredError.Content = "field cannot be blank.";
                 check = false;
             }
-
-
-
-
-
-
-
-
-
             return check;
         }
 
@@ -188,10 +179,20 @@ namespace SeatingManager
             dateHiredDatePicker.SelectedDate = DateTime.Today;
         }
 
-        private void lastNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
 
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
