@@ -283,17 +283,17 @@
                     <DataGrid x:Name="customersDataGrid1" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="0,10" RowDetailsVisibilityMode="VisibleWhenSelected">
                         <DataGrid.Columns>
                             <!--<DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding customerID}" Header="customer ID" IsReadOnly="True" Width="50"/>-->
-                            <DataGridTextColumn x:Name="customerNameColumn1" Binding="{Binding customerName}" Header="customer Name" Width="200"/>
-                            <DataGridTextColumn x:Name="waitColumn" Binding="{Binding wait}" Header="wait" Width="90"/>
-                            <DataGridTextColumn x:Name="reservationColumn" Binding="{Binding reservation}" Header="reservation" Width="90"/>
-                            <DataGridTemplateColumn x:Name="timeInColumn" Header="time In" Width="100">
+                            <DataGridTextColumn x:Name="customerNameColumn1" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="200"/>
+                            <DataGridTextColumn x:Name="waitColumn" Binding="{Binding wait}" Header="WAIT" Width="90"/>
+                            <DataGridTextColumn x:Name="reservationColumn" Binding="{Binding reservation}" Header="RESERVATION" Width="90"/>
+                            <DataGridTemplateColumn x:Name="timeInColumn" Header="TIME IN" Width="100">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <DatePicker SelectedDate="{Binding timeIn, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            <DataGridTemplateColumn x:Name="timeMadeColumn" Header="time Made" Width="120">
+                            <DataGridTemplateColumn x:Name="timeMadeColumn" Header="TIME MADE" Width="120">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <DatePicker SelectedDate="{Binding timeMade, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
@@ -305,7 +305,6 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Label Content="Customer List" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,399,0,0" VerticalAlignment="Top" Width="199" Background="#FF3F414D" Foreground="White" FontSize="14"/>
         <Label Content="Active Server List" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="10,36,891,0" VerticalAlignment="Top" Width="199" Foreground="White" Background="#FF3F414D" FontSize="14"/>
         <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="10,63,891,458" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Width="199" Height="316">
             <DataGrid.Columns>
@@ -345,5 +344,6 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Label Content="Customer List" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Height="25" Margin="10,400,0,0" VerticalAlignment="Top" Width="199" Background="#FF3F414D" Foreground="White" FontSize="14"/>
     </Grid>
 </Window>
