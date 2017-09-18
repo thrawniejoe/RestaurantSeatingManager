@@ -119,6 +119,7 @@ namespace SeatingManager
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
+            SeatingManagerDBDataSet ds = new SeatingManagerDBDataSet();
             int custId = Convert.ToInt32(cboCustomer.SelectedValue);
             Reservation r = new Reservation();
             int hour = 0;
@@ -138,17 +139,9 @@ namespace SeatingManager
             }
             else
             {
+                SeatingManagerDBDataSet.ReservationRow selectedRow = (SeatingManagerDBDataSet.ReservationRow)ds.Reservation.Rows[((ds.Reservation.Rows.Count) - 1)];
                 id = db.Reservations.Last().Id + 1;
             }
-            //r.CustomerID = custId;
-            //r.ReservationDateTime = new DateTime(dtpResDate.SelectedDate.Value.Year,
-            //                                     dtpResDate.SelectedDate.Value.Month,
-            //                                     dtpResDate.SelectedDate.Value.Day,
-            //                                     hour,
-            //                                     Convert.ToInt32(cboMinute.SelectedValue),
-            //                                     0);
-            //db.Reservations.Add(r);
-            SeatingManagerDBDataSet ds = new SeatingManagerDBDataSet();
             SeatingManagerDBDataSet.ReservationRow newReservationRow;
             newReservationRow = ds.Reservation.NewReservationRow();
             newReservationRow.Id = id;
