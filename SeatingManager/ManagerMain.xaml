@@ -333,7 +333,17 @@
             </DataGrid.Columns>
         </DataGrid>
         <Button x:Name="btnClose" IsCancel="true" BorderBrush="Transparent" Margin="1074,0,0,0" VerticalAlignment="Top" Height="24" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="0" Width="24"/>
-        <Button x:Name="btnLogOut" Content="Log Off" HorizontalAlignment="Left" Margin="990,41,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
+        <Button x:Name="btnLogOut" Content="Log Off" HorizontalAlignment="Left" Margin="881,46,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
         <Rectangle Fill="#FF1A1B20" HorizontalAlignment="Left" Height="26" Margin="0,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1075"/>
+        <Button x:Name="btnLogOut_Copy" Content="Exit" HorizontalAlignment="Left" Margin="986,46,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnExit_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF938585" Offset="0"/>
+                    <GradientStop Color="#FFBA1111" Offset="0.983"/>
+                    <GradientStop Color="#FF7F2020" Offset="0.527"/>
+                    <GradientStop Color="#FFB03434" Offset="0.021"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

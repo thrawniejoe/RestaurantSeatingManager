@@ -550,6 +550,18 @@ namespace SeatingManager
             addRes.EngageRefreshList += RefreshList;
             addRes.ShowDialog();
         }
-        
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnLogOut_Click(object sender, RoutedEventArgs e)
+        {
+            Properties.Settings.Default.CurrentUserRole = -1; //saves the user role to the applcation settings file
+            Properties.Settings.Default.Save();
+            SplashLogin sL = new SplashLogin();
+            sL.Show();
+        }
     }
 }

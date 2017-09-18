@@ -133,7 +133,7 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
-        <Style  x:Key="mainBtnStyle" TargetType="{x:Type Button}">
+        <Style TargetType="{x:Type Button}">
             <Setter Property="Background">
                 <Setter.Value>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -366,6 +366,17 @@
         </DataGrid>
         <Label Content="Customer List:" HorizontalAlignment="Left" Height="30" Margin="12,370,0,0" VerticalAlignment="Top" Width="279"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF3D404B" FontSize="16" FontWeight="Bold"/>
         <Label Content="Reservation List:" HorizontalAlignment="Left" Height="32" Margin="12,684,0,0" VerticalAlignment="Top" Width="278"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF3D404B" FontSize="16" FontWeight="Bold"/>
+        <Button x:Name="btnLogOut" Content="Log Off" HorizontalAlignment="Left" Margin="1295,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
+        <Button x:Name="btnLogOut_Copy" Content="Exit" HorizontalAlignment="Left" Margin="1400,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnExit_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF938585" Offset="0"/>
+                    <GradientStop Color="#FFBA1111" Offset="0.983"/>
+                    <GradientStop Color="#FF7F2020" Offset="0.527"/>
+                    <GradientStop Color="#FFB03434" Offset="0.021"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>
 

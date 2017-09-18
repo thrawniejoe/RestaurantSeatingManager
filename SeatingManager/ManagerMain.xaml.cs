@@ -272,7 +272,8 @@ namespace SeatingManager
         {
             Properties.Settings.Default.CurrentUserRole = -1; //saves the user role to the applcation settings file
             Properties.Settings.Default.Save();
-            this.Close();
+            SplashLogin sL = new SplashLogin();
+            sL.Show();
         }
 
         private void btnAddSection_Click(object sender, RoutedEventArgs e)
@@ -360,6 +361,11 @@ namespace SeatingManager
                 context.SaveChanges();  //Saves changes to the database
             }
             RefreshList();
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
