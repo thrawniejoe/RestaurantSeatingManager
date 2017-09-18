@@ -105,6 +105,7 @@ namespace SeatingManager
             string newList2 = "";
             int tableIndex = 0;
             int mergeOk = 0;
+            int seats = 0;
 
             ImageBrush tableBrush = new ImageBrush();
             tableBrush.ImageSource =
@@ -130,6 +131,7 @@ namespace SeatingManager
                         MessageBox.Show("This merge includes a table that has already been merged", "Merge Error");
                         mergeOk = 1;
                     }
+                    seats += Convert.ToInt32(tableList2[tableIndex].TableSeats);
                     counter1++;
                 }
             }
@@ -145,6 +147,7 @@ namespace SeatingManager
                         buttons[Convert.ToInt32(btn.Tag)-1].BorderThickness = new Thickness(0);
                         buttons[Convert.ToInt32(btn.Tag)-1].FontSize = 14;
                         buttons[Convert.ToInt32(btn.Tag)-1].Foreground = Brushes.Black;
+                        buttons[Convert.ToInt32(btn.Tag)-1].Content = "Table " + btn.Tag + "\nSeats - " + seats;
                         tableIndex = Convert.ToInt32(btn.Tag) - 1;
                         tmerge = tableList2[tableIndex].TableNameOrig;
                         tableList2[tableIndex].IsMerged = 2;
@@ -152,7 +155,7 @@ namespace SeatingManager
                     else if (counter > 0 && mergeOk == 0)
                     {
                         Button btn = buttonMerge[counter] as Button;
-                        buttons[Convert.ToInt32(btn.Tag)-1].Content = "Merged with \n" + buttonMerge[0].Content.ToString();
+                        buttons[Convert.ToInt32(btn.Tag)-1].Content = "Merged with \nTable " + buttonMerge[0].Tag;
                         buttons[Convert.ToInt32(btn.Tag)-1].Foreground = Brushes.White;
                         buttons[Convert.ToInt32(btn.Tag)-1].Background = tableBrush2;
                         buttons[Convert.ToInt32(btn.Tag)-1].BorderThickness = new Thickness(0);
@@ -196,6 +199,7 @@ namespace SeatingManager
         //load buttons
         private void loadTables()
         {
+            string seats = "";
             string name = "";
             string bn = "";
             string bc = "t";
@@ -241,7 +245,7 @@ namespace SeatingManager
                 Button addBtn = newBtn as Button;
                 int y = Convert.ToInt32(tbc.TableX);
                 int x = Convert.ToInt32(tbc.TableY);
-                addBtn.Content = "Table " + newBtn.Tag;
+                addBtn.Content = "Table " + newBtn.Tag + "\nSeats - " + tbc.TableSeats;
                 addBtn.Name = newBtn.Name;
                 addBtn.Tag = newBtn.Tag;
                 addBtn.Width = 110;
@@ -346,7 +350,7 @@ namespace SeatingManager
                                 new BitmapImage(
                                     new Uri(@"..\\..\\images\" + tb.TableSeats + "t.png", UriKind.Relative));
                                 Button btn2 = bb as Button;
-                                buttons[Convert.ToInt32(btn2.Tag) - 1].Content = "Table " + tb.TableName.ToString();
+                                buttons[Convert.ToInt32(btn2.Tag) - 1].Content = "Table " + tb.TableName.ToString() + "\nSeats - " + tb.TableSeats; ;
                                 buttons[Convert.ToInt32(btn2.Tag) - 1].Foreground = Brushes.Black;
                                 buttons[Convert.ToInt32(btn2.Tag) - 1].Background = tableBrush;
                                 buttons[Convert.ToInt32(btn2.Tag) - 1].BorderThickness = new Thickness(0);
@@ -562,6 +566,7 @@ namespace SeatingManager
             Properties.Settings.Default.Save();
             SplashLogin sL = new SplashLogin();
             sL.Show();
+            Close();
         }
     }
 }
