@@ -118,10 +118,9 @@ namespace SeatingManager
 
             //Refresh Customer GridView
             customersDataGrid.ItemsSource = null;
-            var getCust = (from su in context.users
-                           where su.title == "Server"
+            var getCust = (from su in context.customers
                            select su);
-            serversDataGrid.ItemsSource = getCust.ToList();
+            customersDataGrid.ItemsSource = getCust.ToList();
 
             //Refresh Table Section GridView
             tablesectionsDataGrid.ItemsSource = null;
