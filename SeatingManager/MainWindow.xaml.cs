@@ -385,6 +385,7 @@ namespace SeatingManager
                 var context = new SeatingManager.SeatingManagerDBEntities();
                 Button bt = sender as Button;
                 int myid = Convert.ToInt16(bt.Tag);
+                MessageBox.Show(Convert.ToString(myid));
                 var getCust = (from su in context.customers
                                where su.customerID == myid
                                select su);
@@ -450,11 +451,20 @@ namespace SeatingManager
 
             //Refresh Customer GridView
             customersDataGrid.ItemsSource = null;
+
+
+            var result = (from e in context.customers
+                          select e.customerID).Except(from m in context.assigncustomers
+                                                      select m.customerID);
+            var temp = context.customers
+       .Where(x => !context.assigncustomers.Any(y => y.customerID != x.customerID))
+       .Select(x => new { x.customerID, x.customerName}).ToList();
+
             var getCust = (from su in context.customers
                 where su.reservation == 0
                 orderby su.timeIn  
                 select su);
-            customersDataGrid.ItemsSource = getCust.ToList();
+            customersDataGrid.ItemsSource = temp;
 
             //Refresh Reservation GridView
             reservationDataGrid.ItemsSource = null;
