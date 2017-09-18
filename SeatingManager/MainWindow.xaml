@@ -261,7 +261,7 @@
                         <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Click="btnAddBtn_Click" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAddCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
-                        <Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAssignCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
+                        <!--<Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAssignCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>-->
                         <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}" Click="btnCreateReservation_Click"/>
                         <Button x:Name="btnClearTable" Content="Clear Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnClearTable_Click" Style="{DynamicResource mainBtnStyle}"/>
                     </WrapPanel>
@@ -347,6 +347,13 @@
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button x:Name="btnDeleteCust" Content="X" Tag="{Binding customerID}" Style="{DynamicResource mainBtnStyle}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto" Click="btnDeleteCust_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn x:Name="assignReserverColumn" Header="" Width="70">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="btnAssignCust" Content="Assign" Tag="{Binding customerID}" Style="{DynamicResource mainBtnStyle}" BorderThickness="0" Margin="0" Padding="1" Grid.IsSharedSizeScope="False" Width="Auto" Click="btnAssignCustomer_Click"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

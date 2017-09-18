@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\
+C:\Users\Mark\Source\RestaurantSeatingManager - After assign customer\SeatingManager\obj\Debug\
 SeatingManager
 none
 false
 DEBUG;TRACE
-C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\App.xaml
+C:\Users\Mark\Source\RestaurantSeatingManager - After assign customer\SeatingManager\App.xaml
 7-1915931195
 61292185334
 291865369403
-21482000217
+21-184690273
 AddCustomer.xaml;AddReservation.xaml;AddUser.xaml;MainWindow.xaml;ManagerMain.xaml;ModifyUser.xaml;SplashLogin.xaml;
 
-False
+True
 

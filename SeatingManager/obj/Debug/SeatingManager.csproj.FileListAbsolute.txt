@@ -269,3 +269,6 @@ C:\Users\Thrawn\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\A
 C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\bin\Debug\seatingManagerDBDataSet1.Designer.cs
 C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.g.cs
 C:\Users\Mark\Source\Repos\RestaurantSeatingManager\SeatingManager\obj\Debug\AddReservation.baml
+C:\Users\Mark\Source\RestaurantSeatingManager - After assign customer\SeatingManager\bin\Debug\SeatingManager.exe.config
+C:\Users\Mark\Source\RestaurantSeatingManager - After assign customer\SeatingManager\obj\Debug\SeatingManager.exe
+C:\Users\Mark\Source\RestaurantSeatingManager - After assign customer\SeatingManager\obj\Debug\SeatingManager.pdb

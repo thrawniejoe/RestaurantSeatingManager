@@ -377,51 +377,44 @@ namespace SeatingManager
         //assigns the customer to a table
         private void btnAssignCustomer_Click(object sender, RoutedEventArgs e)
         {
-            string customer = "";
-            if (nameToUse == 0)
-            {
-                customer = "Matt";
-                nameToUse++;
-            }
-            else if (nameToUse == 1)
-            {
-                customer = "Joe";
-                nameToUse++;
-            }
-            else if (nameToUse == 2)
-            {
-                customer = "John";
-                nameToUse++;
-            }
-            else if (nameToUse == 3)
-            {
-                customer = "Taylor";
-                nameToUse++;
-            }
-            else if (nameToUse == 4)
-            {
-                customer = "Mark";
-                nameToUse = 0;
-            }
+            
+        string customerName = "";
 
-            DateTime dt = DateTime.Now;
-            string time = dt.ToString("h:mm");
-            ImageBrush tableBrush = new ImageBrush();
-            tableBrush.ImageSource =
-                new BitmapImage(
-                    new Uri(@"..\\..\\images\taken.png", UriKind.Relative)
-                );
-
-            foreach (Button b in buttonMerge)
+            if (isButtonClicked == 1)
             {
-                b.Content = b.Content + "\n" + customer + "\nSeated: " + time;
-                b.FontSize = 14;
-                b.BorderThickness = new Thickness(0);
-                b.Background = tableBrush;
+                var context = new SeatingManager.SeatingManagerDBEntities();
+                Button bt = sender as Button;
+                int myid = Convert.ToInt16(bt.Tag);
+                var getCust = (from su in context.customers
+                               where su.customerID == myid
+                               select su);
+                List<customer> currentCustomer = getCust.ToList();
+                customerName = currentCustomer[0].customerName.ToString();
+
+
+                DateTime dt = DateTime.Now;
+                string time = dt.ToString("h:mm");
+                ImageBrush tableBrush = new ImageBrush();
+                tableBrush.ImageSource =
+                    new BitmapImage(
+                        new Uri(@"..\\..\\images\taken.png", UriKind.Relative)
+                    );
+
+                foreach (Button b in buttonMerge)
+                {
+                    b.Content = b.Content + "\n" + customerName + "\nSeated: " + time;
+                    b.FontSize = 14;
+                    b.BorderThickness = new Thickness(0);
+                    b.Background = tableBrush;
+                }
+                buttonMerge.Clear();
+                isButtonClicked = 0;
             }
-            buttonMerge.Clear();
-            isButtonClicked = 0;
-        }
+            else
+            {
+                MessageBox.Show("Please choose a table to assign this customer to", "Assignment Error");
+            }
+    }
 
 
         private void TabItem_Loaded(object sender, RoutedEventArgs e)
