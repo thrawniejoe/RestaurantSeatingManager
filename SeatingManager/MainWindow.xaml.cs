@@ -409,6 +409,15 @@ namespace SeatingManager
                 }
                 buttonMerge.Clear();
                 isButtonClicked = 0;
+
+                //remove customer from cust list. -MG
+                    
+                    context.customers.Attach(currentCustomer[0]); //attaches the user object by the id given to the object above
+                    context.customers.Remove(currentCustomer[0]); //Adds the change to Deletes the customer from the database
+                    context.SaveChanges();  //Saves changes to the database
+                RefreshList();
+
+
             }
             else
             {
