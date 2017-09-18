@@ -361,14 +361,14 @@
         </DataGrid>
         <DataGrid x:Name="reservationDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,714,1242,42" RowDetailsVisibilityMode="VisibleWhenSelected">
             <DataGrid.Columns>
-                <DataGridTemplateColumn x:Name="reservationDateTimeColumn" Header="Reservation Time" Width="120">
-                    <DataGridTemplateColumn.CellTemplate>
+                <DataGridTextColumn x:Name="reservationDateTimeColumn" Binding="{Binding Date}" Header="Reservation" Width="150"/>
+                <!--<DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <DatePicker SelectedDate="{Binding ReservationDateTime, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
+                            <DatePicker SelectedDate="{Binding Date, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}"/>
                         </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <!--<DataGridTextColumn x:Name="customerIDColumn" Binding="{Binding CustomerID}" Header="Customer ID" Width="120"/>-->
+                    </DataGridTemplateColumn.CellTemplate>-->
+
+                <DataGridTextColumn x:Name="Customer" Binding="{Binding Customer}" Header="Customer" Width="90"/>
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="Customer List:" HorizontalAlignment="Left" Height="30" Margin="12,370,0,0" VerticalAlignment="Top" Width="279"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF3D404B" FontSize="16" FontWeight="Bold"/>
