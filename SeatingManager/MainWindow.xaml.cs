@@ -583,5 +583,10 @@ namespace SeatingManager
             sL.Show();
             Close();
         }
+
+        private void btnMinimize_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }

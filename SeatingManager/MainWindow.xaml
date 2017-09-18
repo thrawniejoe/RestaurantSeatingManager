@@ -242,7 +242,7 @@
     </Window.Resources>
 
 
-    <Grid Background="#FF1F1F27" DataContext="{StaticResource reservationViewSource}">
+    <Grid Background="#FF1F1F27" DataContext="{StaticResource reservationViewSource}" Margin="0,0,0,0.4">
         <Grid.RowDefinitions>
             <RowDefinition/>
         </Grid.RowDefinitions>
@@ -259,7 +259,6 @@
                             </LinearGradientBrush>
                         </WrapPanel.Background>
                         <Button x:Name="btnMergeTables" Content="Merge Tables" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Click="btnAddBtn_Click" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
-                        <Button x:Name="btnModifyTables" Content="Modify Table" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}"/>
                         <Button x:Name="btnAddCustomer" Content="Add Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAddCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>
                         <!--<Button x:Name="btnAssignCustomer" Content="Assign Customer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Click="btnAssignCustomer_Click" Style="{DynamicResource mainBtnStyle}"/>-->
                         <Button x:Name="btnCreateReservation" Content="Create Reservation" HorizontalAlignment="Left" VerticalAlignment="Top" Width="108" Height="33" Margin="4" Style="{DynamicResource mainBtnStyle}" Click="btnCreateReservation_Click"/>
@@ -305,8 +304,8 @@
         </TabControl>
         <DataGrid x:Name="serversDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding Source={StaticResource usersViewSource}}" Margin="12,72,1242,601" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" Height="265">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="75"/>
-                <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="75"/>
+                <DataGridTextColumn x:Name="firstNameColumn1" Binding="{Binding firstName}" Header="FIRST" Width="120"/>
+                <DataGridTextColumn x:Name="lastNameColumn1" Binding="{Binding lastName}" Header="LAST" Width="120"/>
                 <DataGridTemplateColumn MaxWidth="35" MinWidth="30">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
@@ -339,7 +338,7 @@
         <Label Content="Servers On Duty" HorizontalAlignment="Left" Margin="12,43,0,0" VerticalAlignment="Top" Width="278" HorizontalContentAlignment="Center" Background="#FF1BA300" Foreground="White" FontSize="16" FontWeight="Bold" Height="31" BorderBrush="#FF3D404B"/>
         <TextBox x:Name="txtTest" HorizontalAlignment="Left" Height="826" Margin="1500,100,-166,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="220" Visibility="Hidden"/>
         <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="1500,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
-        <Rectangle Fill="#FF353848" HorizontalAlignment="Left" Height="26" Margin="-4,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1504"/>
+        <Rectangle Fill="#FF353848" HorizontalAlignment="Left" Height="26" Margin="0,-2,0,0" Stroke="Black" VerticalAlignment="Top" Width="1500"/>
         <DataGrid x:Name="customersDataGrid" AutoGenerateColumns="False" EnableRowVirtualization="True" ItemsSource="{Binding}" Margin="12,0,0,292" RowDetailsVisibilityMode="VisibleWhenSelected" Background="{x:Null}" UseLayoutRounding="False" HorizontalAlignment="Left" Width="279" Height="248" VerticalAlignment="Bottom">
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="customerNameColumn" Binding="{Binding customerName}" Header="CUSTOMER NAME" Width="140"/>
@@ -373,8 +372,8 @@
         </DataGrid>
         <Label Content="Customer List" HorizontalAlignment="Left" Height="30" Margin="12,370,0,0" VerticalAlignment="Top" Width="279"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF1BA300" FontSize="16" FontWeight="Bold"/>
         <Label Content="Reservation List" HorizontalAlignment="Left" Height="32" Margin="12,684,0,0" VerticalAlignment="Top" Width="278"  HorizontalContentAlignment="Center" Foreground="White" Background="#FF1BA300" FontSize="16" FontWeight="Bold"/>
-        <Button x:Name="btnLogOut" Content="Log Off" Style="{DynamicResource mainBtnStyle}" HorizontalAlignment="Left" Margin="1295,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
-        <Button x:Name="btnLogOut_Copy" Content="Exit" HorizontalAlignment="Left" Margin="1400,40,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnExit_Click" Foreground="White" BorderBrush="{x:Null}">
+        <Button x:Name="btnLogOut" Content="Log Off" Style="{DynamicResource mainBtnStyle}" HorizontalAlignment="Left" Margin="1194,43,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnLogOut_Click"/>
+        <Button x:Name="btnLogOut_Copy" Content="Exit" HorizontalAlignment="Left" Margin="1299,43,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnExit_Click" Foreground="White" BorderBrush="{x:Null}">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF938585" Offset="0"/>
@@ -384,7 +383,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <Button x:Name="btnClose_Copy" IsCancel="true" BorderBrush="Black" Margin="1468,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1,1,0,1" Padding="1" HorizontalAlignment="Left" Width="32"/>
+        <Button x:Name="btnMinimize" IsCancel="true" BorderBrush="Black" Margin="1468,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnMinimize_Click" Background="#FF2D2D30" Content="__" BorderThickness="1,1,0,1" Padding="1" HorizontalAlignment="Left" Width="32"/>
     </Grid>
 </Window>
 
