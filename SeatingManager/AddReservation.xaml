@@ -12,7 +12,7 @@
         ShowInTaskbar="True"
         
         
-        Title="AddReservation" Height="334.611" Width="423.955" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
+        Title="AddReservation" Height="334.611" Width="423.955" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown" Background="#FF30343E">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
@@ -112,28 +112,28 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle HorizontalAlignment="Left" Margin="20,84,0,0" Width="382" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830" Height="230" VerticalAlignment="Top"/>
+        <Rectangle HorizontalAlignment="Left" Margin="19,84,0,0" Width="382" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830" Height="230" VerticalAlignment="Top"/>
 
-        <Label x:Name="label" Content="Customer" HorizontalAlignment="Left" Margin="51,100,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cboCustomer" DisplayMemberPath="customerName" ItemsSource="{Binding}" Margin="118,103,0,0" SelectedValuePath="customerID" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" />
+        <Label x:Name="label" Content="Customer" HorizontalAlignment="Left" Margin="50,100,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboCustomer" DisplayMemberPath="customerName" ItemsSource="{Binding}" Margin="117,103,0,0" SelectedValuePath="customerID" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" />
         <!--<ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
                 </ItemsPanelTemplate>
             </ComboBox.ItemsPanel>
         </ComboBox>-->
-        <Label x:Name="label_Copy" Content="Time" HorizontalAlignment="Left" Margin="81,198,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cboHour" HorizontalAlignment="Left" Margin="118,201,0,0" VerticalAlignment="Top" Width="65"/>
-        <ComboBox x:Name="cboMinute" HorizontalAlignment="Left" Margin="211,201,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.543,-0.239"/>
-        <ComboBox x:Name="cboAmPm" HorizontalAlignment="Left" Margin="320,201,0,0" VerticalAlignment="Top" Width="65"/>
-        <Button x:Name="btnAdd" Content="Add Reservation" HorizontalAlignment="Left" Margin="277,259,0,0" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.231,0.471" Click="btnAdd_Click" Height="33"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="41,259,0,0" VerticalAlignment="Top" Width="108" Click="btnCancel_Click" Height="33"/>
-        <DatePicker x:Name="dtpResDate" HorizontalAlignment="Left" Margin="118,151,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label1" Content="Date                " HorizontalAlignment="Left" Margin="75,150,0,0" VerticalAlignment="Top" Width="38"/>
-        <Label x:Name="label2" Content=":" HorizontalAlignment="Left" Margin="188,182,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_Copy" Content="Time" HorizontalAlignment="Left" Margin="80,198,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboHour" HorizontalAlignment="Left" Margin="117,201,0,0" VerticalAlignment="Top" Width="65"/>
+        <ComboBox x:Name="cboMinute" HorizontalAlignment="Left" Margin="210,201,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.543,-0.239"/>
+        <ComboBox x:Name="cboAmPm" HorizontalAlignment="Left" Margin="319,201,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btnAdd" Content="Add Reservation" HorizontalAlignment="Left" Margin="276,259,0,0" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.231,0.471" Click="btnAdd_Click" Height="33"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="40,259,0,0" VerticalAlignment="Top" Width="108" Click="btnCancel_Click" Height="33"/>
+        <DatePicker x:Name="dtpResDate" HorizontalAlignment="Left" Margin="117,151,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label1" Content="Date                " HorizontalAlignment="Left" Margin="74,150,0,0" VerticalAlignment="Top" Width="38"/>
+        <Label x:Name="label2" Content=":" HorizontalAlignment="Left" Margin="187,182,0,0" VerticalAlignment="Top" FontSize="30"/>
         <Rectangle Fill="#FF252830" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="424"/>
         <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="392,0,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
-        <Label x:Name="label_Copy1" HorizontalContentAlignment="Center" Content="Add Reservation" HorizontalAlignment="Left" Margin="81,36,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" Width="252"/>
+        <Label x:Name="label_Copy1" HorizontalContentAlignment="Center" Content="Add Reservation" HorizontalAlignment="Left" Margin="80,36,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" Width="252"/>
 
     </Grid>
 </Window>

@@ -169,11 +169,6 @@
             </Setter>
         </Style>
 
-        <Style TargetType="TextBox">
-            <Setter Property="Background" Value="#FF191A1F"/>
-            <Setter Property="BorderBrush" Value="#FF292929"/>
-            <Setter Property="Foreground" Value="White"/>
-        </Style>
 
 
         <Style x:Key="userActiveStyle" TargetType="Button">
@@ -188,6 +183,60 @@
         </Style>
         <Style TargetType="Window">
             <Setter Property="Background" Value="#FF1F1F27" />
+        </Style>
+
+
+
+
+
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF292929"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="#FF4A9EB7"/>
+            <Setter Property="FontFamily" Value="Segoe UI SemiBold"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border x:Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            BorderBrush="#FF232635"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                                <Setter  Property="BorderThickness" Value="0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
         <CollectionViewSource x:Key="reservationViewSource" Source="{Binding Reservation, Source={StaticResource seatingManagerDBDataSet}}"/>
     </Window.Resources>
