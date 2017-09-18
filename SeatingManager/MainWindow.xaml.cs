@@ -449,10 +449,13 @@ namespace SeatingManager
 
             //Refresh Reservation GridView
             reservationDataGrid.ItemsSource = null;
-            var getResrv = (from su in context.customers
-                            where su.reservation == 1
-                            orderby su.timeIn
-                            select su);
+            var getResrv = (from rs in context.Reservations
+                            join cs in context.customers on rs.CustomerID equals cs.customerID
+                            select new
+                            {
+                                Date = rs.ReservationDateTime,
+                                Customer = cs.customerName
+                            });
             reservationDataGrid.ItemsSource = getResrv.ToList();
 
             //Refresh Server List
