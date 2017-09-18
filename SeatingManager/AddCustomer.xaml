@@ -12,7 +12,7 @@
         AllowsTransparency="True"
         ShowInTaskbar="True"
         
-        Title="AddCustomer" Height="300" Width="592.771" Loaded="Window_Loaded" Background="#FF30343E" MouseDown="Window_MouseDown">
+        Title="AddCustomer" Height="300" Width="443.971" Loaded="Window_Loaded" Background="#FF30343E" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="customerViewSource" Source="{Binding customer, Source={StaticResource seatingManagerDBDataSet}}"/>
@@ -109,10 +109,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Rectangle HorizontalAlignment="Left" Height="204" Margin="123,86,0,0" VerticalAlignment="Top" Width="382" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830"/>
-        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="373,247,0,0" VerticalAlignment="Top" Width="108" Click="btnAdd_Click" TabIndex="5" FontFamily="Segoe UI Semibold" Height="33"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="152,247,0,0" VerticalAlignment="Top" Width="108" Click="btnCancel_Click" TabIndex="6" FontFamily="Segoe UI Semibold" Height="33"/>
-        <Grid x:Name="grid1" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="170,110,0,0" VerticalAlignment="Top">
+        <Rectangle HorizontalAlignment="Left" Height="204" Margin="26,81,0,0" VerticalAlignment="Top" Width="382" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830"/>
+        <Button x:Name="btnAdd" Content="Add" HorizontalAlignment="Left" Margin="276,242,0,0" VerticalAlignment="Top" Width="108" Click="btnAdd_Click" TabIndex="5" FontFamily="Segoe UI Semibold" Height="33"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="55,242,0,0" VerticalAlignment="Top" Width="108" Click="btnCancel_Click" TabIndex="6" FontFamily="Segoe UI Semibold" Height="33"/>
+        <Grid x:Name="grid1" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="73,105,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -123,7 +123,7 @@
             <Label Content="Customer Name" Grid.Column="0" Margin="4,4,2,3.6" Grid.Row="0" VerticalAlignment="Center" TabIndex="0"/>
             <TextBox x:Name="customerNameTextBox" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="3,5,0,4.6" Grid.Row="0" Text="{Binding customerName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" VerticalAlignment="Center" Width="123"/>
         </Grid>
-        <Grid x:Name="grid2" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="233,145,0,0" VerticalAlignment="Top">
+        <Grid x:Name="grid2" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="136,140,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -133,7 +133,7 @@
             </Grid.RowDefinitions>
             <Label Content="Wait" Grid.Column="0" Margin="2,3,-0.2,3" Grid.Row="0" VerticalAlignment="Center" Grid.ColumnSpan="2"/>
         </Grid>
-        <Grid x:Name="grid3" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="215,180,0,0" VerticalAlignment="Top" Width="246">
+        <Grid x:Name="grid3" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="118,175,0,0" VerticalAlignment="Top" Width="246">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -147,7 +147,7 @@
             <TextBox x:Name="txtTimeIn" Grid.Column="2" HorizontalAlignment="Left" Height="23                      " Margin="6.6,3,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="123" TabIndex="2" Grid.ColumnSpan="2"/>
 
         </Grid>
-        <Grid x:Name="grid4" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="192,217,0,0" VerticalAlignment="Top" Height="25" Width="270">
+        <Grid x:Name="grid4" DataContext="{StaticResource customerViewSource}" HorizontalAlignment="Left" Margin="95,212,0,0" VerticalAlignment="Top" Height="25" Width="270">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition Width="Auto"/>
@@ -163,11 +163,11 @@
                 <RadioButton x:Name="radioReservationYes" Content="Yes" Tag="White" Width="43" TabIndex="4" Foreground="White" Background="#FF292C3C" BorderBrush="#FF30343E"/>
             </StackPanel>
         </Grid>
-        <Label x:Name="label" HorizontalContentAlignment="Center" Content="Add a Customer" HorizontalAlignment="Left" Margin="170,38,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" Width="252"/>
-        <Label x:Name="lblCustNameError" Content="*" HorizontalAlignment="Left" Margin="406,113,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
-        <Label x:Name="lblWaitTimeError" Content="*" HorizontalAlignment="Left" Margin="406,148,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
-        <Label x:Name="lblTimeInError" Content="*" HorizontalAlignment="Left" Margin="406,180,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
-        <ComboBox x:Name="cboWaitTime" HorizontalAlignment="Left" Margin="277,152,0,0" VerticalAlignment="Top" Width="123" TabIndex="1" >
+        <Label x:Name="label" HorizontalContentAlignment="Center" Content="Add a Customer" HorizontalAlignment="Left" Margin="99,33,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" Width="252"/>
+        <Label x:Name="lblCustNameError" Content="*" HorizontalAlignment="Left" Margin="309,108,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblWaitTimeError" Content="*" HorizontalAlignment="Left" Margin="309,143,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <Label x:Name="lblTimeInError" Content="*" HorizontalAlignment="Left" Margin="309,175,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
+        <ComboBox x:Name="cboWaitTime" HorizontalAlignment="Left" Margin="180,147,0,0" VerticalAlignment="Top" Width="123" TabIndex="1" >
             <ComboBoxItem Content="0"/>
             <ComboBoxItem Content="5"/>
             <ComboBoxItem Content="10"/>
@@ -179,7 +179,7 @@
             <ComboBoxItem Content="40"/>
             <ComboBoxItem Content="45"/>
         </ComboBox>
-        <Rectangle Fill="#FF252830" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="593" Margin="0,0,-0.2,0"/>
-        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="561,0,-0.2,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
+        <Rectangle Fill="#FF252830" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="444"/>
+        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="412,0,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
     </Grid>
 </Window>

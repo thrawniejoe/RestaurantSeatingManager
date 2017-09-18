@@ -29,6 +29,12 @@ namespace SeatingManager
             InitializeComponent();
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
@@ -213,6 +219,16 @@ namespace SeatingManager
         public void getID(int myid)
         {
             userID = myid;
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

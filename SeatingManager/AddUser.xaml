@@ -103,7 +103,7 @@
         </Style>
     </Window.Resources>
     <Grid Margin="0,0,0.4,0.4">
-        <Rectangle HorizontalAlignment="Left" Height="334" Margin="20,43,0,0" VerticalAlignment="Top" Width="576" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830"/>
+        <Rectangle HorizontalAlignment="Left" Height="286" Margin="20,91,0,0" VerticalAlignment="Top" Width="576" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830"/>
 
         <Button x:Name="btnAddUser" Content="Add" HorizontalAlignment="Left" Margin="350,331,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Height="33" TabIndex="7" FontFamily="Segoe UI Semibold"/>
         <Label Content="Add a User" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="155,43,0,0" VerticalAlignment="Top" FontSize="24" Width="310" Background="{x:Null}" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" FontFamily="Segoe UI Semibold"/>
