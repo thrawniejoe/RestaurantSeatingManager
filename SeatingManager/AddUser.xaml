@@ -68,11 +68,44 @@
             <Setter Property="Foreground" Value="#FF4A9EB7"/>
             <Setter Property="FontFamily" Value="Segoe UI SemiBold"/>
         </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border x:Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            BorderBrush="#FF232635"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                                <Setter  Property="BorderThickness" Value="0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Grid Margin="0,0,0.4,0.4">
         <Rectangle HorizontalAlignment="Left" Height="334" Margin="20,43,0,0" VerticalAlignment="Top" Width="576" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830"/>
 
-        <Button x:Name="btnAddUser" Content="Add" HorizontalAlignment="Left" Margin="340,330,0,0" VerticalAlignment="Top" Width="125" Click="btnAddUser_Click" Height="30" TabIndex="7" FontFamily="Segoe UI Semibold"/>
+        <Button x:Name="btnAddUser" Content="Add" HorizontalAlignment="Left" Margin="350,331,0,0" VerticalAlignment="Top" Width="108" Click="btnAddUser_Click" Height="33" TabIndex="7" FontFamily="Segoe UI Semibold"/>
         <Label Content="Add a User" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="155,43,0,0" VerticalAlignment="Top" FontSize="24" Width="310" Background="{x:Null}" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" FontFamily="Segoe UI Semibold"/>
         <Grid x:Name="grid1" DataContext="{StaticResource usersViewSource}" HorizontalAlignment="Left" Margin="184,105,0,0" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
@@ -162,7 +195,7 @@
         <Label x:Name="lblTitleError" Content="*" HorizontalAlignment="Left" Margin="391,248,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
         <Label x:Name="lblDateHiredError" Content="*" HorizontalAlignment="Left" Margin="423,285,0,0" VerticalAlignment="Top" Foreground="#FFDC6363"/>
         <Rectangle Fill="#FF252830" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="620"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="155,330,0,0" VerticalAlignment="Top" Width="125" Click="btnCancel_Click" Height="30" TabIndex="7" FontFamily="Segoe UI Semibold"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="165,331,0,0" VerticalAlignment="Top" Width="108" Click="btnCancel_Click" Height="33" TabIndex="7" FontFamily="Segoe UI Semibold"/>
         <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="590,0,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
 
     </Grid>

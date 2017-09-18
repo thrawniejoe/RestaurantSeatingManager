@@ -34,6 +34,12 @@ namespace SeatingManager
             customerNameTextBox.Focus();
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             
@@ -129,6 +135,11 @@ namespace SeatingManager
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

@@ -23,6 +23,13 @@ namespace SeatingManager
         public event RefreshList EngageRefreshList;
         SeatingManagerDBEntities db = null;
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+                this.DragMove();
+        }
+
+
         public AddReservation()
         {
             InitializeComponent();
@@ -43,6 +50,8 @@ namespace SeatingManager
             cboAmPm.Items.Add("AM");
             cboAmPm.Items.Add("PM");
         }
+
+
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -158,6 +167,11 @@ namespace SeatingManager
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

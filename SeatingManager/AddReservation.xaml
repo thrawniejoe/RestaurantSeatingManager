@@ -5,35 +5,136 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SeatingManager"
         mc:Ignorable="d"
-        Title="AddReservation" Height="306.533" Width="423.955" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen">
+        
+                ResizeMode="NoResize"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        ShowInTaskbar="True"
+        
+        
+        Title="AddReservation" Height="369.227" Width="423.955" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" MouseDown="Window_MouseDown">
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
         <CollectionViewSource x:Key="customersViewSource" Source="{Binding customers, Source={StaticResource seatingManagerDBDataSet}}"/>
+        <Style TargetType="{x:Type Window}">
+            <Setter Property="Background" Value="#FF30343E"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+        </Style>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF858593" Offset="0"/>
+                        <GradientStop Color="#FF434551" Offset="0.983"/>
+                        <GradientStop Color="#FF4B4D5C" Offset="0.527"/>
+                        <GradientStop Color="#FF57586A" Offset="0.021"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="BorderBrush" Value="#FF3C3C3C"/>
+            <Setter Property="Foreground" Value="#FFB1B1B1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" 
+                            BorderThickness="1"
+                            Padding="4,2" 
+                            CornerRadius="2" 
+                            BorderBrush="#FF232635"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="{x:Type PasswordBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF292929"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <Style TargetType="{x:Type TextBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+        </Style>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="#FF4A9EB7"/>
+            <Setter Property="FontFamily" Value="Segoe UI SemiBold"/>
+        </Style>
+        <Style TargetType="{x:Type ComboBox}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+        </Style>
+        <Style TargetType="{x:Type ComboBoxItem}">
+            <Setter Property="Background" Value="#FF292C3C"/>
+            <Setter Property="BorderBrush" Value="#FF484C65"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                        <Border x:Name="border" 
+                            BorderThickness="0"
+                            Padding="4,2" 
+                            BorderBrush="#FF232635"
+                            Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter  Property="Background" Value="#FF6E6F85" />
+                                <Setter  Property="BorderThickness" Value="0" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
     </Window.Resources>
     <Grid DataContext="{StaticResource customersViewSource}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="341*"/>
-            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="Customer:" HorizontalAlignment="Left" Margin="28,46,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cboCustomer" DisplayMemberPath="customerName" ItemsSource="{Binding}" Margin="116,46,0,0" SelectedValuePath="customerID" HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <Rectangle HorizontalAlignment="Left" Height="257" Margin="16,84,0,0" VerticalAlignment="Top" Width="382" Stroke="#FF434857" RadiusY="4.3" RadiusX="4.3" Fill="#FF252830"/>
+
+        <Label x:Name="label" Content="Customer" HorizontalAlignment="Left" Margin="47,95,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboCustomer" DisplayMemberPath="customerName" ItemsSource="{Binding}" Margin="114,98,0,0" SelectedValuePath="customerID" HorizontalAlignment="Left" VerticalAlignment="Top" Width="158" />
         <!--<ComboBox.ItemsPanel>
                 <ItemsPanelTemplate>
                     <VirtualizingStackPanel/>
                 </ItemsPanelTemplate>
             </ComboBox.ItemsPanel>
         </ComboBox>-->
-        <Label x:Name="label_Copy" Content="Time:" HorizontalAlignment="Left" Margin="54,140,0,0" VerticalAlignment="Top"/>
-        <ComboBox x:Name="cboHour" HorizontalAlignment="Left" Margin="116,140,0,0" VerticalAlignment="Top" Width="65"/>
-        <ComboBox x:Name="cboMinute" HorizontalAlignment="Left" Margin="209,140,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.543,-0.239"/>
-        <ComboBox x:Name="cboAmPm" HorizontalAlignment="Left" Margin="318,140,0,0" VerticalAlignment="Top" Width="65" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnAdd" Content="AddReservation" HorizontalAlignment="Left" Margin="116,213,0,0" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.231,0.471" Click="btnAdd_Click"/>
-        <Separator HorizontalAlignment="Left" Height="32" Margin="28,171,0,0" VerticalAlignment="Top" Width="355" Grid.ColumnSpan="2"/>
-        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="17,213,0,0" VerticalAlignment="Top" Width="65" Click="btnCancel_Click" Grid.Column="1"/>
-        <DatePicker x:Name="dtpResDate" HorizontalAlignment="Left" Margin="116,93,0,0" VerticalAlignment="Top" />
-        <Label x:Name="label1" Content="Date
-               " HorizontalAlignment="Left" Margin="54,93,0,0" VerticalAlignment="Top" Width="38"/>
-        <Label x:Name="label2" Content=":" HorizontalAlignment="Left" Margin="186,121,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Label x:Name="label_Copy" Content="Time" HorizontalAlignment="Left" Margin="77,189,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cboHour" HorizontalAlignment="Left" Margin="114,192,0,0" VerticalAlignment="Top" Width="65"/>
+        <ComboBox x:Name="cboMinute" HorizontalAlignment="Left" Margin="207,192,0,0" VerticalAlignment="Top" Width="65" RenderTransformOrigin="0.543,-0.239"/>
+        <ComboBox x:Name="cboAmPm" HorizontalAlignment="Left" Margin="316,192,0,0" VerticalAlignment="Top" Width="65"/>
+        <Button x:Name="btnAdd" Content="Add Reservation" HorizontalAlignment="Left" Margin="273,297,0,0" VerticalAlignment="Top" Width="108" RenderTransformOrigin="0.231,0.471" Click="btnAdd_Click" Height="33"/>
+        <Separator HorizontalAlignment="Left" Height="32" Margin="26,223,0,0" VerticalAlignment="Top" Width="355"/>
+        <Button x:Name="btnCancel" Content="Cancel" HorizontalAlignment="Left" Margin="37,297,0,0" VerticalAlignment="Top" Width="108" Click="btnCancel_Click" Height="33"/>
+        <DatePicker x:Name="dtpResDate" HorizontalAlignment="Left" Margin="114,145,0,0" VerticalAlignment="Top" />
+        <Label x:Name="label1" Content="Date                " HorizontalAlignment="Left" Margin="71,144,0,0" VerticalAlignment="Top" Width="38"/>
+        <Label x:Name="label2" Content=":" HorizontalAlignment="Left" Margin="184,173,0,0" VerticalAlignment="Top" FontSize="30"/>
+        <Rectangle Fill="#FF252830" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top" Width="424"/>
+        <Button x:Name="btnClose" IsCancel="true" BorderBrush="Black" Margin="392,0,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1" Padding="1" HorizontalAlignment="Left" Width="32"/>
+        <Label x:Name="label_Copy1" HorizontalContentAlignment="Center" Content="Add Reservation" HorizontalAlignment="Left" Margin="77,36,0,0" VerticalAlignment="Top" FontSize="24" BorderThickness="0,0,0,1" BorderBrush="#FF4A9EB7" Width="252"/>
 
     </Grid>
 </Window>
