@@ -553,6 +553,7 @@ namespace SeatingManager
         }
 
         internal System.Windows.Controls.DataGridTextColumn customer;
+        internal System.Windows.Controls.Button btnClose_Copy;
     }
 }
 

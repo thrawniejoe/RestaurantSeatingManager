@@ -384,6 +384,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
+        <Button x:Name="btnClose_Copy" IsCancel="true" BorderBrush="Black" Margin="1468,-2,0,0" VerticalAlignment="Top" Height="26" Click="btnClose_Click" Background="#FF2D2D30" Content="X" BorderThickness="1,1,0,1" Padding="1" HorizontalAlignment="Left" Width="32"/>
     </Grid>
 </Window>
 
