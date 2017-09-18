@@ -239,7 +239,7 @@
                             </ComboBox.ItemsPanel>
                         </ComboBox>
                     </Grid>
-                    <TextBox x:Name="txtRow" HorizontalAlignment="Left" Height="23" Margin="119,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846"/>
+                    <TextBox x:Name="txtRow" HorizontalAlignment="Left" Height="23" Margin="119,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846" />
                     <TextBox x:Name="txtColumn" HorizontalAlignment="Left" Height="23" Margin="119,169,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FF353846"/>
                     <Label x:Name="label" Content="Column:" HorizontalAlignment="Left" Margin="53,130,0,0" VerticalAlignment="Top" Foreground="White"/>
                     <Label x:Name="lblColumn" Content="Row:" HorizontalAlignment="Left" Margin="74,164,0,0" VerticalAlignment="Top" Foreground="White"/>

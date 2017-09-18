@@ -83,6 +83,7 @@ namespace SeatingManager
             tablesectionsViewSource.View.MoveCurrentToFirst();
             RefreshList();
             cboTableType.ItemsSource = fillTableType();
+            //sectionColorComboBox.ItemsSource = fillTableSections();
         }
 
         public void RefreshList()
@@ -274,6 +275,7 @@ namespace SeatingManager
             Properties.Settings.Default.Save();
             SplashLogin sL = new SplashLogin();
             sL.Show();
+            Close();
         }
 
         private void btnAddSection_Click(object sender, RoutedEventArgs e)
@@ -326,24 +328,43 @@ namespace SeatingManager
             return tabletypes;
         }
 
+        /*private List<int> fillTableSections()
+        {
+            List<int> sectionNumber = new List<int>();
+
+            sectionNumber.Add(1);
+            sectionNumber.Add(2);
+            sectionNumber.Add(3);
+            sectionNumber.Add(4);
+            sectionNumber.Add(5);
+
+            return sectionNumber;
+        }*/
+
         private void btnAddTable_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(sectionColorComboBox.Text);
-            var context = new SeatingManager.SeatingManagerDBEntities();
-            var getSectionID = (from u in context.tablesections
-                                where u.sectionColor.Equals(sectionColorComboBox.Text)
-                                select u).SingleOrDefault();
+            if (txtRow.Text != null && txtColumn != null && txtRow.Text != "" && txtColumn.Text != "")
+            {
+                var context = new SeatingManager.SeatingManagerDBEntities();
+                var getSectionID = (from u in context.tablesections
+                                    where u.sectionColor.Equals(sectionColorComboBox.Text)
+                                    select u).SingleOrDefault();
 
-            tablemap tm = new tablemap();
-            tm.tableType = Convert.ToInt16(cboTableType.SelectedItem);
-            tm.sectionID = getSectionID.tableSectionID;
-            tm.visible = 1;
-            tm.numberOfSeats = Convert.ToInt16(cboTableType.SelectedItem);
-            tm.tableX = Convert.ToInt32(txtRow.Text);
-            tm.tableY = Convert.ToInt32(txtColumn.Text);
-            context.tablemaps.Add(tm);
-            context.SaveChanges();
-            RefreshList();
+                tablemap tm = new tablemap();
+                tm.tableType = 4;
+                tm.tableType = Convert.ToInt32(cboTableType.SelectedItem);
+                tm.sectionID = 1;
+                tm.sectionID = Convert.ToInt32(getSectionID.tableSectionID);
+                tm.visible = 1;
+                tm.numberOfSeats = Convert.ToInt16(cboTableType.SelectedItem);
+                tm.tableX = Convert.ToInt32(txtRow.Text);
+                tm.tableY = Convert.ToInt32(txtColumn.Text);
+                context.tablemaps.Add(tm);
+                context.SaveChanges();
+                MessageBox.Show("You have added a table at the following coordinates:\nX = " + txtRow.Text + " & Y " + txtColumn.Text + ".");
+                RefreshList();
+            }
+            else MessageBox.Show("Please complet all four fields");
         }
 
         private void btnDeleteCust_Click(object sender, RoutedEventArgs e)
