@@ -511,10 +511,6 @@ namespace SeatingManager
         {
             RefreshList();
             // Load data into the table Reservation. You can modify this code as needed.
-            //SeatingManager.SeatingManagerDBDataSetTableAdapters.ReservationTableAdapter seatingManagerDBDataSetReservationTableAdapter = new SeatingManager.SeatingManagerDBDataSetTableAdapters.ReservationTableAdapter();
-            //seatingManagerDBDataSetReservationTableAdapter.Fill(seatingManagerDBDataSet.Reservation);
-            //System.Windows.Data.CollectionViewSource reservationViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("reservationViewSource")));
-            //reservationViewSource.View.MoveCurrentToFirst();
         }
 
         private void btnDeleteServer_Click(object sender, RoutedEventArgs e)
@@ -565,8 +561,12 @@ namespace SeatingManager
 
         private void btnCreateReservation_Click(object sender, RoutedEventArgs e)
         {
+            
+            //aU.Owner = Application.Current.MainWindow;
             AddReservation addRes = new AddReservation();
             addRes.EngageRefreshList += RefreshList;
+            addRes.Owner = this;
+            addRes.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             addRes.ShowDialog();
         }
 
@@ -580,6 +580,7 @@ namespace SeatingManager
             Properties.Settings.Default.CurrentUserRole = -1; //saves the user role to the applcation settings file
             Properties.Settings.Default.Save();
             SplashLogin sL = new SplashLogin();
+            
             sL.Show();
             Close();
         }

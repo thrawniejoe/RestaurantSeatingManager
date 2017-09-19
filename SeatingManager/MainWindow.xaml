@@ -11,7 +11,7 @@
         AllowsTransparency="True"
         ShowInTaskbar="True"
         
-        Title="MainWindow" Height="938.5" Width="1532" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown" WindowStartupLocation="CenterOwner">
+        Title="MainWindow" Height="938.5" Width="1532" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>

@@ -11,7 +11,7 @@
     
         xmlns:SeatingManagerDBDataSetTableAdapters="clr-namespace:SeatingManager.SeatingManagerDBDataSetTableAdapters" x:Class="SeatingManager.ManagerMain"
         mc:Ignorable="d"
-        Title="ManagerMain" Height="841" Width="1100" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown">
+        Title="ManagerMain" Height="841" Width="1100" Background="#FF202028" Loaded="Window_Loaded" MouseDown="Window_MouseDown" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
         <local:SeatingManagerDBDataSet x:Key="seatingManagerDBDataSet"/>
