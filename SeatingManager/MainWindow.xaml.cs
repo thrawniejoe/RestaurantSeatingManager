@@ -385,7 +385,7 @@ namespace SeatingManager
                 var context = new SeatingManager.SeatingManagerDBEntities();
                 Button bt = sender as Button;
                 int myid = Convert.ToInt16(bt.Tag);
-                MessageBox.Show(Convert.ToString(myid));
+                //MessageBox.Show(Convert.ToString(myid));
                 var getCust = (from su in context.customers
                                where su.customerID == myid
                                select su);
